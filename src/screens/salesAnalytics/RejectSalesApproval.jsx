@@ -4,7 +4,7 @@ import DashboardInnerTitle from '../../components/dashboard/DashboardInnerTitle'
 import SearchBoxTable from '../../components/ui/SearchBoxTable'
 import ListTable from '../../components/ui/ListTable'
 import '../../styles/dashboard/PendingSalesApproval.css'
-const PendingSalesApproval = () => {
+const RejectSalesApproval = () => {
 
       //dummy data
       const dataColumn =[
@@ -14,6 +14,7 @@ const PendingSalesApproval = () => {
         {name:'Seller ID'},
         {name:'Category'},
         {name:'Verification Status'},
+        {name:'Rejection Reason'},
         {name:'Action'}
 
     ]
@@ -23,42 +24,48 @@ const PendingSalesApproval = () => {
             name:'Vimal Pandey',
             sellerId: '5484651654IUBGY',
             category: 'Electronics , Fashion',
-            status:'pending',
+            status:'reject',
+            reason:'Wrong Information'
         },
         {
             img:require('../../assests/dashboard/sellerImg.png'),
             name:'Vimal Pandey',
             sellerId: '5484651654IUBGY',
             category: 'Electronics , Fashion',
-            status:'pending',
+            status:'reject',
+            reason:'Wrong Information'
         },
         {
             img:require('../../assests/dashboard/sellerImg.png'),
             name:'Vimal Pandey',
             sellerId: '5484651654IUBGY',
             category: 'Electronics , Fashion',
-            status:'pending',
+            status:'reject',
+            reason:'Wrong Information'
         },
         {
             img:require('../../assests/dashboard/sellerImg.png'),
             name:'Vimal Pandey',
             sellerId: '5484651654IUBGY',
             category: 'Electronics , Fashion',
-            status:'pending',
+            status:'reject',
+            reason:'Wrong Information'
         },
         {
             img:require('../../assests/dashboard/sellerImg.png'),
             name:'Vimal Pandey',
             sellerId: '5484651654IUBGY',
             category: 'Electronics , Fashion',
-            status:'pending',
+            status:'reject',
+            reason:'Wrong Information'
         },
         {
             img:require('../../assests/dashboard/sellerImg.png'),
             name:'Vimal Pandey',
             sellerId: '5484651654IUBGY',
             category: 'Electronics , Fashion',
-            status:'pending',
+            status:'reject',
+            reason:'Wrong Information'
         }
 
     ]
@@ -85,4 +92,4 @@ const PendingSalesApproval = () => {
   )
 }
 
-export default PendingSalesApproval
+export default RejectSalesApproval

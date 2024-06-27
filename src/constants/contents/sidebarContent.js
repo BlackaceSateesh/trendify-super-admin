@@ -16,8 +16,16 @@ export const sideMenuListManage = [
     icon: <BsShop />,
     option: [
       {
+        name: "Verified Approval Seller List",
+        route: AuthenticatedRoutes.verifiedSalesApproval,
+      },
+      {
         name: "Pending Approval Seller List",
-        route: AuthenticatedRoutes.sellerManagement,
+        route: AuthenticatedRoutes.pendingSalesApproval,
+      },
+      {
+        name: "Rejected Approval Seller List",
+        route: AuthenticatedRoutes.rejectSalesApproval,
       },
     ],
   },

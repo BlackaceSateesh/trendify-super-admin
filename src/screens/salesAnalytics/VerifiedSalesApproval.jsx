@@ -4,7 +4,7 @@ import DashboardInnerTitle from '../../components/dashboard/DashboardInnerTitle'
 import SearchBoxTable from '../../components/ui/SearchBoxTable'
 import ListTable from '../../components/ui/ListTable'
 import '../../styles/dashboard/PendingSalesApproval.css'
-const PendingSalesApproval = () => {
+const VerifiedSalesApproval = () => {
 
       //dummy data
       const dataColumn =[
@@ -23,42 +23,42 @@ const PendingSalesApproval = () => {
             name:'Vimal Pandey',
             sellerId: '5484651654IUBGY',
             category: 'Electronics , Fashion',
-            status:'pending',
+            status:'verified',
         },
         {
             img:require('../../assests/dashboard/sellerImg.png'),
             name:'Vimal Pandey',
             sellerId: '5484651654IUBGY',
             category: 'Electronics , Fashion',
-            status:'pending',
+            status:'verified',
         },
         {
             img:require('../../assests/dashboard/sellerImg.png'),
             name:'Vimal Pandey',
             sellerId: '5484651654IUBGY',
             category: 'Electronics , Fashion',
-            status:'pending',
+            status:'verified',
         },
         {
             img:require('../../assests/dashboard/sellerImg.png'),
             name:'Vimal Pandey',
             sellerId: '5484651654IUBGY',
             category: 'Electronics , Fashion',
-            status:'pending',
+            status:'verified',
         },
         {
             img:require('../../assests/dashboard/sellerImg.png'),
             name:'Vimal Pandey',
             sellerId: '5484651654IUBGY',
             category: 'Electronics , Fashion',
-            status:'pending',
+            status:'verified',
         },
         {
             img:require('../../assests/dashboard/sellerImg.png'),
             name:'Vimal Pandey',
             sellerId: '5484651654IUBGY',
             category: 'Electronics , Fashion',
-            status:'pending',
+            status:'verified',
         }
 
     ]
@@ -85,4 +85,4 @@ const PendingSalesApproval = () => {
   )
 }
 
-export default PendingSalesApproval
+export default VerifiedSalesApproval

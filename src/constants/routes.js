@@ -4,7 +4,9 @@ export const AuthRoutes ={
 }
 export const AuthenticatedRoutes ={
     dashboard: '/',
-    sellerManagement: '/sellerManagement',
+    verifiedSalesApproval: '/verifiedSalesApproval',
+    pendingSalesApproval: '/pendingSalesApproval',
+    rejectSalesApproval: '/rejectSalesApproval',
     notificationAndAlert: '/notificationAndAlert',
     customerReviews: '/customerReviews'
 }

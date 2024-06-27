@@ -126,3 +126,33 @@
   color: var(--box-heading);
   font-size: 1.6rem;
 }
+
+
+/* search box table */
+
+.inner_table .SearchBoxTable {
+  width: 40%;
+}
+.SearchBoxTable {
+  border-radius: 3px;
+  border: 1px solid #EFF0F2;
+  background: #FFF;
+  padding: 1rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.SearchBoxTable input {
+  color: #616161;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.SearchBoxTable label svg {
+  color: #616161;
+  font-size: 14px;
+  font-weight: 400;
+}
