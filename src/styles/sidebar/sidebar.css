@@ -1,0 +1,233 @@
+.Sidebar {
+  min-width: 16.2vw;
+  width: 16.2vw;
+  /* min-width: 24.2rem;
+  width: 24.2rem; */
+  height: 100%;
+  background-color: var(--white);
+  border-radius: 1.6rem;
+  padding: 1.2rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+  z-index: 9999999;
+}
+.Sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.Sidebar_inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.Sidebar_inner .head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+  border-bottom: 1px solid #f7f6ec;
+  padding: 1rem 0;
+}
+.Sidebar_inner .head .closeBtn {
+  padding: 0 0.4rem;
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 1.5rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+.Sidebar_inner .logoName {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  position: relative;
+}
+.Sidebar_inner .logoName .logo {
+  min-width: 3.3rem;
+  width: 3.3rem;
+}
+.Sidebar_inner .logoName .name {
+  font-size: 1.6rem;
+  color: var(--black);
+  font-weight: 500;
+}
+.Sidebar_inner .user {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border: 1px solid #f7f6ec;
+  border-radius: 0.8rem;
+  padding: 0.8rem;
+}
+.Sidebar_inner .user .pic {
+  min-width: 3.6rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+.Sidebar_inner .user .txt {
+  width: 80%;
+}
+.Sidebar_inner .user .txt h6 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--black);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+.Sidebar_inner .user .txt p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #616161;
+}
+.Sidebar_inner .typeName {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #454751;
+  text-transform: uppercase;
+  margin: 0.6rem 0;
+}
+.Sidebar_inner .menuLists {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 0 0.8rem;
+}
+.Sidebar_inner .menuList {
+  width: 100%;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  color: #52616b;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 1rem 1.2rem;
+  border-radius: 0.8rem;
+  opacity: 1;
+}
+.Sidebar_inner .menuList:hover {
+  transition: all 0.5s;
+  color: var(--white);
+  background-color: var(--secondary-yellow);
+  opacity: 0.8;
+}
+.Sidebar_inner .menuList.active {
+  color: var(--white);
+  background-color: var(--secondary-yellow);
+}
+.Sidebar_inner .menuList .icon {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.sidebarAccordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.sidebarAccordion .accordion-button {
+  padding: 0;
+  border-radius: 0.8rem !important;
+  overflow: hidden;
+}
+.sidebarAccordion .accordion-body {
+  padding: 0.6rem;
+}
+.sidebarAccordion .accordion-button:not(.collapsed) {
+  color: #52616b;
+  background-color: transparent;
+  box-shadow: none;
+}
+.Sidebar_inner .menuList.accoHeader {
+  border-radius: 0;
+}
+.Sidebar_inner .menuList.accoHeader:hover {
+  color: initial;
+  background-color: transparent;
+  opacity: 1;
+}
+
+.sidebarAccordion .accordion-button:hover,
+.sidebarAccordion .accordion-button:hover .menuList.accoHeader {
+  color: var(--white);
+  background-color: var(--secondary-yellow);
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+
+.sidebarAccordion .accordion-button::after {
+  margin-right: 1rem;
+}
+.sidebarAccordion .accordion-button:hover::after {
+  color: var(--white);
+}
+.sidebarAccordion .accordion-header {
+  box-shadow: none;
+}
+.sidebarAccordion .accordion-button:focus {
+  box-shadow: none;
+}
+
+.sidebarAccordion .accordion-item {
+  border: none;
+}
+
+/* others hover */
+
+.Sidebar_inner .menuList.otherList:nth-child(2):hover {
+  background-color: var(--success-green);
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.Sidebar_inner .menuList.otherList:nth-child(3):hover {
+  background-color: var(--native-blue);
+  opacity: 1;
+  transition: all 0.5s;
+}
+.Sidebar_inner .menuList.otherList:nth-child(4):hover {
+  background-color: var(--dark-red);
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+
+/* collapse menu */
+
+.Sidebar.collapseMenu {
+  min-width: 5.2vw;
+  width: 5.2vw;
+}
+.Sidebar.collapseMenu .Sidebar_inner .typeName,
+.Sidebar.collapseMenu .Sidebar_inner .logoName .name,
+.Sidebar.collapseMenu .Sidebar_inner .menuList .text,
+.Sidebar.collapseMenu .Sidebar_inner .user .txt{
+  transition: opacity 200ms, display 200ms;
+  display: none;
+  opacity: 0;
+}
+.Sidebar.showMenu .Sidebar_inner .typeName,
+.Sidebar.showMenu .Sidebar_inner .logoName .name,
+.Sidebar.showMenu .Sidebar_inner .menuList .text,
+.Sidebar.showMenu .Sidebar_inner .user .txt{
+  transition: opacity 200ms, display 200ms;
+  display: block;
+  opacity: 1;
+}

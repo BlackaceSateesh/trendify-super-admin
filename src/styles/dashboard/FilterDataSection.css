@@ -1,0 +1,10 @@
+.filterData_inner{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.1%;
+    row-gap: 2rem;
+}
+.filterData_inner .inputFieldBox{
+    width: 24.16%;
+}

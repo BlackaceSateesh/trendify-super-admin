@@ -1,0 +1,11 @@
+.Header{
+    width: 100%;
+    padding: 3rem 0;
+    padding-left: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Header .search{
+    width: 35%;
+}

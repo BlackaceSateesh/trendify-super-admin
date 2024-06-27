@@ -4,4 +4,6 @@ export const AuthRoutes ={
 }
 export const AuthenticatedRoutes ={
     dashboard: '/',
+    sellerManagement: '/sellerManagement',
+    notificationAndAlert: '/notificationAndAlert'
 }

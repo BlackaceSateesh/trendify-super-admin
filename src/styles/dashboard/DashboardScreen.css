@@ -1,0 +1,82 @@
+.DashboardScreen {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-bg);
+}
+.DashboardScreen_inner {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  /* gap: 1.2rem; */
+  justify-content: space-between;
+  padding: var(--main-padding);
+  overflow-y: scroll;
+
+}
+.DashboardScreen_inner .content_screen {
+  /* width: 100%; */
+  width: 79.2vw;
+  height: 100%;
+  transition: all 0.5s;
+}
+.DashboardScreen_inner .content_screen.full {
+  /* width: 100%; */
+  width: 90.4vw;
+  height: 100%;
+  transition: all 0.5s;
+}
+.TopTotalTableCard {
+  min-width: 24%;
+  width: 24%;
+  border-radius: .6rem;
+}
+.TopTotalTableCard .head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.TopTotalTableCard .head .tag {
+  padding: 0.2rem 0.6rem;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--success-green);
+  border-radius: 0.4rem;
+}
+.TopTotalTableCard .tableBox{
+  width: 100%;
+}
+.TopTotalTableCard table {
+    width: 100%;
+    margin-top: 1.2rem;
+}
+.TopTotalTableCard table,
+.TopTotalTableCard th,
+.TopTotalTableCard td {
+  border-collapse: collapse;
+  border: 0.8px solid #eff0f2;
+}
+.TopTotalTableCard th,
+.TopTotalTableCard td {
+  font-size: 1.2rem;
+  color: #616161;
+  font-weight: 400;
+  padding: 0.6rem;
+}
+.TopTotalTableCard th{
+  color: var(--primary-black);
+  font-weight: 500;
+}
+
+
+footer{
+    padding-top: 2.4rem;
+    padding-bottom: 1.6rem;
+}
+footer h6{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-black);
+    text-align: center;
+}
