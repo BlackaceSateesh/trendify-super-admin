@@ -1,0 +1,77 @@
+.CustomerReview_inner .cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+.CustomerReviewCardInner {
+  width: 100%;
+  display: flex;
+  gap: 1.2rem;
+  padding: 2rem 0;
+  border-bottom: 0.8px solid #ebebeb;
+}
+.CustomerReviewCardInner:last-child{
+    border-bottom: none;
+}
+.CustomerReviewCardInner .pic {
+  min-width: 5rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.CustomerReviewCardInner .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.CustomerReviewCardInner .content .name {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--primary-black);
+}
+.CustomerReviewCardInner .content .name .date {
+  font-size: 1.1rem;
+  margin-left: 1rem;
+}
+.CustomerReviewCardInner .content .stars {
+  display: flex;
+  gap: 0.6rem;
+  color: var(--star-color);
+  font-size: 2.1rem;
+}
+.CustomerReviewCardInner .content .text {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--primary-black);
+}
+
+.CustomerReviewCardInner .content .msg {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #667085;
+}
+
+.CustomerReviewCardInner .content .images {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: .6rem;
+}
+.CustomerReviewCardInner .content .images .imgCard {
+  max-width: 10rem;
+  max-height: 8rem;
+}
+.CustomerReviewCardInner .content .deleteBtns {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.CustomerReviewCardInner .content .deleteBtn {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--dark-red);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

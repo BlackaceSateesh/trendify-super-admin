@@ -49,6 +49,7 @@ button {
   outline: none;
   background-color: transparent;
   cursor: pointer;
+  width: fit-content;
 }
 
 .h1,

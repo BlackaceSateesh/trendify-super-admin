@@ -13,61 +13,68 @@ import { RiFeedbackLine } from "react-icons/ri";
 export const sideMenuListManage = [
   {
     title: "Seller Management",
-    icon:<BsShop />,
-    option: [{
-       name: "Pending Approval Seller List",
-       route: AuthenticatedRoutes.sellerManagement
-       }],
+    icon: <BsShop />,
+    option: [
+      {
+        name: "Pending Approval Seller List",
+        route: AuthenticatedRoutes.sellerManagement,
+      },
+    ],
   },
   {
     title: " Product Management",
-    icon:<LiaBoxOpenSolid />,
+    icon: <LiaBoxOpenSolid />,
     option: [{ name: "option1" }],
   },
   {
     title: " Order Management",
-    icon:<LiaBoxOpenSolid />,
+    icon: <LiaBoxOpenSolid />,
     option: [{ name: "option1" }],
   },
   {
     title: " Analytics and Reports",
-    icon:<AiOutlineLineChart />,
+    icon: <AiOutlineLineChart />,
     option: [{ name: "option1" }],
   },
   {
     title: " Communication",
-    icon:<MdSupportAgent />,
+    icon: <MdSupportAgent />,
     option: [{ name: "option1" }],
   },
   {
     title: " Profile Management",
-    icon:<MdOutlineManageAccounts />,
+    icon: <MdOutlineManageAccounts />,
     option: [{ name: "option1" }],
   },
   {
     title: " Platform Management",
-    icon:<MdManageHistory />,
+    icon: <MdManageHistory />,
     option: [{ name: "option1" }],
   },
   {
     title: " Support and Feedback",
-    icon:<RiFeedbackLine />,
-    option: [{ name: "option1" }],
+    icon: <RiFeedbackLine />,
+    option: [
+      {
+        name: "Customer Reviews",
+        route: AuthenticatedRoutes.customerReviews,
+      },
+    ],
   },
 ];
 
-export const sideMenuListOther =[
-    {
-        name:'Notification',
-        icon:<IoNotificationsOutline />,
-        route: AuthenticatedRoutes.notificationAndAlert
-    },
-    {
-        name:'Message',
-        icon:<BiMessageSquareDetail />
-    },
-    {
-        name:'Logout',
-        icon:<BiLogOut />
-    },
-]
+export const sideMenuListOther = [
+  {
+    name: "Notification",
+    icon: <IoNotificationsOutline />,
+    route: AuthenticatedRoutes.notificationAndAlert,
+  },
+  {
+    name: "Message",
+    icon: <BiMessageSquareDetail />,
+  },
+  {
+    name: "Logout",
+    icon: <BiLogOut />,
+  },
+];
