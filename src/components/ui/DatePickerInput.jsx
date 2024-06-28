@@ -1,11 +1,11 @@
 import React from 'react';
 
-const DatePickerInput = (props) => {
+const DatePickerInput = ({labelName, option}) => {
   return (
     <>
       <div className="DatePickerInput inputFieldBox">
-        <label className='inputLabel' htmlFor="">{props.labelName}</label>
-        <input type="date" name="" id="" defaultValue={props.option}/>
+        <label className='inputLabel' htmlFor="">{labelName}</label>
+        <input type="date" name="" id="" defaultValue={option}/>
       </div>
     </>
   )

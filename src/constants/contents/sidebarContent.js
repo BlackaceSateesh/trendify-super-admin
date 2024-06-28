@@ -27,12 +27,19 @@ export const sideMenuListManage = [
         name: "Rejected Approval Seller List",
         route: AuthenticatedRoutes.rejectSalesApproval,
       },
+      {
+        name: "Seller Verification Detail Page",
+        route: AuthenticatedRoutes.sellerVerificationDetailPage,
+      },
     ],
   },
   {
     title: " Product Management",
     icon: <LiaBoxOpenSolid />,
-    option: [{ name: "option1" }],
+    option: [{
+      name: " Pending Approval Product",
+      route: AuthenticatedRoutes.pendingApprovalProduct,
+    },],
   },
   {
     title: " Order Management",

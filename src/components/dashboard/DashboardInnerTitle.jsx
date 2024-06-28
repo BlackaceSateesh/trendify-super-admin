@@ -1,9 +1,9 @@
 import React from 'react';
 
-const DashboardInnerTitle = ({name}) => {
+const DashboardInnerTitle = ({name , optional}) => {
   return (
     <>
-        <h2 className="page_subtitle">{name}</h2>
+        <h2 className="page_subtitle">{name} {optional? <p>{optional}</p> : null} </h2>
     </>
   )
 }

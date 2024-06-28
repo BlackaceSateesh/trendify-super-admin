@@ -90,6 +90,29 @@
   font-weight: 400;
   letter-spacing: 0.438px;
   outline: none;
+  width: 100%;
+}
+
+/* input with eye btn */
+.inputFieldBox .box{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.inputFieldBox .box .eye{
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  right: 1.5rem;
+}
+.inputFieldBox .box .eye:hover svg{
+    color: var(--secondary-yellow);
+    font-size: 1.6rem;
+    transition: all .3s ease;
+}
+.inputFieldBox .box input{
+  padding-right: 4rem;
 }
 
 .inputFieldBox select * {
@@ -119,12 +142,72 @@
   gap: 0.6rem;
   width: fit-content;
 }
+input[type=checkbox] {
+  accent-color: #b18d62;
+}
+
+.sectionContainer .inputField{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1%;
+  row-gap: 2rem;
+}
+
+.sectionContainer .inputField .inputFieldBox{
+  width: 24%;
+}
+.sectionContainer .inputField .inputFieldBox.textareaInput{
+  width: 100%;
+  min-height: 10rem;
+}
+.sectionContainer .inputField .inputFieldBox.textareaInput textarea{
+  min-height: 10rem;
+}
+.sectionContainer .inputField .inputFieldBox.textareaInput textarea::-webkit-scrollbar{
+  display: none;
+}
 
 /* ========================= all input fields end ===================================== */
 
 .page_subtitle {
   color: var(--box-heading);
   font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+.page_subtitle p{
+  font-size: 1.1rem;
+}
+
+.ButtonMain {
+  font-size: 1.2rem;
+  border-radius: 3px;
+  background-color: var(--native-blue);
+  box-shadow: var(--btn-shadow);
+  color: var(--white);
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 1.429px;
+  padding: 1rem 2.2rem;
+  width: fit-content;
+}
+.centerBtns .ButtonMain.green {
+  background: var(--success-green, #32C98D);
+}
+.centerBtns .ButtonMain.red {
+  background: var(--dark-red);
+}
+
+.centerBtns{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
 }
 
 
@@ -155,4 +238,27 @@
   color: #616161;
   font-size: 14px;
   font-weight: 400;
+}
+
+/* declaration */
+
+ .declaration p{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--primary-black);
+    margin-bottom: 1rem;
+}
+ .declaration .agree{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+}
+ .declaration .agree input{
+    width: 100%;
+    margin-top: .4rem;
+}
+ .centerBtns .ButtonMain:first-child{
+   background-color: var(--native-blue);
 }

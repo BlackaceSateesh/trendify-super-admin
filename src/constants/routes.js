@@ -8,5 +8,7 @@ export const AuthenticatedRoutes ={
     pendingSalesApproval: '/pendingSalesApproval',
     rejectSalesApproval: '/rejectSalesApproval',
     notificationAndAlert: '/notificationAndAlert',
-    customerReviews: '/customerReviews'
+    sellerVerificationDetailPage: '/sellerVerificationDetailPage',
+    customerReviews: '/customerReviews',
+    pendingApprovalProduct: '/pendingApprovalProduct'
 }
