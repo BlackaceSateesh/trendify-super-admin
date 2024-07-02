@@ -1,10 +1,10 @@
 import React from 'react'
 
-const CheckboxWithoutLable = ({idName}) => {
+const CheckboxWithoutLable = () => {
     return (
         <>
             <div className="CheckboxWithoutLable">
-                <input type="checkbox" id={idName} />
+                <input type="checkbox" />
             </div>
         </>
     )

@@ -39,7 +39,20 @@ export const sideMenuListManage = [
     option: [{
       name: " Pending Approval Product",
       route: AuthenticatedRoutes.pendingApprovalProduct,
-    },],
+    },
+    {
+      name: " Product Details",
+      route: AuthenticatedRoutes.productDetails,
+    },
+    {
+      name: " Add New Category",
+      route: AuthenticatedRoutes.addNewCategory,
+    },
+    {
+      name: "Edit & Add Product",
+      route: AuthenticatedRoutes.editAndAddProduct,
+    },
+  ],
   },
   {
     title: " Order Management",
@@ -73,6 +86,18 @@ export const sideMenuListManage = [
       {
         name: "Customer Reviews",
         route: AuthenticatedRoutes.customerReviews,
+      },
+      {
+        name: "Chat Support",
+        route: AuthenticatedRoutes.chatSupport,
+      },
+      {
+        name: "Customer Enquiry",
+        route: AuthenticatedRoutes.customerEnquiry,
+      },
+      {
+        name: "Create Ticket",
+        route: AuthenticatedRoutes.createTicket,
       },
     ],
   },

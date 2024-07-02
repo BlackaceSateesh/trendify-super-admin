@@ -10,5 +10,12 @@ export const AuthenticatedRoutes ={
     notificationAndAlert: '/notificationAndAlert',
     sellerVerificationDetailPage: '/sellerVerificationDetailPage',
     customerReviews: '/customerReviews',
-    pendingApprovalProduct: '/pendingApprovalProduct'
+    pendingApprovalProduct: '/pendingApprovalProduct',
+    productDetails: '/productDetails',
+    addNewCategory: '/addNewCategory',
+    editAndAddProduct: '/editAndAddProduct',
+    chatSupport: '/chatSupport',
+    customerEnquiry: '/customerEnquiry',
+    responseTicket: '/responseTicket',
+    createTicket: '/createTicket',
 }

@@ -1,0 +1,91 @@
+.inputField .inputField_container {
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.inputField .inputField_container .inputFieldBox {
+  width: 100%;
+}
+.inputField .inputField_container .multiBtns {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+.inputField .inputField_container .multiBtns .btn_icon {
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  font-weight: 300;
+  background-color: var(--native-blue);
+  color: var(--white);
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.inputField .inputField_container .multiInputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/*  */
+
+.innerBox_shadow {
+  width: 100%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  padding: 2rem;
+  border-radius: 0.4rem;
+}
+.innerBox_shadow .head .sideBtns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.innerBox_shadow .head .sideBtns .categoryBtns {
+  padding: 0.6rem 1.2rem;
+  font-size: 1.2rem;
+  color: var(--white);
+  background-color: var(--success-green);
+  box-shadow: var(--btn-shadow);
+  border-radius: 3px;
+}
+.innerBox_shadow .head .sideBtns .categoryBtns.blue {
+  background-color: var(--native-blue);
+}
+.innerBox_shadow .head .sideBtns .categoryBtns.delete {
+  background-color: var(--dark-red);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.innerBox_shadow .category_table {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 2.6rem;
+}
+.innerBox_shadow .category_table table {
+  width: 100%;
+}
+.innerBox_shadow .category_table table th{
+    text-wrap: nowrap;
+    font-weight: 500;
+}
+.innerBox_shadow .category_table table th,
+.innerBox_shadow .category_table table td{
+  border: 1px solid #eff0f2;
+  padding: 1.4rem;
+  font-size: 1.2rem;
+  min-width:16rem;
+  color: var(--primary-black);
+}
+.innerBox_shadow .category_table table td{
+    font-weight: 400;
+}
+.innerBox_shadow .category_table table td.blank{
+    border: none;
+}
