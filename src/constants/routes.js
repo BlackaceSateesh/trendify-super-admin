@@ -22,4 +22,6 @@ export const AuthenticatedRoutes ={
     plateformTermAndCondition: '/plateformTermAndCondition',
     BannerManagementList: '/BannerManagementList',
     bannerSetting: '/bannerSetting',
+    bannerSettingEdit: '/bannerSettingEdit',
+    viewSingleBanner: '/viewSingleBanner',
 }

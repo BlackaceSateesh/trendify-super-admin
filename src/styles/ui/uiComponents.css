@@ -62,6 +62,9 @@
   font-size: 1rem;
   margin-bottom: 0;
 }
+.inputLabel .optional{
+ color: var(--secondary-yellow);
+}
 
 .inputLabel span {
   color: var(--Red, #f00);
@@ -126,6 +129,7 @@
   border: 1px solid #eff0f2;
   border-radius: 10px 3px 3px 10px;
   cursor: pointer;
+  padding: 0;
 }
 
 .fileInput input::file-selector-button {
@@ -133,7 +137,7 @@
   border-radius: 8px 0px 0px 8px;
   background: var(--secondary-color, #c09562);
   border: none;
-  color: var(--white-color);
+  color: var(--white);
   padding: 1rem 1.2rem;
 }
 

@@ -21,6 +21,8 @@ import AddAndManageFaqs from "../plateformManagement/AddAndManageFaqs";
 import PlateformTermAndCondition from "../plateformManagement/PlateformTermAndCondition";
 import BannerManagementList from "../bannerManagement/BannerManagementList";
 import BannerSetting from "../bannerManagement/BannerSetting";
+import BannerSettingEdit from "../bannerManagement/BannerSettingEdit";
+import ViewSingleBanner from "../bannerManagement/ViewSingleBanner";
 
 const Authenticated = () => {
   return (
@@ -51,6 +53,8 @@ const Authenticated = () => {
         {/* banner management */}
         <Route path={AuthenticatedRoutes.BannerManagementList} element={<DashboardScreen innerPage={<BannerManagementList />}  pageName='Banner Management' pageTitle='Banner Management' parentName='Dashboard'/>} />
         <Route path={AuthenticatedRoutes.bannerSetting} element={<DashboardScreen innerPage={<BannerSetting />}  pageName='Banner Setting' pageTitle='Banner Management' parentName='Banner Management'/>} />
+        <Route path={AuthenticatedRoutes.bannerSettingEdit} element={<DashboardScreen innerPage={<BannerSettingEdit />}  pageName='Banner Edit' pageTitle='Banner Management' parentName='Banner Management'/>} />
+        <Route path={AuthenticatedRoutes.viewSingleBanner} element={<DashboardScreen innerPage={<ViewSingleBanner />}  pageName='Banner Edit' pageTitle='Banner Management' parentName='Banner Management'/>} />
       </Routes>
     </>
   );

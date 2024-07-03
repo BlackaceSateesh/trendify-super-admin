@@ -40,6 +40,10 @@
   padding: 2rem;
   border-radius: 0.4rem;
 }
+.innerBox_shadow .head .heading span {
+  color: var(--secondary-yellow);
+  font-weight: 600;
+}
 .innerBox_shadow .head .sideBtns {
   display: flex;
   flex-wrap: wrap;

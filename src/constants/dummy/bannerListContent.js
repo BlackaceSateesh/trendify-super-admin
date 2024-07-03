@@ -1,6 +1,8 @@
 import { FiEye } from "react-icons/fi";
 import { GoPencil } from "react-icons/go";
 import { MdDeleteOutline } from "react-icons/md";
+import { Link } from "react-router-dom";
+import { AuthenticatedRoutes } from "../routes";
 
 
 export const webBannerList = {
@@ -125,7 +127,7 @@ export const mobileBannerColumns = {
         },
         {
             name: 'Action',
-            selector: row => <div className="actionBtns"><button><FiEye /></button><button><GoPencil /></button><button><MdDeleteOutline /></button></div>,
+            selector: row => <div className="actionBtns"><Link to={AuthenticatedRoutes.viewSingleBanner} ><button><FiEye /></button></Link><button><GoPencil /></button><button><MdDeleteOutline /></button></div>,
         },
     ]
 };

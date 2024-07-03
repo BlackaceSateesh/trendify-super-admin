@@ -1,0 +1,6 @@
+.bannerDetails{
+    margin-top: 1.2rem;
+}
+.bannerDetails .fileInput input::file-selector-button{
+    background-color: var(--primary-black);
+}

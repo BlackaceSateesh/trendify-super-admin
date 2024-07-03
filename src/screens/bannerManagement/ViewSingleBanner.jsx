@@ -3,27 +3,8 @@ import DashboardInnerTitle from "../../components/dashboard/DashboardInnerTitle"
 import ButtonMain from "../../components/ui/ButtonMain";
 import '../../styles/dashboard/BannerSetting.css';
 import { AuthenticatedRoutes } from "../../constants/routes";
-const BannerSetting = () => {
-  // dummy template banner list
+const ViewSingleBanner = () => {
 
-  const templateBannerList = [
-    {
-      img: require("../../assests/dashboard/bannerTemplate1.png"),
-      name: "Banner Template One",
-    },
-    {
-      img: require("../../assests/dashboard/bannerTemplate2.png"),
-      name: "Banner Template Two",
-    },
-    {
-      img: require("../../assests/dashboard/bannerTemplate3.png"),
-      name: "Banner Template Three",
-    },
-    {
-      img: require("../../assests/dashboard/bannerTemplate4.png"),
-      name: "Banner Template Four",
-    },
-  ];
 
   return (
     <>
@@ -32,7 +13,6 @@ const BannerSetting = () => {
         <div className="heroBanner sectionContainer">
           <DashboardInnerTitle name="Hero Banner" />
           <div className="activeBanner">
-            <DashboardInnerTitle name="Current Active Banner " />
             <div className="inner">
               <div className="image">
                 <img
@@ -80,25 +60,9 @@ const BannerSetting = () => {
           </div>
         </div>
 
-        {/* banner template */}
-        <div className="bannerTemplate sectionContainer">
-          <DashboardInnerTitle name="Banner Template" />
-          <div className="template_list">
-            {templateBannerList.map((e, i) => {
-              return (
-                <div key={i} className="template_card">
-                  <div className="image">
-                    <img src={e.img} alt="" />
-                  </div>
-                  <h6 className="name">{e.name}</h6>
-                </div>
-              );
-            })}
-          </div>
-        </div>
       </div>
     </>
   );
 };
 
-export default BannerSetting;
+export default ViewSingleBanner;
