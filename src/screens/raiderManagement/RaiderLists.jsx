@@ -12,7 +12,7 @@ const RaiderLists = () => {
             data={raiderList.data}
             selectableRows
             pagination
-            className="raiderListTable"
+            className="raiderListTable dataTable_main"
           />
         </div>
       </div>

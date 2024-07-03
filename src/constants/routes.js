@@ -18,6 +18,7 @@ export const AuthenticatedRoutes ={
     customerEnquiry: '/customerEnquiry',
     responseTicket: '/responseTicket',
     createTicket: '/createTicket',
+    
     addAndManageFaqs: '/addAndManageFaqs',
     plateformTermAndCondition: '/plateformTermAndCondition',
     BannerManagementList: '/BannerManagementList',
@@ -26,4 +27,7 @@ export const AuthenticatedRoutes ={
     viewSingleBanner: '/viewSingleBanner',
     raiderVerification: '/raiderVerification',
     raiderLists: '/raiderLists',
+    raiderDetails: '/raiderDetails',
+    allOrderProductList: '/allOrderProductList',
+    orderDetails: '/orderDetails',
 }

@@ -25,6 +25,9 @@ import BannerSettingEdit from "../bannerManagement/BannerSettingEdit";
 import ViewSingleBanner from "../bannerManagement/ViewSingleBanner";
 import RaiderVerification from "../raiderManagement/RaiderVerification";
 import RaiderLists from "../raiderManagement/RaiderLists";
+import RaiderDetails from "../raiderManagement/RaiderDetails";
+import AllOrderProductList from "../orderManagement/AllOrderProductList";
+import OrderDetails from "../orderManagement/OrderDetails";
 
 const Authenticated = () => {
   return (
@@ -61,6 +64,12 @@ const Authenticated = () => {
         {/* raider management */}
         <Route path={AuthenticatedRoutes.raiderVerification} element={<DashboardScreen innerPage={<RaiderVerification />}  pageName='Raider Verification' pageTitle='Raider Management' parentName='Dashboard'/>} />
         <Route path={AuthenticatedRoutes.raiderLists} element={<DashboardScreen innerPage={<RaiderLists />}  pageName='Raider Lists' pageTitle='Raider Management' parentName='Dashboard'/>} />
+        <Route path={AuthenticatedRoutes.raiderDetails} element={<DashboardScreen innerPage={<RaiderDetails />}  pageName='Raider Details' pageTitle='Raider Management' parentName='Dashboard'/>} />
+
+        {/* order management */}
+        <Route path={AuthenticatedRoutes.allOrderProductList} element={<DashboardScreen innerPage={<AllOrderProductList />}  pageName='All Order Products' pageTitle='Order Management' parentName='Dashboard'/>} />
+        <Route path={AuthenticatedRoutes.orderDetails} element={<DashboardScreen innerPage={<OrderDetails />}  pageName=' Order Details' pageTitle='Order Management' parentName='Dashboard'/>} />
+
       </Routes>
     </>
   );

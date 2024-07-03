@@ -60,8 +60,18 @@ export const sideMenuListManage = [
   {
     title: " Order Management",
     icon: <LiaBoxOpenSolid />,
-    option: [{ name: "option1" }],
+    option: [
+      {
+        name: "All Order Products",
+        route: AuthenticatedRoutes.allOrderProductList,
+      },
+      {
+        name: "Order Details",
+        route: AuthenticatedRoutes.orderDetails,
+      },
+    ],
   },
+  
   {
     title: " Analytics and Reports",
     icon: <AiOutlineLineChart />,
@@ -118,6 +128,10 @@ export const sideMenuListManage = [
       {
         name: "Raider Lists",
         route: AuthenticatedRoutes.raiderLists,
+      },
+      {
+        name: "Raider Details",
+        route: AuthenticatedRoutes.raiderDetails,
       },
 
     ],
