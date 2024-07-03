@@ -21,18 +21,4 @@
     background: var(--secondary-yellow, #C09562);
     transition: all .3s ease;
 }
-.bannerManagementTable .rdt_TableCol_Sortable{
-    color: var(--primary-black);
-    font-size: 1.4rem;
-    font-weight: 500;
-}
-.bannerManagementTable .rdt_TableCell{
-    color: #616161;
-    font-size: 1.4rem;
-    font-weight: 300;
-}
-.bannerManagementTable .rdt_TableHeadRow,
-.bannerManagementTable .rdt_TableRow{
-    border: none !important;
-}
 

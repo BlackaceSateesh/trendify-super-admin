@@ -23,6 +23,8 @@ import BannerManagementList from "../bannerManagement/BannerManagementList";
 import BannerSetting from "../bannerManagement/BannerSetting";
 import BannerSettingEdit from "../bannerManagement/BannerSettingEdit";
 import ViewSingleBanner from "../bannerManagement/ViewSingleBanner";
+import RaiderVerification from "../raiderManagement/RaiderVerification";
+import RaiderLists from "../raiderManagement/RaiderLists";
 
 const Authenticated = () => {
   return (
@@ -55,6 +57,10 @@ const Authenticated = () => {
         <Route path={AuthenticatedRoutes.bannerSetting} element={<DashboardScreen innerPage={<BannerSetting />}  pageName='Banner Setting' pageTitle='Banner Management' parentName='Banner Management'/>} />
         <Route path={AuthenticatedRoutes.bannerSettingEdit} element={<DashboardScreen innerPage={<BannerSettingEdit />}  pageName='Banner Edit' pageTitle='Banner Management' parentName='Banner Management'/>} />
         <Route path={AuthenticatedRoutes.viewSingleBanner} element={<DashboardScreen innerPage={<ViewSingleBanner />}  pageName='Banner Edit' pageTitle='Banner Management' parentName='Banner Management'/>} />
+
+        {/* raider management */}
+        <Route path={AuthenticatedRoutes.raiderVerification} element={<DashboardScreen innerPage={<RaiderVerification />}  pageName='Raider Verification' pageTitle='Raider Management' parentName='Dashboard'/>} />
+        <Route path={AuthenticatedRoutes.raiderLists} element={<DashboardScreen innerPage={<RaiderLists />}  pageName='Raider Lists' pageTitle='Raider Management' parentName='Dashboard'/>} />
       </Routes>
     </>
   );

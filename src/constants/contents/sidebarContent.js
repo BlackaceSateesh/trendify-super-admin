@@ -10,6 +10,7 @@ import { MdOutlineManageAccounts } from "react-icons/md";
 import { MdManageHistory } from "react-icons/md";
 import { RiFeedbackLine } from "react-icons/ri";
 import { TbPhotoCog } from "react-icons/tb";
+import { RiEBikeLine } from "react-icons/ri";
 
 
 export const sideMenuListManage = [
@@ -104,6 +105,21 @@ export const sideMenuListManage = [
         name: "Banner Setting",
         route: AuthenticatedRoutes.bannerSetting,
       },
+    ],
+  },
+  {
+    title: "Raider Management",
+    icon: <RiEBikeLine />,
+    option: [
+      {
+        name: "Raider Verification",
+        route: AuthenticatedRoutes.raiderVerification,
+      },
+      {
+        name: "Raider Lists",
+        route: AuthenticatedRoutes.raiderLists,
+      },
+
     ],
   },
   {

@@ -24,4 +24,6 @@ export const AuthenticatedRoutes ={
     bannerSetting: '/bannerSetting',
     bannerSettingEdit: '/bannerSettingEdit',
     viewSingleBanner: '/viewSingleBanner',
+    raiderVerification: '/raiderVerification',
+    raiderLists: '/raiderLists',
 }

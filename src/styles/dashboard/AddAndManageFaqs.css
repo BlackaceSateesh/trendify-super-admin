@@ -156,6 +156,7 @@
   border-radius: 0.6rem;
   border: 0.16rem solid #dddddd;
   display: flex;
+  justify-content: space-between;
   gap: 1rem;
 }
 .AllFaqsCard .txt h5 {
