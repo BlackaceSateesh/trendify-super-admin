@@ -17,6 +17,10 @@ import ChatSupport from "../customerSupport/ChatSupport";
 import CustomerEnquiry from "../customerSupport/CustomerEnquiry";
 import ResponseTicket from "../customerSupport/ResponseTicket";
 import CreateTicket from "../customerSupport/CreateTicket";
+import AddAndManageFaqs from "../plateformManagement/AddAndManageFaqs";
+import PlateformTermAndCondition from "../plateformManagement/PlateformTermAndCondition";
+import BannerManagementList from "../bannerManagement/BannerManagementList";
+import BannerSetting from "../bannerManagement/BannerSetting";
 
 const Authenticated = () => {
   return (
@@ -33,10 +37,20 @@ const Authenticated = () => {
         <Route path={AuthenticatedRoutes.productDetails} element={<DashboardScreen innerPage={<ProductDetails />}  pageName='Product Details' pageTitle='Product Management' parentName='Product Management'/>} />
         <Route path={AuthenticatedRoutes.addNewCategory} element={<DashboardScreen innerPage={<AddNewCategory />}  pageName='Add New Category' pageTitle='Add New Category' parentName='Product Management'/>} />
         <Route path={AuthenticatedRoutes.editAndAddProduct} element={<DashboardScreen innerPage={<EditAndAddProduct />}  pageName='Edit & Add Product' pageTitle='Edit & Add Product' parentName='Product Management'/>} />
+
+        {/* support and feedback */}
         <Route path={AuthenticatedRoutes.chatSupport} element={<DashboardScreen innerPage={<ChatSupport />}  pageName='Chat Support' pageTitle='Chat Support' parentName='Chat Support'/>} />
         <Route path={AuthenticatedRoutes.customerEnquiry} element={<DashboardScreen innerPage={<CustomerEnquiry />}  pageName='Customer Inquiries' pageTitle='Customer Inquiries' parentName='Dashboard'/>} />
         <Route path={AuthenticatedRoutes.responseTicket} element={<DashboardScreen innerPage={<ResponseTicket />}  pageName='Response Ticket' pageTitle='Response Ticket' parentName='Dashboard'/>} />
         <Route path={AuthenticatedRoutes.createTicket} element={<DashboardScreen innerPage={<CreateTicket />}  pageName='Create Ticket' pageTitle='Create Ticket' parentName='Dashboard'/>} />
+
+        {/* plateform management */}
+        <Route path={AuthenticatedRoutes.addAndManageFaqs} element={<DashboardScreen innerPage={<AddAndManageFaqs />}  pageName='Add & Manage FAQs' pageTitle='Add & Manage FAQs' parentName='Dashboard'/>} />
+        <Route path={AuthenticatedRoutes.plateformTermAndCondition} element={<DashboardScreen innerPage={<PlateformTermAndCondition />}  pageName='Platform Terms & Conditions' pageTitle='Add & Manage Platform Terms & Conditions' parentName='Dashboard'/>} />
+
+        {/* banner management */}
+        <Route path={AuthenticatedRoutes.BannerManagementList} element={<DashboardScreen innerPage={<BannerManagementList />}  pageName='Banner Management' pageTitle='Banner Management' parentName='Dashboard'/>} />
+        <Route path={AuthenticatedRoutes.bannerSetting} element={<DashboardScreen innerPage={<BannerSetting />}  pageName='Banner Setting' pageTitle='Banner Management' parentName='Banner Management'/>} />
       </Routes>
     </>
   );

@@ -9,6 +9,8 @@ import { MdSupportAgent } from "react-icons/md";
 import { MdOutlineManageAccounts } from "react-icons/md";
 import { MdManageHistory } from "react-icons/md";
 import { RiFeedbackLine } from "react-icons/ri";
+import { TbPhotoCog } from "react-icons/tb";
+
 
 export const sideMenuListManage = [
   {
@@ -72,12 +74,37 @@ export const sideMenuListManage = [
   {
     title: " Profile Management",
     icon: <MdOutlineManageAccounts />,
-    option: [{ name: "option1" }],
+    option: [
+      
+    ],
   },
   {
     title: " Platform Management",
     icon: <MdManageHistory />,
-    option: [{ name: "option1" }],
+    option: [
+      {
+        name: "Add & Manage FAQs",
+        route: AuthenticatedRoutes.addAndManageFaqs,
+      },
+      {
+        name: "Platform Terms & Conditions",
+        route: AuthenticatedRoutes.plateformTermAndCondition,
+      },
+    ],
+  },
+  {
+    title: "Banner Management",
+    icon: <TbPhotoCog />,
+    option: [
+      {
+        name: "Banner Management List",
+        route: AuthenticatedRoutes.BannerManagementList,
+      },
+      {
+        name: "Banner Setting",
+        route: AuthenticatedRoutes.bannerSetting,
+      },
+    ],
   },
   {
     title: " Support and Feedback",

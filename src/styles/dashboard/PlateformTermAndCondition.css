@@ -1,0 +1,98 @@
+.PlateformTermAndCondition .heading {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #555555;
+}
+.PlateformTermAndCondition .current_active,
+.PlateformTermAndCondition .add_new_terms ,
+.PlateformTermAndCondition .all_preview {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.PlateformTermAndCondition .current_active .lists {
+  width: 100%;
+  padding: 1.6rem;
+  border: 1px solid #eff0f2;
+}
+.PlateformTermAndCondition .current_active .lists ol {
+  list-style: number;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+}
+.PlateformTermAndCondition .current_active .lists ol li {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #454751;
+  padding-left: 2rem;
+}
+.PlateformTermAndCondition .current_active .lists ol .list {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.PlateformTermAndCondition .current_active .lists ol .list span {
+  color: var(--dark-red);
+  font-size: 1.6rem;
+}
+
+.PlateformTermAndCondition .add_new_terms .lists {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  padding: 1.6rem;
+  border: 1px solid #eff0f2;
+}
+.PlateformTermAndCondition .add_new_terms .lists .list {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.PlateformTermAndCondition
+  .add_new_terms
+  .lists
+  .list
+  .inputFieldBox
+  .inputLabel {
+  display: none;
+}
+.PlateformTermAndCondition
+  .add_new_terms
+  .lists
+  .list
+  .inputFieldBox {
+  width: 100%;
+}
+
+
+.PlateformTermAndCondition .all_preview .list_box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+.PlateformTermAndCondition .all_preview .list_box ol{
+    width: 100%;
+  padding: 1.6rem;
+  border: 1px solid #eff0f2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: number;
+  padding-left: 3rem;
+
+  }
+.PlateformTermAndCondition .all_preview .list_box ol li{
+    font-size: 1.3rem;
+  font-weight: 400;
+  color: #454751;
+  padding-left: 1.2rem;
+  }

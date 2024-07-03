@@ -1,0 +1,132 @@
+.BannerSetting .activeBanner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.BannerSetting .activeBanner .inner {
+  width: 100%;
+  display: flex;
+}
+.BannerSetting .activeBanner .inner .image {
+  width: 75%;
+}
+.BannerSetting .activeBanner .inner .details {
+  width: 25%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.BannerSetting .activeBanner .inner .details .details_inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.BannerSetting .activeBanner .inner .details .details_inner .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.BannerSetting .activeBanner .inner .details .details_inner .content .list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.BannerSetting
+  .activeBanner
+  .inner
+  .details
+  .details_inner
+  .content
+  .list
+  span {
+  width: 48%;
+}
+.BannerSetting
+  .activeBanner
+  .inner
+  .details
+  .details_inner
+  .content
+  .list
+  .key {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  font-weight: 400;
+}
+.BannerSetting
+  .activeBanner
+  .inner
+  .details
+  .details_inner
+  .content
+  .list
+  .value {
+  color: var(--primary-black);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.BannerSetting .activeBanner .inner .details .details_inner .btns {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 1.4rem;
+}
+.BannerSetting
+  .activeBanner
+  .inner
+  .details
+  .details_inner
+  .btns
+  .ButtonMain:first-child {
+  width: 100%;
+}
+.BannerSetting .activeBanner .inner .details .details_inner .btns .ButtonMain {
+  font-size: 1rem;
+  padding: 0.8rem 2.1rem;
+  border-radius: 0.8rem;
+}
+.BannerSetting
+  .activeBanner
+  .inner
+  .details
+  .details_inner
+  .btns
+  .ButtonMain.green {
+  background-color: var(--success-green);
+}
+
+/* bannerTemplate */
+.BannerSetting .bannerTemplate {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.BannerSetting .bannerTemplate .template_list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 2.2rem;
+}
+.BannerSetting .bannerTemplate .template_list .template_card{
+  min-width: 48.6%;
+  width: 48.6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+.BannerSetting .bannerTemplate .template_list .template_card .image{
+  border: .4rem solid var(--primary-black);
+}
+.BannerSetting .bannerTemplate .template_list .template_card .name{
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--primary-black);
+}

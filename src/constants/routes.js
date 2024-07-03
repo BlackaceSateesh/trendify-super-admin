@@ -18,4 +18,8 @@ export const AuthenticatedRoutes ={
     customerEnquiry: '/customerEnquiry',
     responseTicket: '/responseTicket',
     createTicket: '/createTicket',
+    addAndManageFaqs: '/addAndManageFaqs',
+    plateformTermAndCondition: '/plateformTermAndCondition',
+    BannerManagementList: '/BannerManagementList',
+    bannerSetting: '/bannerSetting',
 }
