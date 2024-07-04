@@ -1,0 +1,145 @@
+.LoginPage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.LoginPage_inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.LoginPage_inner .left {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.LoginPage_inner .left .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.6rem;
+  width: 90%;
+}
+.LoginPage_inner .left .content .title {
+  font-size: 4rem;
+  color: var(--white);
+  text-align: center;
+  font-weight: 400;
+}
+.LoginPage_inner .left .content .para {
+  font-size: 2.8rem;
+  color: var(--white);
+  text-align: center;
+  opacity: 0.8;
+  font-weight: 400;
+}
+.LoginPage_inner .right {
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+}
+.LoginPage_inner .right .LoginForm {
+  width: 85%;
+  padding: 5rem 6rem;
+  border-radius: 2rem;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.LoginPage_inner .right .LoginForm .name {
+  font-size: 3.6rem;
+}
+.LoginPage_inner .right .LoginForm .input_inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.LoginPage_inner .right .LoginForm .input_inner .inputBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.LoginPage_inner .right .LoginForm .input_inner .inputBox .top {
+  width: 100%;
+  display: flex;
+  gap: 0.6rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.LoginPage_inner
+  .right
+  .LoginForm
+  .input_inner
+  .inputBox
+  .top
+  .loginInputLabel {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #666666;
+}
+.LoginPage_inner .right .LoginForm .input_inner .inputBox .top button {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #666666d3;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.3s ease;
+}
+.LoginPage_inner .right .LoginForm .input_inner .inputBox input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.3rem;
+  color: #666666;
+  border: 1px solid #66666651;
+  border-radius: 1rem;
+}
+
+.LoginPage_inner .right .LoginForm .input_inner .inputBox .passMsg {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #666666;
+}
+
+.LoginPage_inner .right .LoginForm .input_inner .remember {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.2rem;
+  color: var(--primary-black);
+  font-weight: 400;
+}
+.LoginPage_inner .right .LoginForm .btm {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.LoginPage_inner .right .LoginForm .btm .loginBtn {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--white);
+  border-radius: 10rem;
+  padding: 1.2rem 4rem;
+  background-color: rgba(17, 17, 17, 0.227);
+}
+.LoginPage_inner .right .LoginForm .btm .loginBtn:hover {
+  background-color:rgb(116, 116, 116);
+  transition: all .5s ease;
+}
+.LoginPage_inner .right .LoginForm .btm p {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.LoginPage_inner .right .LoginForm .btm p a{
+  font-weight: 500;
+color: var(--secondary-yellow);
+text-decoration: underline;
+}

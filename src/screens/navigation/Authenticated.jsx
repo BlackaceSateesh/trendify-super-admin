@@ -28,6 +28,7 @@ import RaiderLists from "../raiderManagement/RaiderLists";
 import RaiderDetails from "../raiderManagement/RaiderDetails";
 import AllOrderProductList from "../orderManagement/AllOrderProductList";
 import OrderDetails from "../orderManagement/OrderDetails";
+import ManageCommissionRate from "../plateformManagement/ManageCommissionRate";
 
 const Authenticated = () => {
   return (
@@ -54,6 +55,7 @@ const Authenticated = () => {
         {/* plateform management */}
         <Route path={AuthenticatedRoutes.addAndManageFaqs} element={<DashboardScreen innerPage={<AddAndManageFaqs />}  pageName='Add & Manage FAQs' pageTitle='Add & Manage FAQs' parentName='Dashboard'/>} />
         <Route path={AuthenticatedRoutes.plateformTermAndCondition} element={<DashboardScreen innerPage={<PlateformTermAndCondition />}  pageName='Platform Terms & Conditions' pageTitle='Add & Manage Platform Terms & Conditions' parentName='Dashboard'/>} />
+        <Route path={AuthenticatedRoutes.manageCommissionRate} element={<DashboardScreen innerPage={<ManageCommissionRate />}  pageName='Manage Commission Rate & Platform Charges' pageTitle='Platform Management' parentName='Dashboard'/>} />
 
         {/* banner management */}
         <Route path={AuthenticatedRoutes.BannerManagementList} element={<DashboardScreen innerPage={<BannerManagementList />}  pageName='Banner Management' pageTitle='Banner Management' parentName='Dashboard'/>} />

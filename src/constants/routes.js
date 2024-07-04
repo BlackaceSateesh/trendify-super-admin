@@ -1,6 +1,6 @@
 export const AuthRoutes ={
     register: '/register',
-    login: '/login',
+    login: '/',
 }
 export const AuthenticatedRoutes ={
     dashboard: '/',
@@ -18,6 +18,7 @@ export const AuthenticatedRoutes ={
     customerEnquiry: '/customerEnquiry',
     responseTicket: '/responseTicket',
     createTicket: '/createTicket',
+
     
     addAndManageFaqs: '/addAndManageFaqs',
     plateformTermAndCondition: '/plateformTermAndCondition',
@@ -30,4 +31,5 @@ export const AuthenticatedRoutes ={
     raiderDetails: '/raiderDetails',
     allOrderProductList: '/allOrderProductList',
     orderDetails: '/orderDetails',
+    manageCommissionRate: '/manageCommissionRate',
 }

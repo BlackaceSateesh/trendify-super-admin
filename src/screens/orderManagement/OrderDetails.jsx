@@ -82,7 +82,7 @@ const OrderDetails = () => {
               </li>
               <li class="">
                 Out For Delivery
-                <p>Tus, 11th Jan</p>
+                <p>Thu, 11th Jan</p>
               </li>
               <li>
                 Delivered

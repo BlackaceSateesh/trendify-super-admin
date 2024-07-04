@@ -72,16 +72,16 @@ export const sideMenuListManage = [
     ],
   },
   
-  {
-    title: " Analytics and Reports",
-    icon: <AiOutlineLineChart />,
-    option: [{ name: "option1" }],
-  },
-  {
-    title: " Communication",
-    icon: <MdSupportAgent />,
-    option: [{ name: "option1" }],
-  },
+  // {
+  //   title: " Analytics and Reports",
+  //   icon: <AiOutlineLineChart />,
+  //   option: [{ name: "option1" }],
+  // },
+  // {
+  //   title: " Communication",
+  //   icon: <MdSupportAgent />,
+  //   option: [{ name: "option1" }],
+  // },
   {
     title: " Profile Management",
     icon: <MdOutlineManageAccounts />,
@@ -100,6 +100,10 @@ export const sideMenuListManage = [
       {
         name: "Platform Terms & Conditions",
         route: AuthenticatedRoutes.plateformTermAndCondition,
+      },
+      {
+        name: "Manage Commission Rate & Platform Charges",
+        route: AuthenticatedRoutes.manageCommissionRate,
       },
     ],
   },
