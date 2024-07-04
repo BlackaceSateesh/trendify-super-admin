@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ButtonWithIcon = ({name, icon}) => {
+const ButtonWithIcon = ({name, icon ,btnColor}) => {
   return (
     <>
-      <button className='ButtonWithIcon'>{icon} {name}</button>
+      <button className={`ButtonWithIcon ${btnColor? btnColor : ''}`}>{icon} {name}</button>
     </>
   )
 }

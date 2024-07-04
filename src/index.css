@@ -103,6 +103,30 @@ ol {
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000;
 }
+
+
+/* ======== progress bar bg color =================== */
+.bg-tSuccess{
+  background-color: var(--Sucess-green) !important;
+}
+.bg-tBlue{
+  background-color: #1E3D73 !important;
+}
+.bg-tYellow{
+  background-color: #FFBF43 !important;
+}
+.bg-tLightGreen{
+  background-color: #65F9B3 !important;
+}
+.bg-tPink{
+  background-color: #FE517E !important;
+}
+.bg-tPurple{
+  background-color: #9267FF !important;
+}
+
+
+
 .pageHeading {
   font-size: 2.6rem;
   color: var(--font-sec);

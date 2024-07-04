@@ -32,4 +32,8 @@ export const AuthenticatedRoutes ={
     allOrderProductList: '/allOrderProductList',
     orderDetails: '/orderDetails',
     manageCommissionRate: '/manageCommissionRate',
+
+    userProfile: '/userProfile',
+    allFaqs: '/allFaqs',
+    applicationFeedback: '/applicationFeedback',
 }

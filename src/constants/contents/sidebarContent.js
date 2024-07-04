@@ -86,7 +86,10 @@ export const sideMenuListManage = [
     title: " Profile Management",
     icon: <MdOutlineManageAccounts />,
     option: [
-      
+      {
+        name: "User Profile",
+        route: AuthenticatedRoutes.userProfile,
+      },
     ],
   },
   {
@@ -159,6 +162,14 @@ export const sideMenuListManage = [
       {
         name: "Create Ticket",
         route: AuthenticatedRoutes.createTicket,
+      },
+      {
+        name: "View and manage FAQs",
+        route: AuthenticatedRoutes.allFaqs,
+      },
+      {
+        name: "Application Feedback",
+        route: AuthenticatedRoutes.applicationFeedback,
       },
     ],
   },

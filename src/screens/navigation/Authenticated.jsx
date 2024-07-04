@@ -29,6 +29,9 @@ import RaiderDetails from "../raiderManagement/RaiderDetails";
 import AllOrderProductList from "../orderManagement/AllOrderProductList";
 import OrderDetails from "../orderManagement/OrderDetails";
 import ManageCommissionRate from "../plateformManagement/ManageCommissionRate";
+import UserProfile from "../profileManagement/UserProfile";
+import AllFaqs from "../customerSupport/AllFaqs";
+import ApplicationFeedback from "../customerSupport/ApplicationFeedback";
 
 const Authenticated = () => {
   return (
@@ -52,6 +55,9 @@ const Authenticated = () => {
         <Route path={AuthenticatedRoutes.responseTicket} element={<DashboardScreen innerPage={<ResponseTicket />}  pageName='Response Ticket' pageTitle='Response Ticket' parentName='Dashboard'/>} />
         <Route path={AuthenticatedRoutes.createTicket} element={<DashboardScreen innerPage={<CreateTicket />}  pageName='Create Ticket' pageTitle='Create Ticket' parentName='Dashboard'/>} />
 
+        <Route path={AuthenticatedRoutes.allFaqs} element={<DashboardScreen innerPage={<AllFaqs />}  pageName='Create TicketView and manage FAQs' pageTitle='Support and Feedback' parentName='Dashboard'/>} />
+        <Route path={AuthenticatedRoutes.applicationFeedback} element={<DashboardScreen innerPage={<ApplicationFeedback />}  pageName='Application Feedback' pageTitle='Support and Feedback' parentName='Dashboard'/>} />
+
         {/* plateform management */}
         <Route path={AuthenticatedRoutes.addAndManageFaqs} element={<DashboardScreen innerPage={<AddAndManageFaqs />}  pageName='Add & Manage FAQs' pageTitle='Add & Manage FAQs' parentName='Dashboard'/>} />
         <Route path={AuthenticatedRoutes.plateformTermAndCondition} element={<DashboardScreen innerPage={<PlateformTermAndCondition />}  pageName='Platform Terms & Conditions' pageTitle='Add & Manage Platform Terms & Conditions' parentName='Dashboard'/>} />
@@ -71,6 +77,10 @@ const Authenticated = () => {
         {/* order management */}
         <Route path={AuthenticatedRoutes.allOrderProductList} element={<DashboardScreen innerPage={<AllOrderProductList />}  pageName='All Order Products' pageTitle='Order Management' parentName='Dashboard'/>} />
         <Route path={AuthenticatedRoutes.orderDetails} element={<DashboardScreen innerPage={<OrderDetails />}  pageName=' Order Details' pageTitle='Order Management' parentName='Dashboard'/>} />
+
+        {/* profile management */}
+        <Route path={AuthenticatedRoutes.userProfile} element={<DashboardScreen innerPage={<UserProfile />}  pageName=' User Profile' pageTitle='User Profile' parentName='Dashboard'/>} />
+
 
       </Routes>
     </>

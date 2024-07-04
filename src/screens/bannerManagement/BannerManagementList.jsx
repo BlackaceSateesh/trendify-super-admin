@@ -25,7 +25,7 @@ const BannerManagementList = () => {
             data={mobileBannerList.data}
             selectableRows
             // pagination
-            className="bannerManagementTable"
+            className="bannerManagementTable dataTable_main"
           />
         </div>
       </div>

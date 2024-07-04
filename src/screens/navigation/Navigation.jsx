@@ -7,7 +7,7 @@ const Navigation = () => {
   return (
     <>
       <BrowserRouter>
-        {true ? <Auth/> : <Authenticated />}
+        {false ? <Auth/> : <Authenticated />}
       </BrowserRouter>
     </>
   );

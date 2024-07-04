@@ -1,0 +1,316 @@
+.ApplicationFeedback .headTitle {
+  font-size: 2.5rem;
+  color: var(--primary-black);
+  font-weight: 400;
+  padding-bottom: 1.6rem;
+  border-bottom: 0.8px solid #f3f3fe;
+}
+.ApplicationFeedback .valuesBoxes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding-top: 1.6rem;
+  padding-bottom: 3.2rem;
+  border-bottom: 0.8px solid #f3f3fe;
+}
+.ApplicationFeedback .valuesBoxes:last-child{
+    border-bottom: none;
+}
+
+.ApplicationFeedback .col_2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.ApplicationFeedback .fieldLabel {
+  font-size: 1.3rem;
+  color: var(--primary-black);
+}
+.ApplicationFeedback .fieldLabel .redAsterisk {
+  color: var(--dark-red);
+  margin-left: 0.4rem;
+  font-size: 1.4rem;
+}
+.ApplicationFeedback .valuesBoxes .details {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+  row-gap: 1.6rem;
+}
+.ApplicationFeedback .valuesBoxes .details .fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+.ApplicationFeedback .valuesBoxes .details .fields.both {
+  width: 49%;
+}
+.ApplicationFeedback .valuesBoxes .details .fields.single {
+  width: 24.5%;
+}
+
+.ApplicationFeedback .valuesBoxes .fieldBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.ApplicationFeedback .valuesBoxes .fieldBox input {
+  font-size: 1.2rem;
+  color: #2c3345;
+  border: 1px solid #b8bdc9;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0.4rem;
+}
+.ApplicationFeedback .valuesBoxes .fieldBox .hint {
+  font-size: 1rem;
+  color: #2c3345;
+  font-weight: 400;
+}
+.ApplicationFeedback .valuesBoxes .col_2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.ApplicationFeedback
+  .valuesBoxes
+  .details
+  .fields
+  .col_2.phone
+  .fieldBox:first-child {
+  width: 30%;
+}
+.ApplicationFeedback
+  .valuesBoxes
+  .details
+  .fields
+  .col_2.phone
+  .fieldBox:first-child
+  input {
+  text-align: center;
+}
+.ApplicationFeedback
+  .valuesBoxes
+  .details
+  .fields
+  .col_2.phone
+  .fieldBox:last-child {
+  width: 68%;
+}
+.ApplicationFeedback .valuesBoxes .details .fields .col_2 .fieldBox {
+  width: 49%;
+}
+
+/* === overall==== */
+
+.ApplicationFeedback .valuesBoxes .selectOption {
+  width: 24%;
+}
+.ApplicationFeedback .valuesBoxes .valuesBoxes_select {
+  font-size: 1.2rem;
+  color: #2c3345;
+  border: 1px solid #b8bdc9;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0.4rem;
+}
+.ApplicationFeedback .valuesBoxes .number_value {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.ApplicationFeedback .col_2 .left,
+.ApplicationFeedback .col_2 .right {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.number_value_circle {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.number_value_circle .circle_card {
+  max-width: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+.number_value_circle .circle_card .circle {
+  min-width: 3.6rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #b8bdc9;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--primary-black);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.number_value_circle .circle_card .circle:hover {
+  color: var(--white);
+}
+.number_value_circle .circle_card:nth-child(1) .circle:hover {
+  background-color: #ff0d00;
+}
+.number_value_circle .circle_card:nth-child(2) .circle:hover {
+  background-color: #ff5900f1;
+}
+.number_value_circle .circle_card:nth-child(3) .circle:hover {
+  background-color: #ff5e00d0;
+}
+.number_value_circle .circle_card:nth-child(4) .circle:hover {
+  background-color: #fc6500ec;
+}
+.number_value_circle .circle_card:nth-child(5) .circle:hover {
+  background-color: #ffbf43;
+}
+.number_value_circle .circle_card:nth-child(6) .circle:hover {
+  background-color: #c9ba32f4;
+}
+.number_value_circle .circle_card:nth-child(7) .circle:hover {
+  background-color: #99c932dd;
+}
+.number_value_circle .circle_card:nth-child(8) .circle:hover {
+  background-color: #32c955a8;
+}
+.number_value_circle .circle_card:nth-child(9) .circle:hover {
+  background-color: #32c98dda;
+}
+.number_value_circle .circle_card:nth-child(10) .circle:hover {
+  background-color: #00a463;
+}
+
+.number_value_circle .circle_card p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--primary-black);
+}
+
+.radioOptions .radioOptions_box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.ApplicationFeedback .valuesBoxes .number_value .textareaInput {
+  margin-top: 1.6rem;
+}
+.ApplicationFeedback .valuesBoxes .number_value .textareaInput textarea {
+  min-height: 10rem;
+}
+.ApplicationFeedback .subInstruction {
+ font-size: 1.2rem;
+ font-weight: 400;
+}
+
+/* FeedbackTableCard */
+
+.FeedbackTableCard {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.FeedbackTableCard .innerTable {
+  width: 100%;
+}
+
+.FeedbackTableCard .innerTable table thead th,
+.FeedbackTableCard .innerTable table tbody td {
+  border: 1px solid #b8bdc9;
+  border-collapse: separate;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+}
+.FeedbackTableCard .innerTable table thead th {
+  color: var(--white);
+  font-weight: 400;
+}
+.FeedbackTableCard .innerTable table thead th.black {
+  min-width: 16rem;
+  width: 16rem;
+  border: none;
+}
+.FeedbackTableCard .innerTable table thead th.notAll {
+  background-color: #e46962;
+}
+.FeedbackTableCard .innerTable table thead th.notReally {
+  background-color: #e46962d3;
+}
+.FeedbackTableCard .innerTable table thead th.someWhat {
+  background-color: #ffbf43;
+}
+.FeedbackTableCard .innerTable table thead th.mostly {
+  background-color: #32c98dba;
+}
+.FeedbackTableCard .innerTable table thead th.defenitely {
+  background-color: #32c98d;
+}
+.FeedbackTableCard .innerTable table tbody td.name {
+  background-color: #c3cad8;
+}
+.FeedbackTableCard .innerTable table tbody td.radioBox {
+  position: relative;
+}
+.FeedbackTableCard .innerTable table tbody td.radioBox input[type='radio'] {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* remove table corner border and radius */
+
+.FeedbackTableCard .innerTable table thead th.notAll,
+.FeedbackTableCard .innerTable table tbody tr:first-child td.name {
+    border-top-left-radius: .6rem;
+    border-left: none;
+    border-top: none;
+  }
+.FeedbackTableCard .innerTable table tbody td.name {
+    border-left: none;
+    border-top: none;
+  }
+  .FeedbackTableCard .innerTable table tbody tr:last-child td.name {
+    border-bottom-left-radius: .6rem;
+    border-bottom: none;
+  }
+  .FeedbackTableCard .innerTable table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: .6rem;
+  }
+  .FeedbackTableCard .innerTable table thead th.defenitely{
+    border-top-right-radius: .6rem;
+    border-right: none;
+    border-top: none;
+  }
+  .feedbackTable{
+    margin-top: 1.6rem;
+  }
+  .feedbackTable .col_2{
+    flex-wrap: wrap;
+    row-gap: 2.6rem;
+  }
+
+  .application .fields{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
