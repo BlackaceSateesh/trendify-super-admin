@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import DashboardInnerTitle from "../../components/dashboard/DashboardInnerTitle";
 import TextInput from "../../components/ui/TextInput";
 import TextareaInput from "../../components/ui/TextareaInput";
 import "../../styles/dashboard/PendingApprovalProduct.css";
 import CheckboxWithoutLable from "../../components/ui/CheckboxWithoutLable";
 import ButtonMain from "../../components/ui/ButtonMain";
+import WarningPopup from "../../components/ui/popups/WarningPopup";
+import PendingPopup from "../../components/ui/popups/PendingPopup";
+import ApprovePopup from "../../components/ui/popups/ApprovePopup";
+import ModifyPopup from "../../components/ui/popups/ModifyPopup";
 const PendingApprovalProduct = () => {
   // dummy data product details
 
@@ -42,6 +46,12 @@ const PendingApprovalProduct = () => {
       name: "Benefit Image",
     },
   ];
+
+  // show popup 
+  const [showWarning, setShowWarning] = useState(false);
+  const [showApprove, setShowApprove] = useState(false);
+  const [showModify, setShowModify] = useState(false);
+  const [showPending, setShowPending] = useState(false);
 
   return (
     <>
@@ -265,11 +275,33 @@ const PendingApprovalProduct = () => {
         </div>
 
         <div className="centerBtns">
-          <ButtonMain name='Reject Seller' />
-          <ButtonMain name='Make as Pending' />
-          <ButtonMain name='Requires to Modify Product Details' />
-          <ButtonMain btnColor='green' name='Approve Product' />
+          <ButtonMain onClick={()=> setShowWarning(true)} name='Reject Seller' />
+          <ButtonMain onClick={()=> setShowPending(true)} name='Make as Pending' />
+          <ButtonMain onClick={()=> setShowModify(true)} name='Requires to Modify Product Details' />
+          <ButtonMain onClick={()=> setShowApprove(true)} btnColor='green' name='Approve Product' />
         </div>
+
+        {/* popup here */}
+        {/* warning */}
+        <WarningPopup
+        show={showWarning}
+        onHide={() => setShowWarning(false)}
+         />
+        {/* pending */}
+        <PendingPopup
+        show={showPending}
+        onHide={() => setShowPending(false)}
+         />
+        {/* approve */}
+        <ApprovePopup
+        show={showApprove}
+        onHide={() => setShowApprove(false)}
+         />
+        {/* modify */}
+        <ModifyPopup
+        show={showModify}
+        onHide={() => setShowModify(false)}
+         />
 
 
       </div>

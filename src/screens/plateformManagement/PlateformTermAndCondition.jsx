@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import DashboardInnerTitle from "../../components/dashboard/DashboardInnerTitle";
 import { MdOutlineDelete } from "react-icons/md";
 import ButtonMain from "../../components/ui/ButtonMain";
 import TextInput from "../../components/ui/TextInput";
 import "../../styles/dashboard/PlateformTermAndCondition.css";
+import PreviewPolicy from "../../components/ui/popups/PreviewPolicy";
 
 const PlateformTermAndCondition = () => {
+  const [showPreview, setShowPreview] = useState(false);
+
   return (
     <>
       <div className="PlateformTermAndCondition sectionGap">
@@ -87,9 +90,17 @@ const PlateformTermAndCondition = () => {
           <div className="centerBtns">
             <ButtonMain btnColor="red" name="Delete" />
             <ButtonMain name="Reset" />
-            <ButtonMain name="Preview Policies" />
+            <ButtonMain
+              onClick={() => setShowPreview(true)}
+              name="Preview Policies"
+            />
             <ButtonMain btnColor="green" name="Save Policies" />
           </div>
+          {/* preview popup */}
+          <PreviewPolicy
+            show={showPreview}
+            onHide={() => setShowPreview(false)}
+          />
         </div>
 
         {/* all previews */}
@@ -104,31 +115,31 @@ const PlateformTermAndCondition = () => {
                 ratione voluptas aperiam nam! Hic deleniti velit non dolorum
                 corporis.
               </li>
-                <li>
+              <li>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
                 non sit animi autem eum assumenda soluta corrupti est ea odit
                 ratione voluptas aperiam nam! Hic deleniti velit non dolorum
                 corporis.
               </li>
-                <li>
+              <li>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
                 non sit animi autem eum assumenda soluta corrupti est ea odit
                 ratione voluptas aperiam nam! Hic deleniti velit non dolorum
                 corporis.
               </li>
-                <li>
+              <li>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
                 non sit animi autem eum assumenda soluta corrupti est ea odit
                 ratione voluptas aperiam nam! Hic deleniti velit non dolorum
                 corporis.
               </li>
-                <li>
+              <li>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
                 non sit animi autem eum assumenda soluta corrupti est ea odit
                 ratione voluptas aperiam nam! Hic deleniti velit non dolorum
                 corporis.
               </li>
-                <li>
+              <li>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
                 non sit animi autem eum assumenda soluta corrupti est ea odit
                 ratione voluptas aperiam nam! Hic deleniti velit non dolorum
@@ -139,37 +150,37 @@ const PlateformTermAndCondition = () => {
           <div className="list_box">
             <p className="heading">12-04-2023 Terms & Conditions</p>
             <ol>
-                <li>
+              <li>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
                 non sit animi autem eum assumenda soluta corrupti est ea odit
                 ratione voluptas aperiam nam! Hic deleniti velit non dolorum
                 corporis.
               </li>
-                <li>
+              <li>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
                 non sit animi autem eum assumenda soluta corrupti est ea odit
                 ratione voluptas aperiam nam! Hic deleniti velit non dolorum
                 corporis.
               </li>
-                <li>
+              <li>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
                 non sit animi autem eum assumenda soluta corrupti est ea odit
                 ratione voluptas aperiam nam! Hic deleniti velit non dolorum
                 corporis.
               </li>
-                <li>
+              <li>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
                 non sit animi autem eum assumenda soluta corrupti est ea odit
                 ratione voluptas aperiam nam! Hic deleniti velit non dolorum
                 corporis.
               </li>
-                <li>
+              <li>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
                 non sit animi autem eum assumenda soluta corrupti est ea odit
                 ratione voluptas aperiam nam! Hic deleniti velit non dolorum
                 corporis.
               </li>
-                <li>
+              <li>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
                 non sit animi autem eum assumenda soluta corrupti est ea odit
                 ratione voluptas aperiam nam! Hic deleniti velit non dolorum

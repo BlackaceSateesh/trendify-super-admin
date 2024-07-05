@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ButtonMain = ({ name, btnColor, link }) => {
+const ButtonMain = ({ name, btnColor, link ,onClick }) => {
   return (
     <>
       {link ? (
@@ -11,7 +11,7 @@ const ButtonMain = ({ name, btnColor, link }) => {
           </button>
         </Link>
       ) : (
-          <button className={`ButtonMain ${btnColor ? btnColor : ""}`}>
+          <button onClick={onClick} className={`ButtonMain ${btnColor ? btnColor : ""}`}>
             {name}
           </button>
       )}

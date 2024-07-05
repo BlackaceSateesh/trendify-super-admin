@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import DashboardInnerTitle from "../../components/dashboard/DashboardInnerTitle";
 import TextInput from "../../components/ui/TextInput";
 import TextInputWithEye from "../../components/ui/TextInputWithEye";
 import SelectInput from "../../components/ui/SelectInput";
 import DatePickerInput from "../../components/ui/DatePickerInput";
 import CheckboxWithoutLable from "../../components/ui/CheckboxWithoutLable";
-import '../../styles/dashboard/SellerVerificationDetailPage.css'
+import "../../styles/dashboard/SellerVerificationDetailPage.css";
 import ButtonMain from "../../components/ui/ButtonMain";
+import ViewImagePopup from "../../components/ui/popups/ViewImagePopup";
+import ProfileRejectionPopup from "../../components/ui/popups/ProfileRejectionPopup";
 
 const SellerVerificationDetailPage = () => {
+  // view image
+  const [viewImagePopup, setViewImagePopup] = useState(false);
+  const [rejectPopup, setRejectPopup] = useState(false);
+
   return (
     <>
       <div className="SellerVerificationDetailPage sectionGap">
@@ -220,15 +226,38 @@ const SellerVerificationDetailPage = () => {
 
             <span className="agree">
               <CheckboxWithoutLable idName="agree" />
-              <label className="inputLabel" htmlFor="">I Agree</label>
+              <label className="inputLabel" htmlFor="">
+                I Agree
+              </label>
             </span>
           </div>
         </div>
 
         <div className="centerBtns">
-          <ButtonMain name='Reject Seller' />
-          <ButtonMain btnColor='green' name='Confirm Seller' />
+          <ButtonMain
+            name="Reject Seller"
+            onClick={() => setRejectPopup(true)}
+          />
+          <ButtonMain
+            onClick={() => setViewImagePopup(true)}
+            btnColor="green"
+            name="Confirm Seller"
+          />
         </div>
+
+        {/* popup call */}
+        {/* view image */}
+        <ViewImagePopup
+          show={viewImagePopup}
+          onHide={() => setViewImagePopup(false)}
+          className="viewImagePopup"
+          heading="Aadhar Card"
+        />
+        {/* reject */}
+        <ProfileRejectionPopup
+          show={rejectPopup}
+          onHide={() => setRejectPopup(false)}
+        />
       </div>
     </>
   );

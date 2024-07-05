@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import DashboardInnerTitle from "../../components/dashboard/DashboardInnerTitle";
 import ButtonMain from "../../components/ui/ButtonMain";
-import '../../styles/dashboard/BannerSetting.css';
+import "../../styles/dashboard/BannerSetting.css";
 import { AuthenticatedRoutes } from "../../constants/routes";
+import SelectBannerPopup from "../../components/ui/popups/SelectBannerPopup";
 const BannerSetting = () => {
+  const [showTemplate, setShowTemplate] = useState(false);
   // dummy template banner list
 
   const templateBannerList = [
@@ -70,10 +72,22 @@ const BannerSetting = () => {
                     </div>
                   </div>
                   <div className="btns">
-                    <ButtonMain name="Change Banner Template" />
-                    <ButtonMain link={AuthenticatedRoutes.bannerSettingEdit} btnColor="green" name="Edit Banner" />
+                    <ButtonMain
+                      onClick={() => setShowTemplate(true)}
+                      name="Change Banner Template"
+                    />
+                    <ButtonMain
+                      link={AuthenticatedRoutes.bannerSettingEdit}
+                      btnColor="green"
+                      name="Edit Banner"
+                    />
                     <ButtonMain name="Pause Banner" />
                   </div>
+                  {/* preview popup */}
+                  <SelectBannerPopup
+                    show={showTemplate}
+                    onHide={() => setShowTemplate(false)}
+                  />
                 </div>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import DashboardInnerTitle from "../../components/dashboard/DashboardInnerTitle";
 import TextInput from "../../components/ui/TextInput";
 import { IoEyeOutline } from "react-icons/io5";
@@ -6,8 +6,11 @@ import { FaPlus } from "react-icons/fa6";
 import "../../styles/dashboard/AddNewCategory.css";
 import ButtonMain from "../../components/ui/ButtonMain";
 import { MdDeleteOutline } from "react-icons/md";
+import AddProductPopup from "../../components/ui/popups/AddProductPopup";
 
 const AddNewCategory = () => {
+  const [showAddProduct, setShowAddProduct] = useState(false);
+
   return (
     <>
       <div className="AddNewCategory sectionGap">
@@ -76,24 +79,33 @@ const AddNewCategory = () => {
         <div className="sectionContainer">
           <DashboardInnerTitle name="Already Created Category List " />
 
-{/* electronics */}
+          {/* electronics */}
           <div className="innerBox_shadow">
             <div className="head">
               <h5 className="heading">
                 Product Category - <span>Electronics</span>
               </h5>
               <div className="sideBtns">
-                <button className="categoryBtns">Add More Type</button>
+                <button
+                  onClick={() => setShowAddProduct(true)}
+                  className="categoryBtns"
+                >
+                  Add More Type
+                </button>
                 <button className="categoryBtns">Add More Brand</button>
                 <button className="categoryBtns blue">Add More Product</button>
                 <button className="categoryBtns delete">
                   <MdDeleteOutline /> Delete
                 </button>
               </div>
+              {/* preview popup */}
+              <AddProductPopup
+                show={showAddProduct}
+                onHide={() => setShowAddProduct(false)}
+              />
             </div>
 
             <div className="category_table">
-
               <table>
                 <thead>
                   <tr>
@@ -156,7 +168,7 @@ const AddNewCategory = () => {
             </div>
           </div>
 
-{/* Fashion */}
+          {/* Fashion */}
           <div className="innerBox_shadow">
             <div className="head">
               <h5 className="heading">
@@ -173,7 +185,6 @@ const AddNewCategory = () => {
             </div>
 
             <div className="category_table">
-
               <table>
                 <thead>
                   <tr>

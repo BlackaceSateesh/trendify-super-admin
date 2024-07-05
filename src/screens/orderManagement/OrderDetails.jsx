@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import DashboardInnerTitle from "../../components/dashboard/DashboardInnerTitle";
 import SelectInput from "../../components/ui/SelectInput";
 import TextInput from "../../components/ui/TextInput";
 import TextareaInput from "../../components/ui/TextareaInput";
 import ButtonMain from "../../components/ui/ButtonMain";
 import '../../styles/dashboard/OrderDetails.css'
+import PreviewInvoicePopup from "../../components/ui/popups/PreviewInvoicePopup";
 const OrderDetails = () => {
+  const [showPreview ,setShowPreview] = useState(false);
   return (
     <>
       <div className="OrderDetails sectionGap">
@@ -72,15 +74,15 @@ const OrderDetails = () => {
           <DashboardInnerTitle name="Update & View Delivery Status" />
           <div className="orderTrack_inner">
             <ul id="orderTrackBar">
-              <li class="active">
+              <li className="active">
                 Order Confirmed
                 <p>Wed, 11th Jan</p>
               </li>
-              <li class="active">
+              <li className="active">
                 Shipped
                 <p>Sat, 13th Jan</p>
               </li>
-              <li class="">
+              <li className="">
                 Out For Delivery
                 <p>Thu, 11th Jan</p>
               </li>
@@ -94,8 +96,13 @@ const OrderDetails = () => {
         {/* btns */}
         <div className="centerBtns">
           <ButtonMain btnColor="green" name="Contact to Seller" />
-          <ButtonMain name="Preview Invoice" />
+          <ButtonMain  onClick={() => setShowPreview(true)} name="Preview Invoice" />
         </div>
+        {/* popup preview */}
+        <PreviewInvoicePopup
+         show={showPreview}
+         onHide={() => setShowPreview(false)}
+        />
       </div>
     </>
   );

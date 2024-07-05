@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import DashboardInnerTitle from "../../components/dashboard/DashboardInnerTitle";
 import TextInput from "../../components/ui/TextInput";
 import TextareaInput from "../../components/ui/TextareaInput";
@@ -6,8 +6,11 @@ import ButtonMain from "../../components/ui/ButtonMain";
 import SelectInput from "../../components/ui/SelectInput";
 import AllFaqsCard from "../../components/ui/AllFaqsCard";
 import "../../styles/dashboard/AddAndManageFaqs.css";
+import PreviewFaq from "../../components/ui/popups/PreviewFaq";
 
 const AddAndManageFaqs = () => {
+
+  const [showPreview, setShowPreview] = useState(false);
   // dummy data
   const allFaqs = [
     {
@@ -108,10 +111,15 @@ const AddAndManageFaqs = () => {
         <div className="centerBtns">
           <ButtonMain btnColor="red" name="Delete" />
           <ButtonMain name="Reset" />
-          <ButtonMain name="Preview FAQ" />
+          <ButtonMain onClick={() => setShowPreview(true)} name="Preview FAQ" />
           <ButtonMain btnColor="green" name="Add FAQ" />
         </div>
 
+        {/* preview popup */}
+        <PreviewFaq
+          show={showPreview}
+          onHide={() => setShowPreview(false)}
+        />
         {/* faqs */}
         <div className="all_faqs">
           <DashboardInnerTitle name="All FAQ's" />
