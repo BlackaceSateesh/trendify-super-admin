@@ -90,6 +90,10 @@ export const sideMenuListManage = [
         name: "User Profile",
         route: AuthenticatedRoutes.userProfile,
       },
+      {
+        name: "Seller Profile",
+        route: AuthenticatedRoutes.sellerProfile,
+      },
     ],
   },
   {

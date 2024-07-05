@@ -247,6 +247,17 @@ input[type="radio"] {
   background: var(--dark-red);
 }
 
+.ButtonCategoryTag {
+  border-radius: 12px;
+  border: 1px solid var(--Neutral-neutral-50, #e9eaeb);
+  background: #fff;
+  color: var(--primary-black, #101616);
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: fit-content;
+  padding: 1.2rem 1.6rem;
+}
+
 /* search box table */
 
 .inner_table .SearchBoxTable {

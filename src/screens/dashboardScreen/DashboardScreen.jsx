@@ -3,6 +3,7 @@ import '../../styles/dashboard/DashboardScreen.css';
 import Sidebar from '../../components/dashboard/Sidebar';
 import Header from '../../components/dashboard/Header';
 import '../../styles/ui/uiComponents.css';
+import '../../styles/ui/AllPopup.css';
 import { MainContent } from '../../constants/contents/mainContent';
 
 const DashboardScreen = ({innerPage, pageName, pageTitle, parentName }) => {

@@ -32,6 +32,7 @@ import ManageCommissionRate from "../plateformManagement/ManageCommissionRate";
 import UserProfile from "../profileManagement/UserProfile";
 import AllFaqs from "../customerSupport/AllFaqs";
 import ApplicationFeedback from "../customerSupport/ApplicationFeedback";
+import SellerProfile from "../profileManagement/SellerProfile";
 
 const Authenticated = () => {
   return (
@@ -80,6 +81,7 @@ const Authenticated = () => {
 
         {/* profile management */}
         <Route path={AuthenticatedRoutes.userProfile} element={<DashboardScreen innerPage={<UserProfile />}  pageName=' User Profile' pageTitle='User Profile' parentName='Dashboard'/>} />
+        <Route path={AuthenticatedRoutes.sellerProfile} element={<DashboardScreen innerPage={<SellerProfile />}  pageName=' Seller Profile' pageTitle='Seller Profile' parentName='Dashboard'/>} />
 
 
       </Routes>
