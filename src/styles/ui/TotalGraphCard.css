@@ -20,3 +20,11 @@
   height: 10rem !important;
   width: 100% !important;
 }
+
+
+@media (min-width: 500px) and (max-width: 899.99px){
+  .TotalGraphCard{
+   min-width: 48.5%;
+   width: 48.5%;
+  }
+}

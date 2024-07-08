@@ -1,6 +1,7 @@
 .NotificationAndAlert_inner .cards {
   width: 100%;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 2%;
   row-gap: 2rem;
@@ -83,4 +84,11 @@
     font-weight: 500;
     color: var(--text-color);
     text-align: right;
+}
+
+
+@media (min-width:299px) and (max-width:799.99px){
+  .NotificationAlertCard{
+    width: 100%;
+  }
 }

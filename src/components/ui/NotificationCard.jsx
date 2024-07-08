@@ -4,7 +4,7 @@ import React from 'react';
 const NotificationCard = ({icon, time, text, tag, status}) => {
   return (
     <>
-      <div className={`NotificationCard ${status}`}>
+      <div className={`NotificationCard w100 ${status}`}>
         <div className="icon">{icon}</div>
         <div className="content">
             <div className="head">

@@ -3,7 +3,7 @@ import React from "react";
 const TopTotalTableCard = () => {
   return (
     <>
-      <div className="TopTotalTableCard homeCardBox">
+      <div className="TopTotalTableCard homeCardBox w100">
         <div className="head">
           <p className="homeCardHeading">
             Top Seller <span>(May)</span>

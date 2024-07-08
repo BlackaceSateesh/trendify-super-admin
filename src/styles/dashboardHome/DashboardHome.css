@@ -316,3 +316,48 @@
   font-weight: 500;
   color: var(--success-green);
 }
+
+@media (min-width: 500px) and (max-width: 1099.99px){
+  .DashboardHome .top_details{
+    flex-wrap: wrap;
+    gap: 1.6rem;
+  }
+  .TopTotalTableCard {
+    min-width: 48.5%;
+    width: 48.5%;
+  }
+  .DashboardHome .notification .notification_cards .NotificationCard{
+    min-width: 47%;
+    width: 47%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 899.99px){
+  .DashboardHome .total_graph{
+    flex-wrap: wrap;
+    row-gap: 1.6rem;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 299px) and (max-width: 499.99px){
+  .DashboardHome .total_graph,
+  .DashboardHome .top_details{
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .DashboardHome .customer_reviews .head .btns .sliderBTN{
+    min-width: 2.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1.2rem;
+  }
+  .CustomerReviewCard{
+    min-width: 100%;
+    width: 100%;
+    padding: 1.6rem;
+  }
+  .homeBigNumber{
+    font-size: 1.8rem;
+  }
+}

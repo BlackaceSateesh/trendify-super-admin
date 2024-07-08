@@ -53,3 +53,19 @@
   font-weight: 300;
   color: var(--white);
 }
+
+
+@media (min-width: 299px) and (max-width: 499.99px){
+  .PendingApprovalProduct .productImgs .productImgBox .image {
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  .PendingApprovalProduct .productImgs{
+    gap: 1.2%;
+    row-gap: 1.6rem;
+  }
+  .PendingApprovalProduct .productImgs .productImgBox{
+    width: 48%;
+  }
+}

@@ -238,7 +238,7 @@ textarea::-webkit-scrollbar{
   padding: 1rem 2.6rem;
   color: var(--white);
   text-align: center;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 500;
   letter-spacing: 1.429px;
   border-radius: 5px;
@@ -482,7 +482,7 @@ textarea::-webkit-scrollbar{
 
 .prograssBar_main .head h2 {
   color: #3f414d;
-  font-size: 14px;
+  font-size: 1.3rem;
   font-weight: 400;
 }
 
@@ -490,4 +490,58 @@ textarea::-webkit-scrollbar{
 .progress-stacked {
   border-radius: 5px;
   height: 6px;
+}
+
+
+
+
+@media (min-width:799px) and (max-width:1099.99px) {
+  .sectionContainer .inputField {
+    gap: 1.2%;
+    row-gap: 1.6rem;
+}
+.sectionContainer .inputField .inputFieldBox {
+  width: 32.5%;
+}
+}
+@media (min-width:299px) and (max-width:849.99px) {
+.sectionContainer .inputField .inputFieldBox {
+  width: 48.5%;
+}
+}
+@media (min-width:299px) and (max-width:799.99px) {
+  .Breadcrumbs {
+  display: none;
+}
+.SearchHeader input,
+.SearchHeader button{
+  font-size: 1.2rem;
+}
+.sectionContainer .inputField{
+  justify-content: space-between;
+}
+.sectionContainer .inputField .inputFieldBox {
+  width: 48.5%;
+}
+.page_subtitle{
+  font-size: 1.4rem;
+}
+}
+@media (min-width:299px) and (max-width:499.99px) {
+  .inner_table .SearchBoxTable {
+    width: 100%;
+}
+/* .inputLabel{
+  flex-direction: column;
+  align-items: flex-start;
+} */
+.sectionContainer .dataTable_header .SearchBoxTable {
+  width: 70%;
+}
+.prograssBar_main .head{
+  flex-direction: row !important;
+}
+.ButtonWithIcon{
+  font-size: 1.4rem;
+}
 }

@@ -55,6 +55,7 @@
 
 .CustomerReviewCardInner .content .images {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.8rem;
   margin-top: .6rem;
 }
@@ -74,4 +75,25 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+
+
+@media (min-width: 299px) and (max-width: 799.99px) {
+  .CustomerReview_inner .cards{
+    padding: 0;
+  }
+  .CustomerReviewCardInner .content .text{
+    font-size: 1.4rem;
+  }
+  .CustomerReviewCardInner .content .msg{
+    font-size: 1.1rem;
+  }
+  .CustomerReviewCardInner .content .deleteBtn{
+    font-size: 1.2rem;
+  }
+  .CustomerReviewCardInner .content .images .imgCard {
+    max-width: 8rem;
+    max-height: 8rem;
+  }
 }

@@ -5,7 +5,7 @@ import '../../styles/ui/TotalGraphCard.css';
 const TotalGraphCard = ({name, number, status}) => {
   return (
     <>
-      <div className="TotalGraphCard homeCardBox">
+      <div className="TotalGraphCard homeCardBox w100">
         <div className="head">
           <p className="homeCardHeading">{name}</p>
           <select name="" id="" className="homeSelect">

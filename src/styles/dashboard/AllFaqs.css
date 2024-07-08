@@ -76,3 +76,15 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+
+
+@media (min-width: 499px) and (max-width: 999.99px) {
+  .AllFaqCard{
+width: 48.5%;
+  }
+}
+@media (min-width: 299px) and (max-width: 499.99px) {
+  .AllFaqCard{
+width: 100%;
+  }
+}

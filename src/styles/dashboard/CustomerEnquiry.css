@@ -1,166 +1,207 @@
 .CustomerEnquiry_head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .CustomerEnquiry_head .search_list {
-    width: 35%;
+  width: 35%;
 }
 
 .CustomerEnquiry_head .filter {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .CustomerEnquiry_head .filter .selectInput .inputLabel {
-    display: none;
+  display: none;
 }
 
 .CustomerEnquiry_head .filter .selectInput {
-    height: 100%;
+  height: 100%;
 }
 
 .CustomerEnquiry_tab .allTicket {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 1.8rem;
-    padding: 1.8rem 1rem;
-    border: 1px solid #E7E7E7;
-    margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.8rem;
+  padding: 1.8rem 1rem;
+  border: 1px solid #e7e7e7;
+  margin-top: 2rem;
 }
 
 .CustomerEnquiry_tab .nav.nav-tabs {
-    border-bottom: 2px solid #E7E7E7;
-    overflow-x: auto;
-    display: flex;
-    flex-wrap: nowrap;
+  border-bottom: 2px solid #e7e7e7;
+  overflow-x: auto;
+  display: flex;
+  flex-wrap: nowrap;
 }
-.CustomerEnquiry_tab .nav.nav-tabs::-webkit-scrollbar{
-    display: none;
+.CustomerEnquiry_tab .nav.nav-tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .CustomerEnquiry_tab .nav.nav-tabs .nav-link {
-    color: var(--gray, #84818A);
-    font-size: 15px;
-    font-weight: 500;
-    padding: 1rem 2rem;
-    border: none;
-    text-wrap: nowrap;
+  color: var(--gray, #84818a);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border: none;
+  text-wrap: nowrap;
 }
 
 .CustomerEnquiry_tab .nav.nav-tabs .nav-link.active {
-    border-bottom: 4px solid var(--Secondary_yellow, #C09562);
-    color: var(--Secondary_yellow, #C09562);
+  border-bottom: 4px solid var(--Secondary_yellow, #c09562);
+  color: var(--Secondary_yellow, #c09562);
 }
-
-
 
 /* all ticket component css */
 
-
 .AllTicketCard {
-    width: 100%;
-    padding: 1.2rem;
-    border-radius: 4px;
-    padding-bottom: 2.6rem;
-    border-bottom: 1px solid #E7E7E7;
-    background: #FEFEFE;
-    display: flex;
-    flex-direction: column;
-    gap: .8rem;
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 4px;
+  padding-bottom: 2.6rem;
+  border-bottom: 1px solid #e7e7e7;
+  background: #fefefe;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
 .AllTicketCard .head {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .AllTicketCard .head .details {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .AllTicketCard .head .details .circle {
-    min-width: 1.6rem;
-    width: 1.6rem;
-    height: 1.6rem;
-    background-color: #dad;
-    border-radius: 50%;
+  min-width: 1.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: #dad;
+  border-radius: 50%;
 }
 
 .AllTicketCard .head .details .circle.notDeliver {
-    background-color: rgba(248, 165, 52, 0.60);
+  background-color: rgba(248, 165, 52, 0.6);
 }
 
 .AllTicketCard .head .details .circle.pending {
-    background-color: #3B8AFF;
+  background-color: #3b8aff;
 }
 
 .AllTicketCard .head .details .circle.deliver {
-    background-color: #54C104;
+  background-color: #54c104;
 }
 
 .AllTicketCard .head .details h6 {
-    color: var(--dark, #2E2C34);
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin: 0;
+  color: var(--dark, #2e2c34);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
 }
 
 .AllTicketCard .head .date {
-    color: var(--gray, #84818A);
-    font-size: 1.2rem;
-    font-weight: 400;
+  color: var(--gray, #84818a);
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .AllTicketCard .status {
-    color: var(--dark, #2E2C34);
-    font-size: 1.3rem;
-    font-weight: 400;
+  color: var(--dark, #2e2c34);
+  font-size: 1.3rem;
+  font-weight: 400;
 }
 
 .AllTicketCard .desc {
-    color: var(--gray, #84818A);
-    font-size: 1.2rem;
-    font-weight: 400;
+  color: var(--gray, #84818a);
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .AllTicketCard .btms {
-    padding: 1rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .AllTicketCard .btms .username {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .AllTicketCard .btms .username .pic {
-    min-width: 2.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
+  min-width: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
 }
 
 .AllTicketCard .btms .username p {
-    color: var(--gray, #84818A);
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-bottom: 0;
+  color: var(--gray, #84818a);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0;
 }
 
 .AllTicketCard .btms .openTicket {
-    color: var(--secondary-yellow, #C09562);
+  color: var(--secondary-yellow, #c09562);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 14px;
+  text-decoration-line: underline;
+}
+@media (min-width: 299px) and (max-width: 949.99px) {
+    .CustomerEnquiry_head {
+        flex-direction: column;
+        gap: 1.6rem;
+        align-items: flex-start;
+      }
+      .CustomerEnquiry_head .filter {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+      .CustomerEnquiry_head .search_list {
+        width: 100%;
+      }
+      .CustomerEnquiry_tab {
+        margin-top: 1.6rem;
+      }
+}
+
+@media (min-width: 299px) and (max-width: 799.99px) {
+  .CustomerEnquiry_head {
+    flex-direction: column;
+    gap: 1.6rem;
+    align-items: flex-start;
+  }
+  .CustomerEnquiry_head .filter {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .CustomerEnquiry_head .search_list {
+    width: 100%;
+  }
+
+  .CustomerEnquiry_tab .nav.nav-tabs .nav-link {
     font-size: 1.2rem;
-    font-weight: 500;
-    line-height: 14px;
-    text-decoration-line: underline;
+  }
+  .AllTicketCard .head{
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .AllTicketCard .head .details{
+    width: 100%;
+  }
 }

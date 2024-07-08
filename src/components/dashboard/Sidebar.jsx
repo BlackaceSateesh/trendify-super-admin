@@ -1,37 +1,34 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/sidebar/sidebar.css";
-import { BsPieChart } from "react-icons/bs";
 import { MainContent } from "../../constants/contents/mainContent";
 import { FiChevronsLeft } from "react-icons/fi";
 import userPic from "../../assests/dashboard/userPic.png";
 import { Accordion } from "react-bootstrap";
 import { SlGrid } from "react-icons/sl";
+import { RiArrowRightSLine } from "react-icons/ri";
 
 import {
   sideMenuListManage,
   sideMenuListOther,
 } from "../../constants/contents/sidebarContent";
 import { AuthenticatedRoutes } from "../../constants/routes";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleSideMenu } from "../../redux/slice/SideMenuSlice";
 const Sidebar = () => {
-  const [isCollapse, setCollapse] = useState(false);
-  const ToggleClass = () => {
-    setCollapse(!isCollapse);
-    showContent();
-  };
 
-  const showContent = () => {
-    // content screen
-    if (!isCollapse) {
-      document.getElementById("contentScreen").classList.add("full");
-    }else{
-      document.getElementById("contentScreen").classList.remove("full");
-    }
+
+  const sideMenuState = useSelector((state) => state.SideMenuSlice);
+  const dispatch = useDispatch();
+
+  const toggleMenu = () => {
+    dispatch(toggleSideMenu());
   };
+  console.log(sideMenuState);
 
   return (
     <>
-      <div className={`Sidebar ${isCollapse ? "collapseMenu" : "showMenu"}`}>
+      <div id="dashboardSidemenu" className={`Sidebar ${sideMenuState.open ? "collapseMenu" : "showMenu"}`}>
         <div className="Sidebar_inner">
           <div className="head">
             <div className="logoName">
@@ -40,7 +37,13 @@ const Sidebar = () => {
               </div>
               <h6 className="name">{MainContent.appName}</h6>
             </div>
-            <button onClick={() => ToggleClass()} className="closeBtn">
+            {/* <button onClick={() => ToggleClass()} className="closeBtn">
+              <FiChevronsLeft />
+            </button> */}
+            <button onClick={() => toggleMenu()} className="closeBtn">
+              <FiChevronsLeft />
+            </button>
+            <button onClick={() => toggleMenu()} className="closeBtnMo">
               <FiChevronsLeft />
             </button>
           </div>
@@ -68,11 +71,11 @@ const Sidebar = () => {
               {sideMenuListManage?.map((e, i) => {
                 return (
                   <>
-                    <Accordion.Item eventKey={i} key={i}>
+                    <Accordion.Item eventKey={i} key={`sss ${i}`}>
                       <Accordion.Header>
                         <div className="menuList accoHeader">
                           <div className="icon">
-                            {e.icon? e.icon : <BsPieChart /> }
+                            {e.icon? e.icon : <RiArrowRightSLine /> }
                           </div>
                           <span className="text">{e.title}</span>
                         </div>
@@ -83,9 +86,9 @@ const Sidebar = () => {
                             return (
                               <>
                                 <li>
-                                  <Link to={e.route} className="menuList">
+                                  <Link key={i+1} to={e.route} className="menuList">
                                     <div className="icon">
-                                      <BsPieChart />
+                                      <RiArrowRightSLine />
                                     </div>
                                     <span className="text">{e.name}</span>
                                   </Link>

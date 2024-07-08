@@ -128,3 +128,48 @@
   font-weight: 300;
   margin-top: 0.4rem;
 }
+
+@media (min-width: 799px) and (max-width: 999.99px){
+  .userDetail .userDetail_inner .inputField .inputFieldBox {
+    width: 48.5%;
+}
+.UserProfile .reviewSection{
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.UserProfile .reviewSection .sectionContainer{
+  width: 100%;
+}
+}
+
+
+@media (min-width: 299px) and (max-width: 799.99px) {
+  .userDetail .userDetail_inner{
+    flex-direction: column;
+    align-items: center;
+  }
+  .userDetail .userDetail_inner .userPic{
+    min-width: 10rem;
+    width: 10rem;
+  }
+  .userDetail .userDetail_inner .inputField .inputFieldBox{
+    width: 48.5%
+  }
+  .address_cards{
+    padding: 0;
+  }
+  .purchase_col2,
+  .UserProfile .reviewSection{
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  .purchase_col2 .purchaseHistory,
+  .purchase_col2 .purchaseCategory,
+  .UserProfile .reviewSection .sectionContainer{
+    width: 100%;
+  }
+  .UserProfile .rightBtns{
+    flex-wrap: wrap;
+  }
+
+}

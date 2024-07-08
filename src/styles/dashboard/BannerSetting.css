@@ -73,7 +73,8 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 1.8rem;
   row-gap: 1.4rem;
 }
 .BannerSetting
@@ -129,4 +130,47 @@
   font-size: 1.6rem;
   font-weight: 400;
   color: var(--primary-black);
+}
+
+
+@media (min-width:299px) and (max-width:999.99px){
+  .BannerSetting .activeBanner .inner{
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  .BannerSetting .activeBanner .inner .image,
+  .BannerSetting .activeBanner .inner .details{
+    width: 100%;
+  }
+  .BannerSetting .activeBanner .inner .details .details_inner .btns{
+    justify-content: center;
+    gap: 1.6rem;
+  }
+  .BannerSetting .activeBanner .inner .details .details_inner .btns .ButtonMain:first-child{
+    width: fit-content;
+  }
+  .BannerSetting .bannerTemplate .template_list .template_card .name{
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+@media (min-width:1199px) and (max-width:1399.99px){
+  .BannerSetting .activeBanner .inner .image,
+  .BannerSetting .activeBanner .inner .details{
+    width: 70%;
+  }
+  .BannerSetting .activeBanner .inner .details{
+    width: 40%;
+  }
+ 
+}
+@media (min-width:999px) and (max-width:1199.99px){
+  .BannerSetting .activeBanner .inner .image,
+  .BannerSetting .activeBanner .inner .details{
+    width: 65%;
+  }
+  .BannerSetting .activeBanner .inner .details{
+    width: 35%;
+  }
+ 
 }

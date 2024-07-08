@@ -35,7 +35,8 @@
   border-bottom: 1px solid #f7f6ec;
   padding: 1rem 0;
 }
-.Sidebar_inner .head .closeBtn {
+.Sidebar_inner .head .closeBtn,
+.Sidebar_inner .head .closeBtnMo {
   padding: 0 0.4rem;
   background-color: var(--black);
   color: var(--white);
@@ -45,6 +46,9 @@
   align-items: center;
   justify-content: center;
   border-radius: 4px;
+}
+.Sidebar_inner .head .closeBtnMo {
+  display: none;
 }
 .Sidebar_inner .logoName {
   display: flex;
@@ -110,7 +114,7 @@
 .Sidebar_inner .menuList {
   width: 100%;
   display: flex;
-  gap: 1.2rem;
+  gap: 1rem;
   align-items: center;
   color: #52616b;
   font-size: 1.1rem;
@@ -122,12 +126,12 @@
 .Sidebar_inner .menuList:hover {
   transition: all 0.5s;
   color: var(--white);
-  background-color: var(--secondary-yellow);
+  background-color:var(--sidemenu-hover);
   opacity: 0.8;
 }
 .Sidebar_inner .menuList.active {
   color: var(--white);
-  background-color: var(--secondary-yellow);
+  background-color: var(--sidemenu-hover);
 }
 .Sidebar_inner .menuList .icon {
   height: fit-content;
@@ -167,7 +171,7 @@
 .sidebarAccordion .accordion-button:hover,
 .sidebarAccordion .accordion-button:hover .menuList.accoHeader {
   color: var(--white);
-  background-color: var(--secondary-yellow);
+  background-color: var(--sidemenu-hover);
   opacity: 0.8;
   transition: all 0.5s;
 }
@@ -208,17 +212,20 @@
   transition: all 0.5s;
 }
 
-
 /* collapse menu */
 
-.Sidebar.collapseMenu {
+/* .Sidebar.collapseMenu {
   min-width: 5.2vw;
   width: 5.2vw;
+} */
+.Sidebar.collapseMenu {
+  min-width: 7.8rem;
+  width: 7.8rem;
 }
 .Sidebar.collapseMenu .Sidebar_inner .typeName,
 .Sidebar.collapseMenu .Sidebar_inner .logoName .name,
 .Sidebar.collapseMenu .Sidebar_inner .menuList .text,
-.Sidebar.collapseMenu .Sidebar_inner .user .txt{
+.Sidebar.collapseMenu .Sidebar_inner .user .txt {
   transition: opacity 200ms, display 200ms;
   display: none;
   opacity: 0;
@@ -226,8 +233,63 @@
 .Sidebar.showMenu .Sidebar_inner .typeName,
 .Sidebar.showMenu .Sidebar_inner .logoName .name,
 .Sidebar.showMenu .Sidebar_inner .menuList .text,
-.Sidebar.showMenu .Sidebar_inner .user .txt{
+.Sidebar.showMenu .Sidebar_inner .user .txt {
   transition: opacity 200ms, display 200ms;
   display: block;
   opacity: 1;
+}
+
+/* ============================ responsive ===================================== */
+
+@media (min-width: 1299px) and (max-width: 1399.99px) {
+  .Sidebar{
+    min-width: 17vw;
+    width: 17vw;
+  }
+}
+@media (min-width: 899px) and (max-width: 1299.99px) {
+  .Sidebar{
+    min-width: 17vw;
+    width: 26vw;
+  }
+}
+@media (min-width: 799px) and (max-width: 899.99px) {
+  .Sidebar{
+    min-width: 26vw;
+    width: 30vw;
+  }
+}
+
+/* mobile responsive */
+
+
+@media (min-width: 299px) and (max-width: 799.99px) {
+  .Sidebar_inner .head .closeBtn {
+    display: none;
+  }
+  .Sidebar_inner .head .closeBtnMo {
+    display: flex;
+  }
+  .Sidebar.collapseMenu {
+    min-width: 30rem;
+    width: 30rem;
+    position: absolute;
+    left: 0;
+    border-radius: 0 1.6rem 1.6rem 0;
+  }
+  .Sidebar.showMenu {
+    min-width: 0;
+    width: 0;
+    padding: 0;
+    box-shadow: none;
+    position: absolute;
+  }
+  .Sidebar.collapseMenu .Sidebar_inner .typeName,
+  .Sidebar.collapseMenu .Sidebar_inner .logoName .name,
+  .Sidebar.collapseMenu .Sidebar_inner .menuList .text,
+  .Sidebar.collapseMenu .Sidebar_inner .user .txt {
+    display: block;
+    opacity: 1;
+    transition: opacity 200ms, display 200ms;
+  }
 }

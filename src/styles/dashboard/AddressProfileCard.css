@@ -90,11 +90,14 @@
 }
 
 /* ============================================================= */
-@media (min-width:299.99px) and (max-width:999.99px) {
+@media (min-width:299.99px) and (max-width:499.99px) {
     .AdressProfileCard{
         width: 100%;
         padding: 1rem;
     }
+}
+@media (min-width:299.99px) and (max-width:999.99px) {
+ 
 
     .AdressProfileCard .details .head h4{
         font-size: 1.4rem;
@@ -104,7 +107,10 @@
         width: 82%;
     }
     .AdressProfileCard .details p{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+    }
+    .AdressProfileCard .details .head{
+        flex-direction: row;
     }
 }
 

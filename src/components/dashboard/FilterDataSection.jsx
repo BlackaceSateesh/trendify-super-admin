@@ -11,10 +11,11 @@ const FilterDataSection = () => {
       <div className="FilterDataSection sectionContainer">
         <DashboardInnerTitle name="Filter Data" />
         <div className="filterData_inner">
-          <SelectInput labelName="Select Year" option="Choose" />
+          <DatePickerInput labelName="From" option="16:00:00" />
+          <DatePickerInput labelName="To" option="16:00:00" />
+          {/* <SelectInput labelName="Select Year" option="Choose" />
           <SelectInput labelName="Select Month" option="Choose" />
-          <TimeInput labelName="Select Date" option="06:03:24" />
-          <DatePickerInput labelName="Select Time" option="16:00:00" />
+          <TimeInput labelName="Select Date" option="06:03:24" /> */}
         </div>
       </div>
     </>

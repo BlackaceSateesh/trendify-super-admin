@@ -49,6 +49,7 @@
   border: none;
   background: transparent;
   min-height: 12rem;
+  padding: 0;
 }
 .AddAndManageFaqs
   .writeAndAdd
@@ -174,4 +175,27 @@
   font-size: 1.4rem;
   color: var(--dark-red);
   height: fit-content;
+}
+
+
+
+
+@media (min-width: 299px) and (max-width: 799.99px) {
+  .AddAndManageFaqs .writeAndAdd{
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  .AddAndManageFaqs .writeAndAdd .writeAndAdd_left,
+  .AddAndManageFaqs .writeAndAdd .writeAndAdd_right,
+  .AllFaqsCard{
+    width: 100%;
+  }
+}
+@media (min-width: 699px) and (max-width: 999.99px) {
+  .AddAndManageFaqs .all_faqs .allFaqsCards{
+    justify-content: space-between;
+  }
+  .AllFaqsCard{
+    width: 48.5%;
+  }
 }

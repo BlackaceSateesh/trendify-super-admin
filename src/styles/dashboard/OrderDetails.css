@@ -127,3 +127,27 @@ background: #12B76A;
     align-content: center;
     justify-content: center;
 }
+
+@media (min-width: 299px) and (max-width: 499.99px){
+  .OrderDetails .inputFieldBox.textareaInput{
+    width: 100% !important;
+  }
+  #orderTrackBar li {
+    font-size: 1rem;
+    gap: 1rem;
+  }
+  #orderTrackBar li p{
+    font-size: .8rem;
+  }
+  #orderTrackBar li:before {
+    width: 2rem;
+    height: 2rem;
+  }
+  #orderTrackBar li:after {
+    height: .4rem;
+    top: .8rem;
+  }
+  #orderTrackBar li.active:before {
+    font-size: 1.2rem;
+  }
+}

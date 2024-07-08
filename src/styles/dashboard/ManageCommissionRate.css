@@ -41,3 +41,21 @@
 .ManageCommissionRate .inner_rateBox .commission .box .list p.num {
   text-wrap: nowrap;
 }
+
+
+
+@media (min-width: 1099px) and (max-width: 1299.99px){
+  .ManageCommissionRate .inner_rateBox .commission .box .list{
+    width: 32%;
+  }
+}
+@media (min-width: 799px) and (max-width: 1099.99px){
+  .ManageCommissionRate .inner_rateBox .commission .box .list{
+    width: 48.5%;
+  }
+}
+@media (min-width: 299px) and (max-width: 799.99px){
+  .ManageCommissionRate .inner_rateBox .commission .box .list{
+    width: 100%;
+  }
+}

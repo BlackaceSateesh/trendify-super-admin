@@ -37,6 +37,7 @@ body {
     0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   --secondaryCard-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   --primary-border: #eff0f2;
+  --sidemenu-hover: #454751;
 }
 a {
   text-decoration: none;
@@ -104,28 +105,25 @@ ol {
   background: #b30000;
 }
 
-
 /* ======== progress bar bg color =================== */
-.bg-tSuccess{
+.bg-tSuccess {
   background-color: var(--Sucess-green) !important;
 }
-.bg-tBlue{
-  background-color: #1E3D73 !important;
+.bg-tBlue {
+  background-color: #1e3d73 !important;
 }
-.bg-tYellow{
-  background-color: #FFBF43 !important;
+.bg-tYellow {
+  background-color: #ffbf43 !important;
 }
-.bg-tLightGreen{
-  background-color: #65F9B3 !important;
+.bg-tLightGreen {
+  background-color: #65f9b3 !important;
 }
-.bg-tPink{
-  background-color: #FE517E !important;
+.bg-tPink {
+  background-color: #fe517e !important;
 }
-.bg-tPurple{
-  background-color: #9267FF !important;
+.bg-tPurple {
+  background-color: #9267ff !important;
 }
-
-
 
 .pageHeading {
   font-size: 2.6rem;
@@ -170,4 +168,52 @@ ol {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
+}
+.tableBox{
+  width: 100%;
+  overflow-x: auto;
+}
+.tableBox::-webkit-scrollbar{
+  display: none;
+}
+
+/* responsive part */
+
+@media (min-width: 499px) and (max-width: 799.99px) {
+  .pageHeading {
+    font-size: 2rem;
+  }
+  
+}
+@media (min-width: 299px) and (max-width: 499.99px) {
+  :root {
+    --main-padding: 1.4rem;
+  }
+  .pageHeading {
+    font-size: 1.8rem;
+  }
+  .w100 {
+    width: 100% !important;
+  }
+  .sectionContainer{
+    padding: 1.6rem;
+    gap: 1.6rem;
+  }
+  .sectionContainer .head{
+    /* flex-direction: column;
+    align-items: flex-start; */
+    gap: 1.2rem;
+  }
+  .innerBox_shadow .head .sideBtns .categoryBtns{
+    font-size: 1rem;
+  }
+  .innerBox_shadow .category_table{
+    overflow-x: auto;
+  }
+  .innerBox_shadow .category_table::-webkit-scrollbar{
+    display: none;
+  }
+  .innerBox_shadow .category_table table th, .innerBox_shadow .category_table table td{
+    padding: 1.2rem;
+  }
 }

@@ -128,7 +128,7 @@
     }
 
     .ResponseTicket_inner .head .name h6 {
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
 
     .ResponseTicket_inner .head .date p {
@@ -150,13 +150,22 @@
     .ResponseTicket_inner .replyTicket {
         padding: 1.2rem;
     }
+    .ResponseTicket_inner .head {
+        flex-direction: column;
+        align-items: flex-end !important;
+    }
+    .ResponseTicket_inner .head .name{
+        width: 100%;
+    }
+    .ResponseTicket_inner .details{
+        padding-left: 0;
+        text-align: justify;
+    }
+
 }
 
 @media (min-width:299px) and (max-width:399px) {
-    .ResponseTicket_inner .head {
-        flex-direction: column;
-    }
-
+   
     .ResponseTicket_inner .head .date p {
         text-align: right;
     }

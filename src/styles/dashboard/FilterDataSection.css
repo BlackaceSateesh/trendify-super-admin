@@ -8,3 +8,16 @@
 .filterData_inner .inputFieldBox{
     width: 24.16%;
 }
+
+
+/* ========================================= */
+
+@media (min-width: 299px) and (max-width: 799.99px) {
+    .filterData_inner .inputFieldBox{
+        width: 48.5%;
+    }
+    .filterData_inner{
+        justify-content: space-between;
+    }
+  }
+  

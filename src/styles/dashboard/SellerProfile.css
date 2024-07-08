@@ -18,6 +18,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 3rem;
+  gap: .8rem;
 }
 .SellerProfile .profileTop .sellerDetails .left {
   display: flex;
@@ -184,13 +185,29 @@
     width: 32%;
   }
 }
-@media (min-width: 499px) and (max-width: 999px) {
-  .UserProfile .UserProfile_desc {
+@media (min-width: 299px) and (max-width: 999px) {
+  .SellerProfile .profileTop .sellerDetails .left{
+    gap: 1.2rem;
+  }
+  .SellerProfile .profileTop .sellerDetails {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 1.6rem;
+  }
+  .SellerProfile .profileTop .sellerDetails .left{
+    width: 100%;
+  }
+  .SellerProfile .profileTop .sellerDetails .left .logo{
+    min-width: 8rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  .SellerProfile .UserProfile_desc{
     flex-direction: column;
     gap: 2rem;
   }
-  .UserProfile .UserProfile_desc .leftside,
-  .UserProfile .UserProfile_desc .rightside {
+  .SellerProfile .UserProfile_desc .leftside,
+  .SellerProfile .UserProfile_desc .rightside {
     width: 100%;
   }
   .UserProfile_banner {
@@ -224,6 +241,25 @@
 }
 
 @media (min-width: 299px) and (max-width: 499px) {
+
+
+  .SellerProfile .profileTop .sellerDetails .left .nameBox .name h6{
+    font-size: 1.8rem;
+  }
+  .SellerProfile .profileTop .sellerDetails .left .nameBox p{
+    font-size: 1.2rem;
+  }
+  .SellerProfile .profileTop .sellerDetails .left .logo{
+    top: -3rem;
+  }
+
+
+
+
+
+
+
+
   .UserProfile .innerBox .inputFields {
     justify-content: space-between;
   }
@@ -242,6 +278,9 @@
     align-items: center;
   }
 
+  .SellerProfile .UserProfile_desc .rightside .detail h6{
+    font-size: 1.4rem;
+  }
   /* .UserProfile_banner {
         max-height: 6.6rem;
     } */
