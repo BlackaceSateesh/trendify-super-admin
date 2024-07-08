@@ -1,5 +1,4 @@
 export const AuthRoutes ={
-    register: '/register',
     login: '/',
 }
 export const AuthenticatedRoutes ={

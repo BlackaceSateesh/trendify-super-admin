@@ -12,7 +12,7 @@
   justify-content: space-around;
 }
 .LoginPage_inner .left {
-  width: 45%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -44,6 +44,7 @@
 }
 .LoginPage_inner .right .LoginForm {
   width: 85%;
+  max-width: 52rem;
   padding: 5rem 6rem;
   border-radius: 2rem;
   background-color: var(--white);
@@ -142,4 +143,90 @@
   font-weight: 500;
 color: var(--secondary-yellow);
 text-decoration: underline;
+}
+
+
+
+/* responsive part */
+
+@media (min-width:1000px) and (max-width:1299.99px) {
+  .LoginPage_inner .left .content .title{
+    font-size: 3.3rem;
+  }
+  .LoginPage_inner .left .content .para{
+    font-size: 2.6rem;
+  }
+  .LoginPage_inner .right .LoginForm{
+    width: 100%;
+    padding: 4rem 4.6rem;
+  }
+  .LoginPage_inner .right .LoginForm .btm{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width:800px) and (max-width:999.99px) {
+  .LoginPage_inner .left .content .title{
+    font-size: 3rem;
+  }
+  .LoginPage_inner .left .content .para{
+    font-size: 2.4rem;
+  }
+  .LoginPage_inner .right .LoginForm{
+    width: 100%;
+    padding: 3rem 3.3rem;
+  }
+  .LoginPage_inner .right .LoginForm .btm{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width:299px) and (max-width:799.99px) {
+  .LoginPage_inner .left .content .title{
+    font-size: 2.4rem;
+  }
+  .LoginPage_inner .left .content .para{
+    font-size: 1.8rem;
+  }
+  .LoginPage_inner{
+    flex-direction: column;
+    gap: 2.6rem;
+  }
+  .LoginPage_inner .left,
+  .LoginPage_inner .right{
+width: 100%;
+  }
+  .LoginPage_inner .right .LoginForm{
+    padding: 2.2rem 2.6rem;
+  }
+  .LoginPage_inner .right .LoginForm .name{
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  .LoginPage_inner .right .LoginForm .btm{
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (min-width:299px) and (max-width:499.99px) {
+  .LoginPage_inner .left .content .title{
+    font-size: 2rem;
+  }
+  .LoginPage_inner .left .content .para{
+    font-size: 1.6rem;
+  }
+ 
+  .LoginPage_inner .right .LoginForm{
+    padding: 2rem 2.2rem;
+  }
+  .LoginPage_inner .right .LoginForm .name{
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  .LoginPage_inner .right .LoginForm .btm .loginBtn{
+    font-size: 1.6rem;
+    padding: 1rem 4rem;
+  }
 }
