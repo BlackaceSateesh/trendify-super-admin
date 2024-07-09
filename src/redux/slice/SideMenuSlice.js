@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   open: false,
-}; 
+};
 
 const SideMenuSlice = createSlice({
   name: "sideMenu",
@@ -17,4 +17,3 @@ const SideMenuSlice = createSlice({
 export const { toggleSideMenu } = SideMenuSlice.actions;
 
 export default SideMenuSlice.reducer;
- 
