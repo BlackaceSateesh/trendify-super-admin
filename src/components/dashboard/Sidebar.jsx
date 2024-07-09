@@ -7,7 +7,6 @@ import userPic from "../../assests/dashboard/userPic.png";
 import { Accordion } from "react-bootstrap";
 import { SlGrid } from "react-icons/sl";
 import { RiArrowRightSLine } from "react-icons/ri";
-
 import {
   sideMenuListManage,
   sideMenuListOther,
@@ -22,7 +21,6 @@ const Sidebar = () => {
   const toggleMenu = () => {
     dispatch(toggleSideMenu());
   };
-  console.log(sideMenuState);
 
   return (
     <>
