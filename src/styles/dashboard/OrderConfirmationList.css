@@ -1,0 +1,28 @@
+.OrderConfirmationList .dataTable_main .rdt_TableCol:nth-child(2), 
+.OrderConfirmationList .dataTable_main .rdt_TableCell:nth-child(2){
+    max-width: initial;
+    min-width: initial;
+}
+
+.orderDetailsPic{
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+.orderDetailsPic .productImg{
+  min-width: 4.5rem;
+  width: 4.5rem;
+}
+.OrderConfirmationList .dataTable_main .rdt_TableCol:last-child, 
+.OrderConfirmationList .dataTable_main .rdt_TableCell:last-child{
+    max-width: 8rem;
+    min-width: 8rem;
+}
+.OrderConfirmationList .dataTable_main .rdt_TableCol:nth-last-child(2), 
+.OrderConfirmationList .dataTable_main .rdt_TableCell:nth-last-child(2){
+    max-width: fit-content;
+    min-width: fit-content;
+}
+.OrderConfirmationList .dataTable_main .rdt_TableCol_Sortable div{
+    margin: 0 auto;
+}

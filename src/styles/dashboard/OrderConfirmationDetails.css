@@ -1,0 +1,177 @@
+.OrderConfirmationDetails .inputFieldBox.textareaInput {
+  width: 49% !important;
+}
+
+.OrderConfirmationDetails .trackId {
+  font-size: 1.2rem;
+  color: #35465b;
+  font-weight: 400;
+}
+.OrderConfirmationDetails .trackId span {
+  padding: 0.6rem;
+  border-radius: 0.24rem;
+  border: 1px solid #39a956;
+  margin-left: 0.4rem;
+}
+
+.OrderConfirmationDetails .delivery_table {
+  width: 100%;
+  overflow-x: auto;
+}
+.OrderConfirmationDetails .delivery_table table{
+  width: 100%;
+}
+.OrderConfirmationDetails .delivery_table table th{
+    border-bottom: 1px solid #eff0f2;
+    min-width: 12rem;
+}
+.OrderConfirmationDetails .delivery_table table th,
+.OrderConfirmationDetails .delivery_table table td {
+    font-size: 1.2rem;
+    color: #616161;
+    padding: 1.6rem;
+    font-weight: 400;
+}
+
+.OrderConfirmationDetails .delivery_table .thBox {
+   min-width: 16rem;
+}
+.OrderConfirmationDetails .delivery_table .thBox .col1 {
+    display: flex;
+    justify-content: space-between;
+    gap: .6rem;
+}
+.OrderConfirmationDetails .delivery_table .thBox .col1 .key,
+.OrderConfirmationDetails .delivery_table .thBox .col1 .value{
+    width: 48%;
+    font-size: 1.1rem;
+    color: #616161;
+    font-weight: 400;
+    padding: .8rem 0;
+}
+.OrderConfirmationDetails .delivery_table .thBox .col1 .key{
+    text-wrap: nowrap;
+}
+
+.OrderConfirmationDetails .delivery_table .thBox .address h6{
+ font-weight: 500;
+ font-size: 1.2rem;
+}
+.OrderConfirmationDetails .delivery_table .thBox .address .key{
+  text-wrap: wrap;
+}
+
+.dimensions_table::-webkit-scrollbar,
+.OrderConfirmationDetails .delivery_table::-webkit-scrollbar {
+  display: none;
+}
+
+.OrderConfirmationDetails .item_detail{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+.OrderConfirmationDetails .item_detail .heading{
+    display: flex;
+}
+
+.OrderConfirmationDetails .item_detail .heading h6,
+.OrderConfirmationDetails .item_detail .heading p{
+   padding: 0 1.4rem;
+   font-size: 1.2rem;
+   color: #35465B;
+}
+.OrderConfirmationDetails .item_detail .heading p{
+    border-left: 1px solid var(--primary-black);
+    font-weight: 400;
+ }
+.OrderConfirmationDetails .item_detail .item_table{
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+}
+.OrderConfirmationDetails .item_detail .item_table::-webkit-scrollbar{
+    display: none;
+}
+.OrderConfirmationDetails .item_detail .item_table table{
+   width: 50%;
+ }
+.OrderConfirmationDetails .item_detail .item_table table th,
+.OrderConfirmationDetails .item_detail .item_table table td{
+    font-size: 1.2rem;
+    color: #616161;
+    padding: 1.6rem;
+    font-weight: 400;
+ }
+.OrderConfirmationDetails .item_detail .item_table table th,
+.OrderConfirmationDetails .item_detail .item_table table td{
+    border-top: #eff0f2 1px solid;
+    border-bottom: #eff0f2 1px solid;
+}
+.OrderConfirmationDetails .item_detail .item_table table td .item{
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+ }
+.OrderConfirmationDetails .item_detail .item_table table td .item .itemImg{
+   min-width: 4.5rem;
+   width: 4.5rem;
+ }
+.OrderConfirmationDetails .item_detail .item_table table td .item .txt p{
+   color: #ADADAD;
+ }
+.OrderConfirmationDetails .item_detail .item_table table td .quantity{
+   border: .03rem solid #7C97B6;
+   text-align: center;
+   background-color: #7c97b60c;
+   padding: .2rem .8rem;
+   border-radius: .2rem;
+ }
+
+.dimensions_table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.dimensions_table table {
+  min-width: 60%;
+  margin: 0 auto;
+}
+.dimensions_table table,
+.dimensions_table table th,
+.dimensions_table table td {
+  border: 1px solid #eff0f2;
+}
+.dimensions_table table th,
+.dimensions_table table td {
+  font-size: 1.2rem;
+  color: #616161;
+  padding: 1.6rem;
+}
+.dimensions_table table th {
+  font-weight: 500;
+}
+.dimensions_table table td {
+  font-weight: 400;
+}
+
+
+
+@media (min-width: 299px) and (max-width: 499.99px) {
+    .OrderConfirmationDetails .sectionContainer .head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .OrderConfirmationDetails .item_detail .item_table{
+        flex-direction: column;
+    }
+    .OrderConfirmationDetails .trackId{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: .6rem;
+    }
+}

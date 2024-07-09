@@ -33,6 +33,9 @@ import UserProfile from "../profileManagement/UserProfile";
 import AllFaqs from "../customerSupport/AllFaqs";
 import ApplicationFeedback from "../customerSupport/ApplicationFeedback";
 import SellerProfile from "../profileManagement/SellerProfile";
+import OrderConfirmationList from "../orderManagement/OrderConfirmationList";
+import OrderConfirmationDetails from "../orderManagement/OrderConfirmationDetails";
+import DeliveryOption from "../orderManagement/DeliveryOption";
 
 const Authenticated = () => {
   return (
@@ -78,6 +81,9 @@ const Authenticated = () => {
         {/* order management */}
         <Route path={AuthenticatedRoutes.allOrderProductList} element={<DashboardScreen innerPage={<AllOrderProductList />}  pageName='All Order Products' pageTitle='Order Management' parentName='Dashboard'/>} />
         <Route path={AuthenticatedRoutes.orderDetails} element={<DashboardScreen innerPage={<OrderDetails />}  pageName=' Order Details' pageTitle='Order Management' parentName='Dashboard'/>} />
+        <Route path={AuthenticatedRoutes.orderConfirmationList} element={<DashboardScreen innerPage={<OrderConfirmationList />}  pageName=' Order Confirmation' pageTitle='Order Management' parentName='Dashboard'/>} />
+        <Route path={AuthenticatedRoutes.orderConfirmationDetails} element={<DashboardScreen innerPage={<OrderConfirmationDetails />}  pageName=' Order Confirmation Details' pageTitle='Order Management' parentName='Dashboard'/>} />
+        <Route path={AuthenticatedRoutes.deliveryOption} element={<DashboardScreen innerPage={<DeliveryOption />}  pageName=' Delivery Option' pageTitle='Order Management' parentName='Dashboard'/>} />
 
         {/* profile management */}
         <Route path={AuthenticatedRoutes.userProfile} element={<DashboardScreen innerPage={<UserProfile />}  pageName=' User Profile' pageTitle='User Profile' parentName='Dashboard'/>} />

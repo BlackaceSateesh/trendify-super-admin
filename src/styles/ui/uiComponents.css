@@ -381,6 +381,15 @@ textarea::-webkit-scrollbar{
   min-width: 0rem;
   max-width: 6rem;
 }
+.dataTable_main .rdt_TableCol,
+.dataTable_main .rdt_TableCell{
+  border-top: .6px solid #eee;
+  border-bottom: .6px solid #eee;
+  padding: 1rem 0;
+}
+.dataTable_main .rdt_Table{
+  border: .6px solid #eee;
+}
 
 /* data table export btns */
 

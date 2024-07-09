@@ -69,6 +69,18 @@ export const sideMenuListManage = [
         name: "Order Details",
         route: AuthenticatedRoutes.orderDetails,
       },
+      {
+        name: "Order Confirmation List",
+        route: AuthenticatedRoutes.orderConfirmationList,
+      },
+      {
+        name: "Order Confirmation Details",
+        route: AuthenticatedRoutes.orderConfirmationDetails,
+      },
+      {
+        name: "Delivery Option",
+        route: AuthenticatedRoutes.deliveryOption,
+      },
     ],
   },
   
