@@ -38,6 +38,7 @@ body {
   --secondaryCard-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   --primary-border: #eff0f2;
   --sidemenu-hover: #454751;
+  --loader-color: #C09562;
 }
 a {
   text-decoration: none;
