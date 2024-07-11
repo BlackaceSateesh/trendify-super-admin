@@ -36,6 +36,8 @@ import SellerProfile from "../profileManagement/SellerProfile";
 import OrderConfirmationList from "../orderManagement/OrderConfirmationList";
 import OrderConfirmationDetails from "../orderManagement/OrderConfirmationDetails";
 import DeliveryOption from "../orderManagement/DeliveryOption";
+import CreateCustomer from "../customerManagement/CreateCustomer";
+import CustomerList from "../customerManagement/CustomerList";
 
 const Authenticated = () => {
   return (
@@ -88,6 +90,10 @@ const Authenticated = () => {
         {/* profile management */}
         <Route path={AuthenticatedRoutes.userProfile} element={<DashboardScreen innerPage={<UserProfile />}  pageName=' User Profile' pageTitle='User Profile' parentName='Dashboard'/>} />
         <Route path={AuthenticatedRoutes.sellerProfile} element={<DashboardScreen innerPage={<SellerProfile />}  pageName=' Seller Profile' pageTitle='Seller Profile' parentName='Dashboard'/>} />
+
+        {/* customer management */}
+        <Route path={AuthenticatedRoutes.createCustomer} element={<DashboardScreen innerPage={<CreateCustomer />}  pageName='Create Customer' pageTitle='Customer Management' parentName='Dashboard'/>} />
+        <Route path={AuthenticatedRoutes.customerList} element={<DashboardScreen innerPage={<CustomerList />}  pageName='Customer List' pageTitle='Customer Management' parentName='Dashboard'/>} />
 
 
       </Routes>

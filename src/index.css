@@ -218,4 +218,7 @@ ol {
   .innerBox_shadow .category_table table th, .innerBox_shadow .category_table table td{
     padding: 1.2rem;
   }
+  ::-webkit-scrollbar{
+    display: none;
+  }
 }

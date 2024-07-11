@@ -9,13 +9,13 @@ import ButtonMain from '../../components/ui/ButtonMain';
 const CreateTicket = () => {
     return (
         <>
-            <div className="CreateTicket ResponseTicket_inner inner dashboard_center">
+            <div className="CreateTicket ResponseTicket_inner inner dashboard_center sectionContainer">
                 <DashboardInnerTitle name='Create Ticket' />
 
                 <div className="replyTicket">
                     <h6 className='heading'>Create Quick Ticket</h6>
                     <p className='subheading'>Write and address new queries and issues</p>
-                    <div className="inputFields">
+                    <div className="inputField">
                         <TextInput labelName='Customer Email' value='shyam.vendor@gmail.com' />
                         <SelectInput labelName='Request Ticket Type' option='Delivery Issue' />
                         <SelectInput labelName='Status' option='On-Going' />

@@ -11,6 +11,7 @@ import { MdManageHistory } from "react-icons/md";
 import { RiFeedbackLine } from "react-icons/ri";
 import { TbPhotoCog } from "react-icons/tb";
 import { RiEBikeLine } from "react-icons/ri";
+import { RiCustomerService2Line } from "react-icons/ri";
 
 
 export const sideMenuListManage = [
@@ -157,6 +158,20 @@ export const sideMenuListManage = [
         route: AuthenticatedRoutes.raiderDetails,
       },
 
+    ],
+  },
+  {
+    title: "Customer Management",
+    icon: <RiCustomerService2Line />,
+    option: [
+      {
+        name: "Create Customer",
+        route: AuthenticatedRoutes.createCustomer,
+      },
+      {
+        name: "Customer List",
+        route: AuthenticatedRoutes.customerList,
+      },
     ],
   },
   {

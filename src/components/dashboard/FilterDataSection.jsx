@@ -8,9 +8,9 @@ import '../../styles/dashboard/FilterDataSection.css';
 const FilterDataSection = () => {
   return (
     <>
-      <div className="FilterDataSection sectionContainer">
-        <DashboardInnerTitle name="Filter Data" />
-        <div className="filterData_inner">
+      <div className="FilterDataSection ">
+        {/* <DashboardInnerTitle name="Filter Data" /> */}
+        <div className="filterData_inner ">
           <DatePickerInput labelName="From" option="16:00:00" />
           <DatePickerInput labelName="To" option="16:00:00" />
           {/* <SelectInput labelName="Select Year" option="Choose" />
