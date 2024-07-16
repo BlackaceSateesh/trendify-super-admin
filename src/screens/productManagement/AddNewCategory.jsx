@@ -262,10 +262,10 @@ const AddNewCategory = () => {
 
         {/* add category modal test start */}
          {/* preview popup */}
-         <button onClick={()=> setShowAddCategory(true)} >Category</button>
+         {/* <button onClick={()=> setShowAddCategory(true)} >Category</button>
          <button onClick={()=> setShowAddType(true)} >Type</button>
          <button onClick={()=> setShowAddBrand(true)} >Brand</button>
-         <button onClick={()=> setShowAddModelName(true)} >ModelName</button>
+         <button onClick={()=> setShowAddModelName(true)} >ModelName</button> */}
          <AddProductByCategory
                     show={showAddCategory}
                     onHide={() => setShowAddCategory(false)}
