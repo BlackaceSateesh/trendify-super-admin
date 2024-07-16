@@ -1,0 +1,11 @@
+import AppLogo from '../../assests/app/appLogo.png';
+
+export const MainContent = {
+    appName : 'Trendify',
+    appLogo : AppLogo,
+    appURL :'trendify.com'
+}
+
+export const backendConfig = {
+    base: "https://api.ashustores.in/super-admin-service/"
+}

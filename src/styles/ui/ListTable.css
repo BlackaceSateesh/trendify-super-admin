@@ -1,0 +1,59 @@
+.ListTable {
+  width: 100%;
+}
+.ListTable table {
+  width: 100%;
+}
+.ListTable table,
+.ListTable table tr {
+  border: 1px solid #eff0f2;
+  border-collapse: collapse;
+}
+.ListTable table th,
+.ListTable table td {
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.ListTable table th {
+  color: var(--primary-black);
+  font-weight: 500;
+}
+.ListTable table td {
+  color: #616161;
+  font-weight: 400;
+}
+.ListTable table th:first-child,
+.ListTable table td:first-child {
+  padding-left: 2rem;
+}
+.ListTable table .imageBox {
+  min-width: 4rem;
+  width: 4rem;
+  margin: 0 auto;
+}
+.ListTable table .imageBox {
+  min-width: 4rem;
+  width: 4rem;
+  margin: 0 auto;
+}
+.ListTable table .status.pending {
+  color: var(--pending-yellow);
+  text-transform: capitalize;
+}
+.ListTable table .status.verified {
+  color: var(--success-green);
+  text-transform: capitalize;
+}
+.ListTable table .status.reject {
+  color: var(--dark-red);
+  text-transform: capitalize;
+}
+.ListTable table .action select {
+  border: 1px solid var(--secondary-yellow);
+  color: var(--secondary-yellow);
+  padding: 0.4rem;
+  text-align: center;
+  outline: none;
+  border-radius: 0.4rem;
+}

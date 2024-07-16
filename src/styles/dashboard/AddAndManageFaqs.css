@@ -1,0 +1,201 @@
+.AddAndManageFaqs .writeAndAdd {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+/* left side */
+.AddAndManageFaqs .writeAndAdd .writeAndAdd_left {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.AddAndManageFaqs .writeAndAdd .writeAndAdd_left .fullText {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.AddAndManageFaqs .writeAndAdd .writeAndAdd_left .fullText .withBtn {
+  width: 100%;
+  padding: 1.6rem;
+  border-radius: 3px;
+  border: 1px solid #eff0f2;
+  background: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-end;
+}
+.AddAndManageFaqs
+  .writeAndAdd
+  .writeAndAdd_left
+  .fullText
+  .withBtn
+  .inputFieldBox {
+  width: 100%;
+}
+.AddAndManageFaqs
+  .writeAndAdd
+  .writeAndAdd_left
+  .fullText
+  .withBtn
+  .inputFieldBox
+  textarea {
+  width: 100%;
+  border: none;
+  background: transparent;
+  min-height: 12rem;
+  padding: 0;
+}
+.AddAndManageFaqs
+  .writeAndAdd
+  .writeAndAdd_left
+  .fullText
+  .withBtn
+  .inputFieldBox
+  textarea::-webkit-scrollbar {
+  display: none;
+}
+.AddAndManageFaqs
+  .writeAndAdd
+  .writeAndAdd_left
+  .fullText
+  .withBtn
+  .ButtonMain {
+  padding: 0.8rem 1.8rem;
+}
+
+/* right side */
+.AddAndManageFaqs .writeAndAdd .writeAndAdd_right {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.AddAndManageFaqs .writeAndAdd .writeAndAdd_right .col_2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.AddAndManageFaqs .writeAndAdd .writeAndAdd_right .col_2 .inputFieldBox {
+  width: 49%;
+}
+.AddAndManageFaqs .writeAndAdd .writeAndAdd_right .steps {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.AddAndManageFaqs .writeAndAdd .writeAndAdd_right .steps .lists {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  border-radius: 3px;
+  border: 1px solid #eff0f2;
+  background: #fcfcfc;
+  padding: 1.6rem;
+}
+.AddAndManageFaqs .writeAndAdd .writeAndAdd_right .steps .lists .list {
+  width: 100%;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+.AddAndManageFaqs .writeAndAdd .writeAndAdd_right .steps .lists .list span {
+  font-size: 1.2rem;
+}
+.AddAndManageFaqs
+  .writeAndAdd
+  .writeAndAdd_right
+  .steps
+  .lists
+  .list
+  .inputFieldBox {
+  width: 100%;
+}
+.AddAndManageFaqs
+  .writeAndAdd
+  .writeAndAdd_right
+  .steps
+  .lists
+  .list
+  .inputFieldBox
+  .inputLabel {
+  display: none;
+}
+.AddAndManageFaqs .writeAndAdd .writeAndAdd_right .steps .lists button {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--secondary-yellow);
+}
+.AddAndManageFaqs .all_faqs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.AddAndManageFaqs .all_faqs .allFaqsCards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+  row-gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+/* AllFaqsCard components */
+
+.AllFaqsCard {
+  width: 32%;
+  padding: 1.2rem;
+  border-radius: 0.6rem;
+  border: 0.16rem solid #dddddd;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.AllFaqsCard .txt h5 {
+  font-size: 1.2rem;
+  color: var(--primary-black);
+  font-weight: 500;
+}
+.AllFaqsCard .txt p {
+  font-size: 1rem;
+  color: #767676;
+  font-weight: 400;
+  margin-top: 0.6rem;
+}
+.AllFaqsCard .delete {
+  font-size: 1.4rem;
+  color: var(--dark-red);
+  height: fit-content;
+}
+
+
+
+
+@media (min-width: 299px) and (max-width: 799.99px) {
+  .AddAndManageFaqs .writeAndAdd{
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  .AddAndManageFaqs .writeAndAdd .writeAndAdd_left,
+  .AddAndManageFaqs .writeAndAdd .writeAndAdd_right,
+  .AllFaqsCard{
+    width: 100%;
+  }
+}
+@media (min-width: 699px) and (max-width: 999.99px) {
+  .AddAndManageFaqs .all_faqs .allFaqsCards{
+    justify-content: space-between;
+  }
+  .AllFaqsCard{
+    width: 48.5%;
+  }
+}

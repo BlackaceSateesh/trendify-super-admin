@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 62.5%;
+  /* font-family: "Urbanist", sans-serif; */
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+:root {
+  --main-bg: #f9f9f9;
+  --white: #fff;
+  --black: #000;
+  --primary-black: #101616;
+  --box-heading: #0d0f19;
+  --dark-blue: #454751;
+  --font-sec: #484848;
+  --text-color: #696e6e;
+  --secondary-yellow: #c09562;
+  --success-green: #32c98d;
+  --pending-yellow: #ffbf43;
+  --native-blue: #2c6ae5;
+  --star-color: #f79e1b;
+  --dark-red: #ff5f5f;
+  --main-padding: 2.4rem;
+  --cardBox-shadow: 0px 20px 40px 0px rgba(18, 42, 91, 0.05);
+  --btn-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  --secondaryCard-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --primary-border: #eff0f2;
+  --sidemenu-hover: #454751;
+  --loader-color: #C09562;
+}
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+/* scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-yellow);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+/* ======== progress bar bg color =================== */
+.bg-tSuccess {
+  background-color: var(--Sucess-green) !important;
+}
+.bg-tBlue {
+  background-color: #1e3d73 !important;
+}
+.bg-tYellow {
+  background-color: #ffbf43 !important;
+}
+.bg-tLightGreen {
+  background-color: #65f9b3 !important;
+}
+.bg-tPink {
+  background-color: #fe517e !important;
+}
+.bg-tPurple {
+  background-color: #9267ff !important;
+}
+
+.pageHeading {
+  font-size: 2.6rem;
+  color: var(--font-sec);
+}
+
+.sectionInner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.seeMoreBTNS {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.seeAllBtn {
+  font-size: 1.2rem;
+  color: var(--secondary-yellow);
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.sectionContainer {
+  width: 100%;
+  padding: 2.4rem;
+  background: var(--white);
+  box-shadow: 0px 20px 40px 0px rgba(18, 42, 91, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 1rem;
+}
+.sectionGap {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sectionContainer .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.tableBox{
+  width: 100%;
+  overflow-x: auto;
+}
+.tableBox::-webkit-scrollbar{
+  display: none;
+}
+
+/* responsive part */
+
+@media (min-width: 499px) and (max-width: 799.99px) {
+  .pageHeading {
+    font-size: 2rem;
+  }
+  
+}
+@media (min-width: 299px) and (max-width: 499.99px) {
+  :root {
+    --main-padding: 1.4rem;
+  }
+  .pageHeading {
+    font-size: 1.8rem;
+  }
+  .w100 {
+    width: 100% !important;
+  }
+  .sectionContainer{
+    padding: 1.6rem;
+    gap: 1.6rem;
+  }
+  .sectionContainer .head{
+    /* flex-direction: column;
+    align-items: flex-start; */
+    gap: 1.2rem;
+  }
+  .innerBox_shadow .head .sideBtns .categoryBtns{
+    font-size: 1rem;
+  }
+  .innerBox_shadow .category_table{
+    overflow-x: auto;
+  }
+  .innerBox_shadow .category_table::-webkit-scrollbar{
+    display: none;
+  }
+  .innerBox_shadow .category_table table th, .innerBox_shadow .category_table table td{
+    padding: 1.2rem;
+  }
+  ::-webkit-scrollbar{
+    display: none;
+  }
+}

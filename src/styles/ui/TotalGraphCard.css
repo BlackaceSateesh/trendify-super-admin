@@ -1,0 +1,30 @@
+.TotalGraphCard {
+  min-width: 24%;
+  width: 24%;
+
+}
+.TotalGraphCard .head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.TotalGraphCard .graphBox {
+  height: 10rem;
+}
+.TotalGraphCard .graphBox .singleColumn {
+  height: 100%;
+}
+.TotalGraphCard .graphBox .singleColumn .canvasjs-chart-canvas {
+  height: 10rem !important;
+  width: 100% !important;
+}
+
+
+@media (min-width: 500px) and (max-width: 899.99px){
+  .TotalGraphCard{
+   min-width: 48.5%;
+   width: 48.5%;
+  }
+}

@@ -1,0 +1,365 @@
+.SellerProfile .profileTopHeader {
+  padding: 0 0 2.4rem 0;
+}
+.SellerProfile .profileTop {
+  width: 100%;
+}
+.SellerProfile .sectionContainer .head {
+  margin-bottom: 0;
+}
+.SellerProfile .profileTop .bannerImg {
+  width: 100%;
+  max-height: 26.6rem;
+  position: relative;
+}
+.SellerProfile .profileTop .sellerDetails {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  gap: .8rem;
+}
+.SellerProfile .profileTop .sellerDetails .left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+.SellerProfile .profileTop .sellerDetails .left .logo {
+  min-width: 10rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  position: relative;
+  top: -6rem;
+}
+.SellerProfile .profileTop .sellerDetails .left .nameBox .name {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.SellerProfile .profileTop .sellerDetails .left .nameBox .name h6 {
+  color: var(--primary-black, #101616);
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.SellerProfile .profileTop .sellerDetails .left .nameBox p {
+  color: #33363f;
+  font-size: 1.4rem;
+  margin-top: 0.6rem;
+  font-weight: 300;
+}
+.SellerProfile .profileTop .sellerDetails .left .nameBox .name .verifyIcon {
+  min-width: 2rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.SellerProfile .profileTop .sellerDetails .right .requestBtn {
+  padding: 1rem;
+  border: 1.4px solid var(--primary-black);
+  color: var(--primary-black, #101616);
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 1rem;
+}
+
+.SellerProfile .UserProfile_desc {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.SellerProfile .UserProfile_desc .leftside {
+  width: 64%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.SellerProfile .company_desc .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.2rem;
+}
+.SellerProfile .company_desc .inner .inputFieldBox {
+  width: 100%;
+}
+
+.SellerProfile .company_desc .inner textarea {
+  min-height: 20rem;
+}
+.SellerProfile .company_desc .inner textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.SellerProfile .company_desc .inner .seemore {
+  color: var(--secondary-yellow, #c09562);
+  width: fit-content;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.SellerProfile .categoryBtn_inner {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  padding: 1.2rem 0;
+}
+
+.userCertifications .certificate_card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid #8c8c8c29;
+}
+.userCertifications .certificate_card:last-child{
+    border-bottom: none;
+}
+
+.userCertifications .certificate_card .image {
+  min-width: 22rem;
+  width: 22rem;
+  height: 13rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
+.userCertifications .certificate_card .content {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.userCertifications .certificate_card .content h6 {
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.userCertifications .certificate_card .content p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* right side */
+.SellerProfile .UserProfile_desc .rightside {
+  width: 34.5%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.SellerProfile .UserProfile_desc .rightside .inner{
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.SellerProfile .UserProfile_desc .rightside .detail p {
+  margin-bottom: 0.6rem;
+  color: var(--text-color, #696e6e);
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 1.429px;
+}
+
+.SellerProfile .UserProfile_desc .rightside .detail h6 {
+  color: var(--black);
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+
+
+@media (min-width: 299px) and (max-width: 1299px) {
+  .UserProfile .innerBox .inputFields .selectInput,
+  .UserProfile .innerBox .inputFields .textInput,
+  .UserProfile .innerBox .inputFields .DatePickerInput {
+    width: 32%;
+  }
+}
+@media (min-width: 299px) and (max-width: 999px) {
+  .SellerProfile .profileTop .sellerDetails .left{
+    gap: 1.2rem;
+  }
+  .SellerProfile .profileTop .sellerDetails {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 1.6rem;
+  }
+  .SellerProfile .profileTop .sellerDetails .left{
+    width: 100%;
+  }
+  .SellerProfile .profileTop .sellerDetails .left .logo{
+    min-width: 8rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  .SellerProfile .UserProfile_desc{
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .SellerProfile .UserProfile_desc .leftside,
+  .SellerProfile .UserProfile_desc .rightside {
+    width: 100%;
+  }
+  .UserProfile_banner {
+    width: 100%;
+    /* height: 12.8rem; */
+    position: relative;
+  }
+  .UserProfile_details .profilePic {
+    position: absolute;
+    top: -6rem;
+    left: 1rem;
+  }
+  .UserProfile_details .name {
+    top: 0;
+    margin-top: 6rem;
+  }
+  .UserProfile_details {
+    align-items: flex-end;
+  }
+  .UserProfile_details .request_changeBtn {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 299px) and (max-width: 699px) {
+  .UserProfile .innerBox .inputFields .selectInput,
+  .UserProfile .innerBox .inputFields .textInput,
+  .UserProfile .innerBox .inputFields .DatePickerInput {
+    width: 49%;
+  }
+}
+
+@media (min-width: 299px) and (max-width: 499px) {
+
+
+  .SellerProfile .profileTop .sellerDetails .left .nameBox .name h6{
+    font-size: 1.8rem;
+  }
+  .SellerProfile .profileTop .sellerDetails .left .nameBox p{
+    font-size: 1.2rem;
+  }
+  .SellerProfile .profileTop .sellerDetails .left .logo{
+    top: -3rem;
+  }
+
+
+
+
+
+
+
+
+  .UserProfile .innerBox .inputFields {
+    justify-content: space-between;
+  }
+
+  .UserProfile .innerBox .inputFields .selectInput,
+  .UserProfile .innerBox .inputFields .textInput,
+  .UserProfile .innerBox .inputFields .DatePickerInput {
+    width: 49%;
+  }
+
+  .UserProfile .innerBox .inputFields .inputLabel {
+    color: var(--Primary19-Black);
+    font-size: 1.2rem;
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .SellerProfile .UserProfile_desc .rightside .detail h6{
+    font-size: 1.4rem;
+  }
+  /* .UserProfile_banner {
+        max-height: 6.6rem;
+    } */
+
+  .UserProfile_details .profilePic {
+    position: absolute;
+    top: -6rem;
+    left: 1rem;
+  }
+
+  .UserProfile_details {
+    padding: 0 1.2rem;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding-bottom: 1.2rem;
+    align-items: flex-end;
+  }
+
+  .UserProfile_details .nameSide {
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .UserProfile_details .name h4 {
+    font-size: 2rem;
+  }
+  .UserProfile_details .name p {
+    font-size: 1.5rem;
+  }
+  .UserProfile_details .name {
+    top: 0;
+  }
+  .UserProfile .UserProfile_desc {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .UserProfile .UserProfile_desc .leftside,
+  .UserProfile .UserProfile_desc .rightside {
+    width: 100%;
+  }
+  .UserProfile .innerBox .head {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .UserProfile .innerBox .head .buttons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .UserProfile .innerBox .head .buttons .customBTN {
+    margin: 0;
+  }
+  .UserProfile .innerBox .categoryBtn_inner {
+    gap: 1rem;
+  }
+  .UserProfile .innerBox .categoryBtn_inner .categoryBtn {
+    padding: 1rem 1.2rem;
+  }
+  .userCertifications .certificate_card .image {
+    min-width: 8rem;
+    width: 8rem;
+    height: 5rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
+  }
+  .userCertifications .certificate_card {
+    align-items: flex-start;
+  }
+  .userCertifications .certificate_card .content p {
+    font-size: 1.2rem;
+  }
+  .UserProfile .UserProfile_desc .rightside .detail h6 {
+    font-size: 1.6rem;
+  }
+  .UserProfile .UserProfile_desc .rightside .detail p {
+    font-size: 1.3rem;
+  }
+}

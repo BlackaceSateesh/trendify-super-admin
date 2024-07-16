@@ -1,0 +1,175 @@
+.userDetail .userDetail_inner {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+.userDetail .userDetail_inner .userPic {
+  min-width: 21rem;
+  width: 21rem;
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+
+.userDetail .userDetail_inner .inputFieldBox_inner {
+  width: 100%;
+}
+.userDetail .userDetail_inner .inputField {
+  width: 100%;
+  height: fit-content;
+}
+.userDetail .userDetail_inner .inputField .inputFieldBox {
+  width: 32%;
+}
+.address_cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2%;
+  row-gap: 2rem;
+  padding: 0 2rem;
+}
+
+.purchase_col2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.purchase_col2 .purchaseHistory {
+  width: 70%;
+}
+.purchase_col2 .purchaseCategory {
+  width: 28.4%;
+}
+.purchase_col2 .purchaseCategory .prograssBar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.UserProfile .rightBtns {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.UserProfile .rightBtns .ButtonWithIcon {
+  font-size: 1.2rem;
+}
+/* reviewSection */
+.UserProfile .reviewSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.UserProfile .reviewSection .sectionContainer {
+  width: 49%;
+}
+
+/* UserReviewCard */
+
+.UserReviewCard {
+  width: 100%;
+  display: flex;
+  gap: 0.6rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid #ededed;
+}
+.UserReviewCard:last-child {
+  border-bottom: none;
+}
+.UserReviewCard .userPic {
+  min-width: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+}
+.UserReviewCard .details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.UserReviewCard .details .head {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.4rem;
+  margin-bottom: 0;
+}
+.UserReviewCard .details .head .name {
+  font-size: 1.4rem;
+  color: var(--primary-black);
+}
+.UserReviewCard .details .head p {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+.UserReviewCard .details .stars {
+  display: flex;
+  gap: 0.4rem;
+  color: var(--star-color);
+  font-size: 1.6rem;
+}
+.UserReviewCard .details .reviewTxt {
+  font-size: 1.4rem;
+  color: var(--primary-black);
+}
+.UserReviewCard .details .para {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  font-weight: 300;
+}
+.UserReviewCard .details .delete {
+  font-size: 1.2rem;
+  color: var(--dark-red);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 300;
+  margin-top: 0.4rem;
+}
+
+@media (min-width: 799px) and (max-width: 999.99px){
+  .userDetail .userDetail_inner .inputField .inputFieldBox {
+    width: 48.5%;
+}
+.UserProfile .reviewSection{
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.UserProfile .reviewSection .sectionContainer{
+  width: 100%;
+}
+}
+
+
+@media (min-width: 299px) and (max-width: 799.99px) {
+  .userDetail .userDetail_inner{
+    flex-direction: column;
+    align-items: center;
+  }
+  .userDetail .userDetail_inner .userPic{
+    min-width: 10rem;
+    width: 10rem;
+  }
+  .userDetail .userDetail_inner .inputField .inputFieldBox{
+    width: 48.5%
+  }
+  .address_cards{
+    padding: 0;
+  }
+  .purchase_col2,
+  .UserProfile .reviewSection{
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  .purchase_col2 .purchaseHistory,
+  .purchase_col2 .purchaseCategory,
+  .UserProfile .reviewSection .sectionContainer{
+    width: 100%;
+  }
+  .UserProfile .rightBtns{
+    flex-wrap: wrap;
+  }
+
+}

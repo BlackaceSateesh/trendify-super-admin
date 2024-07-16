@@ -1,0 +1,10 @@
+.DeliveryOption .DeliveryOption_inner{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+.DeliveryOption .DeliveryOption_inner .options{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+}

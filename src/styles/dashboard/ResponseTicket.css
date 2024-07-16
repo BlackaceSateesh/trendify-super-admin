@@ -1,0 +1,173 @@
+.ResponseTicket_inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.ResponseTicket_inner .head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ResponseTicket_inner .head .name {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.ResponseTicket_inner .head .name .circle {
+    min-width: 1.6rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: #dad;
+    border-radius: 50%;
+}
+
+.ResponseTicket_inner .head .name h6 {
+    color: var(--dark, #2E2C34);
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.ResponseTicket_inner .head .date p {
+    color: var(--gray, #84818A);
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.ResponseTicket_inner .details {
+    padding-left: 2.7rem;
+    margin: 1rem 0;
+}
+
+.ResponseTicket_inner .details p {
+    margin-bottom: 0;
+}
+
+.ResponseTicket_inner .details .status {
+    color: var(--dark, #2E2C34);
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: .6rem;
+}
+
+.ResponseTicket_inner .details .para {
+    color: var(--gray, #84818A);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.ResponseTicket_inner .replyTicket {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 4px;
+    border: 1px solid #E7E7E7;
+    background-color: var(--white);
+}
+
+.ResponseTicket_inner .replyTicket .heading {
+    color: var(--Secondary-500, #2E2A40);
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: .6rem;
+}
+
+.ResponseTicket_inner .replyTicket .subheading {
+    color: var(--gray, #84818A);
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.ResponseTicket_inner .replyTicket .inputFields {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    row-gap: 2rem;
+}
+
+.ResponseTicket_inner .replyTicket .inputFields .selectInput,
+.ResponseTicket_inner .replyTicket .inputFields .textInput {
+    width: 32%;
+}
+
+.ResponseTicket_inner .replyTicket .inputFields .textareaInput {
+    width: 100%;
+}
+
+.ResponseTicket_inner .replyTicket .submitBtn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1.6rem;
+}
+
+.ResponseTicket_inner .replyTicket .submitBtn .customBTN {
+    margin: 0;
+}
+
+@media (min-width:299px) and (max-width:749px) {
+
+    .ResponseTicket_inner .replyTicket .inputFields .selectInput,
+    .ResponseTicket_inner .replyTicket .inputFields .textInput {
+        width: 49%;
+    }
+}
+
+@media (min-width:299px) and (max-width:499px) {
+    .ResponseTicket_inner .replyTicket .inputFields .textInput {
+        width: 100%;
+    }
+
+    .ResponseTicket_inner .head .name h6 {
+        font-size: 2rem;
+    }
+
+    .ResponseTicket_inner .head .date p {
+        font-size: 1.4rem;
+    }
+
+    .ResponseTicket_inner .details .status {
+        font-size: 2rem;
+    }
+
+    .ResponseTicket_inner .details .para {
+        font-size: 1.4rem;
+    }
+
+    .ResponseTicket_inner .replyTicket .submitBtn {
+        padding-top: .6rem;
+    }
+
+    .ResponseTicket_inner .replyTicket {
+        padding: 1.2rem;
+    }
+    .ResponseTicket_inner .head {
+        flex-direction: column;
+        align-items: flex-end !important;
+    }
+    .ResponseTicket_inner .head .name{
+        width: 100%;
+    }
+    .ResponseTicket_inner .details{
+        padding-left: 0;
+        text-align: justify;
+    }
+
+}
+
+@media (min-width:299px) and (max-width:399px) {
+   
+    .ResponseTicket_inner .head .date p {
+        text-align: right;
+    }
+
+}

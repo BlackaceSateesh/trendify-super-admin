@@ -1,0 +1,129 @@
+.AdressProfileCard .inputField .mainCheck {
+    position: relative;
+}
+
+.AdressProfileCard .inputField .mainCheck label {
+    background-color: #c09662c6;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 1.6rem;
+    width: 1.6rem;
+    left: 0;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AdressProfileCard .inputField .mainCheck label:after {
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 5px;
+    opacity: 0;
+    transform: rotate(-45deg);
+    width: 8px;
+    position: relative;
+    bottom: 2px;
+}
+
+.AdressProfileCard .inputField .mainCheck input[type="checkbox"] {
+    visibility: hidden;
+}
+
+.AdressProfileCard .inputField .mainCheck input[type="checkbox"]:checked+label {
+    background-color: var(--Secondary_yellow);
+    border-color: var(--Secondary_yellow);
+}
+
+.AdressProfileCard .inputField .mainCheck.stratsIcon input[type="checkbox"]:checked+label {
+    background-color: #FFCC2E;
+    border-color: #FFCC2E;
+}
+
+.AdressProfileCard .inputField .mainCheck input[type="checkbox"]:checked+label:after {
+    opacity: 1;
+}
+
+ 
+ .AdressProfileCard {
+    width: 49%;
+    border-radius: 10px;
+    border: 1px solid var(--Primary-100, #E6E6E6);
+    background: var(--Primary-0, #FFF);
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.25);
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+ .AdressProfileCard .icon {
+    color: #999999;
+    font-size: 2rem;
+    margin-top: -.4rem;
+}
+ .AdressProfileCard .details {
+    width: 88%;
+}
+ .AdressProfileCard .details .head {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+ .AdressProfileCard .details .head span {
+    border-radius: 6px;
+    background: var(--Primary-100, #E6E6E6);
+    padding: .2rem .6rem;
+    height: fit-content;
+    font-size: 1rem;
+}
+ .AdressProfileCard .details .head h4 {
+    color: var(--primary_blue, var(--Primary_Black, #101616));
+    font-size: 1.5rem;
+}
+ .AdressProfileCard .details p {
+    color: var(--Primary-500, #808080);
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* ============================================================= */
+@media (min-width:299.99px) and (max-width:499.99px) {
+    .AdressProfileCard{
+        width: 100%;
+        padding: 1rem;
+    }
+}
+@media (min-width:299.99px) and (max-width:999.99px) {
+ 
+
+    .AdressProfileCard .details .head h4{
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+    .AdressProfileCard .details {
+        width: 82%;
+    }
+    .AdressProfileCard .details p{
+        font-size: 1.2rem;
+    }
+    .AdressProfileCard .details .head{
+        flex-direction: row;
+    }
+}
+
+@media (min-width:799.99px) and (max-width:1249.99px) {
+
+    .AdressProfileCard .details .head h4{
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+    .AdressProfileCard .details {
+        width: 82%;
+    }
+    .AdressProfileCard .details p{
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,6 @@
+.SellerVerificationDetailPage .declaration h6{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--dark-red);
+    margin-bottom: 1.4rem;
+}

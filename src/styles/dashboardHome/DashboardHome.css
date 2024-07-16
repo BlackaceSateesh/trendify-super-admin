@@ -1,0 +1,363 @@
+.DashboardHome {
+  width: 100%;
+  background-color: transparent;
+}
+.DashboardHome .total_graph {
+  width: 100%;
+  display: flex;
+  gap: 1.3%;
+}
+.homeCardBox {
+  background-color: var(--white);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  box-shadow: var(--cardBox-shadow);
+}
+.homeBigNumber {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--dark-blue);
+}
+.homeBigNumber span {
+  font-size: 1.3rem;
+}
+.homeCardHeading {
+  font-size: 1.2rem;
+  color: var(--primary-black);
+  font-weight: 600;
+}
+
+.homeStatus {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #4c4c4c;
+}
+.homeStatus .highlight {
+  color: var(--success-green);
+}
+.homeSelect {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-black);
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+/* profile graph */
+
+.DashboardHome .profileGraph .head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.DashboardHome .profileGraph .graphBox {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/* top_details */
+.DashboardHome .top_details {
+  width: 100%;
+  display: flex;
+  gap: 1.3%;
+}
+
+/*  */
+.DashboardHome .notification {
+  width: 100%;
+}
+.DashboardHome .notification .head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.DashboardHome .notification .notification_cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+  row-gap: 1.8rem;
+}
+.DashboardHome .notification .notification_cards .NotificationCard {
+  min-width: 30%;
+  width: 30%;
+  display: flex;
+  gap: 0.8rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+.DashboardHome .notification .notification_cards .NotificationCard .icon svg {
+  font-size: 1.8rem;
+}
+.DashboardHome .notification .notification_cards .NotificationCard .content {
+  width: 100%;
+}
+.DashboardHome
+  .notification
+  .notification_cards
+  .NotificationCard
+  .content
+  .head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.DashboardHome
+  .notification
+  .notification_cards
+  .NotificationCard
+  .content
+  .head
+  .heading {
+  font-size: 1rem;
+  color: var(--dark-blue);
+  font-weight: 400;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.DashboardHome
+  .notification
+  .notification_cards
+  .NotificationCard
+  .content
+  .head
+  .heading
+  .dot {
+  min-width: 0.4rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: var(--dark-blue);
+  border-radius: 50%;
+  display: block;
+}
+.DashboardHome
+  .notification
+  .notification_cards
+  .NotificationCard
+  .content
+  .head
+  .tag {
+  font-size: 1rem;
+  padding: 0.2rem 0.8rem;
+  font-weight: 400;
+  color: var(--white);
+  border-radius: 0.4rem;
+}
+.DashboardHome
+  .notification
+  .notification_cards
+  .NotificationCard.success
+  .content
+  .head
+  .tag {
+  background-color: var(--success-green);
+}
+.DashboardHome
+  .notification
+  .notification_cards
+  .NotificationCard.pending
+  .content
+  .head
+  .tag {
+  background-color: var(--pending-yellow);
+}
+.DashboardHome
+  .notification
+  .notification_cards
+  .NotificationCard.high
+  .content
+  .head
+  .tag {
+  background-color: var(--dark-red);
+}
+.DashboardHome
+  .notification
+  .notification_cards
+  .NotificationCard.success
+  .icon
+  svg {
+  color: var(--success-green);
+}
+.DashboardHome
+  .notification
+  .notification_cards
+  .NotificationCard.pending
+  .icon
+  svg {
+  color: var(--pending-yellow);
+}
+.DashboardHome
+  .notification
+  .notification_cards
+  .NotificationCard.high
+  .icon
+  svg {
+  color: var(--dark-red);
+}
+.DashboardHome .notification .notification_cards .NotificationCard .text {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--dark-blue);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.DashboardHome .customer_reviews {
+  width: 100%;
+  overflow: hidden;
+}
+.DashboardHome .customer_reviews .head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.customer_reviews_cards {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  overflow-x: auto;
+  padding: 1rem;
+}
+.customer_reviews_cards::-webkit-scrollbar {
+  display: none;
+}
+.CustomerReviewCard {
+  min-width: 29rem;
+  width: 29rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 2rem;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.CustomerReviewCard .head {
+  justify-content: flex-start !important;
+  gap: 1.2rem;
+}
+.CustomerReviewCard .pic {
+  min-width: 5rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.CustomerReviewCard .head .txt h6 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--dark-blue);
+}
+.CustomerReviewCard .head .txt p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #a3a3a3;
+}
+.DashboardHome .customer_reviews .head .btns {
+  display: flex;
+  gap: 1.6rem;
+}
+.DashboardHome .customer_reviews .head .btns .sliderBTN {
+  min-width: 4.4rem;
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
+  background-color: var(--white);
+  font-size: 1.6rem;
+  color: var(--primary-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.CustomerReviewCard .stars {
+  font-size: 1.2rem;
+  display: flex;
+  gap: 0.6rem;
+  color: var(--star-color);
+}
+.CustomerReviewCard .text {
+  font-size: 1.2rem;
+  color: #464255;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.CustomerReviewCard .options {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.CustomerReviewCard .options button:nth-child(1) {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--dark-red);
+}
+.CustomerReviewCard .options button:nth-child(2) {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--success-green);
+}
+
+@media (min-width: 500px) and (max-width: 1099.99px){
+  .DashboardHome .top_details{
+    flex-wrap: wrap;
+    gap: 1.6rem;
+  }
+  .TopTotalTableCard {
+    min-width: 48.5%;
+    width: 48.5%;
+  }
+  .DashboardHome .notification .notification_cards .NotificationCard{
+    min-width: 47%;
+    width: 47%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 899.99px){
+  .DashboardHome .total_graph{
+    flex-wrap: wrap;
+    row-gap: 1.6rem;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 299px) and (max-width: 499.99px){
+  .DashboardHome .total_graph,
+  .DashboardHome .top_details{
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .DashboardHome .customer_reviews .head .btns .sliderBTN{
+    min-width: 2.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1.2rem;
+  }
+  .CustomerReviewCard{
+    min-width: 100%;
+    width: 100%;
+    padding: 1.6rem;
+  }
+  .homeBigNumber{
+    font-size: 1.8rem;
+  }
+}

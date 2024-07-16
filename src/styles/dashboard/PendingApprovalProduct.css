@@ -1,0 +1,71 @@
+.PendingApprovalProduct .tagBox {
+  width: 100%;
+  padding: 1.4rem;
+  border-radius: 0.4rem;
+  border: 1px solid var(--primary-border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.PendingApprovalProduct .tagBox .tag {
+  padding: 0.6rem 1rem;
+  border-radius: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--primary-black);
+  border: 1px solid var(--primary-border);
+}
+.PendingApprovalProduct .productImgs {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+}
+.PendingApprovalProduct .productImgs .productImgBox {
+  
+  padding: 1rem 0.8rem;
+  border-radius: 1rem;
+  border: 1px solid var(--primary-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.PendingApprovalProduct .productImgs .productImgBox .image {
+  height: 22rem;
+  min-width: 20rem;
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.PendingApprovalProduct .productImgs .productImgBox .image img{
+  width: 100%;
+  height: 100%;
+}
+
+.PendingApprovalProduct .productImgs .productImgBox .name{
+  padding: .4rem .8rem;
+  border-radius: .4rem;
+  background-color: var(--secondary-yellow);
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--white);
+}
+
+
+@media (min-width: 299px) and (max-width: 499.99px){
+  .PendingApprovalProduct .productImgs .productImgBox .image {
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  .PendingApprovalProduct .productImgs{
+    gap: 1.2%;
+    row-gap: 1.6rem;
+  }
+  .PendingApprovalProduct .productImgs .productImgBox{
+    width: 48%;
+  }
+}

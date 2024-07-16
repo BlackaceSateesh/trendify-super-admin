@@ -1,0 +1,497 @@
+/* default properties modal */
+.modal-body::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-header {
+  padding: 1.6rem;
+}
+.modal-header .btn-close {
+  font-size: 1.6rem;
+  /* color: var(--dark-red); */
+}
+.modal-content{
+    border-radius: 2rem !important;
+    border: none !important;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px !important; 
+}
+
+/* viewImagePopup */
+
+.viewImagePopup .modal-header .btn-close:after {
+  font-size: 1.4rem;
+  /* color: var(--dark-red); */
+  content: "Close";
+  position: relative;
+  right: 6rem;
+  bottom: 0.5rem;
+  background-color: var(--native-blue);
+  color: var(--white);
+  padding: 0.6rem 2rem;
+  border-radius: 0.6rem;
+  opacity: 1;
+}
+
+/* ProfileRejectionPopup */
+
+.ProfileRejectionPopup .inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+  padding: 2rem;
+}
+.ProfileRejectionPopup .inner .heading {
+  font-size: 2.2rem;
+  color: var(--primary-black);
+  text-align: center;
+}
+.ProfileRejectionPopup .inner .radioBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+  row-gap: 1.6rem;
+}
+.ProfileRejectionPopup .inner .radioBox .RadioInputBorder {
+  width: 32.6%;
+}
+.ProfileRejectionPopup .inner .inputFieldBox textarea {
+  min-height: 10rem;
+}
+
+/* alertModal */
+
+.alertModal .inner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+}
+.alertModal .inner .head{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.alertModal .inner .head .icon{
+   min-width: 5rem;
+   width: 5rem;
+}
+.alertModal .inner .head p{
+   font-size: 1.6rem;
+   color: #771505;
+   font-weight: 600;
+}
+.alertModal .inner .msg{
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--primary-black);
+}
+.alertModal .inner .msgDetail{
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* warning strip */
+.alertModal.warning .inner .msgDetail{
+    border-left: 1rem solid #FA703F;
+    background-color: #FFE9D9;
+    color: #BC4C2E;
+}
+/* approve strip */
+.alertModal.approve .inner .msgDetail{
+    border-left: 1rem solid #32C98D;
+    background-color: #32C98D4D;
+    color: #32C98D;
+}
+/* pending strip */
+.alertModal.pending .inner .msgDetail{
+    border-left: 1rem solid #FFBF43;
+    background-color: rgba(255, 233, 217, 0.175);
+    color: #FFBF43;
+}
+/* modify strip */
+.alertModal.modify .inner .msgDetail{
+    border-left: 1rem solid #2C6AE5;
+    background-color: #2c6ae525;
+    color: #2C6AE5;
+}
+
+.alertModal .inner .popupBtn{
+  font-size: 1.3rem;
+  font-weight: 500;
+  border: .16rem solid #fff;
+  color: var(--white);
+  padding: .8rem 2.6rem;
+  transition: all .2s ease;
+}
+.alertModal .inner .popupBtn:hover{
+    opacity: .8;
+}
+.alertModal .inner .popupBtn.cancel{
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: .16rem solid #DF7272;
+  color: #DF7272;
+}
+.alertModal .inner .popupBtn.cancel:hover{
+    background-color: #DF7272;
+    color: var(--white);
+    opacity: 1;
+}
+/* warning btn */
+.alertModal.warning .inner .popupBtn.continuo{
+    background-color: #DF7272;
+}
+/* approve btn */
+.alertModal.approve .inner .popupBtn.continuo{
+    background-color: var(--success-green);
+}
+/* pending btn */
+.alertModal.pending .inner .popupBtn.continuo{
+    background-color: #FFBF43;
+}
+/* modify btn */
+.alertModal.modify .inner .popupBtn.continuo{
+    background-color: #2C6AE5;
+}
+
+
+/* PreviewInvoicePopup */
+
+.PreviewInvoicePopup .inner{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+.PreviewInvoicePopup .inner .heading{
+   font-size: 2.2rem;
+   color: var(--primary-black);
+   font-weight: 400;
+}
+.PreviewInvoicePopup .inner .inner_box {
+   padding: 0 2rem;
+   display: flex;
+   flex-direction: column;
+   gap: 1.6rem;
+   width: 100%;
+}
+.PreviewInvoicePopup .inner .inner_box .head{
+   display: flex;
+   gap: 1rem;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+}
+.PreviewInvoicePopup .inner .inner_box .head .left{
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+}
+.PreviewInvoicePopup .inner .inner_box .head .left .logo{
+   min-width: 5rem;
+   width: 5rem;
+}
+.PreviewInvoicePopup .inner .inner_box .head .left .name{
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--primary-black);
+}
+.PreviewInvoicePopup .inner .inner_box .head .right p{
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--primary-black);
+  text-transform: uppercase;
+}
+.PreviewInvoicePopup .inner .inner_box .billto{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.PreviewInvoicePopup .inner .inner_box .billto .heading{
+ font-size: 1.8rem;
+}
+.PreviewInvoicePopup .inner .inner_box .billto p{
+ font-size: 1.3rem;
+ font-weight: 400;
+ color: var(--primary-black);
+}
+.PreviewInvoicePopup .inner .inner_box .billto .right{
+    display: flex;
+ flex-direction: column;
+ align-items: flex-end;
+}
+.PreviewInvoicePopup .inner .inner_box .bill_table{
+   width: 100%;
+}
+.PreviewInvoicePopup .inner .inner_box .bill_table table{
+   width: 100%;
+}
+.PreviewInvoicePopup .inner .inner_box .bill_table table thead tr{
+  border-bottom: .1rem solid var(--primary-black);
+}
+.PreviewInvoicePopup .inner .inner_box .bill_table table th,
+.PreviewInvoicePopup .inner .inner_box .bill_table table td{
+ color: var(--primary-black);
+ font-size: 1rem;
+ padding: .6rem 0;
+ font-weight: 400;
+ text-align: center;
+}
+.PreviewInvoicePopup .inner .inner_box .bill_table table th{
+    font-weight: 600;
+}
+.PreviewInvoicePopup .inner .inner_box .bill_table table tr th:last-child,
+.PreviewInvoicePopup .inner .inner_box .bill_table table tr td:last-child{
+text-align: right;
+}
+
+.PreviewInvoicePopup .inner .inner_box .bill_table table tr th:first-child,
+.PreviewInvoicePopup .inner .inner_box .bill_table table tr td:first-child{
+width: 50%;
+text-align: left;
+}
+.PreviewInvoicePopup .inner .inner_box .bill_table table tr{
+    border-bottom: 1px solid #eee;
+}
+.PreviewInvoicePopup .inner .inner_box .subTotal,
+.PreviewInvoicePopup .inner .inner_box .total{
+   width: 100%;
+}
+.PreviewInvoicePopup .inner .inner_box .subTotal .item,
+.PreviewInvoicePopup .inner .inner_box .total .item{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   padding: .6rem 0;
+   color: var(--primary-black);
+ font-size: 1rem;
+ font-weight: 400;
+}
+.PreviewInvoicePopup .inner .inner_box .total .item{
+  font-weight: 600;
+  border-top: 1px solid var(--primary-black);
+  padding-top: .8rem;
+ }
+.PreviewInvoicePopup .inner .payment_detail{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+ }
+.PreviewInvoicePopup .inner .payment_detail .detailBox .heading{
+ font-size: 1.4rem;
+ margin-bottom: .8rem;
+ }
+ .PreviewInvoicePopup .inner .payment_detail .detailBox{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+ }
+.PreviewInvoicePopup .inner .payment_detail .detailBox .detail{
+ display: flex;
+ flex-direction: column;
+ gap: .2rem;
+ margin-bottom: .8rem;
+ }
+.PreviewInvoicePopup .inner .payment_detail .detailBox .detail .detail1{
+ display: flex;
+ gap: 1rem;
+ }
+.PreviewInvoicePopup .inner .payment_detail .detailBox .detail .detail1 .key,
+.PreviewInvoicePopup .inner .payment_detail .detailBox .detail .detail1 .value{
+min-width: 25%;
+max-width: 48%;
+font-size: 1.2rem;
+font-weight: 400;
+ }
+ .PreviewInvoicePopup .inner .payment_detail .detailBox .detail .detail1 .key{
+    font-weight: 500;
+ }
+ .PreviewInvoicePopup .inner .payment_detail .detailBox .msg{
+    font-size: 1.1rem;
+    font-weight: 400;
+ }
+ .PreviewInvoicePopup .inner .payment_detail .sign{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 35%;
+ }
+ .PreviewInvoicePopup .inner .payment_detail .sign .signBox{
+    width: 100%;
+    height: 6rem;
+    border: 1px solid  #eee;
+ }
+ .PreviewInvoicePopup .inner .payment_detail .sign .name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+ .PreviewInvoicePopup .inner .payment_detail .sign .name h6{
+    font-size: 1.1rem;
+    font-weight: 500;
+ }
+ .PreviewInvoicePopup .inner .payment_detail .sign .name p{
+    font-size: 1rem;
+    font-weight: 400;
+ }
+ .PreviewInvoicePopup .inner .support{
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--primary-black);
+  display: flex;
+  gap: 1.6%;
+ }
+ .PreviewInvoicePopup .inner .support .box1{
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+ }
+ .PreviewInvoicePopup .inner .support .box1:nth-child(2){
+    align-items: center;
+   }
+ .PreviewInvoicePopup .inner .support .box1:last-child{
+    align-items: flex-end;
+   }
+ .PreviewInvoicePopup .inner .support .box1 .heading{
+ font-size: 1.2rem;
+ font-weight: 500;
+ }
+ .PreviewInvoicePopup .inner .support .box1 p{
+ font-size: 1rem;
+ font-weight: 500;
+ }
+
+
+ /* PreviewFaq */
+
+ .PreviewFaq .inner,
+ .PreviewPolicy .inner{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+ }
+ .PreviewFaq .inner .heading{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--primary-black);
+ }
+ .PreviewFaq .inner .para{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--primary-black);
+ }
+
+ /* PreviewPolicy */
+
+ .PreviewPolicy .inner ol{
+    list-style: number;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+ }
+ .PreviewPolicy .inner ol li{
+   font-size: 1.2rem;
+   color: var(--primary-black);
+   font-weight: 400;
+   padding-left: 1rem;
+ }
+
+ /* PreviewBanner */
+ .PreviewBanner .inner{
+    width: 100%;
+    padding: 2rem;
+ }
+
+ .PreviewBanner .modal-header,
+ .SelectBannerPopup .modal-header{
+    padding: 1.6rem;
+ }
+
+/* SelectBannerPopup */
+ /* BannerPreviewCard */
+.SelectBannerPopup .inner{
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6%;
+    row-gap: 2rem;
+}
+ .BannerPreviewCard{
+    width: 48%;
+ }
+ .BannerPreviewCard .btm{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 2rem 0;
+ }
+ .BannerPreviewCard .btm .name{
+   font-size: 1.3rem;
+   font-weight: 500;
+   color: var(--primary-black);
+ }
+
+ /* AddProductPopup */
+
+ .AddProductPopup .inner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+ }
+ .AddProductPopup .inner .heading{
+    font-size: 1.4rem;
+    color: var(--primary-black);
+ }
+ .AddProductPopup .inner .heading b{
+    color: var(--secondary-yellow);
+ }
+ .AddProductPopup .inner .center{
+    padding: 0 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: .5rem;
+ }
+ .AddProductPopup .inner .center table{
+    width: 100%;
+ }
+ .AddProductPopup .inner .center table,
+ .AddProductPopup .inner .center table th,
+ .AddProductPopup .inner .center table td{
+    border: 1px solid #eff0f2;
+    border-collapse: collapse;
+ }
+ .AddProductPopup .inner .center table th{
+   padding: 1.2rem ;
+   font-size: 1.2rem;
+   color: var(--primary-black);
+   font-weight: 500;
+ }
+ .AddProductPopup .inner .center table th .inputFieldBox .inputLabel{
+   display: none;
+ }
+ .AddProductPopup .inner .center table th .inputFieldBox input{
+   border: none;
+ }
+ .AddProductPopup .inner .center .ButtonWithIcon {
+   font-size: 1rem;
+   font-weight: 400;
+   padding: .6rem 1rem;
+ }
