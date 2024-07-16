@@ -495,3 +495,50 @@ font-weight: 400;
    font-weight: 400;
    padding: .6rem 1rem;
  }
+
+
+ /* addProduct_modal */
+
+ .addProduct_modal .inner{
+   padding: 1.6rem;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 1.6rem;
+ }
+ .addProduct_modal .inner .heading{
+   font-size: 1.6rem;
+   font-weight: 600;
+ }
+ .addProduct_modal .inner .inputField{
+   display: flex;
+   flex-direction: column;
+   gap: 1.6rem;
+ }
+
+ .addProduct_modal.modelName .inner .inputField{
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   gap: 1%;
+   row-gap: 1.6rem;
+   align-items: flex-end;
+   justify-content: space-between;
+ }
+
+ .addProduct_modal.modelName .inner .inputField .ButtonMain{
+   height: fit-content;
+ }
+ 
+ .addProduct_modal.modelName .inner .inputField .inputFieldBox{
+   width: 42%;
+ }
+ 
+ @media (min-width:299px) and (max-width:999px) {
+   .addProduct_modal.modelName .inner .inputField .inputFieldBox{
+      width: 100%;
+    }
+    .addProduct_modal.modelName .inner .inputField {
+      justify-content: flex-end;
+  }
+ }

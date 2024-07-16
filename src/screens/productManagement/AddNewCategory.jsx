@@ -7,13 +7,24 @@ import "../../styles/dashboard/AddNewCategory.css";
 import ButtonMain from "../../components/ui/ButtonMain";
 import { MdDeleteOutline } from "react-icons/md";
 import AddProductPopup from "../../components/ui/popups/AddProductPopup";
+import AddProductByCategory from "../../components/ui/addProductModals/AddProductByCategory";
+import AddProductByType from "../../components/ui/addProductModals/AddProductByType";
+import AddProductByBrand from "../../components/ui/addProductModals/AddProductByBrand";
+import AddProductByModel from "../../components/ui/addProductModals/AddProductByModel";
 
 const AddNewCategory = () => {
   const [showAddProduct, setShowAddProduct] = useState(false);
+  const [showAddCategory, setShowAddCategory] = useState(false);
+  const [showAddType, setShowAddType] = useState(false);
+  const [showAddBrand, setShowAddBrand] = useState(false);
+  const [showAddModelName, setShowAddModelName] = useState(false);
 
   return (
     <>
       <div className="AddNewCategory sectionGap">
+
+
+
         {/* add product category */}
         <div className="sectionContainer">
           <div className="head">
@@ -248,6 +259,32 @@ const AddNewCategory = () => {
           </div>
         </div>
       </div>
+
+        {/* add category modal test start */}
+         {/* preview popup */}
+         <button onClick={()=> setShowAddCategory(true)} >Category</button>
+         <button onClick={()=> setShowAddType(true)} >Type</button>
+         <button onClick={()=> setShowAddBrand(true)} >Brand</button>
+         <button onClick={()=> setShowAddModelName(true)} >ModelName</button>
+         <AddProductByCategory
+                    show={showAddCategory}
+                    onHide={() => setShowAddCategory(false)}
+                  />
+         <AddProductByType
+                    show={showAddType}
+                    onHide={() => setShowAddType(false)}
+                  />
+         <AddProductByBrand
+                    show={showAddBrand}
+                    onHide={() => setShowAddBrand(false)}
+                  />
+         <AddProductByModel
+                    show={showAddModelName}
+                    onHide={() => setShowAddModelName(false)}
+                  />
+
+        {/* add category modal test end */}
+
     </>
   );
 };
