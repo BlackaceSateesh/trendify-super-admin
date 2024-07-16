@@ -9,7 +9,7 @@ const TotalGraphCard = ({name, number, status}) => {
         <div className="head">
           <p className="homeCardHeading">{name}</p>
           <select name="" id="" className="homeSelect">
-            <option value="today">Today</option>
+            <option value="today">Last 7 Days</option>
           </select>
         </div>
         <h6 className="homeBigNumber">{number}</h6>

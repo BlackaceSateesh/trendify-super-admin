@@ -14,6 +14,7 @@ const VerifiedSalesApproval = () => {
   const navigate = useNavigate();
 
   const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
   const [data, setData] = useState([]);
 
   const mapDataToRow = (data) => {
@@ -28,10 +29,17 @@ const VerifiedSalesApproval = () => {
       }
     });
   }
+
+  const onBottomScroll = () => {
+    if (page < totalPages) {
+      setPage(page + 1);
+    }
+  }
  
   useEffect(() => {
     fetchVendorsByStatus(VendorStatus.REQUESTED, page).then((res) => {
-      setData(mapDataToRow(res.content));
+      setData([...data, ...mapDataToRow(res.content)]);
+      setTotalPages(res.totalPages);
     });
   }, [page]);
 
@@ -48,7 +56,7 @@ const VerifiedSalesApproval = () => {
           <div className="inner_table">
             <SearchBoxTable placeholderValue='Search List' />
             <div className="tableBox">
-              <ListTable dataColumn={DataColumn} dataRow={data} />
+              <ListTable dataColumn={DataColumn} dataRow={data} onBottomScroll={onBottomScroll} />
             </div>
           </div>
         </div>

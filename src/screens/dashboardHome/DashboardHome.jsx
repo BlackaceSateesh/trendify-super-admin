@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import TotalGraphCard from "../../components/dashboard/TotalGraphCard";
 import "../../styles/dashboardHome/DashboardHome.css";
 import MultipleAxesGraph from "../../components/ui/MultipleAxesGraph";
@@ -10,31 +10,63 @@ import { MdChevronRight } from "react-icons/md";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import CustomerReviewCard from "../../components/ui/CustomerReviewCard";
 import userLogo from '../../assests/dashboard/userlogo.png';
+import { getTotalSalesByDate, getTotalReturnsByDate } from "../../api/sales-api";
 
 const DashboardHome = () => {
+  const [totalSales, setTotalSales] = useState({
+    totalSalesAmount: 0,
+    totalOrderDone: 0,
+  });
+
+  const [totalReturns, setTotalReturns] = useState({
+    totalReturnAmount: 0,
+    totalReturnDone: 0,
+  });
+
+  useEffect(() => {
+    const payload = {
+      startDate: new Date().toISOString(),
+      endDate: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(),
+    };
+
+    getTotalSalesByDate(payload).then((data) => {
+      setTotalSales({
+        totalSalesAmount: data.totalSalesAmount,
+        totalOrderDone: data.totalOrderDone,
+      });
+    });
+
+    getTotalReturnsByDate(payload).then((data) => {
+      setTotalReturns({
+        totalReturnAmount: data.totalReturnAmount,
+        totalReturnDone: data.totalReturnDone,
+      });
+    });
+  }, []);
+
   return (
     <>
       <div className="DashboardHome sectionInner">
         <div className="total_graph">
           <TotalGraphCard
-            name="Total Seller"
-            number="10,000"
-            status="50 New Seller Approval Pending"
-          />
-          <TotalGraphCard
-            name="Total Product"
-            number="99,999"
-            status="Recently 10 Orders Added"
-          />
-          <TotalGraphCard
             name="Total Sales"
-            number="₹25,00,000/-"
+            number={totalSales.totalSalesAmount}
             status="Today Sale ₹65,023/-"
           />
           <TotalGraphCard
-            name="Total Order"
-            number="89,423"
+            name="Total Orders"
+            number={totalSales.totalOrderDone}
             status="Today Confirm Orders 2365"
+          />
+          <TotalGraphCard
+            name="Total Returns"
+            number={totalReturns.totalReturnAmount}
+            status="50 New Seller Approval Pending"
+          />
+          <TotalGraphCard
+            name="Total Refunds"
+            number={totalReturns.totalReturnDone}
+            status="Recently 10 Orders Added"
           />
         </div>
 
