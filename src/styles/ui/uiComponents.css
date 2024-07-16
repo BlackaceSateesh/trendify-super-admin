@@ -150,6 +150,7 @@ input[type="checkbox"],
 input[type="radio"] {
   accent-color: #b18d62;
 }
+
 textarea::-webkit-scrollbar{
   display: none;
 }
