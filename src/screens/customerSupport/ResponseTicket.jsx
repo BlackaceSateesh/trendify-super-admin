@@ -34,8 +34,8 @@ const ResponseTicket = () => {
                         <h6 className='heading'>Reply to Ticket</h6>
                         <div className="inputFields">
                             <TextInput labelName='Customer Email' value='shyam.vendor@gmail.com' />
-                            <SelectInput labelName='Request Ticket Type' option='Delivery Issue' />
-                            <SelectInput labelName='Status' option='On-Going' />
+                            <SelectInput labelName='Request Ticket Type' options={["Choose"]} />
+                            <SelectInput labelName='Status' options={["Choose"]} />
                             <TextareaInput placeholder='Type ticket issue here..' labelName='Ticket Body' />
                         </div>
                         <div className="submitBtn">

@@ -9,6 +9,7 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   overflow: hidden;
 }
+
 .SearchHeader input {
   width: 100%;
   font-size: 1.4rem;
@@ -20,6 +21,7 @@
   margin: 0.4rem 0;
   margin-left: 1rem;
 }
+
 .SearchHeader button {
   background-color: #454751;
   font-size: 1.3rem;
@@ -33,13 +35,15 @@
 .Breadcrumbs {
   margin-top: 0.6rem;
 }
+
 .Breadcrumbs .breadcrumb-item,
 .Breadcrumbs .breadcrumb-item a {
   font-size: 1.3rem;
   font-weight: 300;
   color: #616161;
 }
-.breadcrumb-item + .breadcrumb-item::before {
+
+.breadcrumb-item+.breadcrumb-item::before {
   content: ">" !important;
 }
 
@@ -62,6 +66,7 @@
   font-size: 1rem;
   margin-bottom: 0;
 }
+
 .inputLabel .optional {
   color: var(--secondary-yellow);
 }
@@ -103,17 +108,20 @@
   align-items: center;
   position: relative;
 }
+
 .inputFieldBox .box .eye {
   font-size: 1.4rem;
   color: rgba(0, 0, 0, 0.6);
   position: absolute;
   right: 1.5rem;
 }
+
 .inputFieldBox .box .eye:hover svg {
   color: var(--secondary-yellow);
   font-size: 1.6rem;
   transition: all 0.3s ease;
 }
+
 .inputFieldBox .box input {
   padding-right: 4rem;
 }
@@ -146,18 +154,22 @@
   gap: 0.6rem;
   width: fit-content;
 }
+
 input[type="checkbox"],
 input[type="radio"] {
   accent-color: #b18d62;
 }
-textarea::-webkit-scrollbar{
+
+textarea::-webkit-scrollbar {
   display: none;
 }
+
 .RadioInput {
   display: flex;
   align-items: center;
   gap: 0.8rem;
 }
+
 .RadioInputBorder {
   display: flex;
   align-items: center;
@@ -178,17 +190,17 @@ textarea::-webkit-scrollbar{
 .sectionContainer .inputField .inputFieldBox {
   width: 24%;
 }
+
 .sectionContainer .inputField .inputFieldBox.textareaInput {
   width: 100%;
   min-height: 10rem;
 }
+
 .sectionContainer .inputField .inputFieldBox.textareaInput textarea {
   min-height: 10rem;
 }
-.sectionContainer
-  .inputField
-  .inputFieldBox.textareaInput
-  textarea::-webkit-scrollbar {
+
+.sectionContainer .inputField .inputFieldBox.textareaInput textarea::-webkit-scrollbar {
   display: none;
 }
 
@@ -201,6 +213,7 @@ textarea::-webkit-scrollbar{
   align-items: center;
   gap: 0.4rem;
 }
+
 .page_subtitle p {
   font-size: 1.1rem;
 }
@@ -217,9 +230,11 @@ textarea::-webkit-scrollbar{
   padding: 1rem 2.2rem;
   width: fit-content;
 }
+
 .centerBtns .ButtonMain.green {
   background: var(--success-green, #32c98d);
 }
+
 .centerBtns .ButtonMain.red {
   background: var(--dark-red);
 }
@@ -250,9 +265,11 @@ textarea::-webkit-scrollbar{
   width: -moz-fit-content;
   width: fit-content;
 }
+
 .ButtonWithIcon.yellow {
   background: var(--pending-yellow);
 }
+
 .ButtonWithIcon.red {
   background: var(--dark-red);
 }
@@ -273,6 +290,7 @@ textarea::-webkit-scrollbar{
 .inner_table .SearchBoxTable {
   width: 40%;
 }
+
 .SearchBoxTable {
   border-radius: 3px;
   border: 1px solid #eff0f2;
@@ -283,6 +301,7 @@ textarea::-webkit-scrollbar{
   justify-content: space-between;
   gap: 1rem;
 }
+
 .SearchBoxTable input {
   color: #616161;
   font-size: 14px;
@@ -291,6 +310,7 @@ textarea::-webkit-scrollbar{
   border: none;
   outline: none;
 }
+
 .SearchBoxTable label svg {
   color: #616161;
   font-size: 14px;
@@ -305,6 +325,7 @@ textarea::-webkit-scrollbar{
   color: var(--primary-black);
   margin-bottom: 1rem;
 }
+
 .declaration .agree {
   width: 100%;
   display: flex;
@@ -312,10 +333,12 @@ textarea::-webkit-scrollbar{
   justify-content: center;
   gap: 0.6rem;
 }
+
 .declaration .agree input {
   width: 100%;
   margin-top: 0.4rem;
 }
+
 /* .centerBtns .ButtonMain:first-child{
    background-color: var(--native-blue);
 } */
@@ -328,14 +351,17 @@ textarea::-webkit-scrollbar{
   height: 5rem;
   border-radius: 50%;
 }
+
 .sc-feUYzb.Nfhbm::-webkit-scrollbar {
   display: none;
 }
+
 .rdt_TableCol_Sortable {
   color: var(--primary-black);
   font-size: 1.4rem;
   font-weight: 500;
 }
+
 .rdt_TableCell {
   color: #616161;
   font-size: 1.4rem;
@@ -343,11 +369,13 @@ textarea::-webkit-scrollbar{
   padding-left: 8px;
   padding-right: 8px;
 }
+
 .rdt_TableCol,
 .rdt_TableCell {
   padding-left: 8px !important;
   padding-right: 8px !important;
 }
+
 .rdt_TableHeadRow,
 .rdt_TableRow {
   border: none !important;
@@ -381,13 +409,15 @@ textarea::-webkit-scrollbar{
   min-width: 0rem;
   max-width: 6rem;
 }
+
 .dataTable_main .rdt_TableCol,
-.dataTable_main .rdt_TableCell{
+.dataTable_main .rdt_TableCell {
   border-top: .6px solid #eee;
   border-bottom: .6px solid #eee;
   padding: 1rem 0;
 }
-.dataTable_main .rdt_Table{
+
+.dataTable_main .rdt_Table {
   border: .6px solid #eee;
 }
 
@@ -412,6 +442,7 @@ textarea::-webkit-scrollbar{
   transition: all ease-in-out 0.5s;
   gap: 0.4rem;
 }
+
 .DatatableExportBtn.iconBtn:hover {
   background-color: #611bcb;
   color: var(--white);
@@ -423,6 +454,7 @@ textarea::-webkit-scrollbar{
   padding: 0.2rem;
   justify-content: center;
 }
+
 .actionBtns button {
   min-width: 2.2rem;
   width: 2.2rem;
@@ -443,20 +475,24 @@ textarea::-webkit-scrollbar{
 }
 
 .actionBtns button:nth-child(3),
-.actionBtns button.delete{
+.actionBtns button.delete {
   background-color: #ff5f5f42;
   color: #ff5f5f;
 }
+
 .actionBtns button:hover {
   color: var(--white, #fff);
   transition: all 0.3s ease;
 }
+
 .actionBtns button:nth-child(1):hover {
   background-color: #7cb342;
 }
+
 .actionBtns button:nth-child(2):hover {
   background-color: #2c6ae5;
 }
+
 .actionBtns button:nth-child(3):hover,
 .actionBtns button.delete:hover {
   background-color: #ff5f5f;
@@ -468,6 +504,7 @@ textarea::-webkit-scrollbar{
   gap: 1rem;
   align-items: center;
 }
+
 .sectionContainer .dataTable_header .SearchBoxTable {
   width: 50%;
 }
@@ -504,56 +541,119 @@ textarea::-webkit-scrollbar{
   height: 6px;
 }
 
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
 
+.dropdownHeader {
+  padding: 1rem 1.2rem;
+  font-size: 1.4rem;
+  border-radius: 3px;
+  border: 1px solid #eff0f2;
+  background: #fcfcfc;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+  letter-spacing: 0.438px;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.dropdownArrow {
+  margin-left: 10px;
+}
+
+.dropdownOptions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px solid #eff0f2;
+  background-color: #fcfcfc;
+  z-index: 1;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.dropdownOption {
+  font-size: 1.4rem;
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.disabled {
+  pointer-events: none;
+  background-color: #f1f1f1;
+}
+
+.dropdownOption:hover {
+  background-color: #f1f1f1;
+}
 
 
 @media (min-width:799px) and (max-width:1099.99px) {
   .sectionContainer .inputField {
     gap: 1.2%;
     row-gap: 1.6rem;
+  }
+
+  .sectionContainer .inputField .inputFieldBox {
+    width: 32.5%;
+  }
 }
-.sectionContainer .inputField .inputFieldBox {
-  width: 32.5%;
-}
-}
+
 @media (min-width:299px) and (max-width:849.99px) {
-.sectionContainer .inputField .inputFieldBox {
-  width: 48.5%;
+  .sectionContainer .inputField .inputFieldBox {
+    width: 48.5%;
+  }
 }
-}
+
 @media (min-width:299px) and (max-width:799.99px) {
   .Breadcrumbs {
-  display: none;
+    display: none;
+  }
+
+  .SearchHeader input,
+  .SearchHeader button {
+    font-size: 1.2rem;
+  }
+
+  .sectionContainer .inputField {
+    justify-content: space-between;
+  }
+
+  .sectionContainer .inputField .inputFieldBox {
+    width: 48.5%;
+  }
+
+  .page_subtitle {
+    font-size: 1.4rem;
+  }
 }
-.SearchHeader input,
-.SearchHeader button{
-  font-size: 1.2rem;
-}
-.sectionContainer .inputField{
-  justify-content: space-between;
-}
-.sectionContainer .inputField .inputFieldBox {
-  width: 48.5%;
-}
-.page_subtitle{
-  font-size: 1.4rem;
-}
-}
+
 @media (min-width:299px) and (max-width:499.99px) {
   .inner_table .SearchBoxTable {
     width: 100%;
-}
-/* .inputLabel{
+  }
+
+  /* .inputLabel{
   flex-direction: column;
   align-items: flex-start;
 } */
-.sectionContainer .dataTable_header .SearchBoxTable {
-  width: 70%;
-}
-.prograssBar_main .head{
-  flex-direction: row !important;
-}
-.ButtonWithIcon{
-  font-size: 1.4rem;
-}
+  .sectionContainer .dataTable_header .SearchBoxTable {
+    width: 70%;
+  }
+
+  .prograssBar_main .head {
+    flex-direction: row !important;
+  }
+
+  .ButtonWithIcon {
+    font-size: 1.4rem;
+  }
 }

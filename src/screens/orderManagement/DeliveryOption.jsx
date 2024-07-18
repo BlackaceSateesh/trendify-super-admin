@@ -13,7 +13,7 @@ const DeliveryOption = () => {
           <DashboardInnerTitle name="Select Delivery Services" />
 
           <div className="inputField">
-            <SelectInput labelName="Select Delivery Services" option="E-kart" />
+            <SelectInput labelName="Select Delivery Services" options={["Choose"]} />
             <TextInput labelName="Track ID" value="Completed" />
             <TextInput labelName="Pickup Date" value="06/05/2001" />
             <TextInput labelName="Pickup Time" value="8:30 PM to 12:30 AM" />

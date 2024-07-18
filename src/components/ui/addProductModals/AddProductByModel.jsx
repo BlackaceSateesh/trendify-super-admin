@@ -32,9 +32,9 @@ const AddProductByModel = (props) => {
         <Modal.Body>
           <div className="inner">
             <h6 className="heading">Add Products - Model Name</h6>
+            <SelectInput labelName="Brand" required="*" option="Choose" />
             <div className="inputField">
               <TextInput labelName="Name" required="*" value="Electronics" />
-              <SelectInput labelName="Brand" required="*" option="Choose" />
               <ButtonMain btnColor="green" name="Add" />
             </div>
             {/*  */}

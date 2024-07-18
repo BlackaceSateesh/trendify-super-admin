@@ -11,18 +11,18 @@ const ManageCommissionRate = () => {
         <div className="sectionContainer">
             <DashboardInnerTitle name='Commission rates' />
             <div className="inputField">
-            <SelectInput labelName="Commission Rates of Electrics Product" value="Choose " />
-            <SelectInput labelName="Commission Rates of Men's Product" value="Choose " />
-            <SelectInput labelName="Commission Rates of Women's Product" value="Choose " />
-            <SelectInput labelName="Commission Rates of Beauty Product" value="Choose " />
-            <SelectInput labelName="Commission Rates of Electrics Product" value="Choose " />
-            <SelectInput labelName="Commission Rates of Men's Product" value="Choose " />
-            <SelectInput labelName="Commission Rates of Women's Product" value="Choose " />
-            <SelectInput labelName="Commission Rates of Beauty Product" value="Choose " />
-            <SelectInput labelName="Commission Rates of Electrics Product" value="Choose " />
-            <SelectInput labelName="Commission Rates of Men's Product" value="Choose " />
-            <SelectInput labelName="Commission Rates of Women's Product" value="Choose " />
-            <SelectInput labelName="Commission Rates of Beauty Product" value="Choose " />
+            <SelectInput labelName="Commission Rates of Electrics Product" options={["Choose"]} />
+            <SelectInput labelName="Commission Rates of Men's Product" options={["Choose"]} />
+            <SelectInput labelName="Commission Rates of Women's Product" options={["Choose"]} />
+            <SelectInput labelName="Commission Rates of Beauty Product" options={["Choose"]} />
+            <SelectInput labelName="Commission Rates of Electrics Product" options={["Choose"]} />
+            <SelectInput labelName="Commission Rates of Men's Product" options={["Choose"]} />
+            <SelectInput labelName="Commission Rates of Women's Product" options={["Choose"]} />
+            <SelectInput labelName="Commission Rates of Beauty Product" options={["Choose"]} />
+            <SelectInput labelName="Commission Rates of Electrics Product" options={["Choose"]} />
+            <SelectInput labelName="Commission Rates of Men's Product" options={["Choose"]} />
+            <SelectInput labelName="Commission Rates of Women's Product" options={["Choose"]} />
+            <SelectInput labelName="Commission Rates of Beauty Product" options={["Choose"]} />
           </div>
           <div className="centerBtns">
           <ButtonMain name='Reset Commission' />
@@ -32,11 +32,11 @@ const ManageCommissionRate = () => {
         <div className="sectionContainer">
             <DashboardInnerTitle name=' Platform Charges' />
             <div className="inputField">
-            <SelectInput labelName="Seller Charge Monthly Charge" value="Choose " />
-            <SelectInput labelName="Seller Charge Yearly Charge" value="Choose " />
-            <SelectInput labelName="Seller Add Product Charge" value="Choose " />
-            <SelectInput labelName="Seller Performance metrics Charge" value="Choose " />
-            <SelectInput labelName="Seller Sales Statistics Charge" value="Choose " />
+            <SelectInput labelName="Seller Charge Monthly Charge" options={["Choose"]} />
+            <SelectInput labelName="Seller Charge Yearly Charge" options={["Choose"]} />
+            <SelectInput labelName="Seller Add Product Charge" options={["Choose"]} />
+            <SelectInput labelName="Seller Performance metrics Charge" options={["Choose"]} />
+            <SelectInput labelName="Seller Sales Statistics Charge" options={["Choose"]} />
           </div>
           <div className="centerBtns">
           <ButtonMain name='Reset Commission' />

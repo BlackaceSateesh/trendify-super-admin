@@ -11,6 +11,13 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import CustomerReviewCard from "../../components/ui/CustomerReviewCard";
 import userLogo from '../../assests/dashboard/userlogo.png';
 import { getTotalSalesByDate, getTotalReturnsByDate } from "../../api/sales-api";
+import { getTopVendors, getTopOrders, getTopProducts } from "../../api/over-all-api";
+
+const AnanlyticsType = {
+  VENDORS: "VENDORS",
+  PRODUCTS: "PRODUCTS",
+  ORDERS: "ORDERS",
+};
 
 const DashboardHome = () => {
   const [totalSales, setTotalSales] = useState({
@@ -23,10 +30,40 @@ const DashboardHome = () => {
     totalReturnDone: 0,
   });
 
+  const [topVendors, setTopVendors] = useState([]);
+  const [topProducts, setTopProducts] = useState([]);
+  const [topOrders, setTopOrders] = useState([]);
+
+  const mapContent = (content, type) => {
+    return content.map((e) => {
+      switch (type) {
+        case AnanlyticsType.VENDORS:
+          return {
+            name: e.vendorName,
+            id: e.vendorUniqueId,
+            amount: e.totalOrders
+          };
+        case AnanlyticsType.PRODUCTS:
+          return {
+            name: e.productName,
+            typeName: e.productTypeName,
+            amount: e.totalOrders
+          };
+        case AnanlyticsType.ORDERS:
+          return {
+            name: e.productName,
+            id: e.orderId,
+            typeName: e.productTypeName,
+            amount: e.totalOrders
+          };
+      }
+    });
+  }
+
   useEffect(() => {
     const payload = {
-      startDate: new Date().toISOString(),
-      endDate: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(),
+      startDate:  new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(),
+      endDate: new Date().toISOString(),
     };
 
     getTotalSalesByDate(payload).then((data) => {
@@ -41,6 +78,18 @@ const DashboardHome = () => {
         totalReturnAmount: data.totalReturnAmount,
         totalReturnDone: data.totalReturnDone,
       });
+    });
+
+    getTopVendors().then((data) => {
+      setTopVendors(mapContent(data, AnanlyticsType.VENDORS));
+    });
+
+    getTopProducts().then((data) => {
+      setTopProducts(mapContent(data, AnanlyticsType.PRODUCTS));
+    });
+
+    getTopOrders().then((data) => {
+      setTopOrders(mapContent(data, AnanlyticsType.ORDERS));
     });
   }, []);
 
@@ -70,7 +119,7 @@ const DashboardHome = () => {
           />
         </div>
 
-        <div className="profileGraph homeCardBox">
+        {/* <div className="profileGraph homeCardBox">
           <div className="head">
             <p className="homeCardHeading">Profile Overview</p>
             <select name="" id="" className="homeSelect">
@@ -89,13 +138,12 @@ const DashboardHome = () => {
           <div className="graphBox">
             <MultipleAxesGraph />
           </div>
-        </div>
+        </div> */}
 
         <div className="top_details">
-          <TopTotalTableCard />
-          <TopTotalTableCard />
-          <TopTotalTableCard />
-          <TopTotalTableCard />
+          <TopTotalTableCard data={topVendors} coulmns={['S.No', 'Vendor Name', 'Total Orders']} heading='Top Vendors' />
+          <TopTotalTableCard data={topProducts} coulmns={['S.No', 'Product Name', 'Product Type', 'Total Orders']} heading='Top Products' />
+          <TopTotalTableCard data={topOrders} coulmns={['S.No', 'Product Name', 'Product Type', 'Total Orders']} heading='Top Orders' />
         </div>
 
         <div className="notification homeCardBox">

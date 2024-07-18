@@ -34,7 +34,7 @@
 }
 .TopTotalTableCard {
   min-width: 24%;
-  width: 24%;
+  width: 100%;
   border-radius: .6rem;
 }
 .TopTotalTableCard .head {

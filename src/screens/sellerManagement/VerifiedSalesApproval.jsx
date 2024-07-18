@@ -22,7 +22,7 @@ const VerifiedSalesApproval = () => {
       return {
         img: item?.aadhaarImageUrl || SellerImage,
         name: item?.vendorName || 'N/A',
-        sellerId: item?.vendorId || 'N/A',
+        sellerId: item?.uniqueId || 'N/A',
         category: item?.businessType || 'N/A',
         status: item?.vendorStatus || 'N/A',
         action: () => navigate(AuthenticatedRoutes.sellerVerificationDetailPage, { state: { seller: item } })

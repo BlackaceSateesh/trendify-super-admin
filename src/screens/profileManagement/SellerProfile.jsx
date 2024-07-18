@@ -219,7 +219,7 @@ const SellerProfile = () => {
               value="Har Har Mahadev Electronics Manager"
             />
             <TextInput labelName="Country" value="Bharat" />
-            <SelectInput labelName="State" option="Choose " />
+            <SelectInput labelName="State" options={["Choose"]} />
             <TextInput labelName="City" value="Bhopal" />
             <TextInput labelName="Pincode / Zipcode" value="462001" />
           </div>
@@ -238,7 +238,7 @@ const SellerProfile = () => {
             <SelectInput
               labelName="Business Type"
               required="*"
-              option="Choose "
+              options={["Choose"]}
             />
             <TextInput labelName="MCA" value="MCA.pdf" />
             <DatePickerInput labelName="MCA Expiry Date" option="06/05/2001" />
@@ -288,7 +288,7 @@ const SellerProfile = () => {
               value="Bharat"
             />
             <TextInput labelName="Country" required="*" value="Bharat" />
-            <SelectInput labelName="State" required="*" option="Choose  " />
+            <SelectInput labelName="State" required="*" options={["Choose"]} />
             <TextInput labelName="City" required="*" value="Bhopal" />
             <TextInput
               labelName="Pincode / Zipcode"

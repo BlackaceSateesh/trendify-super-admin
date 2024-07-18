@@ -17,8 +17,8 @@ const CreateTicket = () => {
                     <p className='subheading'>Write and address new queries and issues</p>
                     <div className="inputField">
                         <TextInput labelName='Customer Email' value='shyam.vendor@gmail.com' />
-                        <SelectInput labelName='Request Ticket Type' option='Delivery Issue' />
-                        <SelectInput labelName='Status' option='On-Going' />
+                        <SelectInput labelName='Request Ticket Type' options={["Choose"]} />
+                        <SelectInput labelName='Status' options={["Choose"]} />
                         <TextareaInput placeholder='Type ticket issue here..' labelName='Ticket Body' />
                     </div>
                     <div className="submitBtn">

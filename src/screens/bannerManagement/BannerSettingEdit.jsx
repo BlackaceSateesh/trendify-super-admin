@@ -28,26 +28,26 @@ const BannerSettingEdit = () => {
           </div>
           <div className="inputField">
             <FileInput labelName="Select Image" />
-            <SelectInput labelName="Select Category" option="Choose" />
+            <SelectInput labelName="Select Category" options={["Choose"]} />
             <SelectInput
               labelName="Select Brand"
               optional="(Optional)"
-              option="Choose"
+              options={["Choose"]}
             />
             <SelectInput
               labelName="Select Product"
               optional="(Optional)"
-              option="Choose"
+              options={["Choose"]}
             />
             <SelectInput
               labelName="Select Discount"
               optional="(Optional)"
-              option="Choose"
+              options={["Choose"]}
             />
             <SelectInput
               labelName="Select Price"
               optional="(Optional)"
-              option="Choose"
+              options={["Choose"]}
             />
           </div>
         </div>
@@ -58,26 +58,26 @@ const BannerSettingEdit = () => {
           </div>
           <div className="inputField">
             <FileInput labelName="Select Image" />
-            <SelectInput labelName="Select Category" option="Choose" />
+            <SelectInput labelName="Select Category" options={["Choose"]} />
             <SelectInput
               labelName="Select Brand"
               optional="(Optional)"
-              option="Choose"
+              options={["Choose"]}
             />
             <SelectInput
               labelName="Select Product"
               optional="(Optional)"
-              option="Choose"
+              options={["Choose"]}
             />
             <SelectInput
               labelName="Select Discount"
               optional="(Optional)"
-              option="Choose"
+              options={["Choose"]}
             />
             <SelectInput
               labelName="Select Price"
               optional="(Optional)"
-              option="Choose"
+              options={["Choose"]}
             />
           </div>
         </div>
@@ -88,26 +88,26 @@ const BannerSettingEdit = () => {
           </div>
           <div className="inputField">
             <FileInput labelName="Select Image" />
-            <SelectInput labelName="Select Category" option="Choose" />
+            <SelectInput labelName="Select Category" options={["Choose"]} />
             <SelectInput
               labelName="Select Brand"
               optional="(Optional)"
-              option="Choose"
+              options={["Choose"]}
             />
             <SelectInput
               labelName="Select Product"
               optional="(Optional)"
-              option="Choose"
+              options={["Choose"]}
             />
             <SelectInput
               labelName="Select Discount"
               optional="(Optional)"
-              option="Choose"
+              options={["Choose"]}
             />
             <SelectInput
               labelName="Select Price"
               optional="(Optional)"
-              option="Choose"
+              options={["Choose"]}
             />
           </div>
         </div>
@@ -118,26 +118,26 @@ const BannerSettingEdit = () => {
           </div>
           <div className="inputField">
             <FileInput labelName="Select Image" />
-            <SelectInput labelName="Select Category" option="Choose" />
+            <SelectInput labelName="Select Category" options={["Choose"]} />
             <SelectInput
               labelName="Select Brand"
               optional="(Optional)"
-              option="Choose"
+              options={["Choose"]}
             />
             <SelectInput
               labelName="Select Product"
               optional="(Optional)"
-              option="Choose"
+              options={["Choose"]}
             />
             <SelectInput
               labelName="Select Discount"
               optional="(Optional)"
-              option="Choose"
+              options={["Choose"]}
             />
             <SelectInput
               labelName="Select Price"
               optional="(Optional)"
-              option="Choose"
+              options={["Choose"]}
             />
           </div>
         </div>

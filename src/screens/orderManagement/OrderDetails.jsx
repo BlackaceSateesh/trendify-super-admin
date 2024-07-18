@@ -16,14 +16,14 @@ const OrderDetails = () => {
           <DashboardInnerTitle name="Product Detail" />
           <div className="inputField">
             <TextInput labelName="Product Code" value="8952202236" />
-            <SelectInput labelName="Product Type" option="Select Type" />
-            <SelectInput labelName="Category" option="Select Type" />
+            <SelectInput labelName="Product Type" options={["Choose"]} />
+            <SelectInput labelName="Category" options={["Choose"]} />
             <TextInput
               labelName="Product Name"
               value="Apple iPhone 199 Pro Max"
             />
-            <SelectInput labelName="Brand" option="Select Type" />
-            <SelectInput labelName="Product Unit" option="Kilogram" />
+            <SelectInput labelName="Brand" options={["Choose"]} />
+            <SelectInput labelName="Product Unit" options={["Choose"]} />
             <TextInput labelName="Product Price" value="0" />
             <TextInput labelName="Unit Price" value="0" />
             <TextInput labelName="Discount" value="0" />
@@ -39,8 +39,8 @@ const OrderDetails = () => {
             <TextInput labelName="Full Name" value="Raju Tea stall" />
             <TextInput labelName="Phone Number" value="Phone Number" />
             <SelectInput labelName="GSTIN" option="Enter GSTIN" />
-            <SelectInput labelName="City" option="Choose" />
-            <SelectInput labelName="State" option="Choose" />
+            <SelectInput labelName="City" options={["Choose"]} />
+            <SelectInput labelName="State" options={["Choose"]} />
             <SelectInput labelName="Country" option="Bharat" />
             <TextInput labelName="Pincode / Zipcode" value="462001" />
             <TextInput labelName="Expected Delivery Date" value="06/05/2001" />

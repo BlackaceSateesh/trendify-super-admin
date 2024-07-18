@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import DashboardInnerTitle from "../../components/dashboard/DashboardInnerTitle";
 import TextInput from "../../components/ui/TextInput";
 import TextareaInput from "../../components/ui/TextareaInput";
@@ -7,10 +7,18 @@ import SelectInput from "../../components/ui/SelectInput";
 import AllFaqsCard from "../../components/ui/AllFaqsCard";
 import "../../styles/dashboard/AddAndManageFaqs.css";
 import PreviewFaq from "../../components/ui/popups/PreviewFaq";
+import { getAllFaqs, addFaq } from "../../api/faq-api";
 
 const AddAndManageFaqs = () => {
 
   const [showPreview, setShowPreview] = useState(false);
+  const [categories, setCategories] = useState([]);
+  const [faq, setFaq] = useState({
+    question: "",
+    answer: "",
+    categoryId: "",
+  });
+
   // dummy data
   const allFaqs = [
     {
@@ -50,6 +58,26 @@ const AddAndManageFaqs = () => {
       para: "You can check the status of your refund in Your Orders .",
     },
   ];
+
+  const addFaqHandler = async () => {
+    try {
+      await addFaq({
+        question: faq.question,
+        answer: faq.answer,
+        faqCategoryId: faq.categoryId
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getAllFaqs().then((res) => {
+      setCategories(res);
+      console.log(res);
+    });
+  }, []);
+
   return (
     <>
       <div className="AddAndManageFaqs sectionContainer">
@@ -59,7 +87,8 @@ const AddAndManageFaqs = () => {
           <div className="writeAndAdd_left">
             <TextInput
               labelName="Write FAQ Question"
-              value="Find a missing item from your package"
+              placeholder="Write your question here"
+              onChange={(e) => setFaq({ ...faq, question: e.target.value })}
             />
             <div className="fullText">
               <label htmlFor="" className="inputLabel">
@@ -67,12 +96,8 @@ const AddAndManageFaqs = () => {
               </label>
               <div className="withBtn">
                 <TextareaInput
-                  value="this to yeah vo yeah vo yeah vo vo yeah this to yeah vo yeah vo yeah vo vo yeah this to yeah vo yeah vo 
-                        yeah vo vo yeah this to yeah vo yeah vo yeah vo vo yeah this to yeah vo yeah vo yeah vo vo yeah
-
-                        this to yeah vo yeah vo yeah vo vo yeah this to yeah vo yeah vo yeah vo vo yeah this to yeah vo yeah vo 
-                        yeah vo vo yeah this to yeah vo yeah vo yeah vo vo yeah this to yeah vo yeah vo yeah  vo vo yeah votoh 
-                        vo vo yeah vo vo yeah vo vo yeah"
+                  placeholder="Write your answer here"
+                  onChange={(e) => setFaq({ ...faq, answer: e.target.value })}
                 />
                 <ButtonMain name="Add Steps" />
               </div>
@@ -80,8 +105,13 @@ const AddAndManageFaqs = () => {
           </div>
           <div className="writeAndAdd_right">
             <div className="col_2">
-              <SelectInput labelName="Select Category" option="Choose" />
-              <SelectInput labelName="Select Arrangement" option="Choose" />
+              <SelectInput 
+                labelName="FAQ Category" 
+                options={categories}
+                customKey={"categoryName"}
+                onChange={(e) => setFaq({ ...faq, categoryId: e.target.value })}
+              />
+              <SelectInput labelName="Select Arrangement" options={["Choose"]} />
             </div>
             <div className="steps">
               <label htmlFor="" className="inputLabel">

@@ -10,7 +10,7 @@ export const DataColumnApproved = [
     { name: 'Seller' },
     { name: 'Seller Name' },
     { name: 'Seller ID' },
-    { name: 'Category' },
+    { name: 'Business Type' },
     { name: 'Verification Status' },
     { name: 'Action' }
 ]
@@ -20,7 +20,7 @@ export const DataColumnRejected = [
     { name: 'Seller' },
     { name: 'Seller Name' },
     { name: 'Seller ID' },
-    { name: 'Category' },
+    { name: 'Buiness Type' },
     { name: 'Verification Status' },
     { name: 'Reason' },
     { name: 'Action' }

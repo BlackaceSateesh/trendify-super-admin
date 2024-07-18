@@ -17,8 +17,8 @@ const CustomerEnquiry = () => {
             <SearchBoxTable placeholderValue="Search List" />
           </div>
           <div className="filter">
-            <SelectInput option="Select Priority" />
-            <SelectInput option="This Week" />
+            <SelectInput options={["Choose"]} />
+            <SelectInput options={["Choose"]} />
             <ButtonWithIcon icon={<HiOutlinePencilAlt />} name="New Ticket" />
           </div>
         </div>

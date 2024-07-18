@@ -326,8 +326,8 @@ const OrderConfirmationDetails = () => {
             <TextInput labelName="Full Name" value="Raju Tea stall" />
             <TextInput labelName="Phone Number" value="Phone Number" />
             <SelectInput labelName="GSTIN" option="Enter GSTIN" />
-            <SelectInput labelName="City" option="Choose" />
-            <SelectInput labelName="State" option="Choose" />
+            <SelectInput labelName="City" options={["Choose"]} />
+            <SelectInput labelName="State" options={["Choose"]} />
             <SelectInput labelName="Country" option="Bharat" />
             <TextInput labelName="Pincode / Zipcode" value="462001" />
             <TextInput labelName="Expected Delivery Date" value="06/05/2001" />

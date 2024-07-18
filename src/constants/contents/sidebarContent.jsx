@@ -54,7 +54,7 @@ export const sideMenuListManage = [
     },
     {
       name: "Edit & Add Product",
-      route: AuthenticatedRoutes.editAndAddProduct,
+      route: AuthenticatedRoutes.addNewProduct,
     },
   ],
   },

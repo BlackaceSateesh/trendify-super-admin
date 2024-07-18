@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
 import RadioInputBorder from "../RadioInputBorder";
 import TextareaInput from "../TextareaInput";
 import ButtonMain from "../ButtonMain";
 
 const ProfileRejectionPopup = (props) => {
+  const [reason, setReason] = useState("");
+
+  const handleConfirm = () => {
+    props.onConfirm(reason);
+    props.onHide();
+  }
+
   return (
     <>
       <Modal
@@ -23,10 +30,14 @@ const ProfileRejectionPopup = (props) => {
               <RadioInputBorder labelName="Lorem ipsum dolor sit amet." />
               <RadioInputBorder labelName="Lorem ipsum dolor sit amet." />
             </div>
-            <TextareaInput value="Organize your data in familiar spreadsheets and workbooks, with all changes saved automatically. Create modern visuals that turn numbers into valuable insights. Work together in real time knowing that everyone is on the same page.Organize your data in familiar spreadsheets and workbooks, with all changes saved automatically. Create modern visuals that turn numbers into valuable insights. Work together in real time knowing that everyone is on the same page. Organize your data in familiar spreadsheets and workbooks, with all changes saved automatically. Create modern visuals that turn numbers into valuable insights. Work together in real time knowing that everyone is on the same page." />
+            <TextareaInput
+              labelName="Reason"
+              placeholder="Enter Reason"
+              onChange={(e) => setReason(e.target.value)}
+            />
             <div className="centerBtns">
               <ButtonMain onClick={props.onHide} name="Cancel" />
-              <ButtonMain onClick={props.onConfirm} btnColor="green" name="Confirm" />
+              <ButtonMain onClick={handleConfirm} btnColor="green" name="Confirm" />
             </div>
           </div>
         </Modal.Body>

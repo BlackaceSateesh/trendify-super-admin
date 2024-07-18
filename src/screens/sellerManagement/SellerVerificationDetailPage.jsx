@@ -9,6 +9,7 @@ import ProfileRejectionPopup from "../../components/ui/popups/ProfileRejectionPo
 import { useLocation, useNavigate, Navigate } from "react-router-dom";
 import { acceptVendor, rejectVendor } from "../../api/vendor-api";
 import { AuthenticatedRoutes } from "../../constants/routes";
+import { VendorStatus } from "../../constants/contents/SellerContent";
 
 const SellerVerificationDetailPage = () => {
   const location = useLocation();
@@ -33,7 +34,7 @@ const SellerVerificationDetailPage = () => {
 
   const handleAccept = async () => {
     try {
-      await acceptVendor(seller?.vendorId);
+      await acceptVendor(seller?.id);
       navigate(AuthenticatedRoutes.dashboard);
     } catch (error) {
       console.log(error);
@@ -42,7 +43,7 @@ const SellerVerificationDetailPage = () => {
 
   const handleReject = async (reason) => {
     try {
-      await rejectVendor(seller?.vendorId, reason);
+      await rejectVendor(seller?.id, reason);
       navigate(AuthenticatedRoutes.dashboard);
     } catch (error) {
       console.log(error);
@@ -100,14 +101,14 @@ const SellerVerificationDetailPage = () => {
               required="*"
               value={seller?.vendorDesignation}
             />
-            <TextInput 
-              labelName="Country" 
-              required="*" 
-              value={seller?.country} 
+            <TextInput
+              labelName="Country"
+              required="*"
+              value={seller?.country}
             />
-            <TextInput 
-              labelName="City" 
-              required="*" 
+            <TextInput
+              labelName="City"
+              required="*"
               value={seller?.city}
             />
             <TextInput
@@ -138,8 +139,8 @@ const SellerVerificationDetailPage = () => {
               value={seller?.mcaImageUrl.split("/").pop()}
               onShow={() => handleImagePopup(seller?.mcaImageUrl, "MCA")}
             />
-            <TextInput 
-              labelName="MCA Expiry Date" 
+            <TextInput
+              labelName="MCA Expiry Date"
               required="*"
               value={seller?.mcaExpiryDate}
             />
@@ -163,7 +164,7 @@ const SellerVerificationDetailPage = () => {
               required="*"
               value={seller?.companySecondaryEmail}
             />
-            <TextInput labelName="NDA" required="*" value= {seller?.nda} />
+            <TextInput labelName="NDA" required="*" value={seller?.nda} />
             <TextInput labelName="NAD Expiry Date" required="*" value={seller?.ndaExpiry} />
             <TextInput
               labelName="GSTIN"
@@ -239,17 +240,21 @@ const SellerVerificationDetailPage = () => {
           </div>
         </div>
 
-        <div className="centerBtns">
-          <ButtonMain
-            name="Reject Seller"
-            onClick={() => setRejectPopup(true)}
-          />
-          <ButtonMain
-            onClick={handleAccept}
-            btnColor="green"
-            name="Confirm Seller"
-          />
-        </div>
+        {
+          seller?.vendorStatus === VendorStatus.REQUESTED && (
+            <div className="centerBtns">
+              <ButtonMain
+                name="Reject Seller"
+                onClick={() => setRejectPopup(true)}
+              />
+              <ButtonMain
+                onClick={handleAccept}
+                btnColor="green"
+                name="Confirm Seller"
+              />
+            </div>
+          )
+        }
 
         {/* popup call */}
         {/* view image */}
@@ -264,7 +269,7 @@ const SellerVerificationDetailPage = () => {
         <ProfileRejectionPopup
           show={rejectPopup}
           onHide={() => setRejectPopup(false)}
-          onConfirm={(reason) => handleReject(reason)}
+          onConfirm={handleReject}
         />
       </div>
     </>

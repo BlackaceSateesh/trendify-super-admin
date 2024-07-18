@@ -13,10 +13,6 @@ const TotalGraphCard = ({name, number, status}) => {
           </select>
         </div>
         <h6 className="homeBigNumber">{number}</h6>
-        <p className="homeStatus">{status} <span className="circle" ></span></p>
-        <div className="graphBox">
-            <SingleColumnGraph />
-        </div>
       </div>
     </>
   );

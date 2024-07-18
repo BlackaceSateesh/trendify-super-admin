@@ -18,7 +18,7 @@ const CreateCustomer = () => {
                         <TextInput labelName='Customer Password' value='***********' />
                         <TextInput labelName='Confirm Customer Password' value='***********' />
                         <TextInput labelName='Customer Mobile Number' value='7024393158' />
-                        <SelectInput labelName='Customer Gender' option='Male' />
+                        <SelectInput labelName='Customer Gender' options={["Choose"]} />
 
                     </div>
                     <div className="centerBtns">
