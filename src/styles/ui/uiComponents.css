@@ -595,7 +595,117 @@ textarea::-webkit-scrollbar {
   background-color: #f1f1f1;
 }
 
+.datatableMain .Nfhbm::-webkit-scrollbar {
+  display: none;
+}
 
+.datatableMain .rdt_Table {
+  font-size: 1.5rem;
+}
+
+.datatableMain .rdt_TableCol {
+  color: var(--Primary_Black, #101616);
+  font-size: 15px;
+  font-weight: 500;
+  /* flex-basis: content; */
+  /* padding: .6rem 1rem; */
+  /* text-align: center; */
+}
+
+.datatableMain .rdt_TableCell {
+  color: #616161;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0.6rem 1rem;
+  /* flex: 0 0; */
+  text-align: center;
+}
+
+.datatableMain .rdt_TableCol:nth-child(2),
+.datatableMain .rdt_TableCell:nth-child(2) {
+  min-width: 6rem;
+  max-width: 6rem;
+}
+
+.datatableMain .rdt_TableCell .productImg {
+  min-width: 4.8rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background: #f4f5f8;
+}
+
+.datatableMain .rdt_TableCell .productImg img {
+  width: 90%;
+}
+
+.datatableMain .rdt_TableCell .actionBtns {
+  display: flex;
+  gap: 0.2rem;
+  padding: 0.2rem;
+}
+
+.datatableMain .rdt_TableCell .actionBtns button {
+  min-width: 2.2rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 5px;
+  background: var(--white, #fff);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--Secondary_yellow, #c09562);
+  transition: all ease-in-out 0.1s;
+}
+
+.datatableMain .rdt_TableCell .actionBtns button:hover {
+  background: var(--Secondary_yellow, #c09562);
+  color: var(--white, #fff)
+}
+
+.datatableMain .rdt_TableCell .paymentStatus {
+  border-radius: 0.8rem;
+  background: var(--yellow, #ffbf43);
+  padding: 0.6rem 1rem;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+}
+
+.datatableMain .rdt_TableCell .paymentStatus.Delivered,
+.datatableMain .rdt_TableCell .paymentStatus.Paid {
+  background: var(--Sucess_green, #32c98d);
+}
+
+.datatableMain .rdt_TableCell .paymentStatus.Pending {
+  background: var(--yellow, #ffbf43);
+}
+
+.datatableMain .rdt_TableCell .paymentStatus.Cancel {
+  background: var(--Material_red, #df7272);
+}
+.addCategoryBtn {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--white);
+  text-align: center;
+  padding: 1rem 2.2rem;
+  border-radius: 3px;
+  background: var(--primary-black);
+  box-shadow: var(--btn-shadow);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+
+}
 @media (min-width:799px) and (max-width:1099.99px) {
   .sectionContainer .inputField {
     gap: 1.2%;

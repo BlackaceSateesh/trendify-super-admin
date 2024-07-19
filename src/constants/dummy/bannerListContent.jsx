@@ -2,7 +2,7 @@ import { FiEye } from "react-icons/fi";
 import { GoPencil } from "react-icons/go";
 import { MdDeleteOutline } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { AuthenticatedRoutes } from "../routes";
+import { AuthenticatedRoutes } from "../Routes";
 
 
 export const webBannerList = {

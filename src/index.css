@@ -179,6 +179,12 @@ ol {
   display: none;
 }
 
+.error {
+  color: red;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
 /* responsive part */
 
 @media (min-width: 499px) and (max-width: 799.99px) {

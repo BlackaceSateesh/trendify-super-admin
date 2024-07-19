@@ -98,7 +98,7 @@ const SelectInput = ({
                                         : option;
                                 const optionLabel =
                                     typeof option === "object"
-                                        ? option.name || option.title
+                                        ? option.name || option[customKey]
                                         : option;
                                 return (
                                     <div

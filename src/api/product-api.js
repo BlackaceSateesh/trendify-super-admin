@@ -12,8 +12,7 @@ export async function addCategory(payload) {
 }
 
 export async function getAllCategories(payload) {
-    console.log('payload', payload);
-    const response = await axios.get(
+    const response = await axios.post(
         `${categoryApiBaseUrl}/allCategory`,
         payload
     );
@@ -31,7 +30,15 @@ export async function addType(payload) {
 }
 
 export async function getAllTypes(payload) {
-    const response = await axios.get(
+    const response = await axios.post(
+        `${typeApiBaseUrl}/allType`,
+        payload
+    );
+    return response.data;
+}
+
+export async function getAllTypesByCategory(payload) {
+    const response = await axios.post(
         `${typeApiBaseUrl}/allByCategory`,
         payload
     );
@@ -49,7 +56,15 @@ export async function addBrand(payload) {
 }
 
 export async function getAllBrands(payload) {
-    const response = await axios.get(
+    const response = await axios.post(
+        `${brandApiBaseUrl}/allBrand`,
+        payload
+    );
+    return response.data;
+}
+
+export async function getAllBrandsByType(payload) {
+    const response = await axios.post(
         `${brandApiBaseUrl}/allByProductType`,
         payload
     );
@@ -67,9 +82,33 @@ export async function addProduct(payload) {
 }
 
 export async function getAllProducts(payload) {
-    const response = await axios.get(
-        `${productApiBaseUrl}/allByProductNameByBrand`,
+    const response = await axios.post(
+        `${productApiBaseUrl}/allByProductName`,
         payload
+    );
+    return response.data;
+}
+
+const productManagementApiBaseUrl = `${backendConfig.base}v1/super-admin/product`;
+
+export async function getAllProductsByStatus(payload) {
+    const response = await axios.post(
+        `${productManagementApiBaseUrl}/getAllProductsByStatus`,
+        payload
+    );
+    return response.data;
+}
+
+export async function approveProduct(id) {
+    const response = await axios.post(
+        `${productManagementApiBaseUrl}/approvedProduct/${id}`
+    );
+    return response.data;
+}
+
+export async function rejectProduct(id, reason) {
+    const response = await axios.post(
+        `${productManagementApiBaseUrl}/rejectProduct/${id}`
     );
     return response.data;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { AuthenticatedRoutes } from '../../constants/routes';
+import { AuthenticatedRoutes } from '../../constants/Routes';
 
 const AllTicketCard = ({userPic, statusClassName, userName, ticketId, date, orderStatus, description}) => {
   return (

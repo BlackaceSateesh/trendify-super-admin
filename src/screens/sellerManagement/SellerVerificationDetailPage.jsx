@@ -8,8 +8,9 @@ import ViewImagePopup from "../../components/ui/popups/ViewImagePopup";
 import ProfileRejectionPopup from "../../components/ui/popups/ProfileRejectionPopup";
 import { useLocation, useNavigate, Navigate } from "react-router-dom";
 import { acceptVendor, rejectVendor } from "../../api/vendor-api";
-import { AuthenticatedRoutes } from "../../constants/routes";
+import { AuthenticatedRoutes } from "../../constants/Routes";
 import { VendorStatus } from "../../constants/contents/SellerContent";
+import SpinnerLoader from "../../components/ui/SpinnerLoader";
 
 const SellerVerificationDetailPage = () => {
   const location = useLocation();
@@ -23,6 +24,8 @@ const SellerVerificationDetailPage = () => {
     heading: ""
   });
   const [rejectPopup, setRejectPopup] = useState(false);
+  const [loadingAccept, setLoadingAccept] = useState(false);
+  const [loadingReject, setLoadingReject] = useState(false);
 
   const handleImagePopup = (image, heading) => {
     setViewImagePopup({
@@ -33,20 +36,28 @@ const SellerVerificationDetailPage = () => {
   }
 
   const handleAccept = async () => {
+    if (loadingAccept) return
+    setLoadingAccept(true);
     try {
       await acceptVendor(seller?.id);
       navigate(AuthenticatedRoutes.dashboard);
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoadingAccept(false);
     }
   }
 
   const handleReject = async (reason) => {
+    if (loadingReject) return
+    setLoadingReject(true);
     try {
       await rejectVendor(seller?.id, reason);
       navigate(AuthenticatedRoutes.dashboard);
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoadingReject(false);
     }
   }
 
@@ -244,13 +255,13 @@ const SellerVerificationDetailPage = () => {
           seller?.vendorStatus === VendorStatus.REQUESTED && (
             <div className="centerBtns">
               <ButtonMain
-                name="Reject Seller"
+                name={loadingReject ? <SpinnerLoader /> : "Reject Seller"}
                 onClick={() => setRejectPopup(true)}
               />
               <ButtonMain
                 onClick={handleAccept}
                 btnColor="green"
-                name="Confirm Seller"
+                name={loadingAccept ? <SpinnerLoader /> : "Accept Seller"}
               />
             </div>
           )

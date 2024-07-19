@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DashboardInnerTitle from "../../components/dashboard/DashboardInnerTitle";
 import ButtonMain from "../../components/ui/ButtonMain";
 import "../../styles/dashboard/BannerSetting.css";
-import { AuthenticatedRoutes } from "../../constants/routes";
+import { AuthenticatedRoutes } from "../../constants/Routes";
 import SelectBannerPopup from "../../components/ui/popups/SelectBannerPopup";
 import BannerTemplate1 from "../../assests/dashboard/bannerTemplate1.png";
 import BannerTemplate2 from "../../assests/dashboard/bannerTemplate2.png";

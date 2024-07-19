@@ -2,7 +2,7 @@ import React from "react";
 import DashboardInnerTitle from "../../components/dashboard/DashboardInnerTitle";
 import ButtonMain from "../../components/ui/ButtonMain";
 import '../../styles/dashboard/BannerSetting.css';
-import { AuthenticatedRoutes } from "../../constants/routes";
+import { AuthenticatedRoutes } from "../../constants/Routes";
 import ActiveBanner from "../../assests/dashboard/activeBannerIMG.png";
 const ViewSingleBanner = () => {
 

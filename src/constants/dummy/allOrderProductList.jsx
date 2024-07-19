@@ -53,57 +53,116 @@ export const allOrderProductLists = {
     ]
 }
 
+export const OrderStatusReport = {
+    PROCESSING: "PROCESSING",
+    DISPATCHED: "DISPATCHED",
+    SHIPPED: "SHIPPED",
+    DELIVERED: "DELIVERED",
+    CANCELLED: "CANCELLED",
+    RETURN: "RETURN",
+    ORDER_PLACED: "ORDER_PLACED",
+    OUT_FOR_DELIVERY: "OUT_FOR_DELIVERY",
+};
+
+export const OrderDeliveryStatus = [
+    {
+        key: "ORDER_PLACED",
+        value: "Order Placed"
+    },
+    {
+        key: "PROCESSING",
+        value: "Processing"
+    },
+    {
+        key: "DISPATCHED",
+        value: "Dispatched"
+    },
+    {
+        key: "SHIPPED",
+        value: "Shipped"
+    },
+    {
+        key: "OUT_FOR_DELIVERY",
+        value: "Out for Delivery"
+    },
+    {
+        key: "DELIVERED",
+        value: "Delivered"
+    }
+]
+
+export const OrderStatus = {
+    ORDER_PLACED: "Order Placed",
+    PROCESSING: "Processing",
+    DISPATCHED: "Dispatched",
+    SHIPPED: "Shipped",
+    DELIVERED: "Delivered",
+    CANCELLED: "Cancelled",
+    RETURN: "Return",
+    OUT_FOR_DELIVERY: "Out For Delivery",
+    REFUNDED: "Refunded",
+    REJECTED: "Rejected"
+};
+
 export const allOrderProductColumns = {
     column: [
         {
-            name: 'SL',
-            selector: row => row.id,
+            name: "SL",
+            selector: (row) => row.id
         },
         {
-            name: 'Image',
-            selector: row => <div className="productImg"><img src={row.productImg} alt="" /></div>,
+            name: "Image",
+            selector: (row) => (
+                <div className="productImg">
+                    <img src={row.productImg} alt="" />
+                </div>
+            )
         },
         {
-            name: 'Product Type',
-            selector: row => row.productType,
+            name: "Product Type",
+            selector: (row) => row.productType
         },
         {
-            name: 'Category',
-            selector: row => row.category,
+            name: "Brand",
+            selector: (row) => row.brand
         },
         {
-            name: 'Brand',
-            selector: row => row.brand,
+            name: "Product Name",
+            selector: (row) => row.productName
         },
         {
-            name: 'Product Name',
-            selector: row => row.productName,
+            name: "Product ID",
+            selector: (row) => row.productID
         },
         {
-            name: 'Product ID',
-            selector: row => row.productID,
+            name: "Quantity",
+            selector: (row) => row.quantity
         },
         {
-            name: 'Unit',
-            selector: row => row.unit,
+            name: "Payment Status",
+            selector: (row) => (
+                <span className={`paymentStatus ${row.paymentStatus}`}>
+                    {row.paymentStatus}
+                </span>
+            )
         },
         {
-            name: 'Payment Status',
-            selector: row =><span className={`paymentStatus ${ row.paymentStatus}`} >{ row.paymentStatus}</span>,
+            name: "Payment Type",
+            selector: (row) => row.paymentType
         },
         {
-            name: 'Delivery Status',
-            selector: row => <span className={`paymentStatus ${ row.deliveryStatus}`} >{ row.deliveryStatus}</span>,
+            name: "Price (Rs)",
+            selector: (row) => row.price
         },
         {
-            name: 'Price (Rs)',
-            selector: row => row.price,
-        },
-        {
-            name: 'Action',
-            selector: row => <div className="actionBtns"><button><FiEye /></button><button><GoPencil /></button><button><MdDeleteOutline /></button></div>,
-            
-
-        },
+            name: "Action",
+            selector: (row) => (
+                <div className="actionBtns">
+                    <button onClick={() => row.action[0](row)}>
+                        <FiEye />
+                    </button>
+                </div>
+            )
+        }
     ]
 };

@@ -1,10 +1,16 @@
 import React from 'react'
 import { RiEqualizerLine } from 'react-icons/ri'
+import SelectInput from "./SelectInput";
 
-const DatatableExportBtn = () => {
+const DatatableExportBtn = (props) => {
   return (
     <>
-      <button className='DatatableExportBtn iconBtn'><RiEqualizerLine /> <span>Filter</span></button>
+      <SelectInput
+        options={props.filterOptions}
+        value={props.filterValue}
+        onChange={props.onFilterChange}
+        defaultOption={props.filterValue}
+      />
     </>
   )
 }

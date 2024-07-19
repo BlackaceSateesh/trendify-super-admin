@@ -3,6 +3,10 @@ import { Modal } from "react-bootstrap";
 import SuccesPng from "../../../assests/dashboard/successPng.png";
 
 const ApprovePopup = (props) => {
+  const handleApprove = () => {
+    props.onApprove();
+    props.onHide();
+  };
   return (
     <>
       <Modal
@@ -30,7 +34,7 @@ const ApprovePopup = (props) => {
             </h6>
             <div className="centerBtns">
                 <button onClick={props.onHide} className="popupBtn cancel" >Cancel</button>
-                <button className="popupBtn continuo">YES , APPROVE</button>
+                <button className="popupBtn continuo" onClick={handleApprove}>YES , APPROVE</button>
             </div>
           </div>
         </Modal.Body>

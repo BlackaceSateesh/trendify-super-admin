@@ -6,53 +6,59 @@ import TextareaInput from "../../components/ui/TextareaInput";
 import ButtonMain from "../../components/ui/ButtonMain";
 import '../../styles/dashboard/OrderDetails.css'
 import PreviewInvoicePopup from "../../components/ui/popups/PreviewInvoicePopup";
+import { useLocation, Navigate } from "react-router-dom";
+import { OrderDeliveryStatus } from "../../constants/dummy/allOrderProductList";
+import { formatDate } from "../../utils/dateFunctions";
+import { AuthenticatedRoutes } from "../../constants/Routes";
+
 const OrderDetails = () => {
-  const [showPreview ,setShowPreview] = useState(false);
-  return (
+  const location = useLocation();
+  const order = location.state?.order;
+  const [showPreview, setShowPreview] = useState(false);
+  
+  return !order ? <Navigate to={AuthenticatedRoutes.allOrderProductList} /> : (
     <>
       <div className="OrderDetails sectionGap">
         {/* product details */}
         <div className="sectionContainer">
           <DashboardInnerTitle name="Product Detail" />
           <div className="inputField">
-            <TextInput labelName="Product Code" value="8952202236" />
-            <SelectInput labelName="Product Type" options={["Choose"]} />
-            <SelectInput labelName="Category" options={["Choose"]} />
+            <TextInput labelName="Product Code" value={order?.orderCode} disabled={true} />
+            <TextInput labelName="Product Type" value={order?.productRes?.productTypeName} disabled={true} />
+            <TextInput labelName="Category" value={order?.productRes?.productCategoryName} disabled={true} />
             <TextInput
               labelName="Product Name"
-              value="Apple iPhone 199 Pro Max"
+              value={order?.productRes?.title}
+              disabled={true}
             />
-            <SelectInput labelName="Brand" options={["Choose"]} />
-            <SelectInput labelName="Product Unit" options={["Choose"]} />
-            <TextInput labelName="Product Price" value="0" />
-            <TextInput labelName="Unit Price" value="0" />
-            <TextInput labelName="Discount" value="0" />
-            <TextInput labelName="Stock" value="0" />
-            <TextInput labelName="SGST in %" value="0" />
-            <TextInput labelName="CGST in %" value="0" />
+            <TextInput labelName="Brand" value={order?.productRes?.brandName} disabled={true} />
+            <TextInput labelName="Product Price" value={order?.productRes?.sellingPrice} disabled={true} />
+            <TextInput labelName="Unit Price" value={order?.price} disabled={true} />
+            <TextInput labelName="Discount" value={order?.productRes?.discount} disabled={true} />
+            <TextInput labelName="Stock" value={order?.productRes?.stock} disabled={true} />
+            <TextInput labelName="Quantity" value={order?.quantity} disabled={true} />
+            <TextInput labelName="Total Price" value={order?.price * order?.quantity} disabled={true} />
           </div>
         </div>
         {/* Shipping details */}
         <div className="sectionContainer">
           <DashboardInnerTitle name="Shipping Detail" />
           <div className="inputField">
-            <TextInput labelName="Full Name" value="Raju Tea stall" />
-            <TextInput labelName="Phone Number" value="Phone Number" />
-            <SelectInput labelName="GSTIN" option="Enter GSTIN" />
-            <SelectInput labelName="City" options={["Choose"]} />
-            <SelectInput labelName="State" options={["Choose"]} />
-            <SelectInput labelName="Country" option="Bharat" />
-            <TextInput labelName="Pincode / Zipcode" value="462001" />
-            <TextInput labelName="Expected Delivery Date" value="06/05/2001" />
+            <TextInput labelName="Full Name" value={order?.addressResponse?.name} disabled={true} />
+            <TextInput labelName="Phone Number" value={order?.addressResponse?.mobileNo} disabled={true} />
+            <TextInput labelName="City" value={order?.addressResponse?.city} disabled={true} />
+            <TextInput labelName="State" value={order?.addressResponse?.state} disabled={true} />
+            <TextInput labelName="Country" value={order?.addressResponse?.country} disabled={true} />
+            <TextInput labelName="Pincode / Zipcode" value={order?.addressResponse?.pinCode} disabled={true} />
             <TextareaInput
               labelName="House No., Building Name"
-              optional="(Words Limit 500)"
-              value="Organize your data in familiar spreadsheets and workbooks, with all changes saved automatically. Create modern visuals that turn numbers into valuable insights. Work together in real time knowing that everyone is on the same page."
+              value={order?.addressResponse?.address}
+              disabled={true}
             />
             <TextareaInput
-              labelName="Road name, Area, Colony"
-              optional="(Words Limit 500)"
-              value="Organize your data in familiar spreadsheets and workbooks, with all changes saved automatically. Create modern visuals that turn numbers into valuable insights. Work together in real time knowing that everyone is on the same page."
+              labelName="Landmark"
+              value={order?.addressResponse?.landmark}
+              disabled={true}
             />
           </div>
         </div>
@@ -60,13 +66,8 @@ const OrderDetails = () => {
         <div className="sectionContainer">
           <DashboardInnerTitle name="Payment & Date Status" />
           <div className="inputField">
-            <TextInput labelName="Payment Type" value="UPI" />
-            <TextInput labelName="Order Date" value="06/05/2001" />
-            <TextInput
-              labelName="Payment Status vai Customer"
-              value="Completed"
-            />
-            <TextInput labelName="Payment Status via Seller" value="Received" />
+            <TextInput labelName="Order Date" value={order?.orderDate} disabled={true} />
+            <TextInput labelName="Payment Type" value={order?.paymentType} disabled={true} />
           </div>
         </div>
         {/* Update & View Delivery Status */}
@@ -74,34 +75,28 @@ const OrderDetails = () => {
           <DashboardInnerTitle name="Update & View Delivery Status" />
           <div className="orderTrack_inner">
             <ul id="orderTrackBar">
-              <li className="active">
-                Order Confirmed
-                <p>Wed, 11th Jan</p>
-              </li>
-              <li className="active">
-                Shipped
-                <p>Sat, 13th Jan</p>
-              </li>
-              <li className="">
-                Out For Delivery
-                <p>Thu, 11th Jan</p>
-              </li>
-              <li>
-                Delivered
-                <p>Mon 16th Jan</p>
-              </li>
+              {
+                OrderDeliveryStatus.map((status, index) => {
+                  return (
+                    <li key={index} className={order?.orderStatusRespList.some((orderStatus) => orderStatus.orderStatus === status.key) ? "active" : ""}>
+                      {status.value}
+                      <p>{order?.orderStatusRespList.find((orderStatus) => orderStatus.orderStatus === status.key)?.timestamp ? formatDate(order?.orderStatusRespList.find((orderStatus) => orderStatus.orderStatus === status.key)?.timestamp) : ""}</p>
+                    </li>
+                  );
+                })
+              }
             </ul>
           </div>
         </div>
         {/* btns */}
         <div className="centerBtns">
-          <ButtonMain btnColor="green" name="Contact to Seller" />
-          <ButtonMain  onClick={() => setShowPreview(true)} name="Preview Invoice" />
+          <ButtonMain onClick={() => setShowPreview(true)} name="Preview Invoice" />
         </div>
         {/* popup preview */}
         <PreviewInvoicePopup
-         show={showPreview}
-         onHide={() => setShowPreview(false)}
+          show={showPreview}
+          onHide={() => setShowPreview(false)}
+          order={order}
         />
       </div>
     </>

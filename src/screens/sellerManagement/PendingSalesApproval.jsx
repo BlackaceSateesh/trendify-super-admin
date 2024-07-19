@@ -8,7 +8,7 @@ import SellerImage from '../../assests/dashboard/sellerImg.png'
 import { fetchVendorsByStatus } from '../../utils/dataFetchers'
 import { VendorStatus, DataColumnApproved as DataColumn } from '../../constants/contents/SellerContent'
 import { useNavigate } from 'react-router-dom'
-import { AuthenticatedRoutes } from '../../constants/routes'
+import { AuthenticatedRoutes } from '../../constants/Routes'
 
 const VerifiedSalesApproval = () => {
   const navigate = useNavigate();

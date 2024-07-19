@@ -7,8 +7,8 @@ import { fetchProductCategories } from "../../utils/dataFetchers";
 
 const DataColumns = [
   {
-    name: "ID",
-    selector: (row) => row.id,
+    name: "S.No",
+    selector: (row) => row.sno,
   },
   {
     name: "Image",
@@ -36,8 +36,8 @@ const AddNewCategory = () => {
   const [perPage, setPerPage] = useState(10);
 
   const mapCategoryList = useCallback((categories) => {
-    return categories?.map((category) => ({
-      id: category?.id,
+    return categories?.map((category, index) => ({
+      sno: index + 1,
       image: category?.imageUrl,
       name: category?.name,
       description: category?.description
@@ -84,7 +84,6 @@ const AddNewCategory = () => {
             data={memoizedOrderList}
             progressPending={loading}
             progressComponent={<SpinnerLoader />}
-            selectableRows
             pagination
             paginationServer
             paginationTotalRows={totalRows}
@@ -96,6 +95,7 @@ const AddNewCategory = () => {
 
       <AddProductByCategory
         show={showAddCategory}
+        onSuccessfullyAdded={() => fetchCategories(1)}
         onHide={() => setShowAddCategory(false)}
       />
     </>

@@ -1,12 +1,12 @@
 import React from 'react'
 
-const TextareaInput = ({labelName, optional, value , placeholder, onChange}) => {
+const TextareaInput = ({labelName, required, value , placeholder, onChange, disabled}) => {
   return (
     <>
     <div className="textareaInput inputFieldBox">
-      {labelName? <label className='inputLabel' htmlFor="">{labelName} <p>{optional}</p></label> : null}
+      {labelName? <label className='inputLabel' htmlFor="">{labelName} <span>{required}</span></label> : null}
         
-        <textarea name="" id="" defaultValue={value} placeholder={placeholder} onChange={onChange}></textarea>
+        <textarea name="" id="" defaultValue={value} placeholder={placeholder} onChange={onChange} disabled={disabled}></textarea>
       </div>
  </>
   )

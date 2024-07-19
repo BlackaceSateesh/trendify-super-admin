@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 import "../../styles/dashboard/AddNewCategory.css";
-import AddProductByType from "../../components/ui/addProductModals/AddProductByType";
+import AddProductByBrand from "../../components/ui/addProductModals/AddProductByBrand";
 import DataTable from "react-data-table-component";
 import SpinnerLoader from "../../components/ui/SpinnerLoader";
-import { fetchProductTypes } from "../../utils/dataFetchers";
+import { fetchBrands } from "../../utils/dataFetchers";
 
 const DataColumns = [
     {
@@ -23,32 +23,32 @@ const DataColumns = [
         selector: (row) => row.name,
     },
     {
-        name: "Product Category",
-        selector: (row) => row.productCategory,
+        name: "Product Type",
+        selector: (row) => row.productType,
     }
 ];
 
 const AddNewCategory = () => {
-    const [showAddType, setShowAddType] = useState(false);
-    const [typeList, setTypeList] = useState([]);
+    const [showAddBrand, setShowAddBrand] = useState(false);
+    const [brandList, setBrandList] = useState([]);
     const [loading, setLoading] = useState(false);
     const [totalRows, setTotalRows] = useState(0);
     const [perPage, setPerPage] = useState(10);
 
-    const mapTypeList = useCallback((types) => {
-        return types?.map((type, index) => ({
+    const mapCategoryList = useCallback((brands) => {
+        return brands?.map((brand, index) => ({
             sno: index + 1,
-            image: type?.imageUrl,
-            name: type?.name,
-            productCategory: type?.categoryName
+            image: brand?.imageUrl,
+            name: brand?.name,
+            productType: brand?.productTypeName
         }));
     });
 
-    const fetchTypes = useCallback(async (page) => {
+    const fetchBrand = useCallback(async (page) => {
         setLoading(true);
         try {
-            const response = await fetchProductTypes(page, perPage);
-            setTypeList(mapTypeList(response?.content));
+            const response = await fetchBrands(page, perPage);
+            setBrandList(mapCategoryList(response?.content));
             setTotalRows(response?.totalElements);
         } catch (error) {
             console.log(error);
@@ -57,26 +57,26 @@ const AddNewCategory = () => {
         }
     });
 
-    const memoizedOrderList = useMemo(() => typeList, [typeList]);
+    const memoizedOrderList = useMemo(() => brandList, [brandList]);
 
     const handlePageChange = useCallback((page) => {
-        fetchTypes(page);
-    }, [fetchTypes]);
+        fetchBrand(page);
+    }, [fetchBrand]);
 
     const handlePerRowsChange = useCallback((newPerPage, page) => {
         setPerPage(newPerPage);
-        fetchTypes(page);
-    }, [fetchTypes]);
+        fetchBrand(page);
+    }, [fetchBrand]);
 
     useEffect(() => {
-        fetchTypes(1);
+        fetchBrand(1);
     }, []);
 
     return (
         <>
             <div className="AddNewCategory sectionGap">
-                <button className="addCategoryBtn" onClick={() => setShowAddType(true)}>
-                    Add New Type
+                <button className="addCategoryBtn" onClick={() => setShowAddBrand(true)}>
+                    Add New Brand
                 </button>
                 <div className="datatableMain">
                     <DataTable
@@ -94,10 +94,10 @@ const AddNewCategory = () => {
                 </div>
             </div>
 
-            <AddProductByType
-                show={showAddType}
-                onSuccessfullyAdded={() => fetchTypes(1)}
-                onHide={() => setShowAddType(false)}
+            <AddProductByBrand
+                show={showAddBrand}
+                onSuccessfullyAdded={() => fetchBrand(1)}
+                onHide={() => setShowAddBrand(false)}
             />
         </>
     );

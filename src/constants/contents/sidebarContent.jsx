@@ -1,7 +1,7 @@
 import { IoNotificationsOutline } from "react-icons/io5";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { BiLogOut } from "react-icons/bi";
-import { AuthenticatedRoutes } from "../routes";
+import { AuthenticatedRoutes } from "../Routes";
 import { BsShop } from "react-icons/bs";
 import { LiaBoxOpenSolid } from "react-icons/lia";
 import { AiOutlineLineChart } from "react-icons/ai";
@@ -53,9 +53,17 @@ export const sideMenuListManage = [
       route: AuthenticatedRoutes.addNewCategory,
     },
     {
-      name: "Edit & Add Product",
-      route: AuthenticatedRoutes.addNewProduct,
+      name: " Add New Sub Category",
+      route: AuthenticatedRoutes.addNewType,
     },
+    {
+      name: " Add New Brand",
+      route: AuthenticatedRoutes.addNewBrand,
+    },
+    {
+      name: " Add New Product",
+      route: AuthenticatedRoutes.addNewProduct,
+    }
   ],
   },
   {

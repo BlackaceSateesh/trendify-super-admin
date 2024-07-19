@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
 import WarningPng from "../../../assests/dashboard/warningPng.png";
+import TextInput from "../TextInput";
 
 const WarningPopup = (props) => {
+  const [reason, setReason] = useState("");
+  const [error, setError] = useState("");
+
+  const handleReject = () => {
+    setError("");
+    if (props.hasPrompt && !reason) {
+      setError("Reason is required");
+      console.log("Reason is required");
+      return;
+    }
+    props.onReject(reason);
+    props.onHide();
+  }
+
   return (
     <>
       <Modal
-        {...props}
+        show={props.show}
+        onHide={props.onHide}
         aria-labelledby="contained-modal-title-vcenter"
         centered
         className="warning alertModal"
@@ -29,9 +45,17 @@ const WarningPopup = (props) => {
               By rejecting this product , you won't be able to see data in
               dashboard.
             </h6>
+            {
+              props.hasPrompt && (
+                <TextInput labelName="Reason" required="*" value={reason} onChange={(e) => setReason(e.target.value)} />
+              )
+            }
+
+            {error && <p className="error">{error}</p>}
+
             <div className="centerBtns">
-                <button onClick={props.onHide} className="popupBtn cancel" >Cancel</button>
-                <button className="popupBtn continuo">YES , REJECT</button>
+                <button onClick={props.onHide} className="popupBtn cancel">Cancel</button>
+                <button className="popupBtn continuo" onClick={handleReject}>YES, REJECT</button>
             </div>
           </div>
         </Modal.Body>

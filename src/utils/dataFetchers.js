@@ -3,8 +3,12 @@ import {
     getAllCategories,
     getAllBrands,
     getAllTypes,
-    getAllProducts
+    getAllProducts,
+    getAllTypesByCategory,
+    getAllBrandsByType,
+    getAllProductsByStatus
 } from "../api/product-api";
+import { getAllOrders } from "../api/order-api";
 
 export async function fetchVendorsByStatus(vendorStatus, page) {
     const response = await getVendorsByStatus({ 
@@ -28,12 +32,11 @@ export async function fetchProductCategories(page = 1, size = 10) {
     }
 }
 
-export async function fetchProductTypesByCategory(categoryId, page = 1, size = 10) {
+export async function fetchProductTypes(page = 1, size = 10) {
     try {
         const productTypes = await getAllTypes({
             page,
             size,
-            productCategoryId: categoryId
         });
 
         return productTypes;
@@ -42,12 +45,25 @@ export async function fetchProductTypesByCategory(categoryId, page = 1, size = 1
     }
 }
 
-export async function fetchBrandsByProductType(typeId, page = 1) {
+export async function fetchProductTypesByCategory(productCategoryId, page = 1, size = 10) {
+    try {
+        const productTypes = await getAllTypesByCategory({
+            productCategoryId,
+            page,
+            size,
+        });
+
+        return productTypes;
+    } catch (error) {
+        console.log(error?.response?.data?.message);
+    }
+}
+
+export async function fetchBrands(page = 1, size = 10) {
     try {
         const brands = await getAllBrands({
             page,
-            size: 20,
-            productTypeId: typeId
+            size
         });
 
         return brands;
@@ -56,15 +72,56 @@ export async function fetchBrandsByProductType(typeId, page = 1) {
     }
 }
 
-export async function fetchProductsByBrand(brandId, page = 1) {
+export async function fetchBrandsByType(productTypeId, page = 1, size = 10) {
+    try {
+        const brands = await getAllBrandsByType({
+            productTypeId,
+            page,
+            size
+        });
+
+        return brands;
+    } catch (error) {
+        console.log(error?.response?.data?.message);
+    }
+}
+
+export async function fetchProducts(page = 1, size = 10) {
     try {
         const products = await getAllProducts({
             page,
-            size: 20,
-            brandId
+            size
         });
 
         return products;
+    } catch (error) {
+        console.log(error?.response?.data?.message);
+    }
+}
+
+export async function fetchProductsByProductStatus(productStatus, page = 1, size = 10) {
+    try {
+        const products = await getAllProductsByStatus({
+            page,
+            size,
+            productStatus
+        });
+
+        return products;
+    } catch (error) {
+        console.log(error?.response?.data?.message);
+    }
+}
+
+export async function fetchAllOrdersByStatus(orderStatus, page = 1, size = 10) {
+    try {
+        const orders = await getAllOrders({
+            page,
+            size,
+            orderStatus
+        });
+
+        return orders;
     } catch (error) {
         console.log(error?.response?.data?.message);
     }

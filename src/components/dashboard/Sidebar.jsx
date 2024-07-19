@@ -11,7 +11,7 @@ import {
   sideMenuListManage,
   sideMenuListOther,
 } from "../../constants/contents/sidebarContent";
-import { AuthenticatedRoutes } from "../../constants/routes";
+import { AuthenticatedRoutes } from "../../constants/Routes";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSideMenu } from "../../redux/slice/SideMenuSlice";
 

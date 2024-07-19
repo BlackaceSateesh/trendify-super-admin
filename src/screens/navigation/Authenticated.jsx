@@ -1,5 +1,5 @@
 import React from "react";
-import { AuthenticatedRoutes } from "../../constants/routes";
+import { AuthenticatedRoutes } from "../../constants/Routes";
 import { Route, Routes } from "react-router-dom";
 import DashboardScreen from "../dashboardScreen/DashboardScreen";
 import DashboardHome from "../dashboardHome/DashboardHome";
@@ -38,6 +38,10 @@ import OrderConfirmationDetails from "../orderManagement/OrderConfirmationDetail
 import DeliveryOption from "../orderManagement/DeliveryOption";
 import CreateCustomer from "../customerManagement/CreateCustomer";
 import CustomerList from "../customerManagement/CustomerList";
+import AddNewType from "../productManagement/AddNewType";
+import AddNewBrand from "../productManagement/AddNewBrand";
+import AddNewProduct from "../productManagement/AddNewProduct";
+import ProductList from "../productManagement/ProductList";
 
 const Authenticated = () => {
   return (
@@ -51,8 +55,11 @@ const Authenticated = () => {
         <Route path={AuthenticatedRoutes.sellerVerificationDetailPage} element={<DashboardScreen innerPage={<SellerVerificationDetailPage />}  pageName='Seller Verification Detail' pageTitle='Seller Verification Detail' parentName='Dashboard'/>} />
         <Route path={AuthenticatedRoutes.customerReviews} element={<DashboardScreen innerPage={<CustomerReview />}  pageName='Customer Reviews' pageTitle='Customer Reviews' parentName='Dashboard'/>} />
         <Route path={AuthenticatedRoutes.pendingApprovalProduct} element={<DashboardScreen innerPage={<PendingApprovalProduct />}  pageName=' Pending Approval Product List' pageTitle='Product Management' parentName='Product Management'/>} />
-        <Route path={AuthenticatedRoutes.productDetails} element={<DashboardScreen innerPage={<ProductDetails />}  pageName='Product Details' pageTitle='Product Management' parentName='Product Management'/>} />
+        <Route path={AuthenticatedRoutes.productDetails} element={<DashboardScreen innerPage={<ProductList />}  pageName='Product Details' pageTitle='Product Management' parentName='Product Management'/>} />
         <Route path={AuthenticatedRoutes.addNewCategory} element={<DashboardScreen innerPage={<AddNewCategory />}  pageName='Add New Category' pageTitle='Add New Category' parentName='Product Management'/>} />
+        <Route path={AuthenticatedRoutes.addNewType} element={<DashboardScreen innerPage={<AddNewType />}  pageName='Add New Type' pageTitle='Add New Type' parentName='Product Management'/>} />
+        <Route path={AuthenticatedRoutes.addNewBrand} element={<DashboardScreen innerPage={<AddNewBrand />}  pageName='Add New Brand' pageTitle='Add New Brand' parentName='Product Management'/>} />
+        <Route path={AuthenticatedRoutes.addNewProduct} element={<DashboardScreen innerPage={<AddNewProduct />}  pageName='Add New Product' pageTitle='Add New Product' parentName='Product Management'/>} />
         <Route path={AuthenticatedRoutes.addNewProduct} element={<DashboardScreen innerPage={<EditAndAddProduct />}  pageName='Edit & Add Product' pageTitle='Edit & Add Product' parentName='Product Management'/>} />
 
         {/* support and feedback */}
