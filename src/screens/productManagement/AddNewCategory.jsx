@@ -75,9 +75,12 @@ const AddNewCategory = () => {
   return (
     <>
       <div className="AddNewCategory sectionGap">
+      <div className="categoryHead">
         <button className="addCategoryBtn" onClick={() => setShowAddCategory(true)}>
           Add New Category
         </button>
+      </div>
+
         <div className="datatableMain addNewCategory dataTable_main">
           <DataTable
             columns={DataColumns}

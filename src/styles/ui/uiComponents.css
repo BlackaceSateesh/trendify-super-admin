@@ -743,6 +743,7 @@ textarea::-webkit-scrollbar {
   gap: 0.5rem;
   width: -moz-fit-content;
   width: fit-content;
+  float: right;
 }
 
 .MobileBannerDesigns .inner {
