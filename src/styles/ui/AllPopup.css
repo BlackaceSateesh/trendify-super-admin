@@ -4,7 +4,7 @@
 }
 
 .modal-header {
-  padding: 1.6rem;
+  padding: 1.6rem !important;
 }
 .modal-header .btn-close {
   font-size: 1.6rem;
@@ -533,6 +533,14 @@ font-weight: 400;
  .addProduct_modal.modelName .inner .inputField .inputFieldBox{
    width: 42%;
  }
+
+ /* mobBannerLayoutPreview */
+ .mobBannerLayoutPreview .MobileBannerType1,
+ .mobBannerLayoutPreview .MobileBannerSliderType1,
+ .mobBannerLayoutPreview .MobileBannerSliderType1 .carousel{
+   width: 100%;
+ }
+
  
  @media (min-width:299px) and (max-width:999px) {
    .addProduct_modal.modelName .inner .inputField .inputFieldBox{

@@ -84,7 +84,7 @@ const ProductList = () => {
                             onFilterChange={handleTabChange}
                         />
                     </div>
-                    <div className="datatableMain">
+                    <div className="datatableMain dataTable_main">
                         <DataTable
                             columns={productColumns.column}
                             data={memoizedProductList}

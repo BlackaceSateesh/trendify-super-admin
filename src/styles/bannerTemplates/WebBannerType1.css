@@ -1,0 +1,28 @@
+
+.WebBannerType1 .left,
+.WebBannerType1 .right ,
+.WebBannerType1 .center {
+  min-width: 33.33%;
+  width: 33.33%;
+  height: 100%;
+}
+.WebBannerType1 .center {
+  border-left: 0.6rem solid var(--white);
+  border-right: 0.6rem solid var(--white);
+}
+.WebBannerType1 .center,
+.WebBannerType1 .right {
+ display: flex;
+ flex-direction: column;
+}
+.WebBannerType1 .center .centerTop,
+.WebBannerType1 .center .centerBtm,
+.WebBannerType1 .right .rightTop,
+.WebBannerType1 .right .rightBtm{
+height: 50%;
+width: 100%;
+}
+.WebBannerType1 .center .centerTop,
+.WebBannerType1 .right .rightTop{
+  border-bottom: 0.6rem solid var(--white);
+}

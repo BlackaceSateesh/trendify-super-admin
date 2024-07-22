@@ -25,14 +25,37 @@ const MobileBannerDesigns = (props) => {
               <div className="singleImg" onClick={props.onLayout}>
                 <img src={bannerMobilePng} alt="" />
               </div>
+              <div className="hoverBox">
               <p className="title">Use this layout</p>
+              </div>
             </div>
+
             <div className="MobileBannerDesignCard">
               <div className="singleImg" onClick={props.onSlider}>
                 <img src={bannerMobileSliderPng} alt="" />
               </div>
+              <div className="hoverBox">
               <p className="title">Use this carousel</p>
+              </div>
             </div>
+            <div className="MobileBannerDesignCard">
+              <div className="singleImg" onClick={props.onLayout}>
+                <img src={bannerMobilePng} alt="" />
+              </div>
+              <div className="hoverBox">
+              <p className="title">Use this layout</p>
+              </div>
+            </div>
+
+            <div className="MobileBannerDesignCard">
+              <div className="singleImg" onClick={props.onSlider}>
+                <img src={bannerMobileSliderPng} alt="" />
+              </div>
+              <div className="hoverBox">
+              <p className="title">Use this carousel</p>
+              </div>
+            </div>
+
           </div>
         </Modal.Body>
       </Modal>

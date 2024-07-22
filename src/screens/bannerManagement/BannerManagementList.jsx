@@ -13,6 +13,10 @@ import MobileBannerSliderType1 from "../../components/bannerTemplates/MobileBann
 import MobileBannerType1 from "../../components/bannerTemplates/MobileBannerType1";
 import { BannerIds } from "../../constants/contents/BannerContent";
 import WarningPopup from "../../components/ui/popups/WarningPopup";
+import WebBannerType3 from "../../components/bannerTemplates/WebBannerType3";
+import WebBannerType2 from "../../components/bannerTemplates/WebBannerType2";
+import WebBannerType4 from "../../components/bannerTemplates/WebBannerType4";
+import WebBannerType1 from "../../components/bannerTemplates/WebBannerType1";
 
 const BannerManagementList = () => {
   const navigate = useNavigate();
@@ -94,6 +98,10 @@ const BannerManagementList = () => {
   return (
     <>
       <div className="BannerManagementList sectionGap">
+        <WebBannerType1 />
+        <WebBannerType2 />
+        <WebBannerType3 />
+        <WebBannerType4 />
         <div className="web_banner sectionContainer">
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <DashboardInnerTitle name='Web Banner List' />
@@ -140,8 +148,10 @@ const BannerManagementList = () => {
       <Modal
         show={showLayout}
         onHide={() => setShowLayout(false)}
-        size="lg"
+        size="s"
         centered
+        scrollable
+        className="mobBannerLayoutPreview"
       >
         <Modal.Header closeButton>
           <Modal.Title>Mobile Banner Layout</Modal.Title>

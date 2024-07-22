@@ -75,10 +75,13 @@ const AddNewCategory = () => {
   return (
     <>
       <div className="AddNewCategory sectionGap">
+      <div className="categoryHead">
         <button className="addCategoryBtn" onClick={() => setShowAddCategory(true)}>
           Add New Category
         </button>
-        <div className="datatableMain">
+      </div>
+
+        <div className="datatableMain addNewCategory dataTable_main">
           <DataTable
             columns={DataColumns}
             data={memoizedOrderList}
@@ -86,6 +89,7 @@ const AddNewCategory = () => {
             progressComponent={<SpinnerLoader />}
             pagination
             paginationServer
+            selectableRows
             paginationTotalRows={totalRows}
             onChangeRowsPerPage={handlePerRowsChange}
             onChangePage={handlePageChange}

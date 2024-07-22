@@ -1,0 +1,12 @@
+
+.WebBannerType4 .left{
+  min-width: 65%;
+  width: 65%;
+  height: 100%;
+}
+.WebBannerType4 .right {
+  height: 100%;
+  min-width: 35%;
+  width: 35%;
+  border-left: 0.6rem solid var(--white);
+}
