@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import DataTable from "react-data-table-component";
 import { BannerColumns } from "../../constants/dummy/bannerListContent";
 import DashboardInnerTitle from "../../components/dashboard/DashboardInnerTitle";
@@ -7,10 +7,12 @@ import '../../styles/dashboard/BannerManagementList.css';
 import { useNavigate } from "react-router-dom";
 import { AuthenticatedRoutes } from "../../constants/Routes";
 import MobileBannerDesigns from "../../components/ui/MobileBannerDesigns";
-import { getBannersAll } from "../../api/banner-api";
+import { getBannersAll, deleteBanner } from "../../api/banner-api";
 import { Modal } from "react-bootstrap";
 import MobileBannerSliderType1 from "../../components/bannerTemplates/MobileBannerSliderType1";
 import MobileBannerType1 from "../../components/bannerTemplates/MobileBannerType1";
+import { BannerIds } from "../../constants/contents/BannerContent";
+import WarningPopup from "../../components/ui/popups/WarningPopup";
 
 const BannerManagementList = () => {
   const navigate = useNavigate();
@@ -21,21 +23,64 @@ const BannerManagementList = () => {
   const [mobileBanners, setMobileBanners] = useState([]);
   const [currentCollageType, setCurrentCollageType] = useState(null);
   const [currentBannerResList, setCurrentBannerResList] = useState([]);
+  const [showDeletePopup, setShowDeletePopup] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const tempBannerData = useRef();
 
   const mapBannerData = (data) => {
-    return data.map((banner, index) => {
+    return data.map((banner) => {
       return {
-        id: index + 1,
+        id: banner?.id,
         bannerType: banner?.bannerApplicationType || "N/A",
         collageType: banner?.collageType || "N/A",
         imageCount: banner?.bannerResList?.length || "N/A",
-        action: () => {
-          setCurrentCollageType(banner?.collageType);
-          setCurrentBannerResList(banner?.bannerResList);
-          setShowLayout(true);
-        }
+        action: [
+          () => {
+            setCurrentCollageType(banner?.collageType);
+            setCurrentBannerResList(banner?.bannerResList);
+            setShowLayout(true);
+          },
+          () => {
+            setShowDeletePopup(true);
+            tempBannerData.current = banner;
+          }
+        ]
       }
     });
+  }
+
+  const handleDeleteBanner = async () => {
+    setLoading(true);
+    const { id, bannerApplicationType: bannerType } = tempBannerData.current;
+    try {
+      setError(null);
+      await deleteBanner(id);
+      if (bannerType === 'Web') {
+        setWebBanners((prevData) => prevData.filter((banner) => banner.id !== id));
+      } else {
+        setMobileBanners((prevData) => prevData.filter((banner) => banner.id !== id));
+      }
+    } catch (error) {
+      setError(error?.response?.data?.message || 'Something went wrong');
+    } finally {
+      tempBannerData.current = null;
+      setLoading(false);
+    }
+  }
+
+  const getBanners = async () => {
+    try {
+      const banners = await getBannersAll();
+      const webBanners = banners.filter((banner) => banner.bannerApplicationType === 'Web');
+      const mobileBanners = banners.filter((banner) => banner.bannerApplicationType === 'Mobile');
+
+      setWebBanners(mapBannerData(webBanners));
+      setMobileBanners(mapBannerData(mobileBanners));
+    } catch (error) {
+      console.log(error?.response?.data?.message);
+    }
   }
 
   const getImageUrlsFromData = () => {
@@ -43,13 +88,7 @@ const BannerManagementList = () => {
   };
 
   useEffect(() => {
-    getBannersAll().then((res) => {
-      const webBanners = res.filter((banner) => banner.bannerApplicationType === 'Web');
-      const mobileBanners = res.filter((banner) => banner.bannerApplicationType === 'Mobile');
-
-      setWebBanners(mapBannerData(webBanners));
-      setMobileBanners(mapBannerData(mobileBanners));
-    });
+    getBanners();
   }, []);
 
   return (
@@ -94,8 +133,8 @@ const BannerManagementList = () => {
       <MobileBannerDesigns
         show={showModal}
         onHide={() => setShowModal(false)}
-        onLayout={() => navigate(AuthenticatedRoutes.bannerSettingEdit, { state: { bannerType: 'mobile-layout1' } })}
-        onSlider={() => navigate(AuthenticatedRoutes.bannerSettingEdit, { state: { bannerType: 'mobile-slider1' } })}
+        onLayout={() => navigate(AuthenticatedRoutes.bannerSettingEdit, { state: { bannerType: BannerIds.MOBILE_BANNER_1 } })}
+        onSlider={() => navigate(AuthenticatedRoutes.bannerSettingEdit, { state: { bannerType: BannerIds.SLIDER } })}
       />
 
       <Modal
@@ -115,6 +154,16 @@ const BannerManagementList = () => {
           )}
         </Modal.Body>
       </Modal>
+
+      <WarningPopup
+        show={showDeletePopup}
+        onHide={() => setShowDeletePopup(false)}
+        title="Delete Banner"
+        message="Are you sure you want to delete this banner?"
+        onReject={() => handleDeleteBanner()}
+        loading={loading}
+        error={error}
+      />
     </>
   );
 };

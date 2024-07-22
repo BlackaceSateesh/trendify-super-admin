@@ -5,11 +5,12 @@ import "../../styles/dashboard/BannerSettingEdit.css";
 import PreviewBanner from "../../components/ui/popups/PreviewBanner";
 import MobileBannerType1 from "../../components/bannerTemplates/MobileBannerType1";
 import MobileBannerSliderType1 from "../../components/bannerTemplates/MobileBannerSliderType1";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Navigate } from "react-router-dom";
 import { AuthenticatedRoutes } from "../../constants/Routes";
 import InputFieldSet from "../../components/ui/BannerInputField";
 import { addBanners } from "../../api/banner-api";
 import SpinnerLoader from "../../components/ui/SpinnerLoader";
+import { BannerIds } from "../../constants/contents/BannerContent";
 
 const BannerSettingEdit = () => {
   const location = useLocation();
@@ -52,7 +53,7 @@ const BannerSettingEdit = () => {
 
     const payload = {
       bannerReqList,
-      collageType: bannerType === "mobile-layout1" ? "MOBILE_BANNER_1" : "SLIDER",
+      collageType: bannerType.id,
       bannerApplicationType: "Mobile"
     }
 
@@ -66,19 +67,19 @@ const BannerSettingEdit = () => {
     }
   };
 
-  return (
+  return !bannerType ? <Navigate to={AuthenticatedRoutes.BannerManagementList} /> : (
     <>
       <div className="BannerSettingEdit sectionContainer">
         <DashboardInnerTitle name="Edit Banner" />
         <div className="bannerIMG">
-          {bannerType === "mobile-layout1" ? (
+          {bannerType.id === BannerIds.MOBILE_BANNER_1.id ? (
             <MobileBannerType1 images={getImageFieldsFromData()} />
           ) : (
             <MobileBannerSliderType1 count={fieldCount} images={getImageFieldsFromData()} />
           )}
         </div>
 
-        {[...Array(bannerType === "mobile-layout1" ? 4 : fieldCount)].map((_, index) => (
+        {[...Array(bannerType.id !== BannerIds.SLIDER ? BannerIds[bannerType.id].count : fieldCount)].map((_, index) => (
           <InputFieldSet key={index} index={index} onDataChange={handleDataChange} />
         ))}
 

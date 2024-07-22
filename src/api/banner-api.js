@@ -17,3 +17,10 @@ export async function getBannersAll() {
     );
     return response.data;
 }
+
+export async function deleteBanner(id) {
+    const response = await axios.delete(
+        `${bannerApiBaseUrl}/${id}`
+    );
+    return response.data;
+}

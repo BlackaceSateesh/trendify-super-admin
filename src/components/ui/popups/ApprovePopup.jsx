@@ -1,6 +1,7 @@
 import React from "react";
 import { Modal } from "react-bootstrap";
 import SuccesPng from "../../../assests/dashboard/successPng.png";
+import SpinnerLoader from "../SpinnerLoader";
 
 const ApprovePopup = (props) => {
   const handleApprove = () => {
@@ -40,8 +41,12 @@ const ApprovePopup = (props) => {
             }
             </h6>
             <div className="centerBtns">
-                <button onClick={props.onHide} className="popupBtn cancel" >Cancel</button>
-                <button className="popupBtn continuo" onClick={handleApprove}>YES</button>
+                <button onClick={props.onHide} className="popupBtn cancel" disabled={props.loading}>
+                  Cancel
+                </button>
+                <button className="popupBtn continuo" onClick={handleApprove}>
+                  {props.loading ? <SpinnerLoader /> : "Yes"}
+                </button>
             </div>
           </div>
         </Modal.Body>

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Modal } from "react-bootstrap";
 import WarningPng from "../../../assests/dashboard/warningPng.png";
 import TextInput from "../TextInput";
+import SpinnerLoader from "../SpinnerLoader";
 
 const WarningPopup = (props) => {
   const [reason, setReason] = useState("");
@@ -11,12 +12,17 @@ const WarningPopup = (props) => {
     setError("");
     if (props.hasPrompt && !reason) {
       setError("Reason is required");
-      console.log("Reason is required");
       return;
     }
     props.onReject(reason);
     props.onHide();
   }
+
+  useEffect(() => {
+    if (props.error) {
+      setError(props.error);
+    }
+  }, [props.error]);
 
   return (
     <>
@@ -39,11 +45,10 @@ const WarningPopup = (props) => {
               <p>Warning</p>
             </div>
             <h6 className="msg">
-              Are you sure to reject <b>Product ID - A15PM ? </b>
+              {props.title ? props.title : "Are you sure you want to reject this product?"}
             </h6>
             <h6 className="msgDetail">
-              By rejecting this product , you won't be able to see data in
-              dashboard.
+              {props.message ? props.message : "By rejecting this product, you are able to see data in Product Management."}
             </h6>
             {
               props.hasPrompt && (
@@ -54,8 +59,12 @@ const WarningPopup = (props) => {
             {error && <p className="error">{error}</p>}
 
             <div className="centerBtns">
-                <button onClick={props.onHide} className="popupBtn cancel">Cancel</button>
-                <button className="popupBtn continuo" onClick={handleReject}>YES, REJECT</button>
+                <button onClick={props.onHide} className="popupBtn cancel" disabled={props.loading}>
+                  Cancel
+                </button>
+                <button className="popupBtn continuo" onClick={handleReject}>
+                  {props.loading ? <SpinnerLoader /> : "Yes"}
+                </button>
             </div>
           </div>
         </Modal.Body>

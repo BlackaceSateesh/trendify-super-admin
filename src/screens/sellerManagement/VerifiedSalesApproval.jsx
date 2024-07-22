@@ -21,8 +21,9 @@ const VerifiedSalesApproval = () => {
   const [loading, setLoading] = useState(false);
 
   const mapDataToRow = useCallback((data) => {
-    return data.map((item) => {
+    return data.map((item, index) => {
       return {
+        id: index + 1,
         img: item?.aadhaarImageUrl || SellerImage,
         name: item?.vendorName || 'N/A',
         sellerId: item?.uniqueId || 'N/A',
@@ -36,22 +37,30 @@ const VerifiedSalesApproval = () => {
   const fetchSellerList = useCallback(async (page) => {
     setLoading(true);
     try {
-      let riders = await fetchVendorsByStatus(VendorStatus.APPROVED, page, perPage);
-      setRiderList(mapRiderList(riders?.content));
-      setTotalRows(riders?.totalElements);
+      let sellers = await fetchVendorsByStatus(VendorStatus.APPROVED, page, perPage);
+      setSellerList(mapDataToRow(sellers?.content));
+      setTotalRows(sellers?.totalElements);
     } catch (error) {
       console.log(error?.response?.data?.message);
     } finally {
       setLoading(false);
     }
   });
- 
+
+  const memoizedSellerList = useMemo(() => sellerList, [sellerList]);
+
+  const handlePageChange = useCallback((page) => {
+    fetchSellerList(page);
+  }, [fetchSellerList]);
+
+  const handlePerRowsChange = useCallback((newPerPage, page) => {
+    setPerPage(newPerPage);
+    fetchSellerList(page);
+  }, [fetchSellerList]);
+
   useEffect(() => {
-    fetchVendorsByStatus(VendorStatus.APPROVED, perPage).then((res) => {
-      setSellerList([...sellerList, ...mapDataToRow(res.content)]);
-      setTotalRows(res.totalPages);
-    });
-  }, [perPage]);
+    fetchSellerList(1);
+  }, []);
 
   return (
     <>
@@ -66,7 +75,19 @@ const VerifiedSalesApproval = () => {
           <div className="inner_table">
             <SearchBoxTable placeholderValue='Search List' />
             <div className="tableBox">
-              <ListTable dataColumn={DataColumn} dataRow={sellerList} onBottomScroll={onBottomScroll} />
+              <DataTable
+                columns={DataColumn}
+                data={memoizedSellerList}
+                progressPending={loading}
+                progressComponent={<SpinnerLoader />}
+                selectableRows
+                pagination
+                paginationServer
+                paginationTotalRows={totalRows}
+                onChangeRowsPerPage={handlePerRowsChange}
+                onChangePage={handlePageChange}
+                className="AllOrderProductList dataTable_main"
+              />
             </div>
           </div>
         </div>
