@@ -78,7 +78,7 @@ const AddNewCategory = () => {
         <button className="addCategoryBtn" onClick={() => setShowAddCategory(true)}>
           Add New Category
         </button>
-        <div className="datatableMain dataTable_main">
+        <div className="datatableMain addNewCategory dataTable_main">
           <DataTable
             columns={DataColumns}
             data={memoizedOrderList}
@@ -86,6 +86,7 @@ const AddNewCategory = () => {
             progressComponent={<SpinnerLoader />}
             pagination
             paginationServer
+            selectableRows
             paginationTotalRows={totalRows}
             onChangeRowsPerPage={handlePerRowsChange}
             onChangePage={handlePageChange}

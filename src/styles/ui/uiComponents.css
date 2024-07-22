@@ -653,6 +653,17 @@ textarea::-webkit-scrollbar {
   min-width: 6rem;
   max-width: 6rem;
 }
+.datatableMain.addNewCategory .rdt_TableCol:nth-child(1),
+.datatableMain.addNewCategory .rdt_TableCell:nth-child(1) {
+  min-width: 6rem;
+  max-width: 6rem;
+}
+.datatableMain.addNewCategory {
+ min-width: 50%;
+ max-width: fit-content;
+ margin: 0 auto;
+}
+
 
 .datatableMain .rdt_TableCell .productImg {
   min-width: 4.8rem;

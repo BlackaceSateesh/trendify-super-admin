@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from "react";
+ import React, { useState, useEffect, useCallback, useMemo } from "react";
 import "../../styles/dashboard/AddNewCategory.css";
 import AddProductByType from "../../components/ui/addProductModals/AddProductByType";
 import DataTable from "react-data-table-component";
@@ -76,9 +76,9 @@ const AddNewCategory = () => {
         <>
             <div className="AddNewCategory sectionGap">
                 <button className="addCategoryBtn" onClick={() => setShowAddType(true)}>
-                    Add New Type
+                Add New Type
                 </button>
-                <div className="datatableMain">
+                <div className="datatableMain addNewCategory dataTable_main">
                     <DataTable
                         columns={DataColumns}
                         data={memoizedOrderList}
