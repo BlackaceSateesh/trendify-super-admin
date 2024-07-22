@@ -93,7 +93,7 @@ const InputFieldSet = ({ index, onDataChange, onImageSet }) => {
     return (
         <div className="bannerDetails">
             <div className="head">
-                <h3>Edit Details {index + 1}</h3>
+                <h3>Image Details {index + 1}</h3>
             </div>
             <div className="inputField">
                 <FileInput labelName='Image' value={image} onChange={handleImageChange} />

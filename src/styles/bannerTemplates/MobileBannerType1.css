@@ -11,7 +11,7 @@
     width: 100%;
     height: 29rem;
     background-color: var(--banner-img-bg);
-    border: .3rem solid var(--primary-black);
+    border: .3rem solid var(--white);
     border-bottom: none;
 }
 .MobileBannerType1 .btm{
@@ -19,7 +19,7 @@
     height: 29rem;
     display: flex;
     background-color: var(--banner-img-bg);
-    border: .6rem solid var(--white);
+    border: .3rem solid var(--white);
 }
 .MobileBannerType1 .btm .left{
     height: 29rem;
@@ -34,11 +34,11 @@
     height: 14.5rem;
 }
 .MobileBannerType1 .btm .left .left_top{
-    border-bottom: .6rem solid var(--white);
+    border-bottom: .3rem solid var(--white);
 }
 .MobileBannerType1 .btm .right{
     height: 29rem;
     background-color: var(--banner-img-bg);
     width: 50%;
-    border-left: .6rem solid var(--white);
+    border-left: .3rem solid var(--white);
 }

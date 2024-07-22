@@ -5,6 +5,10 @@ import "../../styles/dashboard/BannerSettingEdit.css";
 import PreviewBanner from "../../components/ui/popups/PreviewBanner";
 import MobileBannerType1 from "../../components/bannerTemplates/MobileBannerType1";
 import MobileBannerSliderType1 from "../../components/bannerTemplates/MobileBannerSliderType1";
+import WebBannerType3 from "../../components/bannerTemplates/WebBannerType3";
+import WebBannerType2 from "../../components/bannerTemplates/WebBannerType2";
+import WebBannerType4 from "../../components/bannerTemplates/WebBannerType4";
+import WebBannerType1 from "../../components/bannerTemplates/WebBannerType1";
 import { useLocation, useNavigate, Navigate } from "react-router-dom";
 import { AuthenticatedRoutes } from "../../constants/Routes";
 import InputFieldSet from "../../components/ui/BannerInputField";
@@ -54,7 +58,7 @@ const BannerSettingEdit = () => {
     const payload = {
       bannerReqList,
       collageType: bannerType.id,
-      bannerApplicationType: "Mobile"
+      bannerApplicationType: bannerType.type
     }
 
     try {
@@ -74,17 +78,25 @@ const BannerSettingEdit = () => {
         <div className="bannerIMG">
           {bannerType.id === BannerIds.MOBILE_BANNER_1.id ? (
             <MobileBannerType1 images={getImageFieldsFromData()} />
+          ) : bannerType.id === BannerIds.WEB_BANNER_1.id ? (
+            <WebBannerType1 images={getImageFieldsFromData()} />
+          ) : bannerType.id === BannerIds.WEB_BANNER_2.id ? (
+            <WebBannerType2 images={getImageFieldsFromData()} />
+          ) : bannerType.id === BannerIds.WEB_BANNER_3.id ? (
+            <WebBannerType3 images={getImageFieldsFromData()} />
+          ) : bannerType.id === BannerIds.WEB_BANNER_4.id ? (
+            <WebBannerType4 images={getImageFieldsFromData()} />
           ) : (
-            <MobileBannerSliderType1 count={fieldCount} images={getImageFieldsFromData()} />
+            <MobileBannerSliderType1 images={getImageFieldsFromData()} />
           )}
         </div>
 
-        {[...Array(bannerType.id !== BannerIds.SLIDER ? BannerIds[bannerType.id].count : fieldCount)].map((_, index) => (
+        {[...Array(bannerType.id !== BannerIds.MOBILE_SLIDER ? BannerIds[bannerType.id].count : fieldCount)].map((_, index) => (
           <InputFieldSet key={index} index={index} onDataChange={handleDataChange} />
         ))}
 
         {
-          bannerType !== "mobile-layout1" && (
+          bannerType === BannerIds.MOBILE_SLIDER && (
             <div className="sideBtns">
               <ButtonMain 
                 btnColor="green" 

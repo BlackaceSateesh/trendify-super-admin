@@ -30,6 +30,7 @@ const BannerManagementList = () => {
   const [showDeletePopup, setShowDeletePopup] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [templateType, setTemplateType] = useState("");
 
   const tempBannerData = useRef();
 
@@ -98,16 +99,19 @@ const BannerManagementList = () => {
   return (
     <>
       <div className="BannerManagementList sectionGap">
-        <WebBannerType1 />
+        {/* <WebBannerType1 />
         <WebBannerType2 />
         <WebBannerType3 />
-        <WebBannerType4 />
+        <WebBannerType4 /> */}
         <div className="web_banner sectionContainer">
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <DashboardInnerTitle name='Web Banner List' />
             <ButtonMain
               name='Add New Banner'
-              onClick={() => console.log('Add New Banner')}
+              onClick={() => {
+                setShowModal(true);
+                setTemplateType("Web");
+              }}
               className='addNewBanner'
             />
           </div>
@@ -124,7 +128,10 @@ const BannerManagementList = () => {
             <DashboardInnerTitle name='Mobile Banner List' />
             <ButtonMain
               name='Add New Banner'
-              onClick={() => setShowModal(true)}
+              onClick={() => {
+                setShowModal(true);
+                setTemplateType("Mobile");
+              }}
               className='addNewBanner'
             />
           </div>
@@ -141,27 +148,37 @@ const BannerManagementList = () => {
       <MobileBannerDesigns
         show={showModal}
         onHide={() => setShowModal(false)}
-        onLayout={() => navigate(AuthenticatedRoutes.bannerSettingEdit, { state: { bannerType: BannerIds.MOBILE_BANNER_1 } })}
-        onSlider={() => navigate(AuthenticatedRoutes.bannerSettingEdit, { state: { bannerType: BannerIds.SLIDER } })}
+        templateType={templateType}
+        onLayout={(template) => navigate(AuthenticatedRoutes.bannerSettingEdit, { state: { bannerType: template } })}
       />
 
       <Modal
         show={showLayout}
         onHide={() => setShowLayout(false)}
-        size="s"
+        size={currentCollageType?.includes('WEB') ? 'lg' : 's'}
         centered
         scrollable
         className="mobBannerLayoutPreview"
       >
         <Modal.Header closeButton>
-          <Modal.Title>Mobile Banner Layout</Modal.Title>
+          <Modal.Title>Banner Layout</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {currentCollageType === 'MOBILE_BANNER_1' ? (
-            <MobileBannerType1 images={getImageUrlsFromData()} />
-          ) : (
-            <MobileBannerSliderType1 count={currentBannerResList.length} images={getImageUrlsFromData()} />
-          )}
+          <div>
+            {currentCollageType === BannerIds.MOBILE_BANNER_1.id ? (
+              <MobileBannerType1 images={getImageUrlsFromData()} />
+            ) : currentCollageType === BannerIds.WEB_BANNER_1.id ? (
+              <WebBannerType1 images={getImageUrlsFromData()} />
+            ) : currentCollageType === BannerIds.WEB_BANNER_2.id ? (
+              <WebBannerType2 images={getImageUrlsFromData()} />
+            ) : currentCollageType === BannerIds.WEB_BANNER_3.id ? (
+              <WebBannerType3 images={getImageUrlsFromData()} />
+            ) : currentCollageType === BannerIds.WEB_BANNER_4.id ? (
+              <WebBannerType4 images={getImageUrlsFromData()} />
+            ) : (
+              <MobileBannerSliderType1 images={getImageUrlsFromData()} count={currentBannerResList.length} />
+            )}
+          </div>
         </Modal.Body>
       </Modal>
 
