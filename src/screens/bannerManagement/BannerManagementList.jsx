@@ -155,7 +155,7 @@ const BannerManagementList = () => {
       <Modal
         show={showLayout}
         onHide={() => setShowLayout(false)}
-        size={currentCollageType?.includes('WEB') ? 'lg' : 's'}
+        size={currentCollageType === BannerIds?.MOBILE_SLIDER.id || currentCollageType?.includes("'WEB") ? 'lg' : 'sm'}
         centered
         scrollable
         className="mobBannerLayoutPreview"

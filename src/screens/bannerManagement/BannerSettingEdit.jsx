@@ -91,12 +91,12 @@ const BannerSettingEdit = () => {
           )}
         </div>
 
-        {[...Array(bannerType.id !== BannerIds.MOBILE_SLIDER ? BannerIds[bannerType.id].count : fieldCount)].map((_, index) => (
+        {[...Array(bannerType.id !== BannerIds.MOBILE_SLIDER.id ? BannerIds[bannerType.id].count : fieldCount)].map((_, index) => (
           <InputFieldSet key={index} index={index} onDataChange={handleDataChange} />
         ))}
 
         {
-          bannerType === BannerIds.MOBILE_SLIDER && (
+          bannerType.id === BannerIds.MOBILE_SLIDER.id && (
             <div className="sideBtns">
               <ButtonMain 
                 btnColor="green" 
