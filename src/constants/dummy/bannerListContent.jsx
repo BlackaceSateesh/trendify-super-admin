@@ -38,7 +38,7 @@ export const webBannerList = {
 export const BannerColumns = [
     {
         name: 'SL',
-        selector: row => row.id,
+        selector: row => row.sno,
     },
     {
         name: 'Banner Application Type',
@@ -114,7 +114,7 @@ export const mobileBannerColumns = {
     column: [
         {
             name: 'SL',
-            selector: row => row.id,
+            selector: row => row.sno,
         },
         {
             name: 'Banner Name',

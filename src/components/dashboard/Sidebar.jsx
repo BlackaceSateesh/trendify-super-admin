@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../../styles/sidebar/sidebar.css";
 import { MainContent } from "../../constants/contents/mainContent";
 import { FiChevronsLeft, FiChevronsRight } from "react-icons/fi";
@@ -18,6 +18,7 @@ import { toggleSideMenu } from "../../redux/slice/SideMenuSlice";
 
 
 const Sidebar = () => {
+  const location = useLocation();
   const sideMenuState = useSelector((state) => state.SideMenuSlice);
   const UserInfo = useSelector((state) => state.UserInfoSlice);
   const dispatch = useDispatch();
@@ -62,7 +63,7 @@ const Sidebar = () => {
             <h5 className="typeName">manage</h5>
             <Link
               to={AuthenticatedRoutes.dashboard}
-              className="menuList active"
+              className={`menuList ${location.pathname === AuthenticatedRoutes.dashboard ? "active" : ""}`}
             >
               <div className="icon">
                 <SlGrid />
@@ -75,7 +76,7 @@ const Sidebar = () => {
                 return (
                   <Accordion.Item eventKey={i} key={`item-${i}`}>
                     <Accordion.Header key={`header-${i}`}>
-                      <div className="menuList accoHeader">
+                      <div className={`menuList accoHeader`}>
                         <div className="icon">
                           {e.icon ? e.icon : <RiArrowRightSLine />}
                         </div>
@@ -86,7 +87,7 @@ const Sidebar = () => {
                       <ul>
                         {e.option?.map((opt, j) => (
                           <li key={`option-${j}`}>
-                            <Link to={opt.route} className="menuList">
+                            <Link to={opt.route} className={`menuList ${opt.route === location.pathname ? "active" : ""}`}>
                               <div className="icon">
                                 <RiArrowRightSLine />
                               </div>

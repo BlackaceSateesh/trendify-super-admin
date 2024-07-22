@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { SearchRoutes } from "../../constants/Routes";
+import { useNavigate } from "react-router-dom";
 
 const SearchHeader = () => {
+  const navigate = useNavigate();
+
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredRoutes, setFilteredRoutes] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -27,8 +30,9 @@ const SearchHeader = () => {
   };
 
   const handleOptionClick = (route) => {
-    setSearchTerm(route.title);
+    setSearchTerm("");
     setShowDropdown(false);
+    navigate(route.id);
   };
 
   return (

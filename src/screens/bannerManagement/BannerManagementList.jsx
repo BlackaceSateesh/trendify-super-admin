@@ -17,6 +17,7 @@ import WebBannerType3 from "../../components/bannerTemplates/WebBannerType3";
 import WebBannerType2 from "../../components/bannerTemplates/WebBannerType2";
 import WebBannerType4 from "../../components/bannerTemplates/WebBannerType4";
 import WebBannerType1 from "../../components/bannerTemplates/WebBannerType1";
+import SpinnerLoader from "../../components/ui/SpinnerLoader";
 
 const BannerManagementList = () => {
   const navigate = useNavigate();
@@ -31,13 +32,15 @@ const BannerManagementList = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [templateType, setTemplateType] = useState("");
+  const [screenLoader, setScreenLoader] = useState(false);
 
   const tempBannerData = useRef();
 
   const mapBannerData = (data) => {
-    return data.map((banner) => {
+    return data.map((banner, index) => {
       return {
-        id: banner?.id,
+        sno: index + 1,
+        id: banner.id,
         bannerType: banner?.bannerApplicationType || "N/A",
         collageType: banner?.collageType || "N/A",
         imageCount: banner?.bannerResList?.length || "N/A",
@@ -76,6 +79,7 @@ const BannerManagementList = () => {
   }
 
   const getBanners = async () => {
+    setScreenLoader(true);
     try {
       const banners = await getBannersAll();
       const webBanners = banners.filter((banner) => banner.bannerApplicationType === 'Web');
@@ -85,6 +89,8 @@ const BannerManagementList = () => {
       setMobileBanners(mapBannerData(mobileBanners));
     } catch (error) {
       console.log(error?.response?.data?.message);
+    } finally {
+      setScreenLoader(false);
     }
   }
 
@@ -99,10 +105,6 @@ const BannerManagementList = () => {
   return (
     <>
       <div className="BannerManagementList sectionGap">
-        {/* <WebBannerType1 />
-        <WebBannerType2 />
-        <WebBannerType3 />
-        <WebBannerType4 /> */}
         <div className="web_banner sectionContainer">
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <DashboardInnerTitle name='Web Banner List' />
@@ -119,6 +121,8 @@ const BannerManagementList = () => {
             columns={BannerColumns} // dummy data
             data={webBanners}
             selectableRows
+            progressComponent={<SpinnerLoader style={{ marginBottom: "20px" }} />}
+            progressPending={screenLoader}
             // pagination
             className="bannerManagementTable dataTable_main"
           />
@@ -139,6 +143,8 @@ const BannerManagementList = () => {
             columns={BannerColumns} // dummy data
             data={mobileBanners}
             selectableRows
+            progressComponent={<SpinnerLoader style={{ marginBottom: "20px" }} />}
+            progressPending={screenLoader}
             // pagination
             className="bannerManagementTable dataTable_main"
           />

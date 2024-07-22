@@ -74,7 +74,7 @@ const BannerSettingEdit = () => {
   return !bannerType ? <Navigate to={AuthenticatedRoutes.BannerManagementList} /> : (
     <>
       <div className="BannerSettingEdit sectionContainer">
-        <DashboardInnerTitle name="Edit Banner" />
+        <DashboardInnerTitle name="Add Banner" />
         <div className="bannerIMG">
           {bannerType.id === BannerIds.MOBILE_BANNER_1.id ? (
             <MobileBannerType1 images={getImageFieldsFromData()} />
