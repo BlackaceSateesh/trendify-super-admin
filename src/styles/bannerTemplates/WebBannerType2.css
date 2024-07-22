@@ -1,0 +1,33 @@
+
+.WebBannerType2 .left,
+.WebBannerType2 .right {
+  min-width: 25%;
+  width: 25%;
+  height: 100%;
+}
+
+.WebBannerType2 .center {
+  height: 100%;
+  width: 50%;
+  border-right: 0.6rem solid var(--white);
+  border-left: 0.6rem solid var(--white);
+}
+.WebBannerType2 .center .centerTop {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  border-bottom: 0.6rem solid var(--white);
+}
+.WebBannerType2 .center .centerBtm {
+  width: 100%;
+  height: 30%;
+}
+.WebBannerType2 .center .centerTop .centerTopLeft,
+.WebBannerType2 .center .centerTop .centerTopRight {
+  min-width: 50%;
+  width: 50%;
+  height: 100%;
+}
+.WebBannerType2 .center .centerTop .centerTopRight {
+  border-left: 0.6rem solid var(--white);
+}

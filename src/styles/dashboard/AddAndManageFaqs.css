@@ -99,6 +99,9 @@
   height: 160px;
   overflow-y: scroll;
 }
+.AddAndManageFaqs .writeAndAdd .writeAndAdd_right .steps .lists::-webkit-scrollbar{
+  display: none;
+}
 
 .sm_cardTags {
   width: 100%;

@@ -1,0 +1,36 @@
+
+.WebBannerType3 .left{
+    min-width: 70%;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-right: .6rem solid var(--white);
+}
+.WebBannerType3 .left .top{
+    height: 100%;
+    border-bottom: .6rem solid var(--white);
+    width: 100%;
+    display: flex;
+}
+.WebBannerType3 .left .top .topLeft{
+    border-right: .6rem solid var(--white);
+    height: 100%;
+    min-width: 50%;
+    width: 50%;
+}
+.WebBannerType3 .left .top .topRight{
+    height: 100%;
+    min-width: 50%;
+    width: 50%;
+}
+.WebBannerType3 .btm{
+    height: 100%;
+    width: 100%;
+}
+.WebBannerType3 .right{
+    height: 100%;
+    min-width: 30%;
+    width: 30%;
+    display: flex;
+}

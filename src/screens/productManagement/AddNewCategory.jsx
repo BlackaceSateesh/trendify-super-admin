@@ -78,7 +78,7 @@ const AddNewCategory = () => {
         <button className="addCategoryBtn" onClick={() => setShowAddCategory(true)}>
           Add New Category
         </button>
-        <div className="datatableMain">
+        <div className="datatableMain dataTable_main">
           <DataTable
             columns={DataColumns}
             data={memoizedOrderList}

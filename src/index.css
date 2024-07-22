@@ -39,6 +39,7 @@ body {
   --primary-border: #eff0f2;
   --sidemenu-hover: #454751;
   --loader-color: #C09562;
+  --banner-img-bg: #bbb;
 }
 a {
   text-decoration: none;

@@ -31,7 +31,7 @@ const ListTable = ({ dataColumn, dataRow, onBottomScroll }) => {
   }, [onBottomScroll]);
 
   return (
-    <div className="ListTable" ref={tableContainerRef} style={{ overflowY: 'auto', maxHeight: window.innerHeight }}>
+    <div className="ListTable dataTable_main" ref={tableContainerRef} style={{ overflowY: 'auto', maxHeight: window.innerHeight }}>
       <table>
         <thead>
           <tr>
