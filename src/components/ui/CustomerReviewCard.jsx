@@ -3,7 +3,7 @@ import { MdOutlineStarOutline } from "react-icons/md";
 import { MdOutlineStarPurple500 } from "react-icons/md";
 
 
-const CustomerReviewCard = ({pic, name, time, star, text}) => {
+const CustomerReviewCard = ({pic, name, userId, productId, star, text}) => {
   return (
     <>
       <div className="CustomerReviewCard">
@@ -12,23 +12,19 @@ const CustomerReviewCard = ({pic, name, time, star, text}) => {
                 <img src={pic} alt="" />
             </div>
             <div className="txt">
-                <h6>{name}</h6>
-                <p>{time}</p>
+                <h6>{name} - {userId}</h6>
+                <p>{productId}</p>
             </div>
         </div>
 
             <div className="stars">
-            <MdOutlineStarPurple500 />
-            <MdOutlineStarPurple500 />
-            <MdOutlineStarPurple500 />
-            <MdOutlineStarPurple500 />
-            <MdOutlineStarOutline />
+                {[...Array(star)].map((e, i) => {
+                    return (
+                        <MdOutlineStarPurple500 key={i} />
+                    );
+                })}
             </div>
             <p className="text">{text}</p>
-            <div className="options">
-                <button>Delete</button>
-                <button>Accept</button>
-            </div>
       </div>
     </>
   )

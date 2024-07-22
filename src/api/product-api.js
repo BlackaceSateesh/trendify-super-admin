@@ -108,7 +108,7 @@ export async function approveProduct(id) {
 
 export async function rejectProduct(id, reason) {
     const response = await axios.post(
-        `${productManagementApiBaseUrl}/rejectProduct/${id}`
+        `${productManagementApiBaseUrl}/rejectProduct/${id}?remark=${reason}`
     );
     return response.data;
 }

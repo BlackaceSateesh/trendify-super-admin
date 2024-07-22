@@ -237,14 +237,14 @@ const PendingApprovalProduct = () => {
           </div>
         </div>
 
-        {
-          location.state?.status !== ProductStatus.APPROVED && (
+        {/* {
+          location.state?.status !== ProductStatus.APPROVED && ( */}
             <div className="centerBtns">
               <ButtonMain onClick={() => setShowWarning(true)} name='Reject Product' />
               <ButtonMain onClick={() => setShowApprove(true)} btnColor='green' name='Approve Product' />
             </div>
-          )
-        }
+          {/* )
+        } */}
 
         <WarningPopup
           show={showWarning}

@@ -31,19 +31,20 @@ export const sideMenuListManage = [
         name: "Rejected Approval Seller List",
         route: AuthenticatedRoutes.rejectSalesApproval,
       },
-      {
-        name: "Seller Verification Detail Page",
-        route: AuthenticatedRoutes.sellerVerificationDetailPage,
-      },
+      // {
+      //   name: "Seller Verification Detail Page",
+      //   route: AuthenticatedRoutes.sellerVerificationDetailPage,
+      // },
     ],
   },
   {
     title: " Product Management",
     icon: <LiaBoxOpenSolid />,
-    option: [{
-      name: " Pending Approval Product",
-      route: AuthenticatedRoutes.pendingApprovalProduct,
-    },
+    option: [
+    // {
+    //   name: " Pending Approval Product",
+    //   route: AuthenticatedRoutes.pendingApprovalProduct,
+    // },
     {
       name: " Product Details",
       route: AuthenticatedRoutes.productDetails,
@@ -74,22 +75,22 @@ export const sideMenuListManage = [
         name: "All Order Products",
         route: AuthenticatedRoutes.allOrderProductList,
       },
-      {
-        name: "Order Details",
-        route: AuthenticatedRoutes.orderDetails,
-      },
-      {
-        name: "Order Confirmation List",
-        route: AuthenticatedRoutes.orderConfirmationList,
-      },
-      {
-        name: "Order Confirmation Details",
-        route: AuthenticatedRoutes.orderConfirmationDetails,
-      },
-      {
-        name: "Delivery Option",
-        route: AuthenticatedRoutes.deliveryOption,
-      },
+      // {
+      //   name: "Order Details",
+      //   route: AuthenticatedRoutes.orderDetails,
+      // },
+      // {
+      //   name: "Order Confirmation List",
+      //   route: AuthenticatedRoutes.orderConfirmationList,
+      // },
+      // {
+      //   name: "Order Confirmation Details",
+      //   route: AuthenticatedRoutes.orderConfirmationDetails,
+      // },
+      // {
+      //   name: "Delivery Option",
+      //   route: AuthenticatedRoutes.deliveryOption,
+      // },
     ],
   },
   
@@ -103,20 +104,20 @@ export const sideMenuListManage = [
   //   icon: <MdSupportAgent />,
   //   option: [{ name: "option1" }],
   // },
-  {
-    title: " Profile Management",
-    icon: <MdOutlineManageAccounts />,
-    option: [
-      {
-        name: "User Profile",
-        route: AuthenticatedRoutes.userProfile,
-      },
-      {
-        name: "Seller Profile",
-        route: AuthenticatedRoutes.sellerProfile,
-      },
-    ],
-  },
+  // {
+  //   title: " Profile Management",
+  //   icon: <MdOutlineManageAccounts />,
+  //   option: [
+  //     {
+  //       name: "User Profile",
+  //       route: AuthenticatedRoutes.userProfile,
+  //     },
+  //     {
+  //       name: "Seller Profile",
+  //       route: AuthenticatedRoutes.sellerProfile,
+  //     },
+  //   ],
+  // },
   {
     title: " Platform Management",
     icon: <MdManageHistory />,
@@ -125,14 +126,14 @@ export const sideMenuListManage = [
         name: "Add & Manage FAQs",
         route: AuthenticatedRoutes.addAndManageFaqs,
       },
-      {
-        name: "Platform Terms & Conditions",
-        route: AuthenticatedRoutes.plateformTermAndCondition,
-      },
-      {
-        name: "Manage Commission Rate & Platform Charges",
-        route: AuthenticatedRoutes.manageCommissionRate,
-      },
+      // {
+      //   name: "Platform Terms & Conditions",
+      //   route: AuthenticatedRoutes.plateformTermAndCondition,
+      // },
+      // {
+      //   name: "Manage Commission Rate & Platform Charges",
+      //   route: AuthenticatedRoutes.manageCommissionRate,
+      // },
     ],
   },
   {
@@ -153,65 +154,65 @@ export const sideMenuListManage = [
     title: "Raider Management",
     icon: <RiEBikeLine />,
     option: [
+      // {
+      //   name: "Raider Verification",
+      //   route: AuthenticatedRoutes.raiderVerification,
+      // },
       {
-        name: "Raider Verification",
-        route: AuthenticatedRoutes.raiderVerification,
-      },
-      {
-        name: "Raider Lists",
+        name: "Raider List",
         route: AuthenticatedRoutes.raiderLists,
       },
-      {
-        name: "Raider Details",
-        route: AuthenticatedRoutes.raiderDetails,
-      },
+      // {
+      //   name: "Raider Details",
+      //   route: AuthenticatedRoutes.raiderDetails,
+      // },
 
     ],
   },
-  {
-    title: "Customer Management",
-    icon: <RiCustomerService2Line />,
-    option: [
-      {
-        name: "Create Customer",
-        route: AuthenticatedRoutes.createCustomer,
-      },
-      {
-        name: "Customer List",
-        route: AuthenticatedRoutes.customerList,
-      },
-    ],
-  },
-  {
-    title: " Support and Feedback",
-    icon: <RiFeedbackLine />,
-    option: [
-      {
-        name: "Customer Reviews",
-        route: AuthenticatedRoutes.customerReviews,
-      },
-      {
-        name: "Chat Support",
-        route: AuthenticatedRoutes.chatSupport,
-      },
-      {
-        name: "Customer Enquiry",
-        route: AuthenticatedRoutes.customerEnquiry,
-      },
-      {
-        name: "Create Ticket",
-        route: AuthenticatedRoutes.createTicket,
-      },
-      {
-        name: "View and manage FAQs",
-        route: AuthenticatedRoutes.allFaqs,
-      },
-      {
-        name: "Application Feedback",
-        route: AuthenticatedRoutes.applicationFeedback,
-      },
-    ],
-  },
+  // {
+  //   title: "Customer Management",
+  //   icon: <RiCustomerService2Line />,
+  //   option: [
+  //     {
+  //       name: "Create Customer",
+  //       route: AuthenticatedRoutes.createCustomer,
+  //     },
+  //     {
+  //       name: "Customer List",
+  //       route: AuthenticatedRoutes.customerList,
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: " Support and Feedback",
+  //   icon: <RiFeedbackLine />,
+  //   option: [
+  //     {
+  //       name: "Customer Reviews",
+  //       route: AuthenticatedRoutes.customerReviews,
+  //     },
+  //     {
+  //       name: "Chat Support",
+  //       route: AuthenticatedRoutes.chatSupport,
+  //     },
+  //     {
+  //       name: "Customer Enquiry",
+  //       route: AuthenticatedRoutes.customerEnquiry,
+  //     },
+  //     {
+  //       name: "Create Ticket",
+  //       route: AuthenticatedRoutes.createTicket,
+  //     },
+  //     {
+  //       name: "View and manage FAQs",
+  //       route: AuthenticatedRoutes.allFaqs,
+  //     },
+  //     {
+  //       name: "Application Feedback",
+  //       route: AuthenticatedRoutes.applicationFeedback,
+  //     },
+  //   ],
+  // },
 ];
 
 export const sideMenuListOther = [

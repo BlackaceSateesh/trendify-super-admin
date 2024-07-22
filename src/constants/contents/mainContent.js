@@ -9,4 +9,5 @@ export const MainContent = {
 export const backendConfig = {
     base: "https://api.ashustores.in/super-admin-service/",
     vendor: "https://api.ashustores.in/vendor-service/",
+    auth: "https://api.ashustores.in/auth-service/",
 }

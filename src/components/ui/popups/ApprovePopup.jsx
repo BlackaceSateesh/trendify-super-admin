@@ -26,15 +26,22 @@ const ApprovePopup = (props) => {
               </div>
             </div>
             <h6 className="msg">
-              Are you sure to approve <b>Product ID - A15PM ? </b>
+              {
+                props.message ? props.message : (
+                  "Are you sure you want to approve this product?"
+                )
+              }
             </h6>
             <h6 className="msgDetail">
-            By approving this product, you are able to see data in 
-            Product Management.
+            {
+                props.messageDetail ? props.messageDetail : (
+                  "By approving this product, you are able to see data in Product Management."
+                )
+            }
             </h6>
             <div className="centerBtns">
                 <button onClick={props.onHide} className="popupBtn cancel" >Cancel</button>
-                <button className="popupBtn continuo" onClick={handleApprove}>YES , APPROVE</button>
+                <button className="popupBtn continuo" onClick={handleApprove}>YES</button>
             </div>
           </div>
         </Modal.Body>

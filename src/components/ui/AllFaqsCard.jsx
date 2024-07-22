@@ -3,7 +3,7 @@ import { MdOutlineDelete } from "react-icons/md";
 
 
 
-const AllFaqsCard = ({title, para , key}) => {
+const AllFaqsCard = ({title, para, key, onDelete}) => {
   return (
     <>
       <div key={key} className="AllFaqsCard">
@@ -11,7 +11,7 @@ const AllFaqsCard = ({title, para , key}) => {
             <h5>{title}</h5>
             <p>{para}</p>
         </div>
-        <button className='delete'><MdOutlineDelete /></button>
+        <button className='delete' onClick={onDelete}><MdOutlineDelete /></button>
       </div>
     </>
   )

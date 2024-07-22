@@ -12,6 +12,7 @@ import CustomerReviewCard from "../../components/ui/CustomerReviewCard";
 import userLogo from '../../assests/dashboard/userlogo.png';
 import { getTotalSalesByDate, getTotalReturnsByDate } from "../../api/sales-api";
 import { getTopVendors, getTopOrders, getTopProducts } from "../../api/over-all-api";
+import { getAllReviews } from "../../api/reviews-api";
 
 const AnanlyticsType = {
   VENDORS: "VENDORS",
@@ -33,6 +34,7 @@ const DashboardHome = () => {
   const [topVendors, setTopVendors] = useState([]);
   const [topProducts, setTopProducts] = useState([]);
   const [topOrders, setTopOrders] = useState([]);
+  const [reviews, setReviews] = useState([]);
 
   const mapContent = (content, type) => {
     return content.map((e) => {
@@ -90,6 +92,10 @@ const DashboardHome = () => {
 
     getTopOrders().then((data) => {
       setTopOrders(mapContent(data, AnanlyticsType.ORDERS));
+    });
+
+    getAllReviews().then((data) => {
+      setReviews(data);
     });
   }, []);
 
@@ -180,16 +186,27 @@ const DashboardHome = () => {
         <div className="customer_reviews homeCardBox">
           <div className="head">
             <p className="homeCardHeading">Customer Reviews</p>
-            <div className="btns">
+            {/* <div className="btns">
                 <button className="sliderBTN"><FaChevronLeft /></button>
                 <button className="sliderBTN"><FaChevronRight /></button>
-            </div>
+            </div> */}
           </div>
           <div className="customer_reviews_cards">
-            <CustomerReviewCard name='Rajat Pradhan' pic={userLogo} time='2 min ago' text='Ab architecto provident ex accusantium deserunt. Aut aspernatur deleniti sit maiores ut id cum accusamus. Beatae n' />
-            <CustomerReviewCard name='Vimal Pandey' pic={userLogo} time='2 min ago' text='Ab architecto provident ex accusantium deserunt. Aut aspernatur deleniti sit maiores ut id cum accusamus. Beatae n' />
-            <CustomerReviewCard name='Vivek Pandey' pic={userLogo} time='2 min ago' text='Ab architecto provident ex accusantium deserunt. Aut aspernatur deleniti sit maiores ut id cum accusamus. Beatae n' />
-            <CustomerReviewCard name='Syam Seeli' pic={userLogo} time='2 min ago' text='Ab architecto provident ex accusantium deserunt. Aut aspernatur deleniti sit maiores ut id cum accusamus. Beatae n' />
+            {
+              reviews.length <= 0 ? <p style={{ fontSize: "1.4rem", fontWeight: 400 }}>No Reviews Found</p> : reviews.map((e, i) => {
+                return (
+                  <CustomerReviewCard 
+                    name={e.userName} 
+                    pic={e.imageUrlList[0]} 
+                    userId={e.userId}
+                    productId={e.productId}
+                    star={e.rating}
+                    text={e.review}
+                    key={i}
+                  />
+                )
+              })
+            }
           </div>
         </div>
       </div>

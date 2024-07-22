@@ -9,12 +9,13 @@ import {
     getAllProductsByStatus
 } from "../api/product-api";
 import { getAllOrders } from "../api/order-api";
+import { getAllRiders } from "../api/rider-api";
 
-export async function fetchVendorsByStatus(vendorStatus, page) {
+export async function fetchVendorsByStatus(vendorStatus, page = 1, size = 10) {
     const response = await getVendorsByStatus({ 
         page,
         vendorStatus,
-        size: 20
+        size
     });
     return response;
 }
@@ -122,6 +123,20 @@ export async function fetchAllOrdersByStatus(orderStatus, page = 1, size = 10) {
         });
 
         return orders;
+    } catch (error) {
+        console.log(error?.response?.data?.message);
+    }
+}
+
+export async function fetchAllRidersByStatus(riderStatus, page = 1, size = 10) {
+    try {
+        const riders = await getAllRiders({
+            page,
+            size,
+            riderStatus
+        });
+
+        return riders;
     } catch (error) {
         console.log(error?.response?.data?.message);
     }

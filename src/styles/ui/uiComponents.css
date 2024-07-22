@@ -31,6 +31,7 @@
   color: var(--white);
 }
 
+
 /* breadscrumb */
 .Breadcrumbs {
   margin-top: 0.6rem;
@@ -690,6 +691,7 @@ textarea::-webkit-scrollbar {
 .datatableMain .rdt_TableCell .paymentStatus.Cancel {
   background: var(--Material_red, #df7272);
 }
+
 .addCategoryBtn {
   font-size: 1.4rem;
   font-weight: 400;
@@ -706,6 +708,35 @@ textarea::-webkit-scrollbar {
   width: fit-content;
 
 }
+
+.MobileBannerDesigns .inner {
+  width: 100%;
+  display: flex;
+  gap: 2%;
+  row-gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.MobileBannerDesigns .inner .MobileBannerDesignCard {
+  width: 48%;
+}
+.MobileBannerDesigns .inner .MobileBannerDesignCard .MobileBannerType1,
+.MobileBannerDesigns .inner .MobileBannerDesignCard .singleImg,
+.MobileBannerDesigns .inner .MobileBannerDesignCard .MobileBannerSliderType1{
+   width: 100%;
+}
+.MobileBannerDesigns .inner .MobileBannerDesignCard .title{
+   font-size: 1.2rem;
+   font-weight: 500;
+   color: var(--primary-black);
+   text-align: center;
+   margin-top: 1rem;
+}
+
+.ezkotw {
+  font-size: 1.6rem;
+}
+
 @media (min-width:799px) and (max-width:1099.99px) {
   .sectionContainer .inputField {
     gap: 1.2%;

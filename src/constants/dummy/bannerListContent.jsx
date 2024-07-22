@@ -12,57 +12,61 @@ export const webBannerList = {
             bannerName: 'Hero Banner',
             bannerType: 'Group Banner',
             imageCount: '4 Image Banner',
-            action:[],
+            action: [],
         },
         {
             id: 2,
             bannerName: 'Slider Banner',
             bannerType: 'Single Banner',
             imageCount: '1 Image Banner',
-            action:[],
+            action: [],
         },
         {
             id: 3,
             bannerName: 'Trendify Banner',
             bannerType: 'Group Banner',
             imageCount: '2 Image Banner',
-            action:[],
+            action: [],
         },
         {
             id: 4,
             bannerName: 'Brand Banner',
             bannerType: 'Single Banner',
             imageCount: '1 Image Banner',
-            action:[],
+            action: [],
         },
 
     ]
 }
 
-export const webBannerColumns = {
-    column: [
-        {
-            name: 'SL',
-            selector: row => row.id,
-        },
-        {
-            name: 'Banner Name',
-            selector: row => row.bannerName,
-        },
-        {
-            name: 'Banner Type',
-            selector: row => row.bannerType,
-        },
-        {
-            name: 'Image Count',
-            selector: row => row.imageCount,
-        },
-        {
-            name: 'Action',
-            selector: row => <div className="actionBtns"><button><FiEye /></button><button><GoPencil /></button><button><MdDeleteOutline /></button></div>,
-        },
-    ]
-};
+export const BannerColumns = [
+    {
+        name: 'SL',
+        selector: row => row.id,
+    },
+    {
+        name: 'Banner Application Type',
+        selector: row => row.bannerType,
+    },
+    {
+        name: "Collage Type",
+        selector: row => row.collageType
+    },
+    {
+        name: 'Image Count',
+        selector: row => row.imageCount,
+    },
+    {
+        name: 'Action',
+        selector: row => (
+        <div className="actionBtns">
+            <button onClick={row.action}>
+                <FiEye />
+            </button>
+        </div>
+        ),
+    },
+]
 
 
 export const mobileBannerList = {
@@ -72,37 +76,37 @@ export const mobileBannerList = {
             bannerName: 'Hero Banner',
             bannerType: 'Group Banner',
             imageCount: '4 Image Banner',
-            action:[],
+            action: [],
         },
         {
             id: 2,
             bannerName: 'Slider Banner',
             bannerType: 'Single Banner',
             imageCount: '1 Image Banner',
-            action:[],
+            action: [],
         },
         {
             id: 3,
             bannerName: 'Trendify Banner',
             bannerType: 'Group Banner',
             imageCount: '2 Image Banner',
-            action:[],
+            action: [],
         },
         {
             id: 4,
             bannerName: 'Brand Banner',
             bannerType: 'Single Banner',
             imageCount: '1 Image Banner',
-            action:[],
+            action: [],
         },
         {
             id: 5,
             bannerName: 'Collage Banner',
             bannerType: 'Group Banner',
             imageCount: '4 Image Banner',
-            action:[],
+            action: [],
         },
-    
+
 
     ]
 }

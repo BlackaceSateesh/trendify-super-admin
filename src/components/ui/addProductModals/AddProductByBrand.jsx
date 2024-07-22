@@ -135,7 +135,7 @@ const AddProductByBrand = (props) => {
         <Modal.Body>
           <div className="inner">
             <h6 className="heading">
-              Add Products - Type
+              Add Products - Brand
             </h6>
 
             <div className="inputField">

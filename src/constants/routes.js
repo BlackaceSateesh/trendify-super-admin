@@ -43,3 +43,18 @@ export const AuthenticatedRoutes = {
   createCustomer: "/createCustomer",
   customerList: "/customerList",
 };
+
+export const SearchRoutes = [
+  {
+    id: AuthenticatedRoutes.verifiedSalesApproval,
+    title: "Verified Seller List",
+  },
+  {
+    id: AuthenticatedRoutes.pendingSalesApproval,
+    title: "Pending Seller List",
+  },
+  {
+    id: AuthenticatedRoutes.rejectSalesApproval,
+    title: "Rejected Seller List",
+  }
+]

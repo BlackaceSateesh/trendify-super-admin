@@ -47,7 +47,7 @@ const VerifiedSalesApproval = () => {
   return (
     <>
       <div className="PendingSalesApproval sectionGap">
-        <FilterDataSection />
+        {/* <FilterDataSection /> */}
 
         <div className="PendingSalesApproval_inner sectionContainer">
 

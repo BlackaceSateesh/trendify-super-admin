@@ -1,0 +1,44 @@
+.MobileBannerType1{
+    width: 29rem;
+    height: 58rem;
+    overflow: hidden;
+}
+.MobileBannerType1 img {
+    height: 100%;
+    object-fit: cover;
+}
+.MobileBannerType1 .top{
+    width: 100%;
+    height: 29rem;
+    background-color: #bbb;
+    border: .2rem solid #fff;
+    border-bottom: none;
+}
+.MobileBannerType1 .btm{
+    width: 100%;
+    height: 29rem;
+    display: flex;
+    background-color: #bbb;
+    border: .2rem solid #fff;
+}
+.MobileBannerType1 .btm .left{
+    height: 29rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.MobileBannerType1 .btm .left .left_top,
+.MobileBannerType1 .btm .left .left_btm{
+    background-color: #bbb;
+    width: 100%;
+    height: 14.5rem;
+}
+.MobileBannerType1 .btm .left .left_top{
+    border-bottom: .2rem solid #fff;
+}
+.MobileBannerType1 .btm .right{
+    height: 29rem;
+    background-color: #bbb;
+    width: 50%;
+    border-left: .2rem solid #fff;
+}

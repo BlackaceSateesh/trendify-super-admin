@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 const SelectInput = ({
     labelName,
@@ -74,14 +75,14 @@ const SelectInput = ({
     );
 
     return (
-        <div className="selectInput" ref={dropdownRef}>
+        <div className="selectInput inputFieldBox" ref={dropdownRef}>
             <label className="inputLabel">
                 {labelName} <span>{required}</span>
             </label>
             <div className="custom-dropdown">
                 <div className="dropdownHeader" onClick={handleDropdownClick}>
                     {selectedOptionName || "Select an option"}
-                    <span className="dropdown-arrow">{isOpen ? "▲" : "▼"}</span>
+                    <span className="dropdown-arrow">{isOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}</span>
                 </div>
                 {isOpen && (
                     <div className="dropdownOptions">

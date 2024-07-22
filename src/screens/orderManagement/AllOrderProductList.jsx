@@ -80,7 +80,7 @@ const AllOrderProductList = () => {
   return (
     <>
       <div className="AllOrderProductList sectionGap">
-        <FilterDataSection />
+        {/* <FilterDataSection /> */}
 
         <div className="sectionContainer">
           <DashboardInnerTitle name="All Delivered Order" />

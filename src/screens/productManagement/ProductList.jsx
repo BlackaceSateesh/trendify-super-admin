@@ -73,7 +73,7 @@ const ProductList = () => {
     return (
         <>
             <div className="AllOrderProductList sectionGap">
-                <FilterDataSection />
+                {/* <FilterDataSection /> */}
 
                 <div className="sectionContainer">
                     <div className="dataTable_header">
