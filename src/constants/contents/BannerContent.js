@@ -30,6 +30,12 @@ export const BannerIds = {
         type: "Web",
         label: true
     },
+    WEB_NEW_COLLECTION_EVEN_SLIDER: {
+        id: "WEB_NEW_COLLECTION_EVEN_SLIDER",
+        count: 3,
+        type: "Web",
+        label: true
+    },
     WEB_BANNER_1: {
         id: "WEB_BANNER_1",
         count: 5,
@@ -54,9 +60,9 @@ export const BannerIds = {
         type: "Web",
         label: false
     },
-    WEB_CENTER_BANNER: {
-        id: "WEB_CENTER_BANNER",
-        count: 1,
+    WEB_CENTER_BANNER_SLIDER: {
+        id: "WEB_CENTER_BANNER_SLIDER",
+        count: 4,
         type: "Web",
         label: false
     },

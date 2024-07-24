@@ -5,7 +5,7 @@ import { processLabel } from "../../utils/stringFunctions";
 const NewCollectionSection = ({clsName, label, value, images, count = 3}) => {
   return (
     <>
-      <div className={`NewCollectionSection bannerMain ${clsName? clsName : '' }`}>
+      <div className={`NewCollectionSection bannerMain ${clsName? clsName + " fullbox" : '' }`}>
         <div className="content">
           <h6 className="title">{processLabel(label)}</h6>
           <p className="para">

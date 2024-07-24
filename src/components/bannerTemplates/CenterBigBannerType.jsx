@@ -1,12 +1,12 @@
 import React from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
-const CenterBigBannerType = (props) => {
+const CenterBigBannerType = ({ images, count = 4 }) => {
   return (
     <>
       <div className="CenterBigBannerType bannerMain">
         <div className="bigImg">
-          <img src="" alt="" />
+          <img src={images[0] || ""} alt="" />
         </div>
         <div className="singleCards">
           <div className="head">
@@ -23,18 +23,11 @@ const CenterBigBannerType = (props) => {
             <FaAngleLeft />
           </button>
           <div className="singleCards_inner" id="content">
-            <div className="singleCard">
-              <img src="" alt="" />
-            </div>
-            <div className="singleCard">
-              <img src="" alt="" />
-            </div>
-            <div className="singleCard">
-              <img src="" alt="" />
-            </div>
-            <div className="singleCard">
-              <img src="" alt="" />
-            </div>
+            {[...Array(count - 1)].map((_, index) => (
+              <div key={index} className="singleCard">
+                <img src={images[index + 1] || ""} alt="" />
+              </div>
+            ))}
           </div>
           <button
             className="sliderBtns right"

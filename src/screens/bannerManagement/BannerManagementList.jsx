@@ -35,6 +35,10 @@ const BannerManagementList = () => {
   const [mobileBanners, setMobileBanners] = useState([]);
   const [currentCollageType, setCurrentCollageType] = useState(null);
   const [currentBannerResList, setCurrentBannerResList] = useState([]);
+  const [currentBannerLabels, setCurrentBannerLabels] = useState({
+    label: "",
+    value: ""
+  });
   const [showDeletePopup, setShowDeletePopup] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -55,6 +59,10 @@ const BannerManagementList = () => {
           () => {
             setCurrentCollageType(banner?.collageType);
             setCurrentBannerResList(banner?.bannerResList);
+            setCurrentBannerLabels({
+              label: banner?.label,
+              value: banner?.value
+            });
             setShowLayout(true);
           },
           () => {
@@ -176,7 +184,7 @@ const BannerManagementList = () => {
       <Modal
         show={showLayout}
         onHide={() => setShowLayout(false)}
-        size={currentCollageType === BannerIds?.MOBILE_SLIDER.id || currentCollageType?.includes("WEB") ? 'lg' : 'sm'}
+        size={currentCollageType === BannerIds?.MOBILE_SLIDER.id || currentCollageType?.includes("WEB") ? 'xl' : 'sm'}
         centered
         scrollable
         className="mobBannerLayoutPreview"
@@ -196,14 +204,16 @@ const BannerManagementList = () => {
               <WebBannerType3 images={getImageUrlsFromData()} />
             ) : currentCollageType === BannerIds.WEB_BANNER_4.id ? (
               <WebBannerType4 images={getImageUrlsFromData()} />
-            ) : currentCollageType === BannerIds.WEB_CENTER_BANNER.id ? (
-              <CenterBigBannerType images={getImageUrlsFromData()} />
+            ) : currentCollageType === BannerIds.WEB_CENTER_BANNER_SLIDER.id ? (
+              <CenterBigBannerType images={getImageUrlsFromData()} count={currentBannerResList.length} />
             ) : currentCollageType === BannerIds.WEB_NEW_LOOKS_BANNER.id ? (
               <NewLooksBannerTemplate images={getImageUrlsFromData()} />
             ) : currentCollageType === BannerIds.WEB_NEW_COLLECTION_SLIDER.id ? (
-              <NewCollectionSection images={getImageUrlsFromData()} count={currentBannerResList.length} />
+              <NewCollectionSection images={getImageUrlsFromData()} count={currentBannerResList.length} label={currentBannerLabels.label} value={currentBannerLabels.value} />
             ) : currentCollageType === BannerIds.WEB_NEW_COLLECTION_ODD_SLIDER.id ? (
-              <NewCollectionSection images={getImageUrlsFromData()} count={currentBannerResList.length} clsName='odd' />
+              <NewCollectionSection images={getImageUrlsFromData()} count={currentBannerResList.length} clsName='odd' label={currentBannerLabels.label} value={currentBannerLabels.value} />
+            ) : currentCollageType === BannerIds.WEB_NEW_COLLECTION_EVEN_SLIDER.id ? (
+              <NewCollectionSection images={getImageUrlsFromData()} count={currentBannerResList.length} clsName='even' label={currentBannerLabels.label} value={currentBannerLabels.value} />
             ) : currentCollageType === BannerIds.WEB_FULLSCREEN_SLIDER.id ? (
               <FullScreenSlider images={getImageUrlsFromData()} count={currentBannerResList.length} />
             ) : currentCollageType === BannerIds.WEB_SINGLE_PRODUCT_BANNER.id ? (

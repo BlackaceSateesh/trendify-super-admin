@@ -1,7 +1,8 @@
-.bannerMain img{
+.bannerMain img {
   height: 100%;
   object-fit: cover;
 }
+
 .NewLooksBannerTemplate {
   width: 100%;
   display: flex;
@@ -19,6 +20,7 @@
   overflow: hidden;
   position: relative;
 }
+
 .NewLooksBannerTemplate .singleCard::before {
   content: "366px X 580px";
   position: absolute;
@@ -29,6 +31,7 @@
   font-size: 2rem;
   text-wrap: nowrap;
 }
+
 .NewLooksBannerTemplate .singleCard img {
   object-fit: cover;
   height: 100%;
@@ -43,14 +46,17 @@
   flex-wrap: wrap;
   row-gap: 1.8rem;
 }
+
 .NewCollectionSection.odd {
   flex-direction: row-reverse;
 }
+
 .NewCollectionSection .singleCards {
   min-width: 74.5%;
   width: 74.5%;
   position: relative;
 }
+
 .NewCollectionSection .singleCards .sliderBtns {
   font-size: 1.6rem;
   position: absolute;
@@ -66,12 +72,15 @@
   justify-content: center;
   z-index: 4;
 }
+
 .NewCollectionSection .singleCards .sliderBtns.left {
   left: 1rem;
 }
+
 .NewCollectionSection .singleCards .sliderBtns.right {
   right: 1rem;
 }
+
 .NewCollectionSection .singleCards .singleCards_inner {
   min-width: 100%;
   width: 100%;
@@ -80,9 +89,11 @@
   overflow-x: auto;
   transition: all 0.3s ease-in-out;
 }
+
 .NewCollectionSection .singleCards .singleCards_inner::-webkit-scrollbar {
   display: none;
 }
+
 .NewCollectionSection .singleCards .singleCard {
   transition: all 0.3s ease-in-out;
   min-width: 36.6rem;
@@ -91,6 +102,7 @@
   background-color: var(--banner-img-bg);
   position: relative;
 }
+
 .NewCollectionSection .singleCards .singleCard::before {
   content: "366px X 300px";
   position: absolute;
@@ -101,6 +113,24 @@
   font-size: 2rem;
   text-wrap: nowrap;
 }
+
+.NewCollectionSection.fullbox .singleCards .singleCard {
+  height: 42rem;
+  min-width: 32rem;
+  width: 32rem;
+}
+
+.NewCollectionSection.fullbox .singleCards .singleCard::before {
+  content: "366px X 580px";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #dedcdc;
+  font-size: 2rem;
+  text-wrap: nowrap;
+}
+
 .NewCollectionSection .content {
   min-width: 24%;
   width: 24%;
@@ -112,15 +142,19 @@
   justify-content: center;
   padding: 1.6rem;
 }
+
 .NewCollectionSection .content .title {
   font-size: 3rem;
   color: var(--primary-blue);
   font-weight: 400;
+  margin-bottom: 1rem;
 }
+
 .NewCollectionSection .content .para {
   color: var(--primary-blue);
   font-size: 1.6rem;
 }
+
 .NewCollectionSection .singleCards {
   color: var(--primary-blue);
   font-size: 1.6rem;
@@ -133,6 +167,7 @@
   display: flex;
   gap: 2%;
 }
+
 .CenterBigBannerType .bigImg {
   min-width: 49%;
   width: 49%;
@@ -140,6 +175,7 @@
   background-color: var(--banner-img-bg);
   position: relative;
 }
+
 .CenterBigBannerType .bigImg::before {
   content: "718px X 520px";
   position: absolute;
@@ -150,6 +186,7 @@
   font-size: 2rem;
   text-wrap: nowrap;
 }
+
 /* CenterBigBannerType */
 
 .CenterBigBannerType .singleCards {
@@ -157,6 +194,7 @@
   width: 49%;
   position: relative;
 }
+
 .CenterBigBannerType .singleCards .head {
   width: 100%;
   display: flex;
@@ -164,12 +202,14 @@
   align-items: center;
   margin-bottom: 2rem;
 }
+
 .CenterBigBannerType .singleCards .head .heading {
   color: var(--black);
   font-size: 2.2rem;
   font-weight: 600;
   letter-spacing: 0.4px;
 }
+
 .CenterBigBannerType .singleCards .head span {
   border-radius: 2px;
   background: var(--Secondary_yellow, #c09562);
@@ -178,6 +218,7 @@
   padding: 0.6rem 1.6rem;
   text-wrap: nowrap;
 }
+
 .CenterBigBannerType .singleCards .sliderBtns {
   font-size: 1.6rem;
   position: absolute;
@@ -196,9 +237,11 @@
   border-radius: 50%;
   color: var(--primary_blue);
 }
+
 .CenterBigBannerType .singleCards .sliderBtns.left {
   left: 1rem;
 }
+
 .CenterBigBannerType .singleCards .sliderBtns.right {
   right: 1rem;
 }
@@ -211,9 +254,11 @@
   overflow-x: auto;
   transition: all 0.3s ease-in-out;
 }
+
 .CenterBigBannerType .singleCards .singleCards_inner::-webkit-scrollbar {
   display: none;
 }
+
 .CenterBigBannerType .singleCards .singleCard {
   transition: all 0.3s ease-in-out;
   min-width: 29rem;
@@ -222,6 +267,7 @@
   background-color: var(--banner-img-bg);
   position: relative;
 }
+
 .CenterBigBannerType .singleCards .singleCard::before {
   content: "350px X 440px";
   position: absolute;
@@ -240,6 +286,7 @@
   display: flex;
   position: relative;
 }
+
 .TrendifyOriginSection .centerTxt {
   position: absolute;
   left: 50%;
@@ -253,6 +300,7 @@
   border-radius: 1rem;
   font-weight: 800;
 }
+
 .TrendifyOriginSection .left,
 .TrendifyOriginSection .right {
   min-width: 50%;
@@ -262,6 +310,7 @@
   height: 52rem;
   position: relative;
 }
+
 .TrendifyOriginSection .left::before,
 .TrendifyOriginSection .right::before {
   content: "765px X 510px";
@@ -273,6 +322,7 @@
   font-size: 2rem;
   text-wrap: nowrap;
 }
+
 .TrendifyOriginSection .left img,
 .TrendifyOriginSection .right img {
   height: 100%;
@@ -284,10 +334,12 @@
 .FullScreenSlider {
   width: 100%;
 }
+
 .FullScreenSlider .bgPlaceHolder {
   height: 36rem;
   background-color: var(--banner-img-bg);
 }
+
 .FullScreenSlider .bgPlaceHolder::before {
   content: "1080px X 520px";
   position: absolute;
@@ -304,18 +356,21 @@
 .SingleProductType {
   width: 100%;
 }
+
 .SingleProductType .innerBox {
   width: 80%;
   margin: 0 auto;
   display: flex;
   gap: 1.6rem;
 }
+
 .SingleProductType .innerBox .image {
   min-width: 60%;
   width: 60%;
   height: 38rem;
   position: relative;
 }
+
 .SingleProductType .innerBox .image::before {
   content: "688px X 388px";
   position: absolute;
@@ -326,23 +381,28 @@
   font-size: 2rem;
   text-wrap: nowrap;
 }
+
 .SingleProductType .innerBox .image img {
   height: 100%;
   background-color: var(--banner-img-bg);
 }
+
 .SingleProductType .innerBox .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.9rem;
+  width: 100%;
 }
+
 .SingleProductType .innerBox .content .title {
   font-size: 2.2rem;
   color: var(--primary-blue);
   font-weight: 400;
   text-align: center;
 }
+
 .SingleProductType .innerBox .content .para {
   text-align: center;
   font-size: 1.5rem;
@@ -358,21 +418,26 @@
     width: 49%;
     height: 18rem;
   }
+
   .NewCollectionSection {
     flex-direction: column;
   }
+
   .NewCollectionSection .content {
     width: 100%;
     height: fit-content;
   }
+
   .NewCollectionSection .singleCards {
     width: 100%;
   }
+
   .NewCollectionSection .singleCards .singleCard {
     min-width: 20.6rem;
     width: 20.6rem;
     height: 18rem;
   }
+
   .NewCollectionSection .singleCards .singleCard::before,
   .FullScreenSlider .bgPlaceHolder::before,
   .NewLooksBannerTemplate .singleCard::before,
@@ -383,6 +448,7 @@
   .CenterBigBannerType .singleCards .singleCard::before {
     font-size: 1.3rem;
   }
+
   .CenterBigBannerType {
     min-width: 100%;
     width: 100%;
@@ -391,48 +457,59 @@
     row-gap: 2rem;
     position: relative;
   }
+
   .CenterBigBannerType .bigImg {
     min-width: 100%;
     width: 100%;
     height: 38rem;
   }
+
   .CenterBigBannerType .singleCards {
     min-width: 100%;
     width: 100%;
   }
+
   .CenterBigBannerType .singleCards .head .heading {
     font-size: 1.8rem;
   }
+
   .CenterBigBannerType .singleCards .singleCard {
     min-width: 20rem;
     width: 20rem;
     height: 24rem;
   }
+
   .CenterBigBannerType .singleCards .sliderBtns {
     font-size: 1.4rem;
     min-width: 3.6rem;
     width: 3.6rem;
     height: 3.6rem;
   }
+
   .TrendifyOriginSection .left,
   .TrendifyOriginSection .right {
     height: 28rem;
   }
+
   .SingleProductType .innerBox {
     width: 100%;
   }
+
   .SingleProductType .innerBox .image {
     height: 30rem;
     position: relative;
   }
+
   .SingleProductType .innerBox .content .title,
   .NewCollectionSection .content .title {
     font-size: 1.3rem;
   }
+
   .NewCollectionSection .content .para,
   .SingleProductType .innerBox .content .para {
     font-size: 1.2rem;
   }
+
   .TrendifyOriginSection .centerTxt {
     padding: 1.1rem 1.5rem;
     font-size: 1.3rem;
@@ -449,21 +526,26 @@
     width: 49%;
     height: 16rem;
   }
+
   .NewCollectionSection {
     flex-direction: column;
   }
+
   .NewCollectionSection .content {
     width: 100%;
     height: fit-content;
   }
+
   .NewCollectionSection .singleCards {
     width: 100%;
   }
+
   .NewCollectionSection .singleCards .singleCard {
     min-width: 18.6rem;
     width: 18.6rem;
     height: 16rem;
   }
+
   .NewCollectionSection .singleCards .singleCard::before,
   .FullScreenSlider .bgPlaceHolder::before,
   .NewLooksBannerTemplate .singleCard::before,
@@ -474,6 +556,7 @@
   .CenterBigBannerType .singleCards .singleCard::before {
     font-size: 1.2rem;
   }
+
   .CenterBigBannerType {
     min-width: 100%;
     width: 100%;
@@ -482,53 +565,71 @@
     row-gap: 2rem;
     position: relative;
   }
+
   .CenterBigBannerType .bigImg {
     min-width: 100%;
     width: 100%;
     height: 35rem;
   }
+
   .CenterBigBannerType .singleCards {
     min-width: 100%;
     width: 100%;
   }
+
   .CenterBigBannerType .singleCards .head .heading {
     font-size: 1.6rem;
   }
+
   .CenterBigBannerType .singleCards .head span {
     font-size: 1rem;
   }
+
   .CenterBigBannerType .singleCards .singleCard {
     min-width: 18rem;
     width: 18rem;
     height: 22rem;
   }
+
   .CenterBigBannerType .singleCards .sliderBtns {
     font-size: 1.2rem;
     min-width: 3rem;
     width: 3rem;
     height: 3rem;
   }
+
   .TrendifyOriginSection .left,
   .TrendifyOriginSection .right {
     height: 26rem;
   }
+
   .SingleProductType .innerBox {
     width: 100%;
   }
+
   .SingleProductType .innerBox .image {
     height: 28rem;
     position: relative;
   }
+
   .SingleProductType .innerBox .content .title,
   .NewCollectionSection .content .title {
     font-size: 1.2rem;
   }
+
   .NewCollectionSection .content .para,
   .SingleProductType .innerBox .content .para {
     font-size: 1rem;
   }
+
   .TrendifyOriginSection .centerTxt {
     padding: 0.8rem 1.2rem;
     font-size: 1rem;
+  }
+
+  .NewCollectionSection.fullbox .singleCards .singleCard {
+    height: 32rem;
+    min-width: 16rem;
+    width: 16rem;
   }
 }

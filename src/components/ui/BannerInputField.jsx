@@ -180,18 +180,21 @@ const InputFieldSet = ({ index, onDataChange, onImageSet }) => {
                 />
                 {discountOrPrice === "discount" && (
                     <TextInput
-                        labelName="Discount Value"
+                        labelName="Discount %"
                         type="number"
                         value={discountOrPriceValue}
                         onChange={(e) => setDiscountOrPriceValue(e.target.value)}
+                        min={0}
+                        max={100}
                     />
                 )}
                 {discountOrPrice === "price" && (
                     <TextInput
-                        labelName="Price Value"
+                        labelName="Price"
                         type="number"
                         value={discountOrPriceValue}
                         onChange={(e) => setDiscountOrPriceValue(e.target.value)}
+                        min={0}
                     />
                 )}
             </div>

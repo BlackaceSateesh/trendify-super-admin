@@ -100,14 +100,16 @@ const BannerSettingEdit = () => {
             <WebBannerType3 images={getImageFieldsFromData()} />
           ) : bannerType.id === BannerIds.WEB_BANNER_4.id ? (
             <WebBannerType4 images={getImageFieldsFromData()} />
-          ) : bannerType.id === BannerIds.WEB_CENTER_BANNER.id ? (
-            <CenterBigBannerType images={getImageFieldsFromData()} />
+          ) : bannerType.id === BannerIds.WEB_CENTER_BANNER_SLIDER.id ? (
+            <CenterBigBannerType images={getImageFieldsFromData()} count={fieldCount} />
           ) : bannerType.id === BannerIds.WEB_NEW_LOOKS_BANNER.id ? (
             <NewLooksBannerTemplate images={getImageFieldsFromData()} />
           ) : bannerType.id === BannerIds.WEB_NEW_COLLECTION_SLIDER.id ? (
             <NewCollectionSection images={getImageFieldsFromData()} label={label} value={value} count={fieldCount}  />
           ) : bannerType.id === BannerIds.WEB_NEW_COLLECTION_ODD_SLIDER.id ? (
             <NewCollectionSection images={getImageFieldsFromData()} label={label} value={value} count={fieldCount} clsName="odd" />
+          ) : bannerType.id === BannerIds.WEB_NEW_COLLECTION_EVEN_SLIDER.id ? (
+            <NewCollectionSection images={getImageFieldsFromData()} label={label} value={value} count={fieldCount} clsName="even" />
           ) : bannerType.id === BannerIds.WEB_FULLSCREEN_SLIDER.id ? (
             <FullScreenSlider images={getImageFieldsFromData()} count={fieldCount} />
           ) : bannerType.id === BannerIds.WEB_SINGLE_PRODUCT_BANNER.id ? (
