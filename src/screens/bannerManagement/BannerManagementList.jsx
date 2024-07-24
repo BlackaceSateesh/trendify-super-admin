@@ -4,6 +4,7 @@ import { BannerColumns } from "../../constants/dummy/bannerListContent";
 import DashboardInnerTitle from "../../components/dashboard/DashboardInnerTitle";
 import ButtonMain from "../../components/ui/ButtonMain";
 import '../../styles/dashboard/BannerManagementList.css';
+import '../../styles/bannerTemplates/UserDashboardBannerType.css';
 import { useNavigate } from "react-router-dom";
 import { AuthenticatedRoutes } from "../../constants/Routes";
 import MobileBannerDesigns from "../../components/ui/MobileBannerDesigns";
@@ -18,6 +19,12 @@ import WebBannerType2 from "../../components/bannerTemplates/WebBannerType2";
 import WebBannerType4 from "../../components/bannerTemplates/WebBannerType4";
 import WebBannerType1 from "../../components/bannerTemplates/WebBannerType1";
 import SpinnerLoader from "../../components/ui/SpinnerLoader";
+import NewLooksBannerTemplate from "../../components/bannerTemplates/NewLooksBannerTemplate";
+import NewCollectionSection from "../../components/bannerTemplates/NewCollectionSection";
+import CenterBigBannerType from "../../components/bannerTemplates/CenterBigBannerType";
+import TrendifyOriginSection from "./TrendifyOriginSection";
+import FullScreenSlider from "../../components/bannerTemplates/FullScreenSlider";
+import SingleProductType from "../../components/bannerTemplates/SingleProductType";
 
 const BannerManagementList = () => {
   const navigate = useNavigate();
@@ -105,6 +112,14 @@ const BannerManagementList = () => {
   return (
     <>
       <div className="BannerManagementList sectionGap">
+    <FullScreenSlider />
+    <NewLooksBannerTemplate />
+    <NewCollectionSection />
+    <CenterBigBannerType />
+    <TrendifyOriginSection />
+    <NewCollectionSection clsName='odd' />
+    <NewCollectionSection />
+    <SingleProductType />
         <div className="web_banner sectionContainer">
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <DashboardInnerTitle name='Web Banner List' />

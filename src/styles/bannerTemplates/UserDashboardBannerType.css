@@ -1,0 +1,387 @@
+.NewLooksBannerTemplate {
+  width: 100%;
+  display: flex;
+  gap: 1.3%;
+  flex-wrap: wrap;
+  row-gap: 1.8rem;
+}
+
+.NewLooksBannerTemplate .singleCard {
+  min-width: 24%;
+  width: 24%;
+  height: 36rem;
+  background-color: var(--banner-img-bg);
+  border-radius: 5px 20px 5px 5px;
+  overflow: hidden;
+  position: relative;
+}
+.NewLooksBannerTemplate .singleCard::before{
+    content: "366px X 580px";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #dedcdc;
+    font-size: 2rem;
+    text-wrap: nowrap;
+}
+.NewLooksBannerTemplate .singleCard img {
+  object-fit: cover;
+  height: 100%;
+}
+
+/* NewCollectionSection */
+
+.NewCollectionSection {
+  width: 100%;
+  display: flex;
+  gap: 1.3%;
+  flex-wrap: wrap;
+  row-gap: 1.8rem;
+}
+.NewCollectionSection.odd{
+    flex-direction: row-reverse;
+}
+.NewCollectionSection .singleCards {
+  min-width: 74.5%;
+  width: 74.5%;
+  position: relative;
+}
+.NewCollectionSection .singleCards .sliderBtns {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border: 1px solid var(--primary-blue);
+  background-color: var(--white);
+  min-width: 2.4rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+.NewCollectionSection .singleCards .sliderBtns.left {
+  left: 1rem;
+}
+.NewCollectionSection .singleCards .sliderBtns.right {
+  right: 1rem;
+}
+.NewCollectionSection .singleCards .singleCards_inner {
+  min-width: 100%;
+  width: 100%;
+  display: flex;
+  gap: 2%;
+  overflow-x: auto;
+  transition: all 0.3s ease-in-out;
+}
+.NewCollectionSection .singleCards .singleCards_inner::-webkit-scrollbar {
+  display: none;
+}
+.NewCollectionSection .singleCards .singleCard {
+  transition: all 0.3s ease-in-out;
+  min-width: 36.6rem;
+  width: 36.6rem;
+  height: 30rem;
+  background-color: var(--banner-img-bg);
+  position: relative;
+}
+.NewCollectionSection .singleCards .singleCard::before{
+    content: "366px X 300px";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #dedcdc;
+    font-size: 2rem;
+    text-wrap: nowrap;
+}
+.NewCollectionSection .content {
+  min-width: 24%;
+  width: 24%;
+  height: 30rem;
+  background-color: var(--white);
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.6rem;
+}
+.NewCollectionSection .content .title {
+  font-size: 3rem;
+  color: var(--primary-blue);
+  font-weight: 400;
+}
+.NewCollectionSection .content .para {
+  color: var(--primary-blue);
+  font-size: 1.6rem;
+}
+.NewCollectionSection .singleCards {
+  color: var(--primary-blue);
+  font-size: 1.6rem;
+}
+
+/* CenterBigBannerType */
+
+.CenterBigBannerType {
+  min-width: 72rem;
+  width: 72rem;
+  height: 52rem;
+  background-color: var(--banner-img-bg);
+  position: relative;
+}
+.CenterBigBannerType::before{
+    content: "718px X 520px";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #dedcdc;
+    font-size: 2rem;
+    text-wrap: nowrap;
+}
+
+/* TrendifyOriginSection */
+
+.TrendifyOriginSection {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.TrendifyOriginSection .centerTxt{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--black);
+    padding: 1.5rem 2.2rem;
+    font-size: 3rem;
+    color: var(--white);
+    text-wrap: nowrap;
+    border-radius: 1rem;
+    font-weight: 800;
+}
+.TrendifyOriginSection .left,
+.TrendifyOriginSection .right {
+  min-width: 50%;
+  width: 50%;
+  height: 100%;
+  background-color: var(--banner-img-bg);
+  height: 52rem;
+  position: relative;
+}
+.TrendifyOriginSection .left::before,
+.TrendifyOriginSection .right::before{
+    content: "765px X 510px";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #dedcdc;
+    font-size: 2rem;
+    text-wrap: nowrap;
+}
+.TrendifyOriginSection .left img,
+.TrendifyOriginSection .right img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* FullScreenSlider */
+
+.FullScreenSlider {
+ width: 100%;
+}
+.FullScreenSlider .bgPlaceHolder {
+  height: 36rem;
+  background-color: var(--banner-img-bg);
+}
+.FullScreenSlider .bgPlaceHolder::before{
+    content: "1080px X 520px";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #dedcdc;
+    font-size: 2rem;
+    text-wrap: nowrap;
+}
+
+/* SingleProductType */
+
+.SingleProductType {
+  width: 100%;
+}
+.SingleProductType .innerBox {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  gap: 1.6rem;
+}
+.SingleProductType .innerBox .image {
+  min-width: 60%;
+  width: 60%;
+  height: 38rem;
+  position: relative;
+}
+.SingleProductType .innerBox .image::before{
+    content: "688px X 388px";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #dedcdc;
+    font-size: 2rem;
+    text-wrap: nowrap;
+}
+.SingleProductType .innerBox .image img {
+  height: 100%;
+  background-color: var(--banner-img-bg);
+}
+.SingleProductType .innerBox .content {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ gap: .9rem;
+}
+.SingleProductType .innerBox .content .title{
+    font-size: 2.2rem;
+    color: var(--primary-blue);
+    font-weight: 400;
+    text-align: center;
+}
+.SingleProductType .innerBox .content .para{
+    text-align: center;
+    font-size: 1.5rem;
+}
+@media (min-width:799px) and (max-width:1049px) {
+    .FullScreenSlider .bgPlaceHolder {
+        height: 26rem;
+    }
+
+    .NewLooksBannerTemplate .singleCard {
+        min-width: 49%;
+        width: 49%;
+        height: 18rem;
+    }
+    .NewCollectionSection{
+        flex-direction: column;
+    }
+    .NewCollectionSection .content{
+        width: 100%;
+        height: fit-content;
+    }
+    .NewCollectionSection .singleCards{
+        width: 100%;
+    }
+    .NewCollectionSection .singleCards .singleCard {
+        min-width: 20.6rem;
+        width: 20.6rem;
+        height: 18rem;
+    }
+    .NewCollectionSection .singleCards .singleCard::before,
+    .FullScreenSlider .bgPlaceHolder::before,
+    .NewLooksBannerTemplate .singleCard::before,
+    .CenterBigBannerType::before,
+    .TrendifyOriginSection .left::before, 
+    .TrendifyOriginSection .right::before,
+    .SingleProductType .innerBox .image::before{
+        font-size: 1.3rem;
+    }
+    .CenterBigBannerType {
+        min-width: 100%;
+        width: 100%;
+        height: 42rem;
+        background-color: var(--banner-img-bg);
+        position: relative;
+    }
+    .TrendifyOriginSection .left, .TrendifyOriginSection .right {
+        height: 28rem;
+    }
+    .SingleProductType .innerBox{
+        width: 100%;
+    }
+    .SingleProductType .innerBox .image {
+        height: 30rem;
+        position: relative;
+    }
+    .SingleProductType .innerBox .content .title,
+    .NewCollectionSection .content .title{
+        font-size: 1.3rem;
+    }
+    .NewCollectionSection .content .para,
+    .SingleProductType .innerBox .content .para{
+        font-size: 1.2rem;
+    }
+    .TrendifyOriginSection .centerTxt{
+        padding: 1.1rem 1.5rem;
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width:299px) and (max-width:799px) {
+    .FullScreenSlider .bgPlaceHolder {
+        height: 22rem;
+    }
+
+    .NewLooksBannerTemplate .singleCard {
+        min-width: 49%;
+        width: 49%;
+        height: 16rem;
+    }
+    .NewCollectionSection{
+        flex-direction: column;
+    }
+    .NewCollectionSection .content{
+        width: 100%;
+        height: fit-content;
+    }
+    .NewCollectionSection .singleCards{
+        width: 100%;
+    }
+    .NewCollectionSection .singleCards .singleCard {
+        min-width: 18.6rem;
+        width: 18.6rem;
+        height: 16rem;
+    }
+    .NewCollectionSection .singleCards .singleCard::before,
+    .FullScreenSlider .bgPlaceHolder::before,
+    .NewLooksBannerTemplate .singleCard::before,
+    .CenterBigBannerType::before,
+    .TrendifyOriginSection .left::before, 
+    .TrendifyOriginSection .right::before,
+    .SingleProductType .innerBox .image::before{
+        font-size: 1.2rem;
+    }
+    .CenterBigBannerType {
+        min-width: 100%;
+        width: 100%;
+        height: 40rem;
+        background-color: var(--banner-img-bg);
+        position: relative;
+    }
+    .TrendifyOriginSection .left, .TrendifyOriginSection .right {
+        height: 26rem;
+    }
+    .SingleProductType .innerBox{
+        width: 100%;
+    }
+    .SingleProductType .innerBox .image {
+        height: 28rem;
+        position: relative;
+    }
+    .SingleProductType .innerBox .content .title,
+    .NewCollectionSection .content .title{
+        font-size: 1.2rem;
+    }
+    .NewCollectionSection .content .para,
+    .SingleProductType .innerBox .content .para{
+        font-size: 1rem;
+    }
+    .TrendifyOriginSection .centerTxt{
+        padding: .8rem 1.2rem;
+        font-size: 1rem;
+    }
+}
