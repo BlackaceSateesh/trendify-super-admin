@@ -3,7 +3,7 @@ import React from "react";
 const NewLooksBannerTemplate = (props) => {
   return (
     <>
-      <div className="NewLooksBannerTemplate">
+      <div className="NewLooksBannerTemplate bannerMain">
         {/* only four card */}
         <div className="singleCard">
           <img src={props?.images[0]} alt="" />

@@ -4,7 +4,7 @@ import { processLabel } from '../../utils/stringFunctions'
 const SingleProductType = (props) => {
   return (
     <>
-      <div className="SingleProductType">
+      <div className="SingleProductType bannerMain">
         <div className="innerBox">
         <div className="image"><img src={props?.images[0]} alt="" /></div>
         <div className="content">

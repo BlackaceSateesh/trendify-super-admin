@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 const FullScreenSlider = ({ images, count = 3}) => {
   return (
     <>
-      <Carousel data-bs-theme="dark" className='FullScreenSlider'>
+      <Carousel data-bs-theme="dark" className='FullScreenSlider bannerMain'>
         {
           Array(count).fill().map((_, i) => (
             <Carousel.Item>
