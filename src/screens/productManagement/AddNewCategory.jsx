@@ -4,6 +4,7 @@ import AddProductByCategory from "../../components/ui/addProductModals/AddProduc
 import DataTable from "react-data-table-component";
 import SpinnerLoader from "../../components/ui/SpinnerLoader";
 import { fetchProductCategories } from "../../utils/dataFetchers";
+import { toPascalCase } from "../../utils/stringFunctions";
 
 const DataColumns = [
   {
@@ -25,7 +26,11 @@ const DataColumns = [
   {
     name: "Description",
     selector: (row) => row.description,
-  }
+  },
+  {
+    name: "Product Category Type",
+    selector: (row) => row.categoryType,
+  },
 ];
 
 const AddNewCategory = () => {
@@ -40,6 +45,7 @@ const AddNewCategory = () => {
       sno: index + 1,
       image: category?.imageUrl,
       name: category?.name,
+      categoryType: toPascalCase(category?.productCategoryType || "N/A"),
       description: category?.description
     }));
   });

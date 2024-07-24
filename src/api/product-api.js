@@ -89,6 +89,14 @@ export async function getAllProducts(payload) {
     return response.data;
 }
 
+export async function getAllProductsByBrand(payload) {
+    const response = await axios.post(
+        `${productApiBaseUrl}/allByProductNameByBrand`,
+        payload
+    );
+    return response.data;
+}
+
 const productManagementApiBaseUrl = `${backendConfig.base}v1/super-admin/product`;
 
 export async function getAllProductsByStatus(payload) {

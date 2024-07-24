@@ -6,7 +6,8 @@ import {
     getAllProducts,
     getAllTypesByCategory,
     getAllBrandsByType,
-    getAllProductsByStatus
+    getAllProductsByStatus,
+    getAllProductsByBrand
 } from "../api/product-api";
 import { getAllOrders } from "../api/order-api";
 import { getAllRiders } from "../api/rider-api";
@@ -92,6 +93,20 @@ export async function fetchProducts(page = 1, size = 10) {
         const products = await getAllProducts({
             page,
             size
+        });
+
+        return products;
+    } catch (error) {
+        console.log(error?.response?.data?.message);
+    }
+}
+
+export async function fetchProductsByBrand(brandId, page = 1, size = 10) {
+    try {
+        const products = await getAllProductsByBrand({
+            page,
+            size,
+            brandId
         });
 
         return products;

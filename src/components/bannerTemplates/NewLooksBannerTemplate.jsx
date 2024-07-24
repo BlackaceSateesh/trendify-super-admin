@@ -1,21 +1,21 @@
 import React from "react";
 
-const NewLooksBannerTemplate = () => {
+const NewLooksBannerTemplate = (props) => {
   return (
     <>
       <div className="NewLooksBannerTemplate">
         {/* only four card */}
         <div className="singleCard">
-          <img src="" alt="" />
+          <img src={props?.images[0]} alt="" />
         </div>
         <div className="singleCard">
-          <img src="" alt="" />
+          <img src={props?.images[1]} alt="" />
         </div>
         <div className="singleCard">
-          <img src="" alt="" />
+          <img src={props?.images[2]} alt="" />
         </div>
         <div className="singleCard">
-          <img src="" alt="" />
+          <img src={props?.images[3]} alt="" />
         </div>
       </div>
     </>

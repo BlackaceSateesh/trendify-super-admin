@@ -57,7 +57,7 @@ const SelectInput = ({
     const handleOptionClick = (optionValue, optionLabel) => {
         setSelectedOptionName(optionLabel);
         setIsOpen(false);
-        onChange({ target: { value: optionValue } });
+        onChange({ target: { value: optionValue, name: labelName } });
     };
 
     const lastOptionRef = useCallback(

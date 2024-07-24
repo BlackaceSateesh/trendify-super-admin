@@ -85,6 +85,14 @@ const MobileBannerDesigns = (props) => {
                       <p className="title">Use this layout</p>
                     </div>
                   </div>
+
+                  <button onClick={() => props.onLayout(BannerIds.WEB_CENTER_BANNER)}>Center Big Banner</button>
+                  <button onClick={() => props.onLayout(BannerIds.WEB_NEW_LOOKS_BANNER)}>New Looks Banner</button>
+                  <button onClick={() => props.onLayout(BannerIds.WEB_NEW_COLLECTION_SLIDER)}>New Collection Slider</button>
+                  <button onClick={() => props.onLayout(BannerIds.WEB_FULLSCREEN_SLIDER)}>Full Screen Slider</button>
+                  <button onClick={() => props.onLayout(BannerIds.WEB_SINGLE_PRODUCT_BANNER)}>Single Product Banner</button>
+                  <button onClick={() => props.onLayout(BannerIds.WEB_TRENDIFY_ORIGIN)}>Trendify Origin</button>
+                  <button onClick={() => props.onLayout(BannerIds.WEB_NEW_COLLECTION_ODD_SLIDER)}>New Collection Slider Odd</button>
                 </>
               )
             }

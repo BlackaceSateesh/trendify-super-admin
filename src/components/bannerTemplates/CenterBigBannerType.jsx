@@ -1,10 +1,10 @@
 import React from 'react'
 
-const CenterBigBannerType = () => {
+const CenterBigBannerType = (props) => {
   return (
     <>
       <div className="CenterBigBannerType">
-        <img src="" alt="" />
+        <img src={props?.images[0]} alt="" />
       </div>
     </>
   )

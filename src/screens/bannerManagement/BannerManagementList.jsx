@@ -22,7 +22,7 @@ import SpinnerLoader from "../../components/ui/SpinnerLoader";
 import NewLooksBannerTemplate from "../../components/bannerTemplates/NewLooksBannerTemplate";
 import NewCollectionSection from "../../components/bannerTemplates/NewCollectionSection";
 import CenterBigBannerType from "../../components/bannerTemplates/CenterBigBannerType";
-import TrendifyOriginSection from "./TrendifyOriginSection";
+import TrendifyOriginSection from "../../components/bannerTemplates/TrendifyOriginSection";
 import FullScreenSlider from "../../components/bannerTemplates/FullScreenSlider";
 import SingleProductType from "../../components/bannerTemplates/SingleProductType";
 
@@ -112,14 +112,14 @@ const BannerManagementList = () => {
   return (
     <>
       <div className="BannerManagementList sectionGap">
-    <FullScreenSlider />
+    {/* <FullScreenSlider />
     <NewLooksBannerTemplate />
     <NewCollectionSection />
     <CenterBigBannerType />
     <TrendifyOriginSection />
     <NewCollectionSection clsName='odd' />
     <NewCollectionSection />
-    <SingleProductType />
+    <SingleProductType /> */}
         <div className="web_banner sectionContainer">
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <DashboardInnerTitle name='Web Banner List' />
@@ -196,9 +196,23 @@ const BannerManagementList = () => {
               <WebBannerType3 images={getImageUrlsFromData()} />
             ) : currentCollageType === BannerIds.WEB_BANNER_4.id ? (
               <WebBannerType4 images={getImageUrlsFromData()} />
-            ) : (
-              <MobileBannerSliderType1 images={getImageUrlsFromData()} count={currentBannerResList.length} />
-            )}
+            ) : currentCollageType === BannerIds.WEB_CENTER_BANNER.id ? (
+              <CenterBigBannerType images={getImageUrlsFromData()} />
+            ) : currentCollageType === BannerIds.WEB_NEW_LOOKS_BANNER.id ? (
+              <NewLooksBannerTemplate images={getImageUrlsFromData()} />
+            ) : currentCollageType === BannerIds.WEB_NEW_COLLECTION_SLIDER.id ? (
+              <NewCollectionSection images={getImageUrlsFromData()} count={currentBannerResList.length} />
+            ) : currentCollageType === BannerIds.WEB_NEW_COLLECTION_ODD_SLIDER.id ? (
+              <NewCollectionSection images={getImageUrlsFromData()} count={currentBannerResList.length} clsName='odd' />
+            ) : currentCollageType === BannerIds.WEB_FULLSCREEN_SLIDER.id ? (
+              <FullScreenSlider images={getImageUrlsFromData()} count={currentBannerResList.length} />
+            ) : currentCollageType === BannerIds.WEB_SINGLE_PRODUCT_BANNER.id ? (
+              <SingleProductType images={getImageUrlsFromData()} />
+            ) : currentCollageType === BannerIds.WEB_TRENDIFY_ORIGIN.id ? (
+              <TrendifyOriginSection images={getImageUrlsFromData()} />
+            ) : currentCollageType === BannerIds.MOBILE_SLIDER.id ? (
+              <MobileBannerSliderType1 count={currentBannerResList.length} images={getImageUrlsFromData()} />
+            ) : null}
           </div>
         </Modal.Body>
       </Modal>

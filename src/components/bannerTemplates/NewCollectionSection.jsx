@@ -1,15 +1,15 @@
 import React from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
+import { processLabel } from "../../utils/stringFunctions";
 
-const NewCollectionSection = ({clsName}) => {
+const NewCollectionSection = ({clsName, label, value, images, count = 3}) => {
   return (
     <>
       <div className={`NewCollectionSection ${clsName? clsName : '' }`}>
         <div className="content">
-          <h6 className="title">Lorem ipsum dolor sit amet</h6>
+          <h6 className="title">{processLabel(label)}</h6>
           <p className="para">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
-            velit!
+            {value}
           </p>
         </div>
         <div className="singleCards">
@@ -23,18 +23,11 @@ const NewCollectionSection = ({clsName}) => {
             <FaAngleLeft />
           </button>
           <div className="singleCards_inner" id="content">
-            <div className="singleCard">
-              <img src="" alt="" />
-            </div>
-            <div className="singleCard">
-              <img src="" alt="" />
-            </div>
-            <div className="singleCard">
-              <img src="" alt="" />
-            </div>
-            <div className="singleCard">
-              <img src="" alt="" />
-            </div>
+            {[...Array(count)].map((_, index) => (
+              <div key={index} className="singleCard">
+                <img src={images[index] || ""} alt="" />
+              </div>
+            ))}
           </div>
           <button
             className="sliderBtns right"

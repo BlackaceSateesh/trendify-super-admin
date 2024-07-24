@@ -1,24 +1,21 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 
-const FullScreenSlider = () => {
+const FullScreenSlider = ({ images, count = 3}) => {
   return (
     <>
       <Carousel data-bs-theme="dark" className='FullScreenSlider'>
+        {
+          Array(count).fill().map((_, i) => (
             <Carousel.Item>
               <img
                 className="d-block w-100 bgPlaceHolder"
-                src=''
+                src={images[i] || ""}
                 alt="First slide"
               />
             </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100 bgPlaceHolder"
-                src=''
-                alt="First slide"
-              />
-            </Carousel.Item>
+          ))
+        }
       </Carousel>
     </>
   )

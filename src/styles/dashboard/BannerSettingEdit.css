@@ -4,3 +4,9 @@
 .bannerDetails .fileInput input::file-selector-button{
     background-color: var(--primary-black);
 }
+
+.labelValue {
+    display: flex;
+    gap: 1rem;
+    width: 50%;
+}
