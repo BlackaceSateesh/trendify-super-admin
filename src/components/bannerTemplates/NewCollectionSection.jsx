@@ -4,7 +4,7 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 const NewCollectionSection = ({clsName}) => {
   return (
     <>
-      <div className={`NewCollectionSection ${clsName? clsName : '' }`}>
+      <div className={`NewCollectionSection bannerMain ${clsName? clsName : '' }`}>
         <div className="content">
           <h6 className="title">Lorem ipsum dolor sit amet</h6>
           <p className="para">

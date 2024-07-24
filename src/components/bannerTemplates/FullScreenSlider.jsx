@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 const FullScreenSlider = () => {
   return (
     <>
-      <Carousel data-bs-theme="dark" className='FullScreenSlider'>
+      <Carousel data-bs-theme="dark" className='FullScreenSlider bannerMain'>
             <Carousel.Item>
               <img
                 className="d-block w-100 bgPlaceHolder"

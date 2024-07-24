@@ -3,7 +3,7 @@ import React from 'react'
 const SingleProductType = () => {
   return (
     <>
-      <div className="SingleProductType">
+      <div className="SingleProductType bannerMain">
         <div className="innerBox">
         <div className="image"><img src="" alt="" /></div>
         <div className="content">

@@ -22,7 +22,7 @@ import SpinnerLoader from "../../components/ui/SpinnerLoader";
 import NewLooksBannerTemplate from "../../components/bannerTemplates/NewLooksBannerTemplate";
 import NewCollectionSection from "../../components/bannerTemplates/NewCollectionSection";
 import CenterBigBannerType from "../../components/bannerTemplates/CenterBigBannerType";
-import TrendifyOriginSection from "./TrendifyOriginSection";
+import TrendifyOriginSection from "../../components/bannerTemplates/TrendifyOriginSection";
 import FullScreenSlider from "../../components/bannerTemplates/FullScreenSlider";
 import SingleProductType from "../../components/bannerTemplates/SingleProductType";
 
