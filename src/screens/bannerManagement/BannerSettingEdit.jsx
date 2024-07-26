@@ -123,7 +123,7 @@ const BannerSettingEdit = () => {
 
         {
           bannerType.label && (
-            <div className="labelValue">
+            <div className="labelValue inputField">
               <TextInput 
                 labelName="Label"
                 optional="&nbsp;&nbsp;&nbsp;Enclose a phrase within {} to highlight"
