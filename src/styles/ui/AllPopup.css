@@ -541,6 +541,20 @@ font-weight: 400;
    width: 100%;
  }
 
+ /* banner promotional list */
+
+ .addProduct_modal .inner .ListTable .productImg{
+   min-width: 4rem;
+   width: 4rem;
+   height: 4rem;
+   overflow: hidden;
+   border: 1px solid #bbb;
+   border-radius: .4rem;
+   margin: 0 auto;
+ }
+ .addProduct_modal.modelName.AddPromotionalListPopup .inner .inputField .inputFieldBox{
+   width: 49%;
+ }
  
  @media (min-width:299px) and (max-width:999px) {
    .addProduct_modal.modelName .inner .inputField .inputFieldBox{
