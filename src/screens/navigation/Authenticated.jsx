@@ -42,6 +42,7 @@ import AddNewType from "../productManagement/AddNewType";
 import AddNewBrand from "../productManagement/AddNewBrand";
 import AddNewProduct from "../productManagement/AddNewProduct";
 import ProductList from "../productManagement/ProductList";
+import PromotionalList from "../bannerManagement/PromotionalList";
 
 const Authenticated = () => {
   return (
@@ -81,6 +82,7 @@ const Authenticated = () => {
         <Route path={AuthenticatedRoutes.bannerSetting} element={<DashboardScreen innerPage={<BannerSetting />}  pageName='Banner Setting' pageTitle='Banner Management' parentName='Banner Management'/>} />
         <Route path={AuthenticatedRoutes.bannerSettingEdit} element={<DashboardScreen innerPage={<BannerSettingEdit />}  pageName='Banner Add' pageTitle='Banner Management' parentName='Banner Management'/>} />
         <Route path={AuthenticatedRoutes.viewSingleBanner} element={<DashboardScreen innerPage={<ViewSingleBanner />}  pageName='Banner Edit' pageTitle='Banner Management' parentName='Banner Management'/>} />
+        <Route path={AuthenticatedRoutes.promotionalList} element={<DashboardScreen innerPage={<PromotionalList />}  pageName='Promotional Lists' pageTitle='Banner Management' parentName='Banner Management'/>} />
 
         {/* raider management */}
         <Route path={AuthenticatedRoutes.raiderVerification} element={<DashboardScreen innerPage={<RaiderVerification />}  pageName='Raider Verification' pageTitle='Raider Management' parentName='Dashboard'/>} />

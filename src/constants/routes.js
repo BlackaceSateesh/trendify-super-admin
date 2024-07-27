@@ -42,6 +42,7 @@ export const AuthenticatedRoutes = {
   deliveryOption: "/deliveryOption",
   createCustomer: "/createCustomer",
   customerList: "/customerList",
+  promotionalList: "/promotionalList",
 };
 
 export const SearchRoutes = [
