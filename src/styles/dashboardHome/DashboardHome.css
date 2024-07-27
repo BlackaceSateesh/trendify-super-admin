@@ -256,6 +256,7 @@
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
+  overflow: hidden;
 }
 .CustomerReviewCard .head .txt h6 {
   font-size: 1.4rem;

@@ -196,12 +196,12 @@ const DashboardHome = () => {
               reviews.length <= 0 ? <p style={{ fontSize: "1.4rem", fontWeight: 400 }}>No Reviews Found</p> : reviews.map((e, i) => {
                 return (
                   <CustomerReviewCard 
-                    name={e.userName} 
-                    pic={e.imageUrlList[0]} 
-                    userId={e.userId}
-                    productId={e.productId}
-                    star={e.rating}
-                    text={e.review}
+                    name={e?.userName} 
+                    pic={e?.imagesUrlList?.[0]} 
+                    userId={e?.userId}
+                    productId={e?.productId}
+                    star={e?.rating}
+                    text={e?.review}
                     key={i}
                   />
                 )

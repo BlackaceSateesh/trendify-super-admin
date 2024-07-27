@@ -19,7 +19,6 @@ const InputFieldSet = ({ index, onDataChange, onImageSet }) => {
     const [brands, setBrands] = useState([]);
     const [products, setProducts] = useState([]);
     const [image, setImage] = useState(null);
-    const [productDetail, setProductDetail] = useState("");
     const [discountOrPrice, setDiscountOrPrice] = useState("");
     const [discountOrPriceValue, setDiscountOrPriceValue] = useState(0);
 
@@ -51,8 +50,8 @@ const InputFieldSet = ({ index, onDataChange, onImageSet }) => {
     };
 
     useEffect(() => {
-        onDataChange(index, { category, type, brand, image, productDetail, product, discountOrPrice, discountOrPriceValue });
-    }, [category, type, brand, image, productDetail, product, discountOrPrice, discountOrPriceValue]);
+        onDataChange(index, { category, type, brand, image, product, discountOrPrice, discountOrPriceValue });
+    }, [category, type, brand, image, product, discountOrPrice, discountOrPriceValue]);
 
     const handleCategoryChange = (value) => {
         setCategory(value);
@@ -157,17 +156,6 @@ const InputFieldSet = ({ index, onDataChange, onImageSet }) => {
                     onChange={(e) => setProduct(e.target.name)}
                     isPaginated={true}
                     loadMoreOptions={() => loadMoreOptions("PRODUCTS")}
-                />
-                <SelectInput 
-                    labelName="Select Which Product Detail To Pick"
-                    options={[
-                        { label: "Product Category", id: "category" },
-                        { label: "Product Type", id: "type" },
-                        { label: "Brand", id: "brand" },
-                        { label: "Product", id: "product" }
-                    ]}
-                    onChange={(e) => setProductDetail(e.target.value)}
-                    customKey={"label"}
                 />
                 <SelectInput
                     labelName="Select Discount or Price"

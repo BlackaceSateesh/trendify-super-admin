@@ -48,20 +48,20 @@ const BannerSettingEdit = () => {
   };
 
   const handleSaveBanner = async () => {
-    if (inputData.some((data) => !data.category || !data.type || !data.image || !data.brand || !data.productDetail || !data.discountOrPrice || !data.discountOrPriceValue || !data.product)) {
-      return;
-    }
+    // if (inputData.some((data) => !data.category || !data.type || !data.image || !data.brand || !data.productDetail || !data.discountOrPrice || !data.discountOrPriceValue || !data.product)) {
+    //   return;
+    // }
 
     if (loading) return;
     setLoading(true);
 
     let bannerReqList = inputData.map((data) => {
       return {
-        productCategoryId: data.productDetail === "category" ? data.category : null,
-        productTypeId: data.productDetail === "type" ? data.type : null,
+        productCategoryId: data.category || null,
+        productTypeId: data.type || null,
         imageBase64Url: data.image,
-        brandId: data.productDetail === "brand" ? data.brand : null,
-        modelName: data.productDetail === "product" ? data.product : null,
+        brandId: data.brand || null,
+        modelName: data.product || null,
         discount: data.discountOrPrice === "discount" ? data.discountOrPriceValue : null,
         price: data.discountOrPrice === "price" ? data.discountOrPriceValue : null,
       };
