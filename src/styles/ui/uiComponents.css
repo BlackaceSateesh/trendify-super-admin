@@ -900,4 +900,8 @@ textarea::-webkit-scrollbar {
   .ButtonWithIcon {
     font-size: 1.4rem;
   }
+  .webBanTemMain{
+    width: 100%;
+    height: 20rem;
+  }
 }
