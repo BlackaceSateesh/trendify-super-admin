@@ -219,8 +219,14 @@ ol {
   .innerBox_shadow .category_table{
     overflow-x: auto;
   }
-  .innerBox_shadow .category_table::-webkit-scrollbar{
-    display: none;
+  .innerBox_shadow .category_table {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  
+    /* Hide scrollbar for WebKit browsers */
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   .innerBox_shadow .category_table table th, .innerBox_shadow .category_table table td{
     padding: 1.2rem;
