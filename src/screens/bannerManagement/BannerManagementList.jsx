@@ -25,6 +25,7 @@ import CenterBigBannerType from "../../components/bannerTemplates/CenterBigBanne
 import TrendifyOriginSection from "../../components/bannerTemplates/TrendifyOriginSection";
 import FullScreenSlider from "../../components/bannerTemplates/FullScreenSlider";
 import SingleProductType from "../../components/bannerTemplates/SingleProductType";
+import WebBannerTypePrimary from "../../components/bannerTemplates/WebBannerTypePrimary";
 
 const BannerManagementList = () => {
   const navigate = useNavigate();
@@ -128,6 +129,7 @@ const BannerManagementList = () => {
     <NewCollectionSection clsName='odd' />
     <NewCollectionSection />
     <SingleProductType /> */}
+    <WebBannerTypePrimary />
         <div className="web_banner sectionContainer">
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <DashboardInnerTitle name='Web Banner List' />
