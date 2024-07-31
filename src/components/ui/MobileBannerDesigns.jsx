@@ -2,6 +2,7 @@ import React from 'react'
 import { Modal } from 'react-bootstrap';
 import bannerMobilePng from '../../assets/bannerMobile.png';
 import bannerMobileSliderPng from '../../assets/bannerMobileSlider.png';
+import bannerWebPrimaryPng from '../../assets/full.png';
 import bannerWeb1Png from '../../assets/full_1.jpg';
 import bannerWeb2Png from '../../assets/full_2.jpg';
 import bannerWeb3Png from '../../assets/full_3.png';
@@ -46,7 +47,7 @@ const MobileBannerDesigns = (props) => {
                     </div>
                   </div>
 
-                  <div className="MobileBannerDesignCard" onClick={() => {console.log(BannerIds.MOBILE_SLIDER);props.onLayout(BannerIds.MOBILE_SLIDER);}}>
+                  <div className="MobileBannerDesignCard" onClick={() => { console.log(BannerIds.MOBILE_SLIDER); props.onLayout(BannerIds.MOBILE_SLIDER); }}>
                     <div className="singleImg">
                       <img src={bannerMobileSliderPng} alt="" />
                     </div>
@@ -57,6 +58,14 @@ const MobileBannerDesigns = (props) => {
                 </>
               ) : (
                 <>
+                  <div className="MobileBannerDesignCard" onClick={() => props.onLayout(BannerIds.WEB_BANNER_4)}>
+                    <div className="singleImg">
+                      <img src={bannerWebPrimaryPng} alt="" />
+                    </div>
+                    <div className="hoverBox">
+                      <p className="title">Use this layout</p>
+                    </div>
+                  </div>
                   <div className="MobileBannerDesignCard" onClick={() => props.onLayout(BannerIds.WEB_BANNER_1)}>
                     <div className="singleImg">
                       <img src={bannerWeb1Png} alt="" />
@@ -83,17 +92,8 @@ const MobileBannerDesigns = (props) => {
                       <p className="title">Use this layout</p>
                     </div>
                   </div>
-
-                  <div className="MobileBannerDesignCard" onClick={() => props.onLayout(BannerIds.WEB_BANNER_4)}>
-                    <div className="singleImg">
-                      <img src={bannerWeb4Png} alt="" />
-                    </div>
-                    <div className="hoverBox">
-                      <p className="title">Use this layout</p>
-                    </div>
-                  </div>
                   {/* ===================== */}
-              
+
                   <div className="MobileBannerDesignCard" onClick={() => props.onLayout(BannerIds.WEB_CENTER_BANNER_SLIDER)}>
                     <div className="singleImg">
                       <img src={bannerCenterBigImg} alt="" />

@@ -144,10 +144,10 @@ export const sideMenuListManage = [
         name: "Banner Management List",
         route: AuthenticatedRoutes.BannerManagementList,
       },
-      {
-        name: "Banner Setting",
-        route: AuthenticatedRoutes.bannerSetting,
-      },
+      // {
+      //   name: "Banner Setting",
+      //   route: AuthenticatedRoutes.bannerSetting,
+      // },
       {
         name: "Promotional Lists",
         route: AuthenticatedRoutes.promotionalList,

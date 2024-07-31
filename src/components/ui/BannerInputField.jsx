@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import SelectInput from "../../components/ui/SelectInput";
+import { MdDeleteOutline } from "react-icons/md";
 import FileInput from "../../components/ui/FileInput";
 import TextInput from "./TextInput";
-import { 
-    fetchProductCategories, 
-    fetchProductTypesByCategory, 
+import {
+    fetchProductCategories,
+    fetchProductTypesByCategory,
     fetchBrandsByType,
     fetchProductsByBrand
 } from "../../utils/dataFetchers";
 
-const InputFieldSet = ({ index, onDataChange, onImageSet }) => {
+const InputFieldSet = ({ index, onDataChange, onImageSet, onDelete, isSlider, sizes, setSizeError }) => {
     const [category, setCategory] = useState("");
     const [type, setType] = useState("");
     const [brand, setBrand] = useState("");
@@ -35,11 +36,20 @@ const InputFieldSet = ({ index, onDataChange, onImageSet }) => {
     const handleImageChange = (e) => {
         const file = e.target.files[0];
         if (file) {
+            setSizeError("");
             const reader = new FileReader();
             reader.onload = (e) => {
                 const img = new Image();
                 img.src = e.target.result;
                 img.onload = () => {
+                    if (sizes && sizes.length > 0) {
+                        const size = getSize();
+                        console.log(size);
+                        if (img.width !== size.width || img.height !== size.height) {
+                            setSizeError(`Image size should be ${size.width} x ${size.height}`);
+                            return;
+                        }
+                    }
                     const base64 = e.target.result.split("base64,")[1];
                     setImage(base64);
                     onImageSet(index, base64);
@@ -118,10 +128,35 @@ const InputFieldSet = ({ index, onDataChange, onImageSet }) => {
         }
     };
 
+    const getSize = () => {
+        if (isSlider) {
+            if (isSlider && sizes && sizes.length > 1) {
+                return index === 0 ? sizes?.[0] : sizes?.[1];
+            } else {
+                return sizes?.[0];
+            }
+        } else {
+            return sizes?.[index];
+        }
+    }
+
     return (
         <div className="bannerDetails">
             <div className="head">
-                <h3>Image Details {index + 1}</h3>
+                <h3>Image Details {index + 1} {
+                    getSize() && (
+                        <span className="size">
+                            ({getSize().width} x {getSize().height})
+                        </span>
+                    )
+                }</h3>
+                {
+                    isSlider && (
+                        <button onClick={() => onDelete(index)}>
+                            <MdDeleteOutline />
+                        </button>
+                    )
+                }
             </div>
             <div className="inputField">
                 <FileInput labelName='Image' value={image} onChange={handleImageChange} />

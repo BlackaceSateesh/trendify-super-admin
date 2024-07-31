@@ -10,3 +10,7 @@
     gap: 1rem;
     width: 50%;
 }
+
+.errorText {
+    text-align: center;
+}

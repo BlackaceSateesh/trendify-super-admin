@@ -7,8 +7,8 @@ import MobileBannerType1 from "../../components/bannerTemplates/MobileBannerType
 import MobileBannerSliderType1 from "../../components/bannerTemplates/MobileBannerSliderType1";
 import WebBannerType3 from "../../components/bannerTemplates/WebBannerType3";
 import WebBannerType2 from "../../components/bannerTemplates/WebBannerType2";
-import WebBannerType4 from "../../components/bannerTemplates/WebBannerType4";
 import WebBannerType1 from "../../components/bannerTemplates/WebBannerType1";
+import WebBannerTypePrimary from "../../components/bannerTemplates/WebBannerTypePrimary";
 import { useLocation, useNavigate, Navigate } from "react-router-dom";
 import { AuthenticatedRoutes } from "../../constants/Routes";
 import InputFieldSet from "../../components/ui/BannerInputField";
@@ -34,6 +34,7 @@ const BannerSettingEdit = () => {
   const [fieldCount, setFieldCount] = useState(bannerType.count ?? 1);
   const [label, setLabel] = useState("");
   const [value, setValue] = useState("");
+  const [sizeError, setSizeError] = useState("");
 
   const handleDataChange = (index, data) => {
     setInputData((prevData) => {
@@ -41,6 +42,17 @@ const BannerSettingEdit = () => {
       newData[index] = data;
       return newData;
     });
+  };
+
+  const deleteField = (index) => {
+    if (index === 0 && fieldCount === 1) return;
+    setInputData((prevData) => {
+      const newData = [...prevData];
+      newData.splice(index, 1);
+      return newData;
+    });
+
+    setFieldCount((prevCount) => prevCount - 1);
   };
 
   const getImageFieldsFromData = () => {
@@ -99,13 +111,13 @@ const BannerSettingEdit = () => {
           ) : bannerType.id === BannerIds.WEB_BANNER_3.id ? (
             <WebBannerType3 images={getImageFieldsFromData()} />
           ) : bannerType.id === BannerIds.WEB_BANNER_4.id ? (
-            <WebBannerType4 images={getImageFieldsFromData()} />
+            <WebBannerTypePrimary images={getImageFieldsFromData()} />
           ) : bannerType.id === BannerIds.WEB_CENTER_BANNER_SLIDER.id ? (
             <CenterBigBannerType images={getImageFieldsFromData()} count={fieldCount} />
           ) : bannerType.id === BannerIds.WEB_NEW_LOOKS_BANNER.id ? (
             <NewLooksBannerTemplate images={getImageFieldsFromData()} />
           ) : bannerType.id === BannerIds.WEB_NEW_COLLECTION_SLIDER.id ? (
-            <NewCollectionSection images={getImageFieldsFromData()} label={label} value={value} count={fieldCount}  />
+            <NewCollectionSection images={getImageFieldsFromData()} label={label} value={value} count={fieldCount} />
           ) : bannerType.id === BannerIds.WEB_NEW_COLLECTION_ODD_SLIDER.id ? (
             <NewCollectionSection images={getImageFieldsFromData()} label={label} value={value} count={fieldCount} clsName="odd" />
           ) : bannerType.id === BannerIds.WEB_NEW_COLLECTION_EVEN_SLIDER.id ? (
@@ -122,44 +134,60 @@ const BannerSettingEdit = () => {
         </div>
 
         {
+          sizeError && (
+            <div className="errorText">
+              <p className="error">{sizeError}</p>
+            </div>
+          )
+        }
+
+        {
           bannerType.label && (
             <div className="labelValue inputField">
-              <TextInput 
+              <TextInput
                 labelName="Label"
                 optional="&nbsp;&nbsp;&nbsp;Enclose a phrase within {} to highlight"
-                value={label} 
-                onChange={(e) => setLabel(e.target.value)} 
+                value={label}
+                onChange={(e) => setLabel(e.target.value)}
               />
-              <TextInput 
-                labelName="Value" 
-                value={value} 
-                onChange={(e) => setValue(e.target.value)} 
+              <TextInput
+                labelName="Value"
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
               />
             </div>
           )
         }
 
         {[...Array(!bannerType.id.includes("SLIDER") ? BannerIds[bannerType.id].count : fieldCount)].map((_, index) => (
-          <InputFieldSet key={index} index={index} onDataChange={handleDataChange} />
+          <InputFieldSet
+            key={index}
+            index={index}
+            onDataChange={handleDataChange}
+            onDelete={deleteField}
+            isSlider={bannerType.id.includes("SLIDER")}
+            sizes={bannerType.sizes}
+            setSizeError={setSizeError}
+          />
         ))}
 
         {
           bannerType.id.includes("SLIDER") && (
             <div className="sideBtns">
-              <ButtonMain 
-                btnColor="green" 
-                name="Add Field" 
-                onClick={() => setFieldCount((prevCount) => prevCount + 1)} 
+              <ButtonMain
+                btnColor="green"
+                name="Add Field"
+                onClick={() => setFieldCount((prevCount) => prevCount + 1)}
               />
             </div>
           )
         }
 
         <div className="centerBtns">
-          <ButtonMain 
-            btnColor="green" 
+          <ButtonMain
+            btnColor="green"
             name={loading ? <SpinnerLoader /> : "Save Banner"}
-            onClick={handleSaveBanner} 
+            onClick={handleSaveBanner}
           />
         </div>
 

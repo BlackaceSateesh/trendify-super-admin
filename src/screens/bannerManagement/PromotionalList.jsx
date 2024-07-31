@@ -2,8 +2,9 @@ import React, { useState, useEffect, useCallback, useMemo } from "react";
 import "../../styles/dashboard/AddNewCategory.css";
 import DataTable from "react-data-table-component";
 import SpinnerLoader from "../../components/ui/SpinnerLoader";
-import { fetchProductCategories } from "../../utils/dataFetchers";
-import { toPascalCase } from "../../utils/stringFunctions";
+import { fetchAllPromotions } from "../../utils/dataFetchers";
+import { deletePromotion } from "../../api/promotion-api";
+import { MdDeleteOutline } from 'react-icons/md';
 import AddPromotionalListPopup from "../../components/ui/popups/AddPromotionalListPopup";
 
 const DataColumns = [
@@ -31,6 +32,16 @@ const DataColumns = [
     name: "Vendor Name",
     selector: (row) => row.categoryType,
   },
+  {
+    name: "Action",
+    selector: (row) => (
+      <div className="actionBtns">
+        <button className="delete" onClick={() => row.action(row.id)}>
+          <MdDeleteOutline />
+        </button>
+      </div>
+    ),
+  }
 ];
 
 const PromotionalList = () => {
@@ -43,17 +54,19 @@ const PromotionalList = () => {
   const mapCategoryList = useCallback((categories) => {
     return categories?.map((category, index) => ({
       sno: index + 1,
-      image: category?.imageUrl,
-      name: category?.name,
-      categoryType: toPascalCase(category?.productCategoryType || "N/A"),
-      description: category?.description
+      image: category?.bannerUrl,
+      name: category?.productRes?.title,
+      categoryType: category?.productRes?.vendorName,
+      description: category?.productRes?.itemCode,
+      id: category?.id,
+      action: deleteCategory,
     }));
   });
 
   const fetchCategories = useCallback(async (page) => {
     setLoading(true);
     try {
-      const response = await fetchProductCategories(page, perPage);
+      const response = await fetchAllPromotions(page, perPage);
       setCategoryList(mapCategoryList(response?.content));
       setTotalRows(response?.totalElements);
     } catch (error) {
@@ -77,6 +90,15 @@ const PromotionalList = () => {
   useEffect(() => {
     fetchCategories(1);
   }, []);
+
+  const deleteCategory = async (id) => {
+    try {
+      await deletePromotion(id);
+      fetchCategories(1);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
@@ -106,6 +128,7 @@ const PromotionalList = () => {
       <AddPromotionalListPopup
         show={showPromotionalList}
         onHide={() => setShowPromotionalList(false)}
+        onSuccess={() => fetchCategories(1)}
       />
     </>
   );

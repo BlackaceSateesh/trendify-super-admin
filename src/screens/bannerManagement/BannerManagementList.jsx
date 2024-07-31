@@ -16,7 +16,6 @@ import { BannerIds } from "../../constants/contents/BannerContent";
 import WarningPopup from "../../components/ui/popups/WarningPopup";
 import WebBannerType3 from "../../components/bannerTemplates/WebBannerType3";
 import WebBannerType2 from "../../components/bannerTemplates/WebBannerType2";
-import WebBannerType4 from "../../components/bannerTemplates/WebBannerType4";
 import WebBannerType1 from "../../components/bannerTemplates/WebBannerType1";
 import SpinnerLoader from "../../components/ui/SpinnerLoader";
 import NewLooksBannerTemplate from "../../components/bannerTemplates/NewLooksBannerTemplate";
@@ -77,15 +76,11 @@ const BannerManagementList = () => {
 
   const handleDeleteBanner = async () => {
     setLoading(true);
-    const { id, bannerApplicationType: bannerType } = tempBannerData.current;
+    const { id } = tempBannerData.current;
     try {
       setError(null);
       await deleteBanner(id);
-      if (bannerType === 'Web') {
-        setWebBanners((prevData) => prevData.filter((banner) => banner.id !== id));
-      } else {
-        setMobileBanners((prevData) => prevData.filter((banner) => banner.id !== id));
-      }
+      await getBanners();
     } catch (error) {
       setError(error?.response?.data?.message || 'Something went wrong');
     } finally {
@@ -121,7 +116,7 @@ const BannerManagementList = () => {
   return (
     <>
       <div className="BannerManagementList sectionGap">
-    {/* <FullScreenSlider />
+        {/* <FullScreenSlider />
     <NewLooksBannerTemplate />
     <NewCollectionSection />
     <CenterBigBannerType />
@@ -129,7 +124,7 @@ const BannerManagementList = () => {
     <NewCollectionSection clsName='odd' />
     <NewCollectionSection />
     <SingleProductType /> */}
-    <WebBannerTypePrimary />
+        {/* <WebBannerTypePrimary /> */}
         <div className="web_banner sectionContainer">
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <DashboardInnerTitle name='Web Banner List' />
@@ -186,7 +181,7 @@ const BannerManagementList = () => {
       <Modal
         show={showLayout}
         onHide={() => setShowLayout(false)}
-        size={currentCollageType === BannerIds?.MOBILE_SLIDER.id || currentCollageType?.includes("WEB") ? 'fullscreen' : 'sm'}
+        size={currentCollageType === BannerIds?.MOBILE_SLIDER.id ? "md" : currentCollageType?.includes("WEB") ? 'fullscreen' : 'sm'}
         centered
         scrollable
         className="mobBannerLayoutPreview"
@@ -205,7 +200,7 @@ const BannerManagementList = () => {
             ) : currentCollageType === BannerIds.WEB_BANNER_3.id ? (
               <WebBannerType3 images={getImageUrlsFromData()} />
             ) : currentCollageType === BannerIds.WEB_BANNER_4.id ? (
-              <WebBannerType4 images={getImageUrlsFromData()} />
+              <WebBannerTypePrimary images={getImageUrlsFromData()} />
             ) : currentCollageType === BannerIds.WEB_CENTER_BANNER_SLIDER.id ? (
               <CenterBigBannerType images={getImageUrlsFromData()} count={currentBannerResList.length} />
             ) : currentCollageType === BannerIds.WEB_NEW_LOOKS_BANNER.id ? (
@@ -219,7 +214,7 @@ const BannerManagementList = () => {
             ) : currentCollageType === BannerIds.WEB_FULLSCREEN_SLIDER.id ? (
               <FullScreenSlider images={getImageUrlsFromData()} count={currentBannerResList.length} />
             ) : currentCollageType === BannerIds.WEB_SINGLE_PRODUCT_BANNER.id ? (
-              <SingleProductType images={getImageUrlsFromData()} />
+              <SingleProductType images={getImageUrlsFromData()} label={currentBannerLabels.label} value={currentBannerLabels.value} />
             ) : currentCollageType === BannerIds.WEB_TRENDIFY_ORIGIN.id ? (
               <TrendifyOriginSection images={getImageUrlsFromData()} />
             ) : currentCollageType === BannerIds.MOBILE_SLIDER.id ? (

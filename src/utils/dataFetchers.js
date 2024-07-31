@@ -11,6 +11,7 @@ import {
 } from "../api/product-api";
 import { getAllOrders } from "../api/order-api";
 import { getAllRiders } from "../api/rider-api";
+import { getAllPromotions } from "../api/promotion-api";
 
 export async function fetchVendorsByStatus(vendorStatus, page = 1, size = 10) {
     const response = await getVendorsByStatus({ 
@@ -152,6 +153,19 @@ export async function fetchAllRidersByStatus(riderStatus, page = 1, size = 10) {
         });
 
         return riders;
+    } catch (error) {
+        console.log(error?.response?.data?.message);
+    }
+}
+
+export async function fetchAllPromotions(page = 1, size = 10) {
+    try {
+        const promotions = await getAllPromotions({
+            page,
+            size
+        });
+
+        return promotions;
     } catch (error) {
         console.log(error?.response?.data?.message);
     }

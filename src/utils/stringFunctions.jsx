@@ -5,7 +5,7 @@ export const toPascalCase = str => {
 };
 
 export function processLabel(label) {
-  const parts = label.split(/({.*?})/);
+  const parts = label?.split(/({.*?})/); 
 
   return parts.map((part, index) => {
     if (part.startsWith('{') && part.endsWith('}')) {
