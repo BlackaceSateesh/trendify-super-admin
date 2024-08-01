@@ -4,6 +4,7 @@
   min-width: 25%;
   width: 25%;
   height: 100%;
+  position: relative;
 }
 
 .WebBannerType2 .center {
@@ -17,17 +18,53 @@
   height: 70%;
   display: flex;
   border-bottom: 0.6rem solid var(--white);
+  position: relative;
 }
 .WebBannerType2 .center .centerBtm {
   width: 100%;
   height: 30%;
+  position: relative;
 }
 .WebBannerType2 .center .centerTop .centerTopLeft,
 .WebBannerType2 .center .centerTop .centerTopRight {
+  position: relative;
   min-width: 50%;
   width: 50%;
   height: 100%;
 }
 .WebBannerType2 .center .centerTop .centerTopRight {
   border-left: 0.6rem solid var(--white);
+}
+
+.WebBannerType2 .left::before,
+.WebBannerType2 .right::before{
+  content: "382px X 800px";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #dedcdc;
+  font-size: 2rem;
+  text-wrap: nowrap;
+}
+.WebBannerType2 .center .centerTop .centerTopLeft::before,
+.WebBannerType2 .center .centerTop .centerTopRight::before {
+  content: "370px X 548px";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #dedcdc;
+  font-size: 2rem;
+  text-wrap: nowrap;
+}
+.WebBannerType2 .center .centerBtm::before{
+  content: "740px X 240px";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #dedcdc;
+  font-size: 2rem;
+  text-wrap: nowrap;
 }

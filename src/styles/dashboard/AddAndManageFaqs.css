@@ -21,6 +21,9 @@
   flex-wrap: wrap;
   flex-direction: row;
 }
+.AddAndManageFaqs .writeAndAdd .writeAndAdd_left.category .inputFieldBox{
+  min-width: 50%;
+}
 
 .AddAndManageFaqs .writeAndAdd .writeAndAdd_left .fullText {
   width: 100%;
@@ -219,6 +222,9 @@
   .AddAndManageFaqs .writeAndAdd .writeAndAdd_left,
   .AddAndManageFaqs .writeAndAdd .writeAndAdd_right,
   .AllFaqsCard {
+    width: 100%;
+  }
+  .AddAndManageFaqs .writeAndAdd .writeAndAdd_left.category{
     width: 100%;
   }
 }

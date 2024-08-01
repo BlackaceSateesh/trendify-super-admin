@@ -14,3 +14,20 @@
 .errorText {
     text-align: center;
 }
+
+.bannerDetails .head button{
+    background-color: transparent;
+    font-size: 2rem;
+    min-width: 3rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: .4rem;
+    transition: all .3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: var(--dark-red);
+}
+.bannerDetails .head button:hover{
+    color: var(--white);
+background-color: var(--dark-red);
+    transition: all .3s ease-in-out;
+}

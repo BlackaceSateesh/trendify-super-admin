@@ -180,10 +180,10 @@ const BannerManagementList = () => {
 
       <Modal
         show={showLayout}
+        scrollable
         onHide={() => setShowLayout(false)}
         size={currentCollageType === BannerIds?.MOBILE_SLIDER.id ? "md" : currentCollageType?.includes("WEB") ? 'fullscreen' : 'sm'}
         centered
-        scrollable
         className="mobBannerLayoutPreview"
       >
         <Modal.Header closeButton>

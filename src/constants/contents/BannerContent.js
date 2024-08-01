@@ -71,7 +71,7 @@ export const BannerIds = {
         sizes: [
             { width: 510, height: 800 },
             { width: 485, height: 176 },
-            { width: 485, height: 800 },
+            { width: 485, height: 448 },
             { width: 485, height: 176 },
             { width: 510, height: 800 },
         ]
