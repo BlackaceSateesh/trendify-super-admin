@@ -14,18 +14,30 @@ import {
 import { AuthenticatedRoutes } from "../../constants/Routes";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSideMenu } from "../../redux/slice/SideMenuSlice";
-
-
+import { setUserInfo } from "../../redux/slice/UserInfoSlice";
+import { AuthRoutes } from "../../constants/Routes";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const location = useLocation();
   const sideMenuState = useSelector((state) => state.SideMenuSlice);
   const UserInfo = useSelector((state) => state.UserInfoSlice);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     dispatch(toggleSideMenu());
   };
+
+  const logout = () => {
+    dispatch(setUserInfo({
+        token: "",
+    }));
+
+    localStorage.removeItem("token");
+
+    navigate(AuthRoutes.login);
+};
 
   return (
     <>
@@ -110,7 +122,11 @@ const Sidebar = () => {
             {sideMenuListOther.map((e, i) => {
               return (
                 <>
-                  <Link to={e.route} key={i} className="menuList otherList">
+                  <Link to={e.route} key={i} className="menuList otherList" onClick={() => {
+                    if (i === 2) {
+                      logout();
+                    }
+                  }}>
                     <div className="icon">{e.icon}</div>
                     <span className="text">{e.name}</span>
                   </Link>
